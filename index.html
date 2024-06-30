@@ -1,5 +1,88 @@
 <head>
-  <title>UmaEra's Web</title>
+  <title>umaera.web</title>
+  <meta name="description" content="umaeraweb | Official website of UmaEra.dev, explore and try projets and apps">
+  <link rel="stylesheet" href="css/Main.css">
+  <link rel="stylesheet" href="css/MainPageHeader.css">
+  <link rel="stylesheet" href="css/HiperLinks.css">
+  <link rel="stylesheet" href="css/Profiles.css">
+  <link rel="stylesheet" href="css/Animations.css">
+  <link rel="stylesheet" href="css/MainPage.css">
 </head>
-<h1>[Content]</h1>
-<button onclick="location.href='SimplyPrivate/index.html'">Go to SimplyPrivate</button>
+
+<div class="rain"></div>
+
+<script>
+function createDrop() {
+            const drop = document.createElement("div");
+            drop.className = "drop";
+            drop.style.left = `${Math.random() * 100}vw`;
+            drop.style.animationDuration = `${Math.random() * 1 + 0.04}s`;
+            document.querySelector('.rain').appendChild(drop);
+
+            drop.addEventListener("animationiteration", () => {
+                drop.remove();
+                createDrop();
+            });
+        }
+
+        for (let i = 0; i < 60; i++) {
+            createDrop();
+        }
+</script>
+
+<div class="giantball"></div>
+<div class="SideNav">
+
+  <div class="SiteInfo">
+    <div class="SiteIcon"></div>
+    <div class="SiteTitle">umaera.web</div>
+  </div>
+
+  <div class="HiperLinks">
+  <div class="HLTitle">Projects</div>
+  <div class="HTframe1" onclick="alert('[error:h84] Sowwy, this project is not avaliable right now')"">● Usai</div>
+  <div class="HTframe2" onclick="alert('[error:h84] Sowwy, this project is not avaliable right now')"">● Rooms</div>
+  <div class="HTframe3" onclick="alert('[error:h84] Sowwy, this project is not avaliable right now')"">● A89</div>
+  <div class="HTframe4" onclick="alert('[error:h0] Project Eliminated')"">● RainOS</div>
+  <div class="HTframe5" onclick="window.open('SimplyPrivate.html')">● SimplyPrivate</div>
+  <div class="HTframe6" onclick="alert('[error:h?] This project never existed')"">● OrnS Disk</div>
+  </div>
+
+  <div class="ProfileLinks">
+  <div class="PLTitle">Profiles</div>
+
+  <div class="PLframe1" onclick="window.open('https://github.com/NotYarazi')">
+    <div class="PLframe1PIC"></div>
+    <div class="PLframe1Title">Github</div>
+  </div>
+
+  <div class="PLframe2" onclick="window.open('https://www.youtube.com/@UmaEra_')">
+    <div class="PLframe2PIC"></div>
+    <div class="PLframe2Title">YouTube</div>
+  </div>
+
+  <div class="PLframe3" onclick="window.open('https://instagram.com/umaera.dev')">
+    <div class="PLframe3PIC"></div>
+    <div class="PLframe3Title">Instagram</div>
+  </div>
+
+  
+  <div class="PLframe4" onclick="window.open('mailto:umaera.dev@gmail.com')">
+    <div class="PLframe4PIC"></div>
+    <div class="PLframe4Title">Email</div>
+  </div>
+</div>
+</div>
+
+<div class="painel1">
+<div class="painel1-title">Not Ready</div>
+</div>
+
+<div class="painel2">
+<div class="painel2-title">Not Ready</div>
+</div>
+
+<div class="painel3">
+  <div class="painel3-title">Not Ready</div>
+  </div>
+
