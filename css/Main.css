@@ -49,3 +49,15 @@ body{
         transform: translateY(-100vh); /* Sobe até fora da tela */
     }
 }
+
+.version{
+    width: 10;
+    position: absolute;
+    color:white;
+    z-index: 999;
+    margin-top: 610;
+    margin-left: 1320;
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: QuickSand;
+}
