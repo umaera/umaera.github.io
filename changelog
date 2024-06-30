@@ -1,0 +1,23 @@
+UIv1.0
+added base webite
+
+UIv1.1
+added intro animations
+added button animations
+added SimplyPrivate page
+
+UIv1.2
+added alerts to the project buttons
+changed pop-up text "soon" to "Not Ready"
+Removed text selection
+
+UIv1.3
+main page animations slower
+better alerts to project buttons
+Changed pop-up 1 text "Not Ready" to "Preparing..."
+Added transition animation
+Changed text font on SimplyPrivate page
+Changed changed background color on SimplyPrivate page
+Added bubble effect on SimplyPrivate page
+
+

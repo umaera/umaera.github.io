@@ -11,44 +11,27 @@
   <link rel="stylesheet" href="css/Animations.css">
   <link rel="stylesheet" href="css/MainPage.css">
 </head>
+<body>
 
+<!--Effects-->
 <div class="rain"></div>
-
-<script>
-function createDrop() {
-            const drop = document.createElement("div");
-            drop.className = "drop";
-            drop.style.left = `${Math.random() * 100}vw`;
-            drop.style.animationDuration = `${Math.random() * 1 + 0.04}s`;
-            document.querySelector('.rain').appendChild(drop);
-
-            drop.addEventListener("animationiteration", () => {
-                drop.remove();
-                createDrop();
-            });
-        }
-
-        for (let i = 0; i < 60; i++) {
-            createDrop();
-        }
-</script>
-
 <div class="giantball"></div>
 
+<!--SideBar-->
 <div class="SideNav">
 
-  <div class="SiteInfo">
-    <div class="SiteIcon"></div>
-    <div class="SiteTitle">umaera.web</div>
-  </div>
+<div class="SiteInfo">
+  <div class="SiteIcon"></div>
+  <div class="SiteTitle">umaera.web</div>
+</div>
 
   <div class="HiperLinks">
   <div class="HLTitle">Projects</div>
-  <div class="HTframe1" onclick="alert('[error:h84] Sowwy, this project is not avaliable right now')"">● Usai</div>
-  <div class="HTframe2" onclick="alert('[error:h84] Sowwy, this project is not avaliable right now')"">● Rooms</div>
-  <div class="HTframe3" onclick="alert('[error:h84] Sowwy, this project is not avaliable right now')"">● A89</div>
-  <div class="HTframe4" onclick="alert('[error:h0] Project Eliminated')"">● RainOS</div>
-  <div class="HTframe5" onclick="window.open('SimplyPrivate.html')">● SimplyPrivate</div>
+  <div class="HTframe1" onclick="alert('Game about the last animal on earth | page not avaliable')"">● Usai</div>
+  <div class="HTframe2" onclick="alert('4 walls, 4 doors, survive the dangers | page not avaliable')"">● Rooms</div>
+  <div class="HTframe3" onclick="alert('MultiTool website | page not avaliable')"">● SubEraWeb</div>
+  <div class="HTframe4" onclick="alert('Recriation of an old Operating Sistem | page not avaliable')"">● RainOS</div>
+  <div class="HTframe5" onclick="closeToSimplyPrivate()">● SimplyPrivate</div>
   <div class="HTframe6" onclick="alert('[error:h?] This project never existed')"">● OrnS Disk</div>
   </div>
 
@@ -78,8 +61,9 @@ function createDrop() {
 </div>
 </div>
 
+<!--Painel elements-->
 <div class="painel1">
-<div class="painel1-title">Not Ready</div>
+<div class="painel1-title">Preparing...</div>
 </div>
 
 <div class="painel2">
@@ -88,6 +72,14 @@ function createDrop() {
 
 <div class="painel3">
   <div class="painel3-title">Not Ready</div>
-  </div>
+</div>
 
-  <div class="version">v1.2</div>
+<div class="version">UIv1.3</div>
+
+<div class="closeP"></div>
+
+
+<!--scripts-->
+  <script src="js/clsAnim.js"></script>
+  <script src="js/raindrops.js"></script>
+</body>

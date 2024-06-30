@@ -1,24 +1,24 @@
 .SideNav{
-    animation: IN-SIDENAV ease-in 1.5s;
+    animation: IN-SIDENAV ease-in 1s;
 }
 
 .painel1{
-    animation: IN-painel1 ease-in 1.5s;
+    animation: IN-painel1 ease-in 1s;
 }
 
 .painel2{
-    animation: IN-painel2 ease-in 1.5s;
+    animation: IN-painel2 ease-in 1s;
 }
 
 .painel2-title{
-    animation: IN-painel2title ease-in 2.5s;
+    animation: IN-painel2title ease-in 2s;
 }
 
 .painel3{
-    animation: IN-painel3 ease-in 1.5s;
+    animation: IN-painel3 ease-in 1s;
 }
 .painel3-title{
-    animation: IN-painel3title ease-in 2.5s;
+    animation: IN-painel3title ease-in 2s;
 }
 @keyframes IN-SIDENAV {
     0%{
