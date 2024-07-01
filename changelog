@@ -24,4 +24,7 @@ UIv1.3
 UIv1.4
 -Pop-up 1 was transformed into a Simplyprivate version info popup about version 3.6
 -Popup 2 text was changed "Not Ready" to "Soon"
+-BugFix
+-Smoother animations
+-Fixed transition between pages
 

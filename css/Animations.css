@@ -45,7 +45,6 @@
 
     0%{
         margin-top: -1100;
-      
     }
     80%{
         margin-top: 25;
@@ -54,7 +53,7 @@
         margin-top: -10;
     }
     90%{
-        margin-top: 5;
+        margin-top: 10;
     }
 
 }
