@@ -1,3 +1,4 @@
+/*---{ Base }---*/
 body{
     background-color: black;
     overflow: hidden;
@@ -13,6 +14,7 @@ body{
     src: url('fonts/Quicksand-VariableFont_wght.ttf') format('truetype'); /* Corrigido para 'truetype' */
 }
 
+/*---{ Effects }---*/
 .giantball{
     position: absolute;
     height: 400px;
@@ -37,18 +39,31 @@ body{
     height: 3px;
     background: rgb(255, 255, 255);
     position: absolute;
-    bottom: 0; /* Começa na parte inferior */
+    bottom: 0;
     animation: rise linear infinite;
     border-radius: 100%;
 }
+
+.closeP{
+    width: 150%;
+    height: 0%;
+    position: relative;
+    background: black;
+    z-index: 50;
+    margin: 0;
+    padding: 0;
+}
+
 @keyframes rise {
     from {
         transform: translateY(0);
     }
     to {
-        transform: translateY(-100vh); /* Sobe até fora da tela */
+        transform: translateY(-100vh);
     }
 }
+
+/*---{ Other }---*/
 
 .version{
     width: 10;
@@ -62,13 +77,4 @@ body{
     font-family: QuickSand;
 }
 
-.closeP{
-    width: 150%;
-    height: 0%;
-    position: relative;
-    background: black;
-    z-index: 50;
-    margin: 0;
-    padding: 0;
-}
 
