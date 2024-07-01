@@ -17,14 +17,16 @@ body{
 /*---{ Effects }---*/
 .giantball{
     position: absolute;
-    height: 400px;
+    height: 470px;
     width: 1500px;
     background-color: rgb(109, 37, 53);
     margin-top: 500;
     margin-left: -70;
     border-radius: 100%;
     filter: blur(100px);
+    animation: riseball ease-in-out 15s
 }
+
 
 .rain {
     position: absolute;

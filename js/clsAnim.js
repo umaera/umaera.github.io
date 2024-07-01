@@ -8,5 +8,5 @@ function closeToSimplyPrivate() {
 
     setTimeout(function() {
         window.location.href = 'SimplyPrivate.html';
-      }, 1800);
+      }, 1300);
   }
