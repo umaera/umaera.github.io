@@ -4,8 +4,8 @@
         border-top:solid #000000;
     }
     50%{
-        color: #ff263f;
-        border-top:solid #ff263f;
+        color: #ff1673;
+        border-top:solid #ff1673;
     }
 }
 
@@ -14,6 +14,6 @@
         color: black;
     }
     50%{
-        color: #ff263f;
+        color: #ff1673;
     }
 }
