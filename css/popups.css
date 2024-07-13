@@ -54,6 +54,7 @@
     border-top:solid #000000;
     border-radius: 157%;
     transform: rotate(45deg);
+    animation: alertblink 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 
 .painel1-deg2 {
@@ -66,6 +67,7 @@
     border-top:solid #000000;
     border-radius: 157%;
     transform: rotate(120deg);
+    animation: alertblink 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 
 .painel1-deg3 {
@@ -78,6 +80,7 @@
     border-top:solid #000000;
     border-radius: 157%;
     transform: rotate(210deg);
+    animation: alertblink 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 
 .painel1-deg4 {
@@ -89,7 +92,8 @@
     border:solid #00000000;
     border-top:solid #000000;
     border-radius: 157%;
-    transform: rotate(265deg);
+    transform: rotate(280deg);
+    animation: alertblink 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 
 
@@ -101,6 +105,7 @@
     font-family: QuickSand;
     font-size: 20;
     text-align: center;
+    animation: alertblinktext 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 
 /*---{ PAINEL 2}---*/

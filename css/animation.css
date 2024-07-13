@@ -1,0 +1,19 @@
+@keyframes alertblink{
+    0%{
+        color: black;
+        border-top:solid #000000;
+    }
+    50%{
+        color: #ff263f;
+        border-top:solid #ff263f;
+    }
+}
+
+@keyframes alertblinktext{
+    0%{
+        color: black;
+    }
+    50%{
+        color: #ff263f;
+    }
+}
