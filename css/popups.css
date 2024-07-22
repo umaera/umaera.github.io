@@ -34,6 +34,7 @@
     border-style: solid;
     border-color: white;
     border-radius: 100%;
+    
 }
 
 .painel1-CircleText{
@@ -55,6 +56,7 @@
     border-radius: 157%;
     transform: rotate(45deg);
     animation: alertblink 1s  cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    display: none;
 }
 
 .painel1-deg2 {
@@ -68,6 +70,7 @@
     border-radius: 157%;
     transform: rotate(120deg);
     animation: alertblink 1s  cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    display: none;
 }
 
 .painel1-deg3 {
@@ -81,6 +84,7 @@
     border-radius: 157%;
     transform: rotate(210deg);
     animation: alertblink 1s  cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    display: none;
 }
 
 .painel1-deg4 {
@@ -94,6 +98,7 @@
     border-radius: 157%;
     transform: rotate(280deg);
     animation: alertblink 1s  cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    display: none;
 }
 
 
@@ -101,11 +106,10 @@
 .painel1-asset3{
     margin-left: 00;
     margin-top: 10;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: QuickSand;
-    font-size: 20;
+    font-size: 16;
     text-align: center;
-    animation: alertblinktext 1s  cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 
 /*---{ PAINEL 2}---*/
