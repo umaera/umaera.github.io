@@ -10,6 +10,10 @@
     animation: IN-painel2 ease-in 1.5s;
 }
 
+.painel2som{
+    animation: IN-painel2 ease-in 1.5s;
+}
+
 .painel2-title{
     animation: IN-painel2title ease-in 2.5s;
 }

@@ -32,17 +32,18 @@
     margin-top: 60;
     background-color: rgba(0, 0, 0, 0);
     border-style: solid;
-    border-color: white;
+    border-color: rgb(48, 0, 9);
     border-radius: 100%;
     
 }
 
 .painel1-CircleText{
-    margin-left: 47;
-    margin-top: 45;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: QuickSand;
     font-size: 28;
+    background-color: rgba(0, 255, 255, 0);
+    width: 100%; text-align: center;
+    margin-top: 35%;
 }
 
 .painel1-deg1 {
@@ -52,11 +53,9 @@
     margin-left: 60;
     border-width: 25;
     border:solid #ff000000;
-    border-top:solid #000000;
+    border-top:solid #ff002f;
     border-radius: 157%;
     transform: rotate(45deg);
-    animation: alertblink 1s  cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-    display: none;
 }
 
 .painel1-deg2 {
@@ -66,11 +65,9 @@
     margin-left: 60;
     border-width: 25;
     border:solid #ff000000;
-    border-top:solid #000000;
+    border-top:solid #ff002f;
     border-radius: 157%;
-    transform: rotate(120deg);
-    animation: alertblink 1s  cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-    display: none;
+    transform: rotate(100deg);
 }
 
 .painel1-deg3 {
@@ -114,6 +111,7 @@
 
 /*---{ PAINEL 2}---*/
 .painel2{
+    overflow: hidden;
     width: 410;
     height: 320;
     background-color: rgba(124, 62, 76, 0.2);
@@ -125,6 +123,9 @@
     -webkit-user-select: none;
     -webkit-user-drag: none;
     
+}
+.painel2som{
+    width:  410; height: 320; position: fixed; border-radius:25px;
 }
 
 .painel2-Title{
@@ -168,3 +169,4 @@
     font-family: QuickSand;
     color:  rgb(255, 255, 255);
 }
+
