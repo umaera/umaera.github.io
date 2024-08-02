@@ -13,7 +13,9 @@ body{
     font-family: QuickSand;
     src: url('fonts/QuickSand.ttf') format('truetype');
 }
+/* For tablets */
 
+  
 /*---{ Effects }---*/
 .giantball{
     position: absolute;
