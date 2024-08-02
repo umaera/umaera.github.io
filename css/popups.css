@@ -114,7 +114,7 @@
     overflow: hidden;
     width: 410;
     height: 320;
-    background-color: rgba(124, 62, 76, 0.2);
+    background-color: rgba(124, 62, 76, 0);
     position:absolute;
     margin-left: 300;
     margin-top: 280;
@@ -125,7 +125,7 @@
     
 }
 .painel2som{
-    width:  410; height: 320; position: fixed; border-radius:25px;
+    width:30%; height: 100%; position: fixed; border-radius:25px;
 }
 
 .painel2-Title{
