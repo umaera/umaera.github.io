@@ -1,0 +1,102 @@
+@font-face {
+    font-family: QuickSand;
+    src: url(font-quicksand.ttf);
+  }
+
+  @font-face {
+    font-family: Jersey;
+    src: url(Jersey15-Regular.ttf);
+  }
+
+body{
+  overflow: hidden;
+  zoom: 50%;
+  background-color: #00000000;
+}
+  .class{
+    font-family: Jersey;
+    position: absolute;
+    font-size:70px;
+    width: 97%;
+    text-align: center;
+    margin-top: 50px;
+    color: #ffffffe6;
+  }
+  
+.pfp{
+    border-style: none;
+    border-radius:100% ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 250px;
+    box-shadow: 0 0 10px #504cbe;
+    width: 250; height: 250;
+    margin-top: 150px;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.left-arrow{
+  background-image: url(../other/left-arrow-blue.png);
+  background-position: center;
+  background-size: 100px;
+  background-color: rgba(255, 0, 0, 0);
+  width: 100;
+  height: 100;
+  position: absolute;
+  margin-top: 70;
+  margin-left: -150;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.left-arrow:hover{
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+.left-arrow:active{
+  transform: scale(1.0);
+  transition: 0.2s;
+}
+
+.right-arrow{
+  background-image: url(../other/right-arrow-blue.png);
+  background-position: center;
+  background-size: 100px;
+  background-color: rgba(255, 0, 0, 0);
+  width: 100;
+  height: 100;
+  position: absolute;
+  margin-top: 70;
+  margin-left: 300;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.right-arrow:hover{
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+.right-arrow:active{
+  transform: scale(1.0);
+  transition: 0.2s;
+}
+
+
+.name{
+  font-family: QuickSand;
+  margin-top: 20px;
+  font-size:35px;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-weight: bold;
+}
+
+.profile{
+  font-family: QuickSand;
+  color: #ff004c;
+  font-size:24px;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-weight: bold;
+}
