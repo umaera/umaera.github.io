@@ -188,7 +188,7 @@ function executeAction(value) {
             document.getElementById('profile').style.color = '#ffffff';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
-            document.getElementById('left-arrow').style.backgroundImage = 'url(.oher/left-arrow-blue.png)';
+            document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
             break;
         case 13:
             document.getElementById('class').textContent = 'Helpers';
