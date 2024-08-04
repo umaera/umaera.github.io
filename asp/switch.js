@@ -1,4 +1,4 @@
-let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 let currentIndex = variables.indexOf(1);
 
 function updateDisplay() {
@@ -74,6 +74,19 @@ function executeAction(value) {
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
             break;
         case 4:
+                document.getElementById('class').textContent = 'TeamEra';
+                document.getElementById('class').style.color = '#ff004c';
+                setProfileImage('https://umaera.github.io/icons/pfp/Insane.jpg');
+                document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
+                document.getElementById('name').textContent = 'Insane';
+                document.getElementById('name').style.color = '#ff004c';
+                document.getElementById('profile').textContent = 'Angel';
+                document.getElementById('profile').style.color = '#ffffff';
+    
+                document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
+                document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
+                break;
+        case 5:
             document.getElementById('class').textContent = 'TeamEra';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('https://umaera.github.io/icons/pfp/shitist.webp');
@@ -86,7 +99,7 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
             break;
-        case 5:
+        case 6:
             document.getElementById('class').textContent = 'TeamEra';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('https://umaera.github.io/icons/pfp/storm.jpg');
@@ -99,7 +112,7 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
             break;
-        case 6:
+        case 7:
             document.getElementById('class').textContent = 'TeamEra';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('https://umaera.github.io/icons/pfp/isis.webp');
@@ -112,7 +125,7 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
             break;
-        case 7:
+        case 8:
             document.getElementById('class').textContent = 'TeamEra';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('https://umaera.github.io/icons/pfp/abby.jpg');
@@ -125,7 +138,7 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
             break;
-        case 8:
+        case 9:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('https://umaera.github.io/icons/pfp/peixe.webp');
@@ -138,7 +151,7 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
             break;
-        case 9:
+        case 10:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('https://umaera.github.io/icons/pfp/devilwolf.webp');
@@ -151,7 +164,7 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
             break;
-        case 10:
+        case 11:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('https://umaera.github.io/icons/pfp/dede07.webp');
@@ -164,7 +177,7 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
             break;
-        case 11:
+        case 12:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('https://umaera.github.io/icons/pfp/low.webp');
@@ -177,7 +190,7 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(.oher/left-arrow-blue.png)';
             break;
-        case 12:
+        case 13:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('https://umaera.github.io/icons/pfp/jjcia689.png');
@@ -190,14 +203,14 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
             break;
-        case 13:
+        case 14:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('https://umaera.github.io/icons/pfp/nsei03.png');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
             document.getElementById('name').textContent = 'nsei_03';
             document.getElementById('profile').textContent = 'Big Supporter';
-            document.getElementById('profile').style.color = '#000000';
+            document.getElementById('profile').style.color = '#ffffff';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
