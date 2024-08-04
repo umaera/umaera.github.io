@@ -1,4 +1,4 @@
-let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 let currentIndex = variables.indexOf(1);
 
 function updateDisplay() {
@@ -80,7 +80,7 @@ function executeAction(value) {
                 document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
                 document.getElementById('name').textContent = 'Insane';
                 document.getElementById('name').style.color = '#ff004c';
-                document.getElementById('profile').textContent = 'Angel';
+                document.getElementById('profile').textContent = 'Developer';
                 document.getElementById('profile').style.color = '#ffffff';
     
                 document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
@@ -215,6 +215,18 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
             break;
+        case 15:
+            document.getElementById('class').textContent = 'Helpers';
+            document.getElementById('class').style.color = '#504cbe';
+            setProfileImage('https://umaera.github.io/icons/pfp/astra.jpg');
+            document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
+            document.getElementById('name').textContent = 'astra';
+            document.getElementById('profile').textContent = 'tester, code helper';
+            document.getElementById('profile').style.color = '#ffffff';
+    
+            document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
+            document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
+        break;
         default:
     }
 }
