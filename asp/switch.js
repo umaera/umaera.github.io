@@ -209,6 +209,7 @@ function executeAction(value) {
             setProfileImage('https://umaera.github.io/icons/pfp/nsei03.png');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
             document.getElementById('name').textContent = 'nsei_03';
+            document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'Big Supporter';
             document.getElementById('profile').style.color = '#ffffff';
 
@@ -218,9 +219,10 @@ function executeAction(value) {
         case 15:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
-            setProfileImage('https://umaera.github.io/icons/pfp/astra.jpg');
+            setProfileImage('https://umaera.github.io/icons/pfp/oida.jpg');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
-            document.getElementById('name').textContent = 'astra';
+            document.getElementById('name').textContent = 'oida';
+            document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'tester, code helper';
             document.getElementById('profile').style.color = '#ffffff';
     
