@@ -1,0 +1,4 @@
+[
+handler-type: json
+see.terminal.files("rsys").as.("js").or.("json")
+]

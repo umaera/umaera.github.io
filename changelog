@@ -41,3 +41,11 @@ UIv1.7
 -added a lot of images on assets.html
 -remade the c3.6.0 screens
 
+UIv1.8
+made shortcuts for every page like "assets/" goes to "assets.html"
+remade design of the assets page
+deleted news page from asp
+acess to RainOS granted (i made a web version to work), "rainOs/"
+fixed some page descriptions and icons
+
+
