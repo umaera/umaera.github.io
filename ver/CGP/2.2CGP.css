@@ -45,20 +45,14 @@ body{
   width: 360px; height: 360px; margin-top: -387;
   margin-left: 80; border:solid transparent;
   border-top:solid #ff004c; border-top-width: 15;
-  border-radius: 157%; transform: rotate(90deg); 
+  border-radius: 157%; transform: rotate(130deg); 
 }
 
 .painel1-deg3 {
-  width: 130px;
-  height: 130px;
-  margin-top: -143;
-  margin-left: 60;
-  border-width: 25;
-  border:solid transparent;
-  border-top:solid #ff004c;
-  border-radius: 157%;
-  transform: rotate(205deg);
-  display:none;
+  width: 360px; height: 360px; margin-top: -387;
+  margin-left: 80; border:solid transparent;
+  border-top:solid #ff004c; border-top-width: 15;
+  border-radius: 157%; transform: rotate(160deg); 
 }
 
 .painel1-deg4 {
