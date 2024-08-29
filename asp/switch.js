@@ -243,7 +243,6 @@ function executeAction(value) {
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
             break;
         case 17:
-
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('https://umaera.github.io/icons/pfp/raxx.webp');
