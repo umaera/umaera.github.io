@@ -1,4 +1,4 @@
-let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 let currentIndex = variables.indexOf(1);
 
 function updateDisplay() {
@@ -235,6 +235,19 @@ function executeAction(value) {
             setProfileImage('https://umaera.github.io/icons/pfp/wecker.jpeg');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
             document.getElementById('name').textContent = 'wecker';
+            document.getElementById('name').style.color = '#504cbe';
+            document.getElementById('profile').textContent = 'Designer';
+            document.getElementById('profile').style.color = '#c0c0c0e6';
+    
+            document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
+            document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
+            break;
+        case 17:
+            document.getElementById('class').textContent = 'Helpers';
+            document.getElementById('class').style.color = '#504cbe';
+            setProfileImage('https://umaera.github.io/icons/pfp/raxx.webp');
+            document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
+            document.getElementById('name').textContent = 'raxx';
             document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'Designer';
             document.getElementById('profile').style.color = '#c0c0c0e6';
