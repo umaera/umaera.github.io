@@ -1,8 +1,7 @@
 body{
     overflow: hidden;
-
+    background-color: white;
     user-select: none;
-
     -webkit-user-drag: none;
     -webkit-user-select: none;
 
