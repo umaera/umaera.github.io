@@ -79,7 +79,7 @@
     border:solid #ff000000;
     border-top:solid #ff002f;
     border-radius: 157%;
-    transform: rotate(162deg);
+    transform: rotate(182deg);
 }
 
 .painel1-deg4 {
@@ -88,12 +88,12 @@
     margin-top: -136;
     margin-left: 60;
     border-width: 25;
-    border:solid #00000000;
-    border-top:solid #000000;
+    border:solid #ff000000;
+    border-top:solid #ff002f;
     border-radius: 157%;
-    transform: rotate(280deg);
-    animation: alertblink 1s  cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-    display: none;
+    transform: rotate(272deg);
+
+    display: block;
 }
 
 
