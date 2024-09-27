@@ -1,0 +1,113 @@
+body {
+  background-color: #000000;
+  margin: 20px; 
+  user-select: none; 
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  font-family: 'QuickSand', sans-serif;
+  color: white;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+
+@font-face {
+  font-family: 'QuickSand';
+  src: url('QuickSand.ttf') format('truetype');
+}
+abe{
+  color: aqua;
+}
+p {
+  text-align: left;
+  word-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.2; 
+  white-space: normal;
+}
+
+.img {
+  border-style: solid;
+  border-color: rgb(0, 255, 145);
+  border-radius: 100%;
+  border-width: 4;
+  box-shadow: 1px 1px 90px rgb(0, 255, 145);
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 18%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  filter: invert();
+  animation: lj 60s infinite;
+}
+.img-wrong {
+  border-style: solid;
+  border-color: rgb(0, 255, 247);
+  border-radius: 100%;
+  border-width: 4;
+  box-shadow: 1px 1px 90px rgb(0, 255, 247);
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 18%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  filter: invert();
+}
+
+.title {
+  position: absolute;
+  top: 0%;
+  left: 51%;
+  transform: translate(-20%, -130%);
+  border-radius: 15px;
+  font-size: 30px;
+}
+
+.description {
+  position: absolute;
+  top: 0%;
+  left: 45%;
+  transform: translate(-1%, -10%);
+  border-radius: 15px;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.description-long {
+  position: absolute;
+  top: 0%;
+  left: 45%;
+  transform: translate(-1%, -10%);
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.description2-long {
+  position: absolute;
+  top: 70%;
+  left: 45%;
+  transform: translate(-1%, 50%);
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.conj {
+  width: 650px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes lj {
+  50%{box-shadow: 1px 1px 900px rgb(0, 255, 145);}
+}
