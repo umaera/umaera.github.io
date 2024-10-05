@@ -41,6 +41,10 @@ p {
   transform: translate(-50%, -50%);
   filter: invert();
   animation: lj 60s infinite;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
 }
 .img-wrong {
   border-style: solid;
