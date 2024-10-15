@@ -42,7 +42,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'UmaEra';
             document.getElementById('name').style.color = '#ff004c';
             document.getElementById('profile').textContent = 'Creator';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
@@ -55,7 +55,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'dhummy';
             document.getElementById('name').style.color = '#ff004c';
             document.getElementById('profile').textContent = 'Developer and Animator';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
             
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
@@ -68,7 +68,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'erica_zy';
             document.getElementById('name').style.color = '#ff004c';
             document.getElementById('profile').textContent = 'Designer and animator';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
@@ -81,7 +81,7 @@ function executeAction(value) {
                 document.getElementById('name').textContent = 'Insane';
                 document.getElementById('name').style.color = '#ff004c';
                 document.getElementById('profile').textContent = 'Developer';
-                document.getElementById('profile').style.color = '#c0c0c0e6';
+                document.getElementById('profile').style.color = '#e06e6ee6';
     
                 document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
                 document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
@@ -94,7 +94,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'ShiTist';
             document.getElementById('name').style.color = '#ff004c';
             document.getElementById('profile').textContent = 'Animator';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
@@ -107,7 +107,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'Storm';
             document.getElementById('name').style.color = '#ff004c';
             document.getElementById('profile').textContent = 'Developer and designer';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
@@ -120,7 +120,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'Isis';
             document.getElementById('name').style.color = '#ff004c';
             document.getElementById('profile').textContent = 'Designer';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
@@ -133,12 +133,25 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'abby';
             document.getElementById('name').style.color = '#ff004c';
             document.getElementById('profile').textContent = 'Designer and Concept helper';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
             break;
         case 9:
+            document.getElementById('class').textContent = 'TeamEra';
+            document.getElementById('class').style.color = '#ff004c';
+            setProfileImage('https://umaera.github.io/icons/pfp/dede07.webp');
+            document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
+            document.getElementById('name').textContent = 'Dede07';
+            document.getElementById('name').style.color = '#ff004c';
+            document.getElementById('profile').textContent = 'Concept & UX helper';
+            document.getElementById('profile').style.color = '#e06e6ee6';
+    
+            document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
+            document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
+        break;
+        case 10:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('https://umaera.github.io/icons/pfp/peixe.webp');
@@ -146,20 +159,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'Peixe';
             document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'Designer and animator';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
-
-            document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
-            document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
-            break;
-        case 10:
-            document.getElementById('class').textContent = 'Helpers';
-            document.getElementById('class').style.color = '#504cbe';
-            setProfileImage('https://umaera.github.io/icons/pfp/devilwolf.webp');
-            document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
-            document.getElementById('name').textContent = 'DevilWolf';
-            document.getElementById('name').style.color = '#504cbe';
-            document.getElementById('profile').textContent = 'Designer and Concept helper';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
@@ -167,12 +167,12 @@ function executeAction(value) {
         case 11:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
-            setProfileImage('https://umaera.github.io/icons/pfp/dede07.webp');
+            setProfileImage('https://umaera.github.io/icons/pfp/devilwolf.webp');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
-            document.getElementById('name').textContent = 'dede07';
+            document.getElementById('name').textContent = 'DevilWolf';
             document.getElementById('name').style.color = '#504cbe';
-            document.getElementById('profile').textContent = 'Concept helper';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').textContent = 'Designer and Concept helper';
+            document.getElementById('profile').style.color = '#e06e6ee6';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
@@ -185,7 +185,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'L0W__';
             document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'Concept helper';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
@@ -198,7 +198,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'JJCIA689';
             document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'Advisor and tester';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
@@ -211,7 +211,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'nsei_03';
             document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'Big Supporter';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
 
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
@@ -224,7 +224,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'oida';
             document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'tester, code helper';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
     
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
@@ -237,7 +237,7 @@ function executeAction(value) {
             document.getElementById('name').textContent = 'raxx';
             document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'Designer';
-            document.getElementById('profile').style.color = '#c0c0c0e6';
+            document.getElementById('profile').style.color = '#e06e6ee6';
     
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';

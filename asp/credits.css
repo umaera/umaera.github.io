@@ -32,7 +32,7 @@ body{
     box-shadow: 0 0 10px #504cbe;
     width: 250; height: 250;
     margin-top: 150px;
-    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 
