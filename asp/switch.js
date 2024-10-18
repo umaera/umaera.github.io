@@ -138,20 +138,8 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
             break;
+        
         case 9:
-            document.getElementById('class').textContent = 'TeamEra';
-            document.getElementById('class').style.color = '#ff004c';
-            setProfileImage('https://umaera.github.io/icons/pfp/dede07.webp');
-            document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
-            document.getElementById('name').textContent = 'Dede07';
-            document.getElementById('name').style.color = '#ff004c';
-            document.getElementById('profile').textContent = 'Concept & UX helper';
-            document.getElementById('profile').style.color = '#e06e6ee6';
-    
-            document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-red.png)';
-            document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-red.png)';
-        break;
-        case 10:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('https://umaera.github.io/icons/pfp/peixe.webp');
@@ -164,7 +152,7 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
             break;
-        case 11:
+        case 10:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('https://umaera.github.io/icons/pfp/devilwolf.webp');
@@ -177,7 +165,7 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
             break;
-        case 12:
+        case 11:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('https://umaera.github.io/icons/pfp/low.webp');
@@ -190,6 +178,19 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
             break;
+        case 12:
+            document.getElementById('class').textContent = 'Helpers';
+            document.getElementById('class').style.color = '#504cbe';
+            setProfileImage('https://umaera.github.io/icons/pfp/dede07.webp');
+            document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
+            document.getElementById('name').textContent = 'Dede07';
+            document.getElementById('name').style.color = '#504cbe';
+            document.getElementById('profile').textContent = 'Concept & UX helper';
+            document.getElementById('profile').style.color = '#e06e6ee6';
+        
+            document.getElementById('right-arrow').style.backgroundImage = 'url(other/right-arrow-blue.png)';
+            document.getElementById('left-arrow').style.backgroundImage = 'url(other/left-arrow-blue.png)';
+        break;
         case 13:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
