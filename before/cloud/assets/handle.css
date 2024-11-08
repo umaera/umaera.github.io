@@ -1,0 +1,36 @@
+body{
+    background-color: white;
+    font-family: QuickSand;
+    color: rgb(0, 0, 0);
+    margin: 0px; padding: 0;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    transition: 0.2s ease-in-out;
+}
+
+@font-face {
+    font-family: QuickSand;
+    src: url(font-quicksand.ttf);
+  }
+
+    
+.img{
+    width: 100%;
+    height:100%;
+    background-position: center;
+    background-size: 120px;
+    background-repeat: no-repeat;
+}
+
+h1{
+    color: black;
+    margin-top: -260;
+}
+
+h2{
+    color: rgb(62, 62, 62);
+    margin-top: -120;
+    font-size: 18;
+}

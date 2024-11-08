@@ -1,0 +1,38 @@
+html{
+    background-color: #d0004c;
+}
+
+body {
+    background-color: #d0004c;
+    opacity: 0;margin: 0;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+.frame{
+    width: 95%; height: 95%;
+    overflow: hidden; position: absolute;
+    background-color: #ff005d45;
+    backdrop-filter: blur(4px);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+.title{
+    font-size: 44px; color: white;
+    font-family: RubikIso;
+    overflow: hidden; position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.description{
+    font-size: 24px; color: white;
+    font-family: QuickSand;
+    overflow: hidden; position: absolute;
+    top: 70%; left: 50%;
+    transform: translate(-50%, -50%);
+}
