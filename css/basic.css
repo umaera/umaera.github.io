@@ -12,7 +12,8 @@ body {
 a{
     color: black;
     border-style: dashed;
-    border-width: 1px;
+    border-width: 1px; 
+    padding: 3;
 }
 
 

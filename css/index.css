@@ -1,0 +1,36 @@
+body{
+    background-color: #2F0B17;
+    overflow: hidden;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+.picture{
+    width: 20%; height: 20%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../icons/pupur.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bubble{
+width: 60%; height: 40%;
+overflow: hidden; position: absolute;
+background-color: #ff005dca; filter: blur(100px);
+top: 50%; left: 50%;
+transform: translate(-50%, -50%);
+}
+.title{
+font-family: QuickSand;
+text-align: center;
+width: 20%; height: 20%;
+position: absolute;
+top: 72%; left: 50%;
+transform: translate(-50%, -50%);
+color: #ffffff;
+font-size: 1.5rem;
+}

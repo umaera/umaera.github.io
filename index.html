@@ -4,32 +4,25 @@
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="umaeraweb | Official website of UmaEra!, explore and try out projects!">
+
+    <link rel="stylesheet" href="css/fonts/fonts.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
-<style>
-    body{
-        background-color: #2F0B17;
-        overflow: hidden;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-drag: none;
-        -webkit-user-select: none;
-    }
-</style>
 <body>
     <div class="bubble"></div>
     <div class="picture"></div>
+    <div class="title" id="title"></div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="js/moon.js"></script>
-<script src="js/access.js"></script>
 <script>
 window.onload = function() {
     var userLang = navigator.language || navigator.userLanguage;
 
-    if (userLang.startsWith('pt')) {
-        setTimeout(goPT, 5000);
+    if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+        document.getElementById('title').textContent = 'bem-vindo';
+        setTimeout(goPT, 2000);
     } else {
-        setTimeout(goEN, 5000);
+        document.getElementById('title').textContent = 'welcome';
+        setTimeout(goEN, 2000);
     }
 };
 

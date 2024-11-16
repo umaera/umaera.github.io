@@ -42,16 +42,25 @@ UIv1.7
 -remade the c3.6.0 screens
 
 UIv1.8
-made shortcuts for every page like "assets/" goes to "assets.html"
-remade design of the assets page
-deleted news page from asp
-acess to RainOS granted (i made a web version to work), "rainOs/"
-fixed some page descriptions and icons
+-made shortcuts for every page like "assets/" goes to "assets.html"
+-remade design of the assets page
+-deleted news page from asp
+-acess to RainOS granted (i made a web version to work), "rainOs/"
+-fixed some page descriptions and icons
 
 UIv1.9
-made extra paths to simplyprivate pages
-updated all icons
-made "astrodist" page
+-made extra paths to simplyprivate pages
+-updated all icons
+-made "astrodist" page
 
 UIv2.0
-TOTAL REDESIGN
+-TOTAL REDESIGN
+
+UIv2.1
+-removed some old pages
+-made a shared folder with all css and js files to all pages
+-made translations happen in the credits page as long with new images
+-new objects and formats in /asp as long with new design
+-new hidden project "astrodist" now in projects menu
+-all buttons on the main page will open a new tab instead of opening them in the same page
+-added a 404 error page
