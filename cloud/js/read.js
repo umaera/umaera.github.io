@@ -2,7 +2,7 @@ let apiUrl = null;
 
 async function loadConfig() {
     try {
-        const response = await fetch('./cloud/cond.json'); 
+        const response = await fetch('./cond.json'); 
         if (!response.ok) {
             throw new Error(`Err config file. state: ${response.status}`);
         }
