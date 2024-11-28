@@ -1,7 +1,7 @@
 <head>  
     <title>EraCloud</title>
     <meta charset="UTF-8">
-    <meta name="robots" content="none, noarchive, nositelinkssearchbox, nosnippet, notranslate">
+    <meta name="robots" content="noindex, nofollow, none, noarchive, nositelinkssearchbox, nosnippet, notranslate">
     <meta name="AdsBot-Google" content="noindex">
     <meta name="googlebot-news" content="noindex">
 
@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="img/default.png" type="image/x-icon">
 
     <link rel="stylesheet" href="assets/handle.css">
+    <link rel="stylesheet" href="assets/token.css">
 </head>
 <body>
     <div id="body">
@@ -17,9 +18,24 @@
     <div id="main">
     <center>
         <div class="img" style="background-image: url(assets/pageicon.png);"></div>
+        <div id="access">
+            <h2></h2>
+            <input 
+            type="password" 
+            id="token" 
+            maxlength="32" 
+            minlength="2" 
+            oninput="RE(this)" 
+            placeholder="Insert Acess Token" 
+            autocomplete="off" 
+            autocorrect="off" 
+            spellcheck="false">
+            <p id="response" style="color: black;"></p>
+        </div>
     </center>
-</div>
 
+    </div>
 <!--              --------------------             -->
+    <script src="js/read.js"></script>
 </div>
 </body>

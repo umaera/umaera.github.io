@@ -34,3 +34,7 @@ h2{
     margin-top: -120;
     font-size: 18;
 }
+
+#main{
+    animation: moveit2 2s ease-in-out;
+}
