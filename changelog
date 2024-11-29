@@ -64,3 +64,10 @@ UIv2.1
 -new hidden project "astrodist" now in projects menu
 -all buttons on the main page will open a new tab instead of opening them in the same page
 -added a 404 error page
+
+UIv2.2
+- Added WhiteWall Security Modules
+- Added ECSE Security Modules
+- Bug Fix
+- EraCloud modified to public versions, insert token to access to projects and resources
+- New icons
