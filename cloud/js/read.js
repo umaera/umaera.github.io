@@ -44,6 +44,8 @@ async function validateToken(apiUrl) {
         const data = await response.json();
 
         if (data.redirect) {
+            document.getElementById("token").style.borderColor = "green"
+            document.getElementById("token").style.color = "green"
             responseElement.textContent = `[ Connecting to server: ${data.name} ]`;
 
             setTimeout(() => {
