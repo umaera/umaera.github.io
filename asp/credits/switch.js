@@ -90,7 +90,7 @@ function executeAction(value) {
             if (userLang.startsWith('pt') || userLang.startsWith('br')) {
                 document.getElementById('profile').textContent = 'Designer & animadora';
             }
-
+            break;
         case 4:
                 document.getElementById('class').textContent = 'TeamEra';
                 document.getElementById('class').style.color = '#ff004c';
@@ -110,6 +110,25 @@ function executeAction(value) {
 
                 break;
         case 5:
+                document.getElementById('class').textContent = 'TeamEra';
+                document.getElementById('class').style.color = '#ff004c';
+                setProfileImage('../icons/pfp/devilwolf.webp');
+                document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
+                document.getElementById('name').textContent = 'DevilWolf';
+                document.getElementById('name').style.color = '#ff004c';
+                document.getElementById('profile').textContent = 'Designer and Concept helper';
+                document.getElementById('profile').style.color = '#e06e6ee6';
+        
+                document.getElementById('right-arrow').style.backgroundImage = 'url(credits/other/right-arrow-blue.png)';
+                document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-blue.png)';
+        
+                if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+                    document.getElementById('profile').textContent = 'Designer & Idealista';
+                    document.getElementById('class').textContent = 'Apoiantes';
+                }
+                    
+                break;
+        case 6:
             document.getElementById('class').textContent = 'TeamEra';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/shitist.webp');
@@ -127,7 +146,7 @@ function executeAction(value) {
             }
 
             break;
-        case 6:
+        case 7:
             document.getElementById('class').textContent = 'TeamEra';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/storm.jpg');
@@ -145,7 +164,7 @@ function executeAction(value) {
             } 
 
             break;
-        case 7:
+        case 8:
             document.getElementById('class').textContent = 'TeamEra';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/isis.webp');
@@ -159,7 +178,7 @@ function executeAction(value) {
             document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-red.png)';
 
             break;
-        case 8:
+        case 9:
             document.getElementById('class').textContent = 'TeamEra';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/abby.jpg');
@@ -178,7 +197,7 @@ function executeAction(value) {
 
             break;
         
-        case 9:
+        case 10:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/peixe.webp');
@@ -196,26 +215,7 @@ function executeAction(value) {
                 document.getElementById('class').textContent = 'Apoiantes';
             }
 
-            break;
-        case 10:
-            document.getElementById('class').textContent = 'Helpers';
-            document.getElementById('class').style.color = '#504cbe';
-            setProfileImage('../icons/pfp/devilwolf.webp');
-            document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
-            document.getElementById('name').textContent = 'DevilWolf';
-            document.getElementById('name').style.color = '#504cbe';
-            document.getElementById('profile').textContent = 'Designer and Concept helper';
-            document.getElementById('profile').style.color = '#e06e6ee6';
-
-            document.getElementById('right-arrow').style.backgroundImage = 'url(credits/other/right-arrow-blue.png)';
-            document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-blue.png)';
-
-            if (userLang.startsWith('pt') || userLang.startsWith('br')) {
-                document.getElementById('profile').textContent = 'Designer & Idealista';
-                document.getElementById('class').textContent = 'Apoiantes';
-            }
-            
-            break;
+            break
         case 11:
             document.getElementById('class').textContent = 'Helpers';
             document.getElementById('class').style.color = '#504cbe';
