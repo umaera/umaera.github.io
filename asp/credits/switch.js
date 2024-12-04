@@ -119,12 +119,12 @@ function executeAction(value) {
                 document.getElementById('profile').textContent = 'Designer and Concept helper';
                 document.getElementById('profile').style.color = '#e06e6ee6';
         
-                document.getElementById('right-arrow').style.backgroundImage = 'url(credits/other/right-arrow-blue.png)';
-                document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-blue.png)';
+                document.getElementById('right-arrow').style.backgroundImage = 'url(credits/other/right-arrow-red.png)';
+                document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-red.png)';
         
                 if (userLang.startsWith('pt') || userLang.startsWith('br')) {
                     document.getElementById('profile').textContent = 'Designer & Idealista';
-                    document.getElementById('class').textContent = 'Apoiantes';
+                    document.getElementById('class').textContent = 'TeamEra';
                 }
                     
                 break;
