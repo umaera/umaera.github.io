@@ -10,15 +10,9 @@ const interval = setInterval(() => {
     const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-    if (difference < 0) {
-        clearInterval(interval);
-        document.getElementById("countdown").innerHTML = "✨Bem-vindo(a) a 2025!✨";
-        document.getElementById("gma").innerHTML = " ";
-    }
 
     const countdownElement = document.getElementById("countdown");
     countdownElement.innerHTML = `
-        <span>${days}</span>d
         <span>${hours}</span>h
         <span>${minutes}</span>m
         <span>${seconds}</span>s
@@ -26,8 +20,23 @@ const interval = setInterval(() => {
 
     if (difference < 0) {
         clearInterval(interval);
-        document.getElementById("countdown").innerHTML = "Feliz Ano Novo!";
+        document.getElementById("countdown").innerHTML = "00:00:00";
+        if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+            document.getElementById('gma').textContent = '✨Bem-vindo(a) a 2025!✨';
+        } else {
+            document.getElementById('gma').textContent = '✨Welcome to 2025!✨';
+        }
     }
+
 }, 1000);
 
-//  <span>${months}</span> meses         
+window.onload = function() {
+    var userLang = navigator.language || navigator.userLanguage;
+
+    if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+        document.getElementById('gma').textContent = 'para ✨2025✨';
+    } else {
+        document.getElementById('gma').textContent = 'to ✨2025✨';
+    }
+};
+//  <span>${months}</span> meses              <span>${days}</span>d   

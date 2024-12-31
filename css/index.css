@@ -1,11 +1,13 @@
 body{
-    background-color: #2F0B17;
+    background-color: #ff00d0;
     overflow: hidden;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
+    text-align: center;
 }
+
 .picture{
     width: 20%; height: 20%;
     position: absolute;
@@ -18,19 +20,37 @@ body{
 }
 
 .bubble{
-width: 60%; height: 40%;
-overflow: hidden; position: absolute;
-background-color: #ff005dca; filter: blur(100px);
-top: 50%; left: 50%;
-transform: translate(-50%, -50%);
+    width: 60%; height: 40%;
+    overflow: hidden; position: absolute;
+    background-color: #ff00d0; filter: blur(100px);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
 }
+
 .title{
-font-family: QuickSand;
-text-align: center;
-width: 20%; height: 20%;
-position: absolute;
-top: 72%; left: 50%;
-transform: translate(-50%, -50%);
-color: #ffffff;
-font-size: 1.5rem;
+    font-family: QuickSand;
+    text-align: center;
+    width: 100%; height: auto;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 550;
+    white-space: nowrap;
+}
+
+.change{
+    position: absolute;
+    top: 95%; left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-family: QuickSand;
+    color: #ff6ae4;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.change:hover{
+    color: white;
 }

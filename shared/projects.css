@@ -1,24 +1,4 @@
-.ex-projects {
-    background-color: #FF0046;
-    width: 4vw; height: 4vw;
-    overflow: hidden; border-radius: 5px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: none; cursor: pointer;
-    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.74);
-    margin-left: 20; margin-right: 20;
-}
 
-.ex-projects:hover {
-    background-color: #b80131;
-    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.74);
-}
-
-.ex-projects:active {
-    background-color: #7f0022;
-    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0);
-}
 .p-title{
     font-size: 84px; color: white;
     font-family: RubikIso;
@@ -30,7 +10,7 @@
 .p-frame{
     display: flex; flex-wrap: wrap;
     justify-content: space-around;
-    width: 70%; height: 9vw;
+    width: 50%; height:40%;
     overflow: hidden; position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
@@ -50,3 +30,32 @@
 .p-box:active{
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0);
 }
+
+/* -- Screens -- */
+@media (max-width: 800px) {
+    .p-title{
+        font-size: 4rem;
+    }
+    .p-box{
+        width: 10vw; height: 10vw;
+      }
+}
+
+@media (max-width: 500px) {
+    .p-title{
+        font-size: 4rem;
+    }
+    .p-frame{
+        display: flex; flex-wrap: wrap;
+        justify-content:space-evenly;
+        width:60%; height:40%;
+        overflow: hidden; position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .p-box{
+        width:18vw; height: 18vw;
+    }
+}
+
