@@ -240,7 +240,7 @@ function executeAction(value) {
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/dede.webp');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
-            document.getElementById('name').textContent = 'Dede<3';
+            document.getElementById('name').textContent = '75tdede';
             document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'UX helper';
             document.getElementById('profile').style.color = '#e06e6ee6';
