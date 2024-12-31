@@ -1,0 +1,15 @@
+@media (max-width: 596px) {
+    #countdown{
+        border-radius: 0.5rem;
+        background-color: #30303048;
+        width: 15rem;
+        font-weight: 550;
+        border-bottom-style: solid;
+        border-bottom-width: 0.1rem;
+        font-size: 2rem;
+        transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+      #gma{
+        font-size: 1rem;
+      }
+}
