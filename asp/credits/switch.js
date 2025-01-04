@@ -180,7 +180,7 @@ function executeAction(value) {
         case 9:
             document.getElementById('class').textContent = 'ex-developers';
             document.getElementById('class').style.color = '#ff6f00';
-            setProfileImage('../icons/pfp/shitist.jpg');
+            setProfileImage('../icons/pfp/shitist.jpg ');
             document.getElementById('pfp').style.boxShadow = '0 0 10px#ff6f00';
             document.getElementById('name').textContent = 'ShiTist';
             document.getElementById('name').style.color = '#ff6f00';
