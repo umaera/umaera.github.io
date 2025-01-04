@@ -12,65 +12,6 @@
     <div class="bubble"></div>
     <!--<div class="picture"></div>-->
     <div class="title" id="title"></div>
-    <div class="change" onclick="window.open('./changelog.html')">UI2.3.1</div>
+    <div class="change" onclick="window.open('./changelog.html')">UI2.3.2</div>
 </body>
-<script>
-
-window.onload = function() {
-    var userLang = navigator.language || navigator.userLanguage;
-
-    if (userLang.startsWith('pt') || userLang.startsWith('br')) {
-       setTimeout(goPT, 2000);
-    } else {
-     setTimeout(goEN, 2000);
-    }
-};
-
-</script>
-
-<script>
-    const userLang = navigator.language || navigator.userLanguage;
-
-    const messagesPT = [
-      "Bem-vindo(a)!", "Olá coisa!", "", "Ora!", "Site estranho...", "olá de novo!",
-      "👋🥰", "uh.. o que era suposto dizer?", "pouco relevante",  "argumentavel", "preguiça huh...", "ruby.ai, brevemente", "amethyst, brevemente", "rust > c++", "Σ = sigma, literalmente "
-    ];
-
-    const messagesEN = [
-      "Welcome!", "Hello there!", "Greetings!", "Welcome back 💕", "Comfy here",
-      "👋🥰", "We hope you enjoy!", "🤨", "not relevant", "wild huh", "lazyness huh", "pink underrated", "rust > c++", "ruby.ai, coming soon", "amethyst, coming soon", "help-me get better catch phrases", "Σ = sigma, literally"
-    ];
-
-    const messages = userLang.startsWith('pt') || userLang.startsWith('br') ? messagesPT : messagesEN;
-    const message = messages[Math.floor(Math.random() * messages.length)]; 
-
-    let i = 0;
-    function typemsg() {
-      if (i < message.length) {
-        document.getElementById("title").innerHTML += message.charAt(i);
-        i++;
-        setTimeout(typemsg, 90);
-      } else {
-      setTimeout(after, 1000);
-      }
-    }
-
-    function after() {
-    if (userLang.startsWith('pt') || userLang.startsWith('br')) {
-       setTimeout(goPT, 2000);
-    } else {
-
-        setTimeout(goEN, 2000);
-    }
-    }
-
-    typemsg();
-
-    function goPT() {
-        window.location.href = 'pt/'; 
-    }
-
-    function goEN() {
-        window.location.href = 'en/'; 
-    }
-  </script>
+<script src="phr.js"></script>

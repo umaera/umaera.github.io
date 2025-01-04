@@ -48,3 +48,11 @@
   }
   
 }
+
+#warning{
+  animation: warning 2s infinite;
+}
+@keyframes warning {
+  0%{ color: yellow; font-weight: 500; font-size: 1.1rem;}
+  50%{color: white; font-weight: normal;}
+}

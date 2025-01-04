@@ -27,17 +27,27 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.title{
+.title {
     font-family: QuickSand;
-    text-align: center;
-    width: 100%; height: auto;
+    height: auto;
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: 550;
-    white-space: nowrap;
+
+    white-space: normal; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    
+    width: 80%; 
+    max-width: 80%;
+    text-align: center;
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
 }
 
 .change{

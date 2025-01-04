@@ -34,9 +34,9 @@ window.onload = function() {
     var userLang = navigator.language || navigator.userLanguage;
 
     if (userLang.startsWith('pt') || userLang.startsWith('br')) {
-        document.getElementById('gma').textContent = 'para ✨2025✨';
+        document.getElementById('gma').textContent = 'bem-vindo ✨2025✨';
     } else {
-        document.getElementById('gma').textContent = 'to ✨2025✨';
+        document.getElementById('gma').textContent = 'welcome to ✨2025✨';
     }
 };
 //  <span>${months}</span> meses              <span>${days}</span>d   
