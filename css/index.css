@@ -1,5 +1,5 @@
 body{
-    background-color: #ff00d0;
+    background-color: #440037;
     overflow: hidden;
     user-select: none;
     -moz-user-select: none;
@@ -7,9 +7,12 @@ body{
     -webkit-user-select: none;
     text-align: center;
 }
+body::selection{
+    background-color: #ff00d0;
+}
 
 .picture{
-    width: 20%; height: 20%;
+    width: 30%; height: 30%;
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
@@ -25,6 +28,7 @@ body{
     background-color: #ff00d0; filter: blur(100px);
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
 .title {
@@ -34,8 +38,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ffffff;
-    font-size: 1.5rem;
+    color: #ffffffde;
+    font-size: 1.7rem;
     font-weight: 550;
 
     white-space: normal; 
@@ -59,6 +63,7 @@ body{
     color: #ff6ae4;
     font-weight: 600;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 .change:hover{

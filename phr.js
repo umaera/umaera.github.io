@@ -74,8 +74,16 @@ function after() {
     }
 }
 
-typemsg();
+function msg(){
+    if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+        document.getElementById('title').textContent = "Olá 😊"
+    } else {
+        document.getElementById('title').textContent = "Welcome 😊"
+    }
+}
 
+//typemsg();
+setTimeout(after, 2000)
 function goPT() {
     window.location.href = 'pt/'; 
 }
@@ -84,3 +92,4 @@ function goEN() {
     window.location.href = 'en/'; 
 }
 
+msg()

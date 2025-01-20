@@ -9,7 +9,7 @@
 </head>
 <style>
     body{
-        background-color:rgb(148, 148, 148);
+        background-color:rgb(75, 75, 75);
         font-family: QuickSand;
         color: white; 
     }
@@ -20,16 +20,26 @@
     }
 
     img{
+        border-color: rgba(0, 255, 238, 0.9);
         width: auto;
         height: 100px;
         border-style: solid;
-        border-color: rgba(255, 255, 255, 0.453);
-        border-radius: 2px;
+        border-radius: 0px;
         image-rendering:optimizeSpeed;
         transition: 0.2s;
         user-select: none;
         -webkit-user-select: none;
         -webkit-user-drag: auto;
+        border-width: 3px;
+    }
+
+    #special{
+        border-color: rgba(163, 50, 255, 0.9);
+        
+    }
+
+    #preview{
+        border-color: rgba(255, 251, 0, 0.9);
     }
 
     img:hover{
@@ -53,115 +63,116 @@
 </style>
 
 <h2>- app icons</h2>
-<img src="../icons/app-icons/PrivateEye.png" title="first icon ever">
-<img src="../icons/app-icons/npb.ico" title="just a test icon, but it still remains in the files">
-<img src="../icons/app-icons/JustEye.png" title="another test icon">
-<img src="../icons/app-icons/eey.png" title="used since version 3.0">
-<img src="../icons/app-icons/s2p.ico" title="another test icon">
-<img src="../icons/app-icons/7dred.ico" title="i liked this, almost became app icon">
-<img src="../icons/app-icons/s3p.ico" title="this is old, i remember this apearing in 2.2">
-<img src="../icons/app-icons/GreenEye.ico" title="almost became the 3.5 icon">
-<img src="../icons/app-icons/PlantPNG.png" title="modern plant, cool leaf">
-<img src="../icons/app-icons/Plant-Turbo.png" title="used as a icon for turbo versions">
-<img src="../icons/app-icons/3leaf.ico" title="best icon ever">
-<img src="../icons/app-icons/scah.png" title="black background for better visibity">
+<img src="../icons/app-icons/PrivateEye.png" onclick="alert('first icon ever')" title="first icon ever">
+<img src="../icons/app-icons/npb.ico" onclick="alert('just a test icon, but it still remains in the files')" title="just a test icon, but it still remains in the files">
+<img src="../icons/app-icons/JustEye.png" onclick="alert('another test icon')" title="another test icon">
+<img src="../icons/app-icons/eey.png"  onclick="alert('used since version 3.0')"title="used since version 3.0">
+<img src="../icons/app-icons/s2p.ico" onclick="alert('another test icon')"  title="another test icon">
+<img src="../icons/app-icons/7dred.ico" onclick="alert('i liked this, almost became the default app icon')" title="i liked this, almost became the default app icon">
+<img src="../icons/app-icons/s3p.ico" onclick="alert('this is old, i remember this apearing in 2.2')" title="this is old, i remember this apearing in 2.2">
+<img src="../icons/app-icons/GreenEye.ico" onclick="alert('almost became the 3.5 icon')" title="almost became the 3.5 icon">
+<img src="../icons/app-icons/PlantPNG.png" onclick="alert('modern plant, cool leaf, good times')" title="modern plant, cool leaf, good times">
+<img src="../icons/app-icons/Plant-Turbo.png" onclick="alert('used as a icon for turbo versions')" title="used as a icon for turbo versions">
+<img src="../icons/app-icons/scah.png" onclick="alert('the default app icon')" title="the default app icon">
+<img src="../icons/app-icons/simplyprivate37.png" id="special" onclick="alert('version 3.7 icon')" title="version 3.7 icon">
 <h2>- pack icons</h2>
-<img src="../icons/pack-icons/carbon-simple.png" title="carbon: used everything">
-<img src="../icons/pack-icons/Carbon.png" title="other carbon icon">
-<img src="../icons/pack-icons/hy.png" title="old hydrogen icon">
-<img src="../icons/pack-icons/hydrogen-icon.ico" title="hydrogen: used for visual stuff">
-<img src="../icons/pack-icons/Iridium.png" title="iridium: internal stuff">
-<img src="../icons/pack-icons/Uranium.ico" title="Uranium: interaction browser -> pc">
-<img src="../icons/pack-icons/swapo.webp" title="JustAFrog: coding jaf, encrypting and packing stuff">
-<img src="../icons/pack-icons/Utils.png" title="default plugin icon">
+<img src="../icons/pack-icons/carbon-simple.png" onclick="alert('carbon: used everything, modular language for packages')" title="carbon: used everything, modular language for packages">
+<img src="../icons/pack-icons/Carbon.png" onclick="alert('old carbon icon')" title="old carbon icon">
+<img src="../icons/pack-icons/hy.png" onclick="alert('old hydrogen icon')" title="old hydrogen icon">
+<img src="../icons/pack-icons/hydrogen-icon.ico" onclick="alert('hydrogen: used for visual elements, effects, shaders and rendering')" title="hydrogen: used for visual elements, effects, shaders and rendering">
+<img src="../icons/pack-icons/Iridium.png" onclick="alert('iridium: network stuff')" title="iridium: network stuff">
+<img src="../icons/pack-icons/Uranium.ico" onclick="alert('Uranium: complex library to configure every element rendering, also used to make spinning toast')" title="Uranium: complex library to configure every element rendering, also used to make spinning toast">
+<img src="../icons/pack-icons/swapo.webp" onclick="alert('jaf (JustAFrog-lang) old icon')" title="jaf (JustAFrog-lang) old icon">
+<img src="../icons/pack-icons/Utils.png" onclick="alert('default plugin icon / also RainOs icon')" title="default plugin icon / also RainOs icon">
+<img src="../icons/pack-icons/JafFrogIcon-nofilter.png" onclick="alert('JustAFrog: jaf-lang, high flexibilty and advanced encription | no-filter-img')"  id="special" title="JustAFrog: jaf-lang, high flexibilty and advanced encription | no-filter-img">
+<img src="../icons/pack-icons/JafFrogIcon-whiteFilter.png" onclick="alert('JustAFrog: jaf-lang, high flexibilty and advanced encription | whiteFilter')" id="special" title="JustAFrog: jaf-lang, high flexibilty and advanced encription | whiteFilter">
+
 <h2>- goat</h2>
-<img src="../icons/lib-icons/atvoa.ico" title="default icon for everything">
+<img src="../icons/lib-icons/atvoa.ico" onclick="alert('default icon for everything')" title="default icon for everything">
 <h2>- lib icons</h2>
-<img src="../icons/lib-icons/Shaders.jpg" title="shaders icon">
-<img src="../icons/lib-icons/akttf-576yv-001.ico" title="chartbuild icon">
-<img src="../icons/lib-icons/BUGISSUE.jpg" title="bug/issue report system">
-<img src="../icons/lib-icons/LMA.png" title="Linguagem Modular Autonoma - oficial icon">
-<img src="../icons/lib-icons/Terminal.png" title="Linguagem Modular Autonoma - task icon">
-<img src="../icons/lib-icons/WhiteWall.png" title="ECSE - EraCloud Security Extension">
-<img src="../icons/lib-icons/ruby2.png" title="ruby.ai">
-<img src="../icons/lib-icons/services.png" alt="/services">
+<img src="../icons/lib-icons/Shaders.jpg" onclick="alert('hydrogen shader renderer icon')" title="hydrogen shader renderer icon">
+<img src="../icons/lib-icons/akttf-576yv-001.ico" onclick="alert('chartLib icon')" title="chartLib icon">
+<img src="../icons/lib-icons/BUGISSUE.jpg" onclick="alert('bug/issue report system')" title="bug/issue report system">
+<img src="../icons/lib-icons/LMA.png" onclick="alert('Linguagem Modular Autonoma (LMA) - icon')" title="Linguagem Modular Autonoma (LMA) - icon">
+<img src="../icons/lib-icons/Terminal.png" onclick="alert('Linguagem Modular Autonoma (LMA) - fileExplorer icon')" title="Linguagem Modular Autonoma (LMA) - fileExplorer icon">
+<img src="../icons/lib-icons/WhiteWall.png" onclick="alert('ECSE - EraCloud Security Extension')" title="ECSE - EraCloud Security Extension">
+<img src="../icons/lib-icons/ruby2.png" onclick="alert('Ruby.Ai - internet-free, human-learned modular ai')" title="Ruby.Ai - internet-free, human-learned modular ai">
+
 <h2>- website icons</h2>
-<img src="../icons//website-icons/2025.ico" alt="2025 - countdown app icon">
-<img src="../icons/website-icons/icon25withFont.png" alt="2025 - new icon with font">
-<img src="../icons/website-icons/icon25withoutFont.png" alt="2025 - new icon without font">
-<img src="../icons/website-icons/a2lk2-8tsw6-001.ico" title="simplyprivate.github.io">
-<img src="../icons/website-icons/default.png" title="umaera.github.io">
-<img src="../icons/website-icons/Gleaf.png" title="variation 1">
-<img src="../icons/website-icons/Gleaf2.png" title="variation 2">
-<img src="../icons/pupur.png" title="pink moon">
+<img src="../icons//website-icons/2025.ico" onclick="alert('2025 - old icon')" alt="2025 - old icon">
+<img src="../icons/website-icons/icon25withFont.png" onclick="alert('2025 - new icon with font')" alt="2025 - new icon with font">
+<img src="../icons/website-icons/icon25withoutFont.png" onclick="alert('2025 - new icon without font')" alt="2025 - new icon without font">
+<img src="../icons/website-icons/a2lk2-8tsw6-001.ico" onclick="alert('simplyprivate.github.io')" title="simplyprivate.github.io">
+<img src="../icons/website-icons/default.png" onclick="alert('umaera.github.io - old icon')" title="umaera.github.io - old icon">
+<img src="../icons/pupur.png" onclick="alert('umaera.github.io - new icon')" title="umaera.github.io - new icon">
+<img src="../icons/lib-icons/services2.png" onclick="alert('/services')" id="special" alt="/services">
 <h2>- EraCloud icons/images</h2>
-<img src="../icons/cloud-icons/cloud.png" title="main icon">
-<img src="../icons/cloud-icons/default.png" title="favicon">
-<img src="../icons/cloud-icons/eco.png" title="unused - eco icon">
-<img src="../icons/cloud-icons/no.png" title="my cloud went down!! 😨😱😰">
-<img src="../icons/cloud-icons/erita.jpg" title="lumia">
-<img src="../icons/cloud-icons/cacti.jpg" title="cactus">
-<img src="../icons/cloud-icons/ic1-3.jpg" title="erita">
+<img src="../icons/cloud-icons/cloud.png" onclick="alert('EraCloud - transparentIcon')" title="EraCloud - transparentIcon">
+<img src="../icons/cloud-icons/default.png" onclick="alert('EraCloud - /cloud')" id="special" title="EraCloud - /cloud">
+<img src="../icons/cloud-icons/eco.png" onclick="alert('unused - eco icon')"  title="unused - eco icon">
+<img src="../icons/cloud-icons/no.png" onclick="alert('my cloud went down!! 😨😱😰')" title="my cloud went down!! 😨😱😰">
+<img src="../icons/cloud-icons/erita.jpg" onclick="alert('lumiaProject')" title="lumiaProject">
+<img src="../icons/cloud-icons/cacti.jpg" onclick="alert('cactusProject')" title="cactusProject">
+<img src="../icons/cloud-icons/ic1-3.jpg" onclick="alert('eritaProject')" title="eritaProject">
 <h2>- miscellaneous icons</h2>
-<img src="../icons/m-icons/3leaf.ico" title="another simplyprivate icon">
-<img src="../icons/m-icons/Lock-green.png" title="green lock - secure & encripted">
-<img src="../icons/m-icons/Lock-red.png" title="red lock - insecure">
-<img src="../icons/m-icons/Lock-white.png" title="white lock - making connection">
-<img src="../icons/m-icons/Lock-yellow.png" title="yellow lock - checking connection">
-<img src="../icons/m-icons/missing-texture.png" title="missing texture - when popups in simplyprivate dont load right">
-<img src="../icons/m-icons/NEW.png" title="new - unused icon for new themes">
-<img src="../icons/m-icons/nowifi.png" title="no wifi - when images dont load right">
-<img src="../icons/m-icons/Tabs.png" title="tabs - open tab screen icon">
-<img src="../icons/m-icons/lithicera.png" title="discord server icon">
-<img src="../icons/m-icons/TitleFrame.png" title="title frame - attempt to make a inicial screen">
-<img src="../icons/m-icons/TitleFramePAS.png" title="title frame pas - attempt to make a inicial screen">
-<img src="../icons/m-icons/TitleFramePOS.png" title="title frame pos - attempt to make a inicial screen">
-<img src="../icons/m-icons/TitleFramePUH.png" title="title frame  puh- attempt to make a inicial screen">
-<img src="../icons/m-icons/Widgets.png" title="widgets - unused icon for  #### ###">
-<img src="../icons/m-icons/SimplyPrivateBanner.jpg" title="SimplyPrivateBanner - github page banner">
-<img src="../icons/m-icons/world2.jpg" title="world2">
-<img src="../icons/m-icons/enjoy.png" title="enjoy - enjoy screen when you open the app for the first time">
-<img src="../icons/m-icons/200w.gif" title="200w - black loading gif (i stealed form google)">
-<img src="../icons/m-icons/400w.gif" title="400w - white loading gif (i stealed form google)">
-<img src="../icons/m-icons/GLITCHYLEAF.jpg" title="glitchy leaf - old offline screen">
-<img src="../icons/m-icons/Warning.png" title="warning - i don't remember this icon">
-<img src="../icons/m-icons/Static.gif" title="static - it's giving no signal">
-<img src="../icons/m-icons/AST.jpg" title="Astrodist - asteroid game">
+<img src="../icons/m-icons/3leaf.ico" onclick="alert('another simplyprivate icon')" title="another simplyprivate icon">
+<img src="../icons/m-icons/Lock-green.png" onclick="alert('green lock - secure & encripted')" title="green lock - secure & encripted">
+<img src="../icons/m-icons/Lock-red.png" onclick="alert('red lock - insecure')" title="red lock - insecure">
+<img src="../icons/m-icons/Lock-white.png" onclick="alert('white lock - making connection')" title="white lock - making connection">
+<img src="../icons/m-icons/Lock-yellow.png" onclick="alert('yellow lock - checking connection')" title="yellow lock - checking connection">
+<img src="../icons/m-icons/missing-texture.png" onclick="alert(`missing texture - pops up when something doesn't load right`)" title="missing texture - pops up when something doesn't load right">
+<img src="../icons/m-icons/NEW.png" onclick="alert('newTheme! - unused icon for new themes')" title="newTheme! - unused icon for new themes">
+<img src="../icons/m-icons/nowifi.png" onclick="alert('no wifi - when images dont load')" title="no wifi - when images dont load">
+<img src="../icons/m-icons/Tabs.png" onclick="alert('tabs - open tab screen icon')" title="tabs - open tab screen icon">
+<img src="../icons/m-icons/lithicera.png" onclick="alert('discord server icon')" title="discord server icon">
+<img src="../icons/m-icons/TitleFrame.png" onclick="alert('title frame - attempt to make a inicial screen')" title="title frame - attempt to make a inicial screen">
+<img src="../icons/m-icons/TitleFramePAS.png" onclick="alert('title frame pas - attempt to make a inicial screen')" title="title frame pas - attempt to make a inicial screen">
+<img src="../icons/m-icons/TitleFramePOS.png" onclick="alert('title frame pos - attempt to make a inicial screen')" title="title frame pos - attempt to make a inicial screen">
+<img src="../icons/m-icons/TitleFramePUH.png" onclick="alert('title frame  puh- attempt to make a inicial screen')" title="title frame  puh- attempt to make a inicial screen">
+<img src="../icons/m-icons/Widgets.png" onclick="alert('open widgets 👀')" title="open widgets 👀">
+<img src="../icons/m-icons/SimplyPrivateBanner.jpg" onclick="alert('SimplyPrivateBanner (old) - github page banner')" title="SimplyPrivateBanner (old) - github page banner">
+<img src="../icons/m-icons/world2.jpg" onclick="alert('world2')" title="world2">
+<img src="../icons/m-icons/enjoy.png" onclick="alert('enjoy - enjoy screen when you open the app for the first time')" title="enjoy - enjoy screen when you open the app for the first time">
+<img src="../icons/m-icons/200w.gif" onclick="alert('200w - black loading gif (i stealed form google)')" title="200w - black loading gif (i stealed form google)">
+<img src="../icons/m-icons/400w.gif" onclick="alert('400w - white loading gif (i stealed form google)')" title="400w - white loading gif (i stealed form google)">
+<img src="../icons/m-icons/GLITCHYLEAF.jpg" onclick="alert('glitchy leaf - old offline screen')" title="glitchy leaf - old offline screen">
+<img src="../icons/m-icons/Warning.png" onclick="alert(`warning - i don't remember this icon`)" title="warning - i don't remember this icon">
+<img src="../icons/m-icons/Static.gif" onclick="alert(`static - it's giving no signal`)" title="static - it's giving no signal">
+<img src="../icons/m-icons/AST.jpg" onclick="alert('Astrodist - asteroid game')" title="Astrodist - asteroid game">
 
 <h2>- especial-themes</h2>
-<img src="../icons/themes/atmosphere.jpg" title="atmosphere - better green theme">
-<img src="../icons/themes/cherry.jpg" title="cherry - soft bread colors">
-<img src="../icons/themes/couple.jpg" title="couple - soft purple colors, named by a friend">
-<img src="../icons/themes/grass.jpg" title="grass - atmosphere but more vivid">
-<img src="../icons/themes/king.jpg" title="king - weid choice of colors">
-<img src="../icons/themes/redberry.jpg" title="redberry - berry colors">
-<p><h3>other themes</h3></p>
-<img src="../icons/themes/ones/bia.jpg" alt="bia - average favorite color">
-<img src="../icons/themes/ones/cadet.jpg" alt="cadet - blue ones">
-<img src="../icons/themes/ones/carmine.jpg" alt="carmine - red ones">
-<img src="../icons/themes/ones/cotton.jpg" alt="cotton - pink ones">
-<img src="../icons/themes/ones/mossy green.jpg" alt="mossy green - green one">
-<img src="../icons/themes/ones/nightsnap.jpg" alt="nightsnap - night colors">
-<img src="../icons/themes/ones/quartz.jpg" alt="quartz - soft white colors">
+<img src="../icons/themes/atmosphere.jpg" onclick="alert('atmosphere - better green theme')" title="atmosphere - better green theme">
+<img src="../icons/themes/cherry.jpg" onclick="alert('cherry - soft bread colors')" title="cherry - soft bread colors">
+<img src="../icons/themes/couple.jpg" onclick="alert('couple - soft purple colors, named by a friend')" title="couple - soft purple colors, named by a friend">
+<img src="../icons/themes/grass.jpg" onclick="alert('grass - atmosphere but more vivid')" title="grass - atmosphere but more vivid">
+<img src="../icons/themes/king.jpg" onclick="alert('king - weid choice of colors')" title="king - weid choice of colors">
+<img src="../icons/themes/redberry.jpg" onclick="alert('redberry - berry colors')" title="redberry - berry colors">
+<img src="../icons/themes/ones/bia.jpg" onclick="alert('bia (preview) - average favorite color')" id="preview" alt="bia (preview) - average favorite color">
+<img src="../icons/themes/ones/cadet.jpg" onclick="alert('cadet (preview) - blue ones')" id="preview" alt="cadet (preview) - blue ones">
+<img src="../icons/themes/ones/carmine.jpg" onclick="alert('carmine (preview)  - red ones')" id="preview" alt="carmine (preview)  - red ones">
+<img src="../icons/themes/ones/cotton.jpg" onclick="alert('cotton (preview)  - pink ones')" id="preview" alt="cotton (preview)  - pink ones">
+<img src="../icons/themes/ones/mossy green.jpg" onclick="alert('mossy green (preview)  - green one')" id="preview" alt="mossy green (preview)  - green one">
+<img src="../icons/themes/ones/nightsnap.jpg" onclick="alert('nightsnap (preview) - night colors')" id="preview" alt="nightsnap (preview) - night colors">
+<img src="../icons/themes/ones/quartz.jpg" onclick="alert('quartz (preview) - soft white colors')" id="preview" alt="quartz (preview) - soft white colors">
 
 
 <h2>- TeamEra / helpers profile pictures</h2>
-<!--Profile Picture: UmaEra --><img src="../icons/pfp/umaera.png" title="umaera (she)">
-<!--Profile Picture: Dhummy --><img src="../icons/pfp/dhummy.webp" title="dhummy (she)">
-<!--Profile Picture: erica_zy --><img src="../icons/pfp/erica_zy.webp" title="erica_zy (she)">
-<!--Profile Picture: Insane --><img src="../icons/pfp/Insane.jpg" title="insane (she)">
-<!--Profile Picture: ShiTist --><img src="../icons/pfp/shitist.jpg" title="shitist (he)">
-<!--Profile Picture: Storm --><img src="../icons/pfp/storm.jpg" title="storm (he)">
-<!--Profile Picture: Isis --><img src="../icons/pfp/isis.webp" title="isis (she)">
-<!--Profile Picture: Abby --><img src="../icons/pfp/abby.jpg" title="abby (she)">
-<!--Profile Picture: peixe --><img src="../icons/pfp/peixe.webp" title="peixe - fish in portuguese">
-<!--Profile Picture: DevilWolf --><img src="../icons/pfp/devilwolf.webp" title="devilwolf - real cute nerd">
-<!--Profile Picture: Dede_07 --><img src="../icons/pfp/dede.webp" title="dede07 - fella gamer">
-<!--Profile Picture: Low__ --><img src="../icons/pfp/low.webp" title="low - more like low sanity">
-<!--Profile Picture: JJcia689 --><img src="../icons/pfp/jjcia689.png" title="jjscia689 - likes gta">
-<!--Profile Picture: nsei_03 --><img src="../icons/pfp/nsei03.png" title="nsei03 - i just leave a blank description">
-<!--Profile Picture: oida --><img src="../icons/pfp/oida.jpg" title="oida - makes hentai">
-<!--Profile Picture: raxx --><img src="../icons/pfp/raxx.webp" title="raxx - designer (uses paint)">
-<!--Profile Picture: nakuMihau --><img src="../icons/pfp/naku.png" title="naku mihau: - = +">
-<!--Profile Picture: souPreto123 --><img src="../icons/pfp/soupreto123.png" title="soupreto123 - absolutly not black">
+<!--Profile Picture: UmaEra --><img src="../icons/pfp/umaera.png" onclick="alert('@umaera')" title="umaera (she)">
+<!--Profile Picture: Dhummy --><img src="../icons/pfp/dhummy.webp" onclick="alert('@dhummy')" title="dhummy (she)">
+<!--Profile Picture: erica_zy --><img src="../icons/pfp/erica_zy.webp" onclick="alert('@erica.zy')" title="erica_zy (she)">
+<!--Profile Picture: Insane --><img src="../icons/pfp/Insane.jpg" onclick="alert('@insane.dev')" title="insane (she)">
+<!--Profile Picture: ShiTist --><img src="../icons/pfp/shitist.jpg" onclick="alert('@shiTist')" title="shitist (he)">
+<!--Profile Picture: Storm --><img src="../icons/pfp/storm.jpg" onclick="alert('@stormElite')" title="storm (he)">
+<!--Profile Picture: Isis --><img src="../icons/pfp/isis.webp" onclick="alert('@HereIsis')" title="isis (she)">
+<!--Profile Picture: Abby --><img src="../icons/pfp/abby.jpg" onclick="alert('@abbyES')" title="abby (she)">
+<!--Profile Picture: peixe --><img src="../icons/pfp/peixe.webp" onclick="alert('@raioAzul (peixe)')" title="peixe - fish in portuguese">
+<!--Profile Picture: DevilWolf --><img src="../icons/pfp/devilwolf.webp" onclick="alert('@DevilWolf')" title="devilwolf - real cute nerd">
+<!--Profile Picture: Dede_07 --><img src="../icons/pfp/dede.webp" onclick="alert('@Walsmit (dede)')" title="dede07 - fella gamer">
+<!--Profile Picture: Low__ --><img src="../icons/pfp/low.webp" onclick="alert('@low__ (low)')" title="low - more like low sanity">
+<!--Profile Picture: JJcia689 --><img src="../icons/pfp/jjcia689.png" onclick="alert('@jjscia689')" title="jjscia689 - likes gta">
+<!--Profile Picture: nsei_03 --><img src="../icons/pfp/nsei03.png" onclick="alert('@nsei03')" title="nsei03 - i just leave a blank description">
+<!--Profile Picture: oida --><img src="../icons/pfp/oida.jpg" onclick="alert('@OidaMongol')" title="oida - makes hentai">
+<!--Profile Picture: raxx --><img src="../icons/pfp/raxx.webp" onclick="alert('@raxx')" title="raxx - designer (uses paint)">
+<!--Profile Picture: nakuMihau --><img src="../icons/pfp/naku.png" onclick="alert('@nakuMihau (castro)')" title="naku mihau: - = +">
+<!--Profile Picture: souPreto123 --><img src="../icons/pfp/soupreto123.png" onclick="alert('@blazinApelao')" title="soupreto123 - absolutly not black person">
 
