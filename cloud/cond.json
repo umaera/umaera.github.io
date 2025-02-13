@@ -1,5 +1,5 @@
 {
-    "apiUrl": "https.//api-eracloud.github.io",
-    "version": "1.4",
+    "apiUrl": "http://eracloud.duckdns.org:3013",
+    "version": "1.5",
     "ApiService": "ECSE"
 }

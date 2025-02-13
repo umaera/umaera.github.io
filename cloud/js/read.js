@@ -29,6 +29,7 @@ async function validateToken(apiUrl) {
 
     if (!token) {
         responseElement.textContent = "EMPTY TOKEN KEY";
+        responseElement.style.color = "red";
         return;
     }
 
@@ -44,6 +45,7 @@ async function validateToken(apiUrl) {
         const data = await response.json();
 
         if (data.redirect) {
+            responseElement.style.color = "purple";
             document.getElementById("token").style.borderColor = "green"
             document.getElementById("token").style.color = "green"
             responseElement.textContent = `[ Connecting to server: ${data.name} ]`;
@@ -55,11 +57,13 @@ async function validateToken(apiUrl) {
             responseElement.textContent = data.message;
         } else {
             responseElement.textContent = "UNEXPECTED SERVER RESPONSE";
+            responseElement.style.color = "red";
         }
 
     } catch (err) {
         console.error("[ERROR]:", err);
         responseElement.textContent = "ERROR CONNECTING TO SERVER";
+        responseElement.style.color = "red";
     }
 }
 
