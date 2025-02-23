@@ -116,6 +116,13 @@
 - some bug fixes
 - new images at "./assets"
 
+# UI_v2.4.3
+- some bug fixes
+- removed /cloud for security reasons
+- did some shady server-side stuff
+- new images in "./assets"
+- plotting something
+
 ### In the Next Updates:
 - Total redesign (again)
 - Better profile page
