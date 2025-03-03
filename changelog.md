@@ -123,6 +123,17 @@
 - new images in "./assets"
 - plotting something
 
+# UI_v2.5
+- some context and bug fixes
+- polishing around things
+- renamed "services" to "resources"
+- moved "RainOs" to Resources
+- moved "astrodist" to Resources
+- did some shady server-side stuff
+- removed, updated and added new icons at "/assets"
+- polished "/before"
+- still plotting something
+
 ### In the Next Updates:
 - Total redesign (again)
 - Better profile page
@@ -131,6 +142,5 @@
 - Theme settings
 - Ruby.ai integration
 - EraCloud redesign
-- Resources page
 
 ...
