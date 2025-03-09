@@ -134,6 +134,10 @@
 - polished "/before"
 - still plotting something
 
+# UI_v2.5.1
+- yes, i'm still plotting something
+- added wiki-icons to "/assets"
+
 ### In the Next Updates:
 - Total redesign (again)
 - Better profile page
