@@ -138,6 +138,12 @@
 - yes, i'm still plotting something
 - added wiki-icons to "/assets"
 
+# UI_v2.5.2
+- yes! i'm still plotting
+- updated SimplyPrivate Screens
+- updated resources - @azayra & @simplyprivate
+- fixed bugs
+
 ### In the Next Updates:
 - Total redesign (again)
 - Better profile page
