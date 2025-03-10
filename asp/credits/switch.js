@@ -238,7 +238,7 @@ function executeAction(value) {
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/dede.webp');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
-            document.getElementById('name').textContent = '75tdede';
+            document.getElementById('name').textContent = 'dede07';
             document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'UX revisor';
             document.getElementById('profile').style.color = '#756cff';
