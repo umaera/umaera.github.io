@@ -1,0 +1,15 @@
+-- excluded users --
+name: walsmit, dede;
+id: #WALSMIT, #DEDE;
+caseId: dede07;
+accountAge: 14;
+roles: pre-device, member;
+contribute: 9;
+nose: @user;
+creditsRole: "UX revisor";
+creditsName: "dede07";
+creditsPfp: "https://umaera.github.io/icons/pfp/dede.webp"
+creditsLang: PT-PT, PT-BR;
+creditsTitle: Supporters;
+creditsColor: "#756cff";
+creditsModifier: cast.if(lang === PT-PT, PT-BR).modify.creditsRole = "Revisor experiência utilizador";

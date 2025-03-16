@@ -1,4 +1,4 @@
-let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 let currentIndex = variables.indexOf(1);
 var userLang = navigator.language || navigator.userLanguage;
 
@@ -236,25 +236,6 @@ function executeAction(value) {
         case 12:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
-            setProfileImage('../icons/pfp/dede.webp');
-            document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
-            document.getElementById('name').textContent = 'dede07';
-            document.getElementById('name').style.color = '#504cbe';
-            document.getElementById('profile').textContent = 'UX revisor';
-            document.getElementById('profile').style.color = '#756cff';
-        
-            document.getElementById('right-arrow').style.backgroundImage = 'url(credits/other/right-arrow-blue.png)';
-            document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-blue.png)';
-
-            if (userLang.startsWith('pt') || userLang.startsWith('br')) {
-                document.getElementById('profile').textContent = 'Revisor experiência utilizador';
-                document.getElementById('class').textContent = 'Apoiantes';
-            }
-
-        break;
-        case 13:
-            document.getElementById('class').textContent = 'Supporters';
-            document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/jjcia689.png');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
             document.getElementById('name').textContent = 'JJCIA689';
@@ -271,7 +252,7 @@ function executeAction(value) {
             }
 
             break;
-        case 14:
+        case 13:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/nsei03.png');
@@ -290,7 +271,7 @@ function executeAction(value) {
             }
 
             break;
-        case 15:
+        case 14:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/oida.jpg');
@@ -309,7 +290,7 @@ function executeAction(value) {
             }
 
             break;
-        case 16:
+        case 15:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/raxx.webp');
@@ -327,7 +308,7 @@ function executeAction(value) {
             }
 
             break;
-        case 17:
+        case 16:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/naku.png');
@@ -346,7 +327,7 @@ function executeAction(value) {
             document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-blue.png)';
     
         break;
-        case 18:
+        case 17:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/blazin-apelao.jpg');
