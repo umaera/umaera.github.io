@@ -11,6 +11,13 @@ body {
 body.loaded {
     opacity: 1;
 }
+
+header{
+    width:100%;
+    height: 5rem;
+    padding: 20px;
+
+}
 canvas {
     display: block;
 }
@@ -28,17 +35,19 @@ canvas {
 .title{
     font-size: 84px; color: white;
     font-family: RubikIso;
-    overflow: hidden; position: absolute;
+    /*overflow: hidden; position: absolute;
     top: 12%; left: 50%;
     transform: translate(-50%, -50%);
+    */
 }
 
 .description{
     font-size: 24px; color: white;
     font-family: QuickSand;
-    overflow: hidden; position: absolute;
+   /* overflow: hidden; position: absolute;
     top: 22%; left: 50%;
     transform: translate(-50%, -50%);
+    */
 }
 
 .bubble{

@@ -1,4 +1,4 @@
-let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 let currentIndex = variables.indexOf(1);
 var userLang = navigator.language || navigator.userLanguage;
 
@@ -198,6 +198,24 @@ function executeAction(value) {
         case 10:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
+            setProfileImage('https://umaera.github.io/icons/pfp/dede.webp');
+            document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
+            document.getElementById('name').textContent = 'dede07';
+            document.getElementById('name').style.color = '#504cbe';
+            document.getElementById('profile').textContent = 'UX revisor';
+            document.getElementById('profile').style.color = '#756cff';
+    
+            document.getElementById('right-arrow').style.backgroundImage = 'url(credits/other/right-arrow-blue.png)';
+            document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-blue.png)';
+    
+            if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+                document.getElementById('profile').textContent = 'Revisor experiência utilizador';
+                document.getElementById('class').textContent = 'Apoiantes';
+            }
+        break
+        case 11:
+            document.getElementById('class').textContent = 'Supporters';
+            document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/peixe.webp');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
             document.getElementById('name').textContent = 'Peixe';
@@ -214,7 +232,7 @@ function executeAction(value) {
             }
 
             break
-        case 11:
+        case 12:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/low.webp');
@@ -233,7 +251,7 @@ function executeAction(value) {
             }
 
             break;
-        case 12:
+        case 13:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/jjcia689.png');
@@ -252,7 +270,7 @@ function executeAction(value) {
             }
 
             break;
-        case 13:
+        case 14:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/nsei03.png');
@@ -271,7 +289,7 @@ function executeAction(value) {
             }
 
             break;
-        case 14:
+        case 15:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/oida.jpg');
@@ -290,7 +308,7 @@ function executeAction(value) {
             }
 
             break;
-        case 15:
+        case 16:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/raxx.webp');
@@ -308,7 +326,7 @@ function executeAction(value) {
             }
 
             break;
-        case 16:
+        case 17:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/naku.png');
@@ -327,7 +345,7 @@ function executeAction(value) {
             document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-blue.png)';
     
         break;
-        case 17:
+        case 18:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/blazin-apelao.jpg');
