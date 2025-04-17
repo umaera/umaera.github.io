@@ -94,6 +94,17 @@
 - Fresh texts in the main page
 - Warning: 2025 page will deleted soon
 
+# UI_v2.5.3
+- big big big update coming
+- removed useless icons
+- updated resources - styles
+- updated resources - added "@EffectsEngine" & "@PuplProject"
+- added icons for the new resources
+- fixed bugs
+- some animations
+- added a new shape in "asp" menu, "LowResSphere" - a low resolution sphere that you can choose the number of sides.
+
+
 ## UI_v2.4
 - Some bug fixes
 - Made Resources page, current apps (3): @2025, @simplyprivate (previews), @world2

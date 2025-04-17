@@ -49,9 +49,6 @@ body::selection{
     width: 80%; 
     max-width: 80%;
     text-align: center;
-    user-select: text;
-    -moz-user-select: text;
-    -webkit-user-select: text;
 }
 
 .change{

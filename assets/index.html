@@ -7,7 +7,7 @@
 </head>
 <style>
     body{
-        background-color:rgb(74, 74, 74);
+        background-color:rgb(94, 82, 101);
         font-family: QuickSand;
         color: white; 
     }
@@ -29,6 +29,7 @@
         -webkit-user-select: none;
         -webkit-user-drag: auto;
         border-width: 3px;
+        animation: init 10s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     #special{
@@ -43,20 +44,17 @@
     img:hover{
         transition: 0.2s;
         transform: scale(1.2);
+        border-radius: 5px;
+        border-color: rgb(234, 0, 255);
+
     }
 
     @keyframes init {
         0%{
-            width: 0px; height: 0;
-            border-color: transparent;
-            background-color:transparent;
+            background-color: aqua;
+            border-radius: 100rem;
         }
 
-        50%{
-            width: 0px; height: 100px;
-            border-color: rgb(255, 0, 85);
-            background-color:rgb(255, 0, 85) ;
-        }
     }
 </style>
 
@@ -86,6 +84,7 @@
 <img src="../icons/new-pack-icons/tile.folder.dev.png" onclick="alert('sweaty nerd kinda folder')" title="sweaty nerd kinda folder">
 <img src="../icons/new-pack-icons/tile.folder.special.png" onclick="alert('party star 🌈🌈')" title="party star 🌈🌈">
 <img src="../icons/pack-icons/Utils.png" onclick="alert('default plugin icon / also RainOs icon')" title="default plugin icon / also RainOs icon">
+<img src="../icons/pack-icons/EffectsEngine.png" onclick="alert('EffectEngine - by Dhummy')" id="preview" title="EffectsEngine - by Dhummy">
 
 <h2>- [ goat ]</h2>
 <img src="../icons/lib-icons/atvoa.ico" onclick="alert('default icon for everything')" title="default icon for everything">

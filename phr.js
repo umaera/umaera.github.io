@@ -10,7 +10,7 @@ function after() {
     }
 }
 
-setTimeout(after, 2000)
+setTimeout(after, 500)
 
 function goPT() {
     window.location.href = 'pt/'; 

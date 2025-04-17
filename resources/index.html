@@ -6,7 +6,9 @@
     <meta name="description" content="resources | simplest project storage ever">
     <link rel="stylesheet" href="../css/fonts/fonts.css">
     <style>
+
         body{
+            background-color: pur;
             overflow:hidden;
             font-family: QuickSand;
             user-select: none;
@@ -17,51 +19,92 @@
         }
 
         .results{
-            width: 99%; height: 80%;
+            width: 99%; height: 90%;
             border-style:inset;
+            border-width: 3px;
             overflow-y: auto;
             background-color: rgba(192, 192, 192, 0.623);
         }
+
+        .results::scroll-marker-group{
+            scroll-behavior:smooth;
+        }
+
         blockquote{
             margin-top: -15;
             margin-left: 10;
             padding: 1px;
+            transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
+
+        blockquote:hover{
+            background-color: rgba(255, 255, 255, 0.452);
+            transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        
+        blockquote::before {
+            content: "- ";
+        }
+
         h4{
             font-size:1rem;
         }
+
         a{
             color: rgb(255, 0, 255);
             font-weight: 500;
         }
+
         a:visited{
             color: rgb(255, 80, 197)
         }
+
+        .project::before {
+            content: "> ";
+        }
+
     </style>
 </head>
-<h4>Resources | 7 apps found:</h4>
+<h3>Resources | <div style="margin: 0; padding: 1; display:inline; background-color: rgb(0, 255, 255);">10</div> projects found!</h3>
 <div class="results">
-    <h4>> @azayra</h4>
-    <blockquote><a href="https://azayrateam.github.io/" target="_blank">↳ website</a></blockquote>
-    <blockquote><a href="https://azayrateam.github.io/wiki/" target="_blank">↳ wiki</a></blockquote>
-    <h4>> @simplyprivate</h4>
-    <blockquote><a href="https://simplyprivate.github.io" target="_blank">↳ website</a></blockquote>
-    <blockquote><a href="https://github.com/notyarazi/simplyprivate" target="_blank">↳ github repo</a></blockquote>
+    
+    <h4 class="project">@azayra</h4>
+    <blockquote><a href="https://azayra.github.io/" target="_blank">↳ Storage/Api Website</a></blockquote>
+    <blockquote><a href="https://azayrateam.github.io/" target="_blank">↳ Website</a></blockquote>
+    <blockquote><a href="https://azayrateam.github.io/wiki/" target="_blank">↳ WIKI</a></blockquote>
+
+    <h4 class="project">@simplyprivate</h4>
+    <blockquote><a href="https://simplyprivate.github.io" target="_blank">↳ Website</a></blockquote>
+    <blockquote><a href="https://github.com/notyarazi/simplyprivate" target="_blank">↳ Github repo</a></blockquote>
     <blockquote><a href="./simplyprivate/changelog.html">↳ changelog</a></blockquote>
-    <blockquote><a href="https://azayrateam.github.io/wiki/" target="_blank">↳ wiki</a></blockquote>
-    <h4>> @StoryHome</h4>
-    <blockquote> - no resources found - </blockquote>
-    <h4>> @2025</h4>
+    <blockquote><a href="https://azayrateam.github.io/wiki/" target="_blank">↳ WIKI</a></blockquote>
+    <blockquote><a href="https://github.com/NotYarazi/SimplyPrivate/blob/all/credits.md" target="_blank">↳ Credits</a></blockquote>
+
+    <h4 class="project">@EffectsEngine</h4>
+    <blockquote><a href="https://github.com/dhummy/EffectsEngine" target="_blank">↳ Github</a></blockquote>
+    <blockquote><a href="https://github.com/dhummy/EffectsEngine/tags" target="_blank">↳ Releases</a></blockquote>
+
+    <h4 class="project">@StoryHome</h4>
+    <blockquote><a href="https://story-home.github.io/" target="_blank">↳ Website</a></blockquote>
+
+    <h4 class="project">@2025</h4>
     <blockquote><a href="2025/source@TeamEra-2025-V2.0.zip" target="_blank">↳ source</a></blockquote>
     <blockquote><a href="2025/" target="_blank">↳ view</a></blockquote>
     <blockquote><a href="2025/LICENCE" target="_blank">↳ licence</a></blockquote>
-    <h4>> @rainOs</h4>
+
+    <h4 class="project">@rainOs</h4>
     <blockquote><a href="./rainOs/index.html" target="_blank">↳ execute</a></blockquote>
     <blockquote><a href="./rainOs/info.html" target="_blank">↳ info</a></blockquote>
-    <h4>> @astrodist</h4>
-    <blockquote><a href="./astrodist/index.html" target="_blank">↳ website</a></blockquote>
-    <h4>> @world2</h4>
-    <blockquote> - no resources found - </blockquote>
-    <h4>> @ruby.ai</h4>
-    <blockquote> - no resources found - </blockquote>
+
+    <h4 class="project">@astrodist</h4>
+    <blockquote><a href="./astrodist/index.html" target="_blank">↳ Website</a></blockquote>
+
+    <h4 class="project">@world2</h4>
+    <blockquote>no resources found - </blockquote>
+
+    <h4 class="project">@ruby.ai</h4>
+    <blockquote>no resources found - </blockquote>
+
+    <h4 class="project">@PuplProject</h4>
+    <blockquote>no resources found - </blockquote>
 </div>
