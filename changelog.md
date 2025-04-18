@@ -155,6 +155,29 @@
 - updated resources - @azayra & @simplyprivate
 - fixed bugs
 
+# UI_v2.5.3
+- big big big update coming
+- removed useless icons
+- updated resources - styles
+- updated resources - added "@EffectsEngine" & "@PuplProject"
+- added icons for the new resources
+- fixed bugs
+- some animations
+- added a new shape in "asp" menu, "LowResSphere" - a low resolution sphere that you can choose the number of sides.
+
+
+# UI_v2.5.4
+- new design coming soon.
+- updated some resources
+- new minimalistic details
+- removed unused pages and assets
+- updated folder organization
+- made better the sliding trough the profiles in the credits page
+- overall optimization
+- fixed a lot of bugs
+- OVER 300 CHANGES?!
+
+
 ### In the Next Updates:
 - Total redesign (again)
 - Better profile page
@@ -163,5 +186,6 @@
 - Theme settings
 - Ruby.ai integration
 - EraCloud redesign
+- easter eggs 🎉
 
 ...
