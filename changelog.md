@@ -181,6 +181,10 @@
 - new design coming soon.
 - updated resources page with new "StorageTest" Folder, a dedicated storage to test rendering and other logic.
 
+# UI_v2.5.6
+- new design coming soon.
+- added "@Old-Websites" to "Resources", it displays (not all)the public websites that i created. They all are abandoned, so don't put any info or send any form.
+
 ### In the Next Updates:
 - Total redesign (again)
 - Better profile page
