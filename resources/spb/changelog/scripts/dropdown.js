@@ -29,5 +29,5 @@ class Dropdown {
     dropdowns.set(dropdown.id, dropdown);
   });
 
-// TYPE2
+
 
