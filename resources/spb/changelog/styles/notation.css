@@ -99,6 +99,7 @@ ul li{
     display: inline;
     margin:0.2rem;
     line-height: 2;
+    color: white;
 }
 
 .miniBlock-Info{
@@ -107,6 +108,7 @@ ul li{
     border-radius: 5px; 
     margin: 1%;
     line-height: 2;
+    color: white;
 }
 
 .miniBlock-beta{
@@ -139,6 +141,7 @@ ul li{
 }
 
 .miniBlock-Info-Inline{
+    color: white;
     background-color: rgba(168, 78, 252, 0.25); 
     padding: 3px; 
     border-radius: 5px; 
@@ -163,6 +166,7 @@ ul li{
     border-radius: 5px; 
     margin: 1%;
     white-space: nowrap;
+    color: white;
 }
 
 .miniBlock-Security-2{
@@ -171,6 +175,7 @@ ul li{
     border-radius: 5px; 
     margin: 1%;
     white-space: nowrap;
+    color: white;
 }
 
 .miniBlock-Security-1{
@@ -179,6 +184,7 @@ ul li{
     border-radius: 5px; 
     margin: 1%;
     white-space: nowrap;
+    color: white;
 }
 
 .miniBlock-Flag{
@@ -187,6 +193,7 @@ ul li{
     border-radius: 5px; 
     margin: 1%;
     display: inline-block;
+    color: white;
 }
 
 
@@ -232,4 +239,5 @@ ul li{
 
 .AdvancedInfoBlob{
     width: 50%;
+    color: white;
 }

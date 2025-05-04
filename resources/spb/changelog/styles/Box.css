@@ -46,6 +46,7 @@
   align-items: center;
   font-weight: 600;
   transition: 0.1s linear;
+  color: white;
 }
 
 .Theme:hover{
