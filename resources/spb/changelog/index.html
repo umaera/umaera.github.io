@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/VersionSearch.css">
     <link rel="stylesheet" href="styles/Resize.css">
     <link rel="stylesheet" href="styles/Box.css">
+    <link rel="stylesheet" href="styles/CreditsFrame.css">
     <link rel="shortcut icon" href="https://umaera.github.io/icons/app-icons/simplyprivate37.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="https://umaera.github.io/icons/app-icons/simplyprivate37.png" type="image/x-icon">
     <link rel="icon" href="https://umaera.github.io/icons/app-icons/simplyprivate37.png" type="image/x-icon">
@@ -42,6 +43,12 @@
         </div>
     </div>
 
+    <!-- Scredits -->
+    <div class="CreditsFrame" id="Credits">
+        <iframe id="CreditsIframe" src="https://umaera.github.io/asp/credits.html" frameborder="0"></iframe>
+        <div class="CreditsClose" onclick="CreditsClose()">Close</div>
+    </div>
+
     <!-- Main Content -->
     <main>
       <div class="content">
@@ -53,7 +60,7 @@
                 <h4>Welcome to our simplest changelog page for our simplest browser out there! </h4>
                 <div class="miniBlock-Link-Inline" onclick="window.open('https://github.com/NotYarazi/SimplyPrivate')">Github Page</div> 
                 <div class="miniBlock-Link-Inline" onclick="window.open('https://umaera.github.io/resources/')">Resources</div>
-                <div class="miniBlock-Link-Inline" id="hidOnResize" onclick="window.open('https://umaera.github.io/asp/credits.html')">Credits</div>
+                <a class="miniBlock-Link-Inline" id="hidOnResize" onclick="CreditsOpen()">Credits</a>
                 <div class="miniBlock-Link-Inline" onclick="toggleTheme()" id="ThemeSwitchText" >Light Mode</div>
                 <a href="#VersionSelection" id="hidOnResize" class="miniBlock-Link-Inline" onclick="OpenVersionSearch()">Go to version..</a>
             </section>
@@ -1097,5 +1104,6 @@
     <script src="scripts/dropdown.js"></script>
     <script src="scripts/VersionSearch.js"></script>
     <script src="scripts/ThemeSys.js"></script>
+    <script src="scripts/Credits.js"></script>
 </body>
 </html>

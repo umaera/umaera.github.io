@@ -185,6 +185,15 @@
 - new design coming soon.
 - added "@Old-Websites" to "Resources", it displays (not all)the public websites that i created. They all are abandoned, so don't put any info or send any form.
 
+# UI_v2.5.7
+- Still cooking something
+- Deleted some resources from /resources and /assets.
+- Cooked a masterpiece: The SimplyPrivate Changelog page.
+- Ajusted image and animation structure from /assets.
+- Updated the Developers/Supporters profile picture.
+- Some bipolar translations are going on, i'm working in a creative solution.
+
+
 ### In the Next Updates:
 - Total redesign (again)
 - Better profile page

@@ -1,4 +1,4 @@
-let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+let variables = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 let currentIndex = variables.indexOf(1);
 var userLang = navigator.language || navigator.userLanguage;
 
@@ -39,7 +39,7 @@ function setProfileImage(url) {
 function executeAction(value) {
     switch (value) {
         case 1:
-            document.getElementById('class').textContent = 'TeamEra';
+            document.getElementById('class').textContent = 'Developers';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/umaera.png');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
@@ -52,12 +52,13 @@ function executeAction(value) {
             document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-red.png)';
 
                 if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+                    document.getElementById('class').textContent = 'Desenvolvedores';
                     document.getElementById('profile').textContent = 'Criadora & programadora';
                 }
 
             break;
         case 2:
-            document.getElementById('class').textContent = 'TeamEra';
+            document.getElementById('class').textContent = 'Developers';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/dhummy.webp');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
@@ -70,12 +71,13 @@ function executeAction(value) {
             document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-red.png)';
 
             if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+                document.getElementById('class').textContent = 'Desenvolvedores';
                 document.getElementById('profile').textContent = 'Criadora & programadora';
             }
 
             break;
         case 3:
-            document.getElementById('class').textContent = 'TeamEra';
+            document.getElementById('class').textContent = 'Developers';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/erica_zy.webp');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
@@ -88,11 +90,12 @@ function executeAction(value) {
             document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-red.png)';
 
             if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+                document.getElementById('class').textContent = 'Desenvolvedores';
                 document.getElementById('profile').textContent = 'Designer & animadora';
             }
             break;
         case 4:
-                document.getElementById('class').textContent = 'TeamEra';
+                document.getElementById('class').textContent = 'Developers';
                 document.getElementById('class').style.color = '#ff004c';
                 setProfileImage('../icons/pfp/Insane.jpg');
                 document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
@@ -105,12 +108,13 @@ function executeAction(value) {
                 document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-red.png)';
 
                 if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+                    document.getElementById('class').textContent = 'Desenvolvedores';
                     document.getElementById('profile').textContent = 'programadora';
                 }
 
                 break;
         case 5:
-                document.getElementById('class').textContent = 'TeamEra';
+                document.getElementById('class').textContent = 'Developers';
                 document.getElementById('class').style.color = '#ff004c';
                 setProfileImage('../icons/pfp/devilwolf.webp');
                 document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
@@ -123,13 +127,13 @@ function executeAction(value) {
                 document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-red.png)';
         
                 if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+                    document.getElementById('class').textContent = 'Desenvolvedores';
                     document.getElementById('profile').textContent = 'Designer & Idealista';
-                    document.getElementById('class').textContent = 'TeamEra';
                 }
                     
             break;
         case 6:
-            document.getElementById('class').textContent = 'TeamEra';
+            document.getElementById('class').textContent = 'Developers';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/storm.jpg');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
@@ -142,12 +146,13 @@ function executeAction(value) {
             document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-red.png)';
 
             if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+                document.getElementById('class').textContent = 'Desenvolvedores';
                 document.getElementById('profile').textContent = 'Programadora visual';
             } 
 
             break;
         case 7:
-            document.getElementById('class').textContent = 'TeamEra';
+            document.getElementById('class').textContent = 'Developers';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/isis.webp');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
@@ -159,9 +164,12 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(credits/other/right-arrow-red.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-red.png)';
 
+            if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+                document.getElementById('class').textContent = 'Desenvolvedores';
+            } 
             break;
         case 8:
-            document.getElementById('class').textContent = 'TeamEra';
+            document.getElementById('class').textContent = 'Developers';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/abby.jpg');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
@@ -174,11 +182,12 @@ function executeAction(value) {
             document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-red.png)';
 
             if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+                document.getElementById('class').textContent = 'Desenvolvedores';
                 document.getElementById('profile').textContent = 'Designer & Idealista';
             }
             break;
         case 9:
-            document.getElementById('class').textContent = 'ex-developers';
+            document.getElementById('class').textContent = 'Ex-Developers';
             document.getElementById('class').style.color = '#ff6f00';
             setProfileImage('../icons/pfp/shitist.jpg ');
             document.getElementById('pfp').style.boxShadow = '0 0 10px#ff6f00';
@@ -289,44 +298,8 @@ function executeAction(value) {
             }
 
             break;
+
         case 15:
-            document.getElementById('class').textContent = 'Supporters';
-            document.getElementById('class').style.color = '#504cbe';
-            setProfileImage('../icons/pfp/oida.jpg');
-            document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
-            document.getElementById('name').textContent = 'oida';
-            document.getElementById('name').style.color = '#504cbe';
-            document.getElementById('profile').textContent = 'teste & extension creator';
-            document.getElementById('profile').style.color = '#756cff';
-    
-            document.getElementById('right-arrow').style.backgroundImage = 'url(credits/other/right-arrow-blue.png)';
-            document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-blue.png)';
-
-            if (userLang.startsWith('pt') || userLang.startsWith('br')) {
-                document.getElementById('profile').textContent = "Testador & criador de extenções";
-                document.getElementById('class').textContent = 'Apoiantes';
-            }
-
-            break;
-        case 16:
-            document.getElementById('class').textContent = 'Supporters';
-            document.getElementById('class').style.color = '#504cbe';
-            setProfileImage('../icons/pfp/raxx.webp');
-            document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
-            document.getElementById('name').textContent = 'raxx';
-            document.getElementById('name').style.color = '#504cbe';
-            document.getElementById('profile').textContent = 'Designer';
-            document.getElementById('profile').style.color = '#756cff';
-    
-            document.getElementById('right-arrow').style.backgroundImage = 'url(credits/other/right-arrow-blue.png)';
-            document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-blue.png)';
-
-            if (userLang.startsWith('pt') || userLang.startsWith('br')) {
-                document.getElementById('class').textContent = 'Apoiantes';
-            }
-
-            break;
-        case 17:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
             setProfileImage('../icons/pfp/naku.png');
@@ -344,25 +317,6 @@ function executeAction(value) {
             document.getElementById('right-arrow').style.backgroundImage = 'url(credits/other/right-arrow-blue.png)';
             document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-blue.png)';
     
-        break;
-        case 18:
-            document.getElementById('class').textContent = 'Supporters';
-            document.getElementById('class').style.color = '#504cbe';
-            setProfileImage('../icons/pfp/blazin-apelao.jpg');
-            document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
-            document.getElementById('name').textContent= 'BlazinApelão';
-            document.getElementById('name').style.color = '#504cbe';
-            document.getElementById('profile').textContent = 'network services nerd';
-            document.getElementById('profile').style.color = '#756cff';
-    
-            if (userLang.startsWith('pt') || userLang.startsWith('br')) {
-                document.getElementById('profile').textContent = 'nerd serviços de internet';
-                document.getElementById('class').textContent = 'Apoiantes';
-            }
-    
-            document.getElementById('right-arrow').style.backgroundImage = 'url(credits/other/right-arrow-blue.png)';
-            document.getElementById('left-arrow').style.backgroundImage = 'url(credits/other/left-arrow-blue.png)';
-        
         break;
         
         default:
