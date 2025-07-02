@@ -1,235 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <title>Changelog</title>
-  <link rel="shortcut icon" href="./icons/@core/pupur.png" type="image/x-icon">
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      background-color: #f4f4f4;
-    }
-
-    #md {
-      width: 90%;
-      max-width: 800px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      background: #fff;
-      overflow-y: auto;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    pre, code {
-      background-color: #f4f4f4;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-family: 'Courier New', Courier, monospace;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>umaera.github.io - Changelog</title>
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+        <link rel="shortcut icon" href="./icons/@core/MyLittleIcon-v1.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        html{
+          user-select: none;
+          -moz-user-select: none;
+          -webkit-user-drag: none;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Animated background particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(108, 124, 224, 0.5);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(0px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
+        }
+        
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 10;
+            background: linear-gradient(135deg, rgba(108, 124, 224, 0.1), rgba(255, 107, 157, 0.1));
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #6c7ce0, #ff6b9d, #c44dff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+            0% { filter: drop-shadow(0 0 10px rgba(108, 124, 224, 0.5)); }
+            100% { filter: drop-shadow(0 0 30px rgba(255, 107, 157, 0.8)); }
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .stat:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #6c7ce0;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+        
+        .timeline {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #6c7ce0, #ff6b9d, #c44dff);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .version-group {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .version-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .version-badge {
+            background: linear-gradient(135deg, #6c7ce0, #ff6b9d);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 10px 30px rgba(108, 124, 224, 0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .version-line {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #6c7ce0, transparent);
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        
+        .updates-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .update-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .update-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #6c7ce0, #ff6b9d, #c44dff);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .update-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(108, 124, 224, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .update-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .update-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .update-icon {
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(45deg, #6c7ce0, #ff6b9d);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        
+        .update-content {
+            line-height: 1.6;
+        }
+        
+        .update-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .update-content li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            opacity: 0.85;
+            transition: all 0.3s ease;
+        }
+        
+        .update-content li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #6c7ce0;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        .update-content li:hover {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+        
+        .update-content li:hover::before {
+            color: #ff6b9d;
+        }
+        
+        .major-update {
+            grid-column: span 2;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(196, 77, 255, 0.1));
+            border: 2px solid rgba(255, 107, 157, 0.3);
+        }
+        
+        .coming-soon {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 107, 157, 0.1));
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            text-align: center;
+            grid-column: span 2;
+        }
+        
+        .coming-soon h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #ffc107;
+        }
+        
+        .feature-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .tag {
+            background: rgba(108, 124, 224, 0.2);
+            color: #6c7ce0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(108, 124, 224, 0.3);
+        }
+        
+        .code {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+            color: #ff6b9d;
+            border: 1px solid rgba(255, 107, 157, 0.2);
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2.5rem; }
+            .stats { flex-direction: column; gap: 20px; }
+            .updates-grid { grid-template-columns: 1fr; }
+            .major-update, .coming-soon { grid-column: span 1; }
+            .timeline::before { left: 20px; }
+            .version-header { justify-content: flex-start; margin-left: 40px; }
+        }
+        
+        /* Scroll animations */
+        .version-group {
+            animation-delay: calc(var(--delay) * 0.2s);
+        }
+    </style>
 </head>
 <body>
-  <div id="md"></div>
+    <div class="particles"></div>
+    
+    <header class="header">
+        <h1>umaera.github.io</h1>
+        <p>Complete changelog • Development Journey</p>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">26+</div>
+                <div class="stat-label">Total Versions </div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">670+</div>
+                <div class="stat-label">Changes</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Major Redesigns</div>
+            </div>
+        </div>
+    </header>
 
-  <script>
-    const markdownText = `
-# Updates: \`umaera.github.io\`
-## UI_v1.0
-- Added base webite
+    <div class="timeline">
+        <div class="version-group" style="--delay: 1">
+            <div class="version-header">
+                <div class="version-badge">UI v1.0 - v1.9</div>
+                <div class="version-line"></div>
+            </div>
+            <div class="updates-grid">
+                <div class="update-card">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        UI v1.0 - Foundation
+                    </h3>
+                    <div class="update-content">
+                        <ul>
+                            <li>Added base website structure</li>
+                        </ul>
+                        <div class="feature-tags">
+                            <span class="tag">Initial Release</span>
+                        </div>
+                    </div>
+                </div>
 
-## UI_v1.1
-- Added intro animations
-- Added button animations
-- Added SimplyPrivate page and access button
+                <div class="update-card">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        UI v1.1 - Animations
+                    </h3>
+                    <div class="update-content">
+                        <ul>
+                            <li>Added intro animations</li>
+                            <li>Added button animations</li>
+                            <li>Added SimplyPrivate page and access button</li>
+                        </ul>
+                        <div class="feature-tags">
+                            <span class="tag">Animations</span>
+                            <span class="tag">New Page</span>
+                        </div>
+                    </div>
+                </div>
 
-## UI_v1.2
-- Added alerts to the project buttons
-- changed pop-up text "soon" to "Not Ready"
-- Removed text selection
+                <div class="update-card">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        UI v1.2-1.6 - Polish
+                    </h3>
+                    <div class="update-content">
+                        <ul>
+                            <li>Added alerts to project buttons</li>
+                            <li>Changed pop-up text <span class="code">"soon"</span> to <span class="code">"Not Ready"</span></li>
+                            <li>Removed text selection</li>
+                            <li>Slower main page animations</li>
+                            <li>Better transition animations</li>
+                            <li>Version config added</li>
+                        </ul>
+                        <div class="feature-tags">
+                            <span class="tag">UX Improvements</span>
+                            <span class="tag">Bug Fixes</span>
+                        </div>
+                    </div>
+                </div>
 
-## UI_v1.3
-- Main page animations slower
-- Better alerts to project buttons
-- Changed pop-up 1 text "Not Ready" to "Preparing..."
-- Added transition animation
-- Changed text font on SimplyPrivate page
-- Changed changed background color on SimplyPrivate page
-- Added bubble effect on SimplyPrivate page
-- BugFix
+                <div class="update-card">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        UI v1.7-1.9 - Content
+                    </h3>
+                    <div class="update-content">
+                        <ul>
+                            <li>Welcome message with secret links</li>
+                            <li>Added lots of images on assets.html</li>
+                            <li>Remade the c3.6.0 screens</li>
+                            <li>Shortcuts for every page</li>
+                            <li>Access to RainOS granted</li>
+                            <li>Created "astrodist" page</li>
+                        </ul>
+                        <div class="feature-tags">
+                            <span class="tag">Content</span>
+                            <span class="tag">Navigation</span>
+                            <span class="tag">Easter Eggs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-## UI_v1.4
-- Pop-up 1 was transformed into a Simplyprivate version info popup about version 3.6
-- Popup 2 text was changed "Not Ready" to "Soon"
-- BugFix
-- Smoother animations
-- Fixed transition between pages
+        <div class="version-group major-update" style="--delay: 2">
+            <div class="version-header">
+                <div class="version-badge">UI v2.0 - TOTAL REDESIGN</div>
+                <div class="version-line"></div>
+            </div>
+            <div class="updates-grid">
+                <div class="update-card major-update">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        Complete Visual Overhaul
+                    </h3>
+                    <div class="update-content">
+                        <p>A complete redesign from the ground up, introducing a new visual language and improved user experience across all pages.</p>
+                        <div class="feature-tags">
+                            <span class="tag">Major Update</span>
+                            <span class="tag">Redesign</span>
+                            <span class="tag">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-## UI_v1.5
-- added version config
-- Version 3.6 is 90% Complete
+        <div class="version-group" style="--delay: 3">
+            <div class="version-header">
+                <div class="version-badge">UI v2.1 - v2.3</div>
+                <div class="version-line"></div>
+            </div>
+            <div class="updates-grid">
+                <div class="update-card">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        UI v2.1 - Architecture
+                    </h3>
+                    <div class="update-content">
+                        <ul>
+                            <li>Removed old pages</li>
+                            <li>Shared CSS and JS files</li>
+                            <li>New translations in credits page</li>
+                            <li>New hidden project "astrodist"</li>
+                            <li>All buttons open in new tabs</li>
+                            <li>Added 404 error page</li>
+                        </ul>
+                        <div class="feature-tags">
+                            <span class="tag">Code Quality</span>
+                            <span class="tag">Navigation</span>
+                        </div>
+                    </div>
+                </div>
 
-## UI_v1.6
-- Minor fixes
+                <div class="update-card">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        UI v2.2-2.3 - Security & Features
+                    </h3>
+                    <div class="update-content">
+                        <ul>
+                            <li>Added WhiteWall Security Modules</li>
+                            <li>Added ECSE Security Modules</li>
+                            <li>EraCloud modified to public versions</li>
+                            <li>Added 2025 countdown page</li>
+                            <li>Responsive design improvements</li>
+                            <li>New random messages in intro</li>
+                        </ul>
+                        <div class="feature-tags">
+                            <span class="tag">Security</span>
+                            <span class="tag">Responsive</span>
+                            <span class="tag">Interactive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-## UI_v1.7 - major update
-- made the popup2 into an welcome menssage and added secret links to it
-- added a lot of images on assets.html
-- remade the c3.6.0 screens
+        <div class="version-group" style="--delay: 4">
+            <div class="version-header">
+                <div class="version-badge">UI v2.4 - v2.5</div>
+                <div class="version-line"></div>
+            </div>
+            <div class="updates-grid">
+                <div class="update-card">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        UI v2.4 - Resources
+                    </h3>
+                    <div class="update-content">
+                        <ul>
+                            <li>Made Resources page with current apps</li>
+                            <li>New categorized images at /assets</li>
+                            <li>Removed heavy animations</li>
+                            <li>New main screen aesthetic</li>
+                            <li>Overall polishing</li>
+                            <li>/RainOs updated</li>
+                        </ul>
+                        <div class="feature-tags">
+                            <span class="tag">Resources</span>
+                            <span class="tag">Performance</span>
+                            <span class="tag">Visual</span>
+                        </div>
+                    </div>
+                </div>
 
-## UI_v1.8
-- made shortcuts for every page like "assets/" goes to "assets.html"
-- remade design of the assets page
-- deleted news page from asp
-- acess to RainOS granted (i made a web version to work), "rainOs/"
-- fixed some page descriptions and icons
+                <div class="update-card">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        UI v2.5 - Organization
+                    </h3>
+                    <div class="update-content">
+                        <ul>
+                            <li>Renamed "services" to "resources"</li>
+                            <li>Moved RainOs and astrodist to Resources</li>
+                            <li>Server-side improvements</li>
+                            <li>Added wiki-icons to /assets</li>
+                            <li>Updated SimplyPrivate screens</li>
+                            <li>Added new resources: EffectsEngine & PuplProject</li>
+                            <li>LowResSphere shape in ASP menu</li>
+                        </ul>
+                        <div class="feature-tags">
+                            <span class="tag">Organization</span>
+                            <span class="tag">Backend</span>
+                            <span class="tag">Content</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-## UI_v1.9
-- made extra paths to simplyprivate pages
-- updated all icons
-- made "astrodist" page
 
-## UI_v2.0 - TOTAL REDESIGN
-## UI_v2.1
-- removed some old pages
-- made a shared folder with all css and js files to all pages
-- made translations happen in the credits page as long with new images
-- new objects and formats in /asp as long with new design
-- new hidden project "astrodist" now in projects menu
-- all buttons on the main page will open a new tab instead of opening them in the same page
-- added a 404 error page
+        <div class="version-group" style="--delay: 5">
+            <div class="version-header">
+                <div class="version-badge">UI v2.5.4 - v2.5.7</div>
+                <div class="version-line"></div>
+            </div>
+            <div class="updates-grid">
+                <div class="update-card">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        Optimization Era
+                    </h3>
+                    <div class="update-content">
+                        <ul>
+                            <li><strong>OVER 300 CHANGES!</strong></li>
+                            <li>Minimalistic design improvements</li>
+                            <li>Better folder organization</li>
+                            <li>Enhanced profile sliding in credits</li>
+                            <li>Overall optimization</li>
+                            <li>Added StorageTest folder</li>
+                            <li>@Old-Websites resource added</li>
+                            <li>SimplyPrivate Changelog masterpiece</li>
+                        </ul>
+                        <div class="feature-tags">
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Masterpiece</span>
+                        </div>
+                    </div>
+                </div>
+            </div><section id="latest"></section>
+        </div>
 
-## UI_v2.2
-- Added WhiteWall Security Modules
-- Added ECSE Security Modules
-- Bug Fix
-- EraCloud modified to public versions, insert token to access to projects and resources
-- New icons
+        <div class="version-group major-update" style="--delay: 2">
+            <div class="version-header">
+                <div class="version-badge">UI v3.0 - TOTAL REDESIGN (latest)</div>
+                <div class="version-line"></div>
+            </div>
+            <div class="updates-grid">
+                <div class="update-card major-update">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        Complete Visual Overhaul
+                    </h3>
+                    <div class="update-content">
+                        <p>A complete redesign from the ground up, including old to new pages. All that to give a new artistic look for my drastic personality change.</p>
+                        
+                        <div class="update-content">
+                        <ul>
+                            <p>-</p>
+                            <li>New design, new layout, new animations, new everything.</li>
+                            <li>Main Screen - cinematic and useful</li>
+                            <li>Resources - now on dark mode, categorized and color coded.</li>
+                            <li>Changelog page - a new space.</li>
+                            <li>/Cloud is back - new service "GemCloud" coming soon.</li>
+                            <li>Ruby.ai access website was redesigned (now shows when the server is closed.).</li>
+                            <li>/assets is much more more visually organized.</li>
+                            <li>New info section in /resources with information about old projects.</li>
+                            <li>The "Book project" (at /book) was redesigned.</li>
+                            <li>404 page is also cinematicly fresh.</li>
+                            <li>europia is here! with a new agent/g3.</li>
+                        </ul>
+                        <div class="feature-tags">
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Masterpiece</span>
+                        </div>
+                    </div>
+                        <div class="feature-tags">
+                            <span class="tag">Major Update</span>
+                            <span class="tag">Redesign</span>
+                            <span class="tag">Architecture</span>
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Masterpiece</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-## UI_v2.3
-- EraCloud design fix
-- Added 2025 countdown page
-- Some bug fixes
-- New icons added to asset page
+        <div class="version-group coming-soon" style="--delay: 6">
+            <div class="version-header">
+                <div class="version-badge">Coming Soon</div>
+                <div class="version-line"></div>
+            </div>
+            <div class="updates-grid">
+                <div class="update-card coming-soon">
+                    <h3>🚀 Next Updates</h3>
+                    <div class="update-content">
+                        <ul>
+                            <li>Theme color settings</li>
+                            <li>Public Post section</li>
+                            <li>More Chapters of the "Book Project"</li>
+                            <li>More animations and small tweaks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-## UI_v2.3.1
-- Some bug fixes
-- New random message in intro page
-- New intro page design
-- Some text and redirect fixes
-- 2025 page now reacts to screen sizes
-- main pages now react to screen sizes (mostly)
-- added redirect to changelog in the loading/intro page
+    <script>
+        // Create animated particles
+        function createParticles() {
+            const particles = document.querySelector('.particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                particles.appendChild(particle);
+            }
+        }
 
-## UI_v2.3.2
-- Some bug fixes
-- Added resources page
-- New helper: soupreto123 - Cloud services developer
-- New images at /assets
-- New animations at credits page
-- Fresh texts in the main page
-- Warning: 2025 page will deleted soon
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-## UI_v2.4
-- Some bug fixes
-- Made Resources page, current apps (3): @2025, @simplyprivate (previews), @world2
-- New images at /assets and added categories: image (blue), preview (yellow), special (purple)
-- Removed and added click functions to /assets
-- Removed heavy animations
-- /2025 removed and moved to resources page - /apps
-- Removed tips and quotes in the main screen
-- New main screen aesthetic (not aplied to all pages, this is a test)
-- Overall polishing
-- /RainOs updated
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
 
-## UI_v2.4.1
-- some bug fixes
-- new images at "./asp/credits.html", changed visuals, description, translations and more
-- new images and chanded images at "./assets"
-- new visuals and resources at "./apps"
+        // Observe all version groups
+        document.querySelectorAll('.version-group').forEach(group => {
+            observer.observe(group);
+        });
 
-# UI_v2.4.2
-- some bug fixes
-- new images at "./assets"
+        // Add click effects to update cards
+        document.querySelectorAll('.update-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 150);
+            });
+        });
 
-# UI_v2.4.3
-- some bug fixes
-- removed /cloud for security reasons
-- did some shady server-side stuff
-- new images in "./assets"
-- plotting something
+        // Initialize
+        createParticles();
+        
+        // Add some interactivity to the timeline
+        document.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            document.querySelector('.particles').style.transform = `translateY(${rate}px)`;
+        });
 
-# UI_v2.5
-- some context and bug fixes
-- polishing around things
-- renamed "services" to "resources"
-- moved "RainOs" to Resources
-- moved "astrodist" to Resources
-- did some shady server-side stuff
-- removed, updated and added new icons at "/assets"
-- polished "/before"
-- still plotting something
-
-# UI_v2.5.1
-- yes, i'm still plotting something
-- added wiki-icons to "/assets"
-
-# UI_v2.5.2
-- yes! i'm still plotting
-- updated SimplyPrivate Screens
-- updated resources - @azayra & @simplyprivate
-- fixed bugs
-
-# UI_v2.5.3
-- big big big update coming
-- removed useless icons
-- updated resources - styles
-- updated resources - added "@EffectsEngine" & "@PuplProject"
-- added icons for the new resources
-- fixed bugs
-- some animations
-- added a new shape in "asp" menu, "LowResSphere" - a low resolution sphere that you can choose the number of sides.
-
-# UI_v2.5.4
-- new design coming soon.
-- updated some resources
-- new minimalistic details
-- removed unused pages and assets
-- updated folder organization
-- made better the sliding trough the profiles in the credits page
-- overall optimization
-- fixed a lot of bugs
-- OVER 300 CHANGES?!
-
-# UI_v2.5.5
-- new design coming soon.
-- updated resources page with new "StorageTest" Folder, a dedicated storage to test rendering and other logic.
-
-# UI_v2.5.6
-- new design coming soon.
-- added "@Old-Websites" to "Resources", it displays (not all)the public websites that i created. They all are abandoned, so don't put any info or send any form.
-
-# UI_v2.5.7
-- Still cooking something
-- Deleted some resources from /resources and /assets.
-- Cooked a masterpiece: The SimplyPrivate Changelog page.
-- Ajusted image and animation structure from /assets.
-- Updated the Developers/Supporters profile picture.
-- Some bipolar translations are going on, i'm working in a creative solution.
-
-### In the Next Updates:
-- Total redesign (again)
-- Better profile page
-- Better reaction to screen sizes
-- More languages
-- Theme settings
-- Ruby.ai integration
-- EraCloud redesign
-...
-`;
-
-document.getElementById('md').innerHTML = marked.parse(markdownText);
-  </script>
+        // Add typing effect to the title
+        const title = document.querySelector('.header h1');
+        const text = title.textContent;
+        title.textContent = '';
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < text.length) {
+                title.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        setTimeout(typeWriter, 500);
+    </script>
 </body>
+</html>

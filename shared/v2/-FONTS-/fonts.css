@@ -1,0 +1,39 @@
+@font-face {
+    font-family: Dosis;
+    src: url(./Dosis/Dosis.ttf);
+}
+
+@font-face {
+    font-family: FleurDeLeah;
+    src: url(./FleurDeLeah/FleurDeLeah.ttf);
+}
+
+@font-face {
+    font-family: Jersey10;
+    src: url(./Jersey10/Jersey10.ttf);
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(./Outfit/Outfit.ttf);
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(./Quicksand/Quicksand.ttf);
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(./Rubik/Rubik.ttf);
+}
+
+@font-face {
+    font-family: RubikMonoOne;
+    src: url(./RubikMonoOne/RubikMonoOne.ttf);
+}
+
+@font-face {
+    font-family: SourceCodePro;
+    src: url(./SourceCodePro/SourceCodePro.ttf);
+}

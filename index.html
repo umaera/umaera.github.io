@@ -1,32 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>UmaEra</title>
-    <link rel="shortcut icon" href="./icons/@core/pupur.png" type="image/x-icon">
-    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" href="./icons/@core/MyLittleIcon-v1.png" type="image/x-icon">
+    <meta name="robots" content="index, follow, noarchive, nosnippet, translate">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="UmaEra | Official website of UmaEra!, explore and try out projects!">
+    <meta name="description" content="No description 😜 - i'm too wild for that">
 
-    <link rel="stylesheet" href="./shared/v1/fonts/fonts.css">
-    <link rel="stylesheet" href="./shared/v1/styles/index.css">
+    <link rel="stylesheet" href="./shared/v2/-FONTS-/fonts.css">
+    <link rel="stylesheet" href="./shared/v2/-STYLES-/main.css">
+    <link rel="stylesheet" href="./shared/v2/-STYLES-/Load.css">
+    <link rel="stylesheet" href="./shared/v2/-STYLES-/reactive.css">
 </head>
-<body style="background-color: black;"></body>
-<script>
-const userLang = navigator.language || navigator.userLanguage;
+<body>
+    <div id="loading-overlay"></div>
+    <div class="desktopView">
+        <div class="fylc">
+            <div class="fylcbox box1">
+                <h1 translate="no">umaera</h1>
+                <p>software developer • digital artist • video editor</p>
+            </div>
 
-function after() {
-    if (userLang.startsWith('pt') || userLang.startsWith('br')) {
-        goPT();
-    } else {
-        goEN();
-    }
-}
+            <div class="fylcbox box2"></div>
+            <div class="fylcbox box3"></div>
+            
+            <div class="fylcbox box4">
+                <nav class="nav-menu">
+                    <h3># Main Page #</h3>
+                    <ul>
+                        <!--<li><a href="#new">What's new?</a></li>-->
+                        <li><a href="./social/" target="_blank">Social Media</a></li>
+                        <li><a href="./resources/" target="_blank">Resources</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
 
-setTimeout(after, 1)
+    </div>
 
-function goPT() {
-    window.location.href = 'pt/'; 
-}
-
-function goEN() {
-    window.location.href = 'en/'; 
-}
-</script>
+    <div class="phoneView">
+        <div class="PhoneViewContent">
+            <div class="titleJob">
+                    <div class="title">umaera</div>
+                    <div class="description">software developer • digital artist • video editor</div>
+                    <div class="controlButtons">
+                        <!--<div class="cbtn" style="background-image: url('./shared/v2/-IMAGES-/stat.png');"></div>-->
+                        <div class="cbtn" style="background-image: url('./shared/v2/-IMAGES-/user.png');" onclick="window.location.href = './social/'"></div>
+                        <div class="cbtn" style="background-image: url('./shared/v2/-IMAGES-/folderCode.png');" onclick="window.location.href = './resources/'"></div>
+                    </div>
+            </div>
+        </div>
+        <div class="mainFrame"></div>
+    </div>
+</body>
+</html>

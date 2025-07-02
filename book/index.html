@@ -1,76 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
- <title>Book Project</title>
- <link rel="shortcut icon" href="../icons/@core/Bulb.png" type="image/x-icon">
- <meta name="robots" content="index, follow">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta name="description" content="Book project.">
- <link rel="stylesheet" href="../shared/v1/fonts/fonts.css">
-
-  <style>
-        body{
-            background-color: pur;
-            overflow:hidden;
-            font-family: QuickSand;
-            user-select: none;
-            -moz-user-select: none;
-            -webkit-user-drag: none;
-            -webkit-user-select: none;
-            padding: 25px;
-        }
-
-        .results{
-            width: 99%; height: 90%;
-            border-style:inset;
-            border-width: 3px;
-            overflow-y: auto;
-            background-color: rgba(192, 192, 192, 0.623);
-        }
-
-        .results::scroll-marker-group{
-            scroll-behavior:smooth;
-        }
-
-        blockquote{
-            margin-top: -15;
-            margin-left: 10;
-            padding: 1px;
-            transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-
-        blockquote:hover{
-            background-color: rgba(255, 255, 255, 0.452);
-            transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
+    <title>Book Project</title>
+    <link rel="shortcut icon" href="../icons/@core/Bulb.png" type="image/x-icon">
+    <meta name="robots" content="none">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A personal collection of feelings transformed into stories - a journey through emotions and experiences.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
         
-        blockquote::before {
-            content: "- ";
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        h4{
-            font-size:1rem;
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            color: #2c3e50;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        a{
-            color: rgb(255, 0, 255);
+        /* Animated background elements */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
+            z-index: -1;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 40px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .subtitle {
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .stats {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .stats .number {
+            background: linear-gradient(45deg, #ff6b9d, #c471ed);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            text-shadow: none;
+        }
+
+        .content-area {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            min-height: 600px;
+        }
+
+        .book-collection {
+            padding: 40px;
+        }
+
+        .collection-item {
+            margin-bottom: 50px;
+            border-bottom: 1px solid rgba(108, 117, 125, 0.2);
+            padding-bottom: 40px;
+        }
+
+        .collection-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .collection-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .collection-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .collection-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .collection-description {
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 5px;
+            font-size: 0.95rem;
+        }
+
+        .episodes-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px solid rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .episode-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .episode-card:hover::before {
+            left: 100%;
+        }
+
+        .episode-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .episode-number {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .episode-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .episode-excerpt {
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .episode-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #868e96;
+        }
+
+        .episode-language {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 4px 10px;
+            border-radius: 10px;
             font-weight: 500;
         }
 
-        a:visited{
-            color: rgb(255, 80, 197)
+        .read-arrow {
+            opacity:1;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+            color: #667eea;
+            font-weight: 600;
         }
 
-        .project::before {
-            content: "> ";
+        .episode-card:hover .read-arrow {
+            opacity: 1;
+            transform: translateX(0);
         }
 
+        .origin-note {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
+            border: 2px solid rgba(255, 193, 7, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .origin-note .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .origin-note .text {
+            color: #856404;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: floatRandom 15s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+            font-size: 2rem;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 5s;
+            font-size: 1.5rem;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 10s;
+            font-size: 1.8rem;
+        }
+
+        @keyframes floatRandom {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
+            50% { transform: translateY(-30px) rotate(5deg); opacity: 0.2; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .header .subtitle {
+                font-size: 1rem;
+            }
+            
+            .book-collection {
+                padding: 25px;
+            }
+            
+            .collection-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .episode-meta {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #5a6fd8, #6a4190);
+        }
     </style>
 </head>
-<h3>Book Project | <mark>1</mark> book found!</h3>
-<div>
-  
- <h4>@Origin</h4>
- <blockquote>- no source --</blockquote>
- <h4>@unamed</h4>
- <blockquote><a href="./unnamed/EP1-PosturaCongelada.pdf" target="_blank">↳ [PT] Episode 1 - Postura-congelada</a></blockquote>
- <blockquote><a href="./unnamed/EP2 - Contacto.pdf" target="_blank">↳ [PT] Episode 2 - Contacto</a></blockquote>
-</div>
+<body>
+    <div class="floating-elements">
+        <div class="floating-element">📖</div>
+        <div class="floating-element">✨</div>
+        <div class="floating-element">💭</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>📚 Book project</h1>
+            <p class="subtitle">Where feelings transform into stories, and emotions find their voice through words</p>
+            <div class="stats">
+                <span class="number">1</span>
+                <span>book series discovered</span>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="book-collection">
+                
+                <!--<div class="collection-item">
+                    <div class="origin-note">
+                        <span class="icon">🌱</span>
+                        <p class="text">Everything is just a thought.</p>
+                    </div>
+                </div>-->
+
+                <div class="collection-item">
+                    <div class="collection-header">
+                        <div class="collection-icon">🔮</div>
+                        <div>
+                            <h2 class="collection-title">@unnamed</h2>
+                            <p class="collection-description">Unknown stories, comfort in caos.</p>
+                        </div>
+                    </div>
+
+                    <div class="episodes-grid">
+                        <a href="./unnamed/EP1-PosturaCongelada.pdf" target="_blank" class="episode-card">
+                            <div class="episode-number">Episode 1</div>
+                            <h3 class="episode-title">Postura Congelada</h3>
+                            <p class="episode-excerpt">A protagonista encrontra-se crítica, a despejar os seus sentimentos para fora e a refletir sobre alguns já vividos, um trabalho por fazer, ela encontra alguém que atrávez de uma conexão genérica, encontra o conforto que procurava para gerir os seus sentimentos.</p>
+                            <div class="episode-meta">
+                                <span class="episode-language">PT</span>
+                                <span class="read-arrow">Read →</span>
+                            </div>
+                        </a>
+
+                        <a href="./unnamed/EP2 - Contacto.pdf" target="_blank" class="episode-card">
+                            <div class="episode-number">Episode 2</div>
+                            <h3 class="episode-title">Contacto</h3>
+                            <p class="episode-excerpt">Uma nova dor, uma que uma que nos torna inúteis mas poderosos. Porquê o contacto humano é aquilo que nos cura e nos mata?</p>
+                            <div class="episode-meta">
+                                <span class="episode-language">PT</span>
+                                <span class="read-arrow">Read →</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add subtle parallax effect to floating elements
+        document.addEventListener('mousemove', (e) => {
+            const floatingElements = document.querySelectorAll('.floating-element');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            floatingElements.forEach((element, index) => {
+                const speed = (index + 1) * 0.5;
+                const x = (mouseX - 0.5) * speed * 50;
+                const y = (mouseY - 0.5) * speed * 50;
+                
+                element.style.transform = `translate(${x}px, ${y}px) rotate(${x * 0.1}deg)`;
+            });
+        });
+
+        // Add reading progress indicator
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const maxHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollProgress = (scrolled / maxHeight) * 100;
+            
+            // You could add a progress bar here if desired
+        });
+
+        // Animate stats number on load
+        window.addEventListener('load', () => {
+            const numberElement = document.querySelector('.stats .number');
+            const finalValue = parseInt(numberElement.textContent);
+            let currentValue = 0;
+            
+            const timer = setInterval(() => {
+                if (currentValue < finalValue) {
+                    currentValue++;
+                    numberElement.textContent = currentValue;
+                } else {
+                    clearInterval(timer);
+                }
+            }, 100);
+        });
+    </script>
+</body>
+</html>

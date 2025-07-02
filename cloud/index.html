@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, noarchive, nosnippet, notranslate">
+    <link rel="shortcut icon" href="../icons/cloud-icons/GemCloud.png" type="image/x-icon">
+    <title>GemCloud - AI & Asset Repository</title>
+    <meta name="description" content="GemCloud is a cloud platform for hosting AI models, executables, project assets, and community extensions. Build, deploy, and share with others!">
+    <link rel="stylesheet" href="../shared/v2/-FONTS-/fonts.css">
+    <link rel="stylesheet" href="./styles/Main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bg-animation"></div>
+        
+        <header>
+            <nav>
+                <div class="logo"  translate="no">GemCloud</div>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#docs">Documentation</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>Your AI hosting service & project Repository</h1>
+                <p>A cloud platform for hosting AI models, executables, project assets, and community extensions. Build, deploy, and share with others!</p>
+                
+                <div class="status-badge">
+                    <div class="status-dot"></div>
+                    Coming Soon - In Development
+                </div>
+            </section>
+
+            <section class="services" id="services">
+                <div class="service-card">
+                    <span class="service-icon">🤖</span>
+                    <h3>AI Model Hosting</h3>
+                    <p>Deploy and manage your AI/Agents model with the most stability possible and automatic scaling.</p>
+                    <ul class="service-features">
+                        <li>GPU-accelerated inference</li>
+                        <li>Auto-scaling capabilities</li>
+                        <li>Model versioning</li>
+                        <li>API endpoint generation</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">📦</span>
+                    <h3>Asset Repository</h3>
+                    <p>Store and distribute your project assets, executables, and archived files with high availability and fast global delivery.</p>
+                    <ul class="service-features">
+                        <li>Unlimited storage</li>
+                        <li>Global CDN distribution</li>
+                        <li>Version control</li>
+                        <li>Secure file sharing</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🔧</span>
+                    <h3>Extension Marketplace</h3>
+                    <p>A thriving ecosystem where your community can create, share, and discover extensions for your applications.</p>
+                    <ul class="service-features">
+                        <li>Community-driven development</li>
+                        <li>Automated testing</li>
+                        <li>Easy installation</li>
+                        <li>Developer tools</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🚀</span>
+                    <h3>Project Hub</h3>
+                    <p>Centralized project management with integrated deployment, monitoring, and collaboration tools for your entire workflow.</p>
+                    <ul class="service-features">
+                        <li>CI/CD integration</li>
+                        <li>Real-time monitoring</li>
+                        <li>Team collaboration</li>
+                        <li>Deployment automation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="cta">
+                <button class="cta-button" onclick="showComingSoon()">Get Early Access</button>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function showComingSoon() {
+            alert('💎 Thanks for your interest! We\'ll notify you when GemCloud launches.');
+        }
+
+        // Add subtle parallax effect to background
+        document.addEventListener('mousemove', (e) => {
+            const bgAnimation = document.querySelector('.bg-animation');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            bgAnimation.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+        });
+
+        // Add intersection observer for service cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

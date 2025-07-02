@@ -193,6 +193,19 @@
 - Updated the Developers/Supporters profile picture.
 - Some bipolar translations are going on, i'm working in a creative solution.
 
+# UI_v3.0
+- TOTAL REDESING IS HERE!!!!!
+- New design, new layout, new animations, new everything.
+- Main Screen - cinematic and useful
+- Resources page is now on dark mode, and color coded.
+- Changelog page - a new space.
+- /Cloud is back - new service "GemCloud" coming soon.
+- Ruby.ai access website was redesigned.
+- New info section for informing about old projects.
+- /assets is much more more visually organized
+- The "book project" (at /book) is redesigned.
+- 404 is also cinematicly fresh.
+- europia is here! with a new agent/g3.
 
 ### In the Next Updates:
 - Total redesign (again)

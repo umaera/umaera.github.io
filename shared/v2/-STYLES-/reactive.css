@@ -1,0 +1,56 @@
+@media (min-width: 900px) {
+    .nav-menu a {
+        font-size:2rem; /* para ecrãs grandes */
+    }
+}
+@media (max-width: 800px) {
+    .nav-menu a {
+        font-size: 1.3rem; /* para ecrãs médios */
+    }
+}
+
+@media (max-width: 650px) {
+    body{ 
+        background-color: rgb(0, 0, 0);
+        padding: 0;
+    }
+    .desktopView{
+        display: none;
+    }
+    .phoneView{
+        display: block;
+    }
+}
+
+@media (max-width: 350px) {
+    body{ 
+        background-color: rgb(255, 0, 128);
+        padding: 0;
+    }
+    body:after{ 
+       content: 'bad screen resolution';
+    }
+    .desktopView{
+        display: none;
+    }
+    .phoneView{
+        display: none;
+    }
+}
+
+@media (max-height: 450px) {
+    body{ 
+        background-color: rgb(255, 0, 128);
+        padding: 0;
+    }
+    body:after{ 
+       content: 'bad screen resolution';
+    }
+    .desktopView{
+        display: none;
+    }
+    .phoneView{
+        display: none;
+    }
+}
+
