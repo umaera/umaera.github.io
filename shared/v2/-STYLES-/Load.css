@@ -1,21 +1,37 @@
-#loading-overlay {
-      position: absolute;
-      width: 100%; height: 0;
-      transform: translate(-50%, -50%);
-      top: 50%; left: 50%;
-      background-image: url('../-IMAGES-/staticNoise-wrd.gif');
-      background-position: center;
-      background-repeat: repeat;
-      background-size: 80%;
-      z-index: 9999;
-      animation: fadeout 0.5s ease-in-out;
-      opacity: 0.04;
+.box1 {
+  animation: height-anim 0.5s ease;
 }
 
-@keyframes fadeout {
-  from{
-    opacity: 0.2;
-    height: 100%;
+.box2 {
+  animation: width-anim 0.5s ease;
+}
+
+.box3 {
+  animation: height-anim 0.5s ease;
+}
+
+.box4 {
+  animation: fade-anim 1s ease;
+}
+
+.PhoneViewContent {
+  animation: height-anim 1s ease;
+}
+
+@keyframes width-anim {
+  0% {
+    width: 0;
   }
 }
 
+@keyframes height-anim {
+  0% {
+    height: 0;
+  }
+}
+
+@keyframes fade-anim {
+  0% {
+    opacity: 0;
+  }
+}

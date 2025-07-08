@@ -37,3 +37,33 @@
     font-family: SourceCodePro;
     src: url(./SourceCodePro/SourceCodePro.ttf);
 }
+
+@font-face {
+    font-family: WorkSans;
+    src: url(./WorkSans/WorkSans.ttf);
+}
+
+@font-face {
+    font-family: LubriFont;
+    src: url(./WDXLLubrifontSC/WDXLLubrifontSC.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(./Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family:LibertinusMono;
+    src: url(./LibertinusMono/LibertinusMono.ttf);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(./Inter/Inter.ttf);
+}
+
+@font-face {
+    font-family: MarkerGothic;
+    src: url(./LXGWMarkerGothic/LXGWMarkerGothic.ttf);
+}

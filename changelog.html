@@ -5,351 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>umaera.github.io - Changelog</title>
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-        <link rel="shortcut icon" href="./icons/@core/MyLittleIcon-v1.png" type="image/x-icon">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
-        
-        html{
-          user-select: none;
-          -moz-user-select: none;
-          -webkit-user-drag: none;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 100%);
-            min-height: 100vh;
-            color: #e0e0e0;
-            overflow-x: hidden;
-            position: relative;
-        }
-        
-        /* Animated background particles */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(108, 124, 224, 0.5);
-            border-radius: 50%;
-            animation: float 20s infinite linear;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(100vh) translateX(0px); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
-        }
-        
-        .header {
-            text-align: center;
-            padding: 60px 20px;
-            position: relative;
-            z-index: 10;
-            background: linear-gradient(135deg, rgba(108, 124, 224, 0.1), rgba(255, 107, 157, 0.1));
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .header h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #6c7ce0, #ff6b9d, #c44dff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 20px;
-            animation: titleGlow 3s ease-in-out infinite alternate;
-        }
-        
-        @keyframes titleGlow {
-            0% { filter: drop-shadow(0 0 10px rgba(108, 124, 224, 0.5)); }
-            100% { filter: drop-shadow(0 0 30px rgba(255, 107, 157, 0.8)); }
-        }
-        
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.8;
-            font-weight: 300;
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 30px;
-        }
-        
-        .stat {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .stat:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #6c7ce0;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            margin-top: 5px;
-        }
-        
-        .timeline {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            position: relative;
-            z-index: 10;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(180deg, #6c7ce0, #ff6b9d, #c44dff);
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-        
-        .version-group {
-            margin-bottom: 60px;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        .version-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        
-        .version-badge {
-            background: linear-gradient(135deg, #6c7ce0, #ff6b9d);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 600;
-            font-size: 1.1rem;
-            position: relative;
-            z-index: 5;
-            box-shadow: 0 10px 30px rgba(108, 124, 224, 0.3);
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        
-        .version-line {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 100px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #6c7ce0, transparent);
-            transform: translate(-50%, -50%);
-            z-index: 1;
-        }
-        
-        .updates-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: start;
-        }
-        
-        .update-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .update-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #6c7ce0, #ff6b9d, #c44dff);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-        
-        .update-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(108, 124, 224, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .update-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .update-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .update-icon {
-            width: 12px;
-            height: 12px;
-            background: linear-gradient(45deg, #6c7ce0, #ff6b9d);
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-        
-        .update-content {
-            line-height: 1.6;
-        }
-        
-        .update-content ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .update-content li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 12px;
-            opacity: 0.85;
-            transition: all 0.3s ease;
-        }
-        
-        .update-content li::before {
-            content: '▶';
-            position: absolute;
-            left: 0;
-            color: #6c7ce0;
-            font-size: 0.8rem;
-            transition: all 0.3s ease;
-        }
-        
-        .update-content li:hover {
-            opacity: 1;
-            transform: translateX(5px);
-        }
-        
-        .update-content li:hover::before {
-            color: #ff6b9d;
-        }
-        
-        .major-update {
-            grid-column: span 2;
-            background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(196, 77, 255, 0.1));
-            border: 2px solid rgba(255, 107, 157, 0.3);
-        }
-        
-        .coming-soon {
-            background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 107, 157, 0.1));
-            border: 2px solid rgba(255, 193, 7, 0.3);
-            text-align: center;
-            grid-column: span 2;
-        }
-        
-        .coming-soon h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: #ffc107;
-        }
-        
-        .feature-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-        
-        .tag {
-            background: rgba(108, 124, 224, 0.2);
-            color: #6c7ce0;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            border: 1px solid rgba(108, 124, 224, 0.3);
-        }
-        
-        .code {
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 3px 8px;
-            border-radius: 6px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9em;
-            color: #ff6b9d;
-            border: 1px solid rgba(255, 107, 157, 0.2);
-        }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .header h1 { font-size: 2.5rem; }
-            .stats { flex-direction: column; gap: 20px; }
-            .updates-grid { grid-template-columns: 1fr; }
-            .major-update, .coming-soon { grid-column: span 1; }
-            .timeline::before { left: 20px; }
-            .version-header { justify-content: flex-start; margin-left: 40px; }
-        }
-        
-        /* Scroll animations */
-        .version-group {
-            animation-delay: calc(var(--delay) * 0.2s);
-        }
-    </style>
+    <link rel="shortcut icon" href="./icons/@core/MyLittleIcon-v1.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./shared/v2/-STYLES-/ap.changelog.css">
+    <link rel="stylesheet" href="./shared/v2/-FONTS-/fonts.css">
 </head>
 <body>
     <div class="particles"></div>
@@ -606,7 +265,7 @@
                             <li>Overall optimization</li>
                             <li>Added StorageTest folder</li>
                             <li>@Old-Websites resource added</li>
-                            <li>SimplyPrivate Changelog masterpiece</li>
+                            <li>SimplyPrivate Changelog masterpiece added</li>
                         </ul>
                         <div class="feature-tags">
                             <span class="tag">Optimization</span>
@@ -614,12 +273,12 @@
                         </div>
                     </div>
                 </div>
-            </div><section id="latest"></section>
+            </div>
         </div>
 
         <div class="version-group major-update" style="--delay: 2">
             <div class="version-header">
-                <div class="version-badge">UI v3.0 - TOTAL REDESIGN (latest)</div>
+                <div class="version-badge">UI v3.0 - TOTAL REDESIGN</div>
                 <div class="version-line"></div>
             </div>
             <div class="updates-grid">
@@ -660,6 +319,41 @@
                         </div>
                     </div>
                 </div>
+            </div><section id="latest"></section>
+        </div>
+
+        <div class="version-group" style="--delay: 5">
+            <div class="version-header">                <div class="version-badge">UI v3.1 (latest)</div>
+                <div class="version-line"></div>
+            </div>
+            <div class="updates-grid">
+                <div class="update-card">
+                    <h3 class="update-title">
+                        <div class="update-icon"></div>
+                        Reactive and Shiny 
+                    </h3>
+                    <div class="update-content">
+                        <ul>
+                            <li>Loading animations added to every page of the website.</li>
+                            <li>Small visual tweaks to button elements.</li>
+                            <li>Buttons on Mobile-View now have text!</li>
+                            <li>Optimized 404 page.</li>
+                            <li>Mobile Social Media page fixed & new design like desktop page!</li>
+                            <li>Visual tweaks to Social Media pages</li>
+                            <li>Visual Tweaks and font changes in changelog page.</li>
+                            <li>Added a LOT of new fonts</li>
+                            <li>Polished info pages, resources marker/project count & style</li>
+                            <li>Astrodist page now has an favicon (wow, compleatly relevant)</li>
+                            <li>Made website icon variations.</li>
+                            <li>Changed some features in Cloud & Ruby pages.</li>
+                        </ul>
+                        <div class="feature-tags">
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Screen variations</span>
+                            <span class="tag">Visual Tweaks</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -674,7 +368,8 @@
                     <div class="update-content">
                         <ul>
                             <li>Theme color settings</li>
-                            <li>Public Post section</li>
+                            <li>Midia/Post section</li>
+                            <li>Project-Only Page</li>
                             <li>More Chapters of the "Book Project"</li>
                             <li>More animations and small tweaks</li>
                         </ul>
@@ -683,77 +378,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Create animated particles
-        function createParticles() {
-            const particles = document.querySelector('.particles');
-            const particleCount = 50;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
-                particles.appendChild(particle);
-            }
-        }
-
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all version groups
-        document.querySelectorAll('.version-group').forEach(group => {
-            observer.observe(group);
-        });
-
-        // Add click effects to update cards
-        document.querySelectorAll('.update-card').forEach(card => {
-            card.addEventListener('click', () => {
-                card.style.transform = 'scale(0.98)';
-                setTimeout(() => {
-                    card.style.transform = '';
-                }, 150);
-            });
-        });
-
-        // Initialize
-        createParticles();
-        
-        // Add some interactivity to the timeline
-        document.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            document.querySelector('.particles').style.transform = `translateY(${rate}px)`;
-        });
-
-        // Add typing effect to the title
-        const title = document.querySelector('.header h1');
-        const text = title.textContent;
-        title.textContent = '';
-        let i = 0;
-        
-        function typeWriter() {
-            if (i < text.length) {
-                title.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
-        }
-        
-        setTimeout(typeWriter, 500);
-    </script>
+<script src="./shared/v2/-SCRIPTS-/ap.changelog.js"></script>
 </body>
 </html>

@@ -207,6 +207,20 @@
 - 404 is also cinematicly fresh.
 - europia is here! with a new agent/g3.
 
+# UI_v3.1
+- Loading animations added to every page of the website.
+- Small visual tweaks to button elements.
+- Buttons on Mobile-View now have text!
+- Optimized 404 page.
+- Mobile Social Media page fixed & new design like desktop page!
+- Visual tweaks to Social Media pages.
+- Visual Tweaks and font changes in changelog page.
+- Added a LOT of new fonts
+- Polished info pages, resources marker/project count & style
+- Astrodist page now has an favicon (wow, compleatly relevant)
+- Made new website icon variations.
+- Changed some features in Cloud & Ruby pages.
+
 ### In the Next Updates:
 - Total redesign (again)
 - Better profile page
