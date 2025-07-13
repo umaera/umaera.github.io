@@ -55,10 +55,10 @@ p {
 
 .img-especial{
   border-style: solid;
-  border-color: rgb(0, 255, 145);
+  border-color: rgb(255, 255, 255);
   border-radius: 100%;
   border-width: 4;
-  box-shadow: 1px 1px 90px rgb(0, 255, 145);
+  box-shadow: 1px 1px 90px rgb(255, 255, 255);
   width: 150px;
   height: 150px;
   position: absolute;
@@ -86,10 +86,10 @@ transform: translate(-50%, -50%);
 
 .img-wrong {
   border-style: solid;
-  border-color: rgb(0, 174, 255);
+  border-color: rgb(255, 255, 255);
   border-radius: 100%;
   border-width: 4;
-  box-shadow: 1px 1px 900px rgb(0, 174, 255);
+  box-shadow: 1px 1px 900px rgb(255, 255, 255);
   width: 150px;
   height: 150px;
   position: absolute;
@@ -105,7 +105,7 @@ transform: translate(-50%, -50%);
 
 .img-urgent {
   border-style: solid;
-  border-color: rgb(0, 255, 255);
+  border-color: rgb(255, 255, 255);
   border-radius: 100%;
   border-width: 4;
   box-shadow: 1px 1px 100px rgb(0, 255, 255);
@@ -123,9 +123,10 @@ transform: translate(-50%, -50%);
 }
 
 .title {
+  width: 100%;
   position: absolute;
   top: 0%;
-  left: 49%;
+  left: 64%;
   transform: translate(-20%, -130%);
   border-radius: 15px;
   font-size: 30px;

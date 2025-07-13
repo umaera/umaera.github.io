@@ -39,7 +39,7 @@ function setProfileImage(url) {
 function executeAction(value) {
     switch (value) {
         case 1:
-            document.getElementById('class').textContent = 'Developers';
+            document.getElementById('class').textContent = 'SimplyPrivate Developers';
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/umaera.png');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
@@ -207,9 +207,9 @@ function executeAction(value) {
         case 10:
             document.getElementById('class').textContent = 'Supporters';
             document.getElementById('class').style.color = '#504cbe';
-            setProfileImage('https://umaera.github.io/icons/pfp/dede.webp');
+            setProfileImage('https://umaera.github.io/icons/m-icons/Static.gif');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #504cbe';
-            document.getElementById('name').textContent = 'dede07';
+            document.getElementById('name').innerHTML = 'dede07 <i style="color: aqua;">(deleted)</i>';
             document.getElementById('name').style.color = '#504cbe';
             document.getElementById('profile').textContent = 'UX revisor';
             document.getElementById('profile').style.color = '#756cff';

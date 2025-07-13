@@ -221,14 +221,29 @@
 - Made new website icon variations.
 - Changed some features in Cloud & Ruby pages.
 
+# UI_v3.2
+- MyMedia page pinned at the "Website Pages" top marker in /Resources.
+- Book Project pinned at the "Website Pages" top marker in /Resources.
+- New design for the "Book Project" page.
+- New Series in Book Project: @LostOnes.
+- New books out! "Ostranenie" & "I preferred to feel nothing rather than feel something new." (at /book).
+- New Translations & read pages for all book in Book Project.
+- Added a new Countdown page - 2026!! (new logo/design/animations)
+- Optimized image loading on /Assets
+- Added a little secret, click on a very RANDOM tile image in /assets.
+- Added morph loading animations to unfinished pages.
+- Added random favicon shape icon generator to random pages.
+- Changelog Page now suports Markdown & links
+- Updated Ruby.ai design and added an automatic check for the server.
+- Made "added items" animations & indicators at /assets
+- Deleted "Dede07" From all Systems - He choosed to.
+- SimplyPrivate Reached the end of it's support - announced
+
 ### In the Next Updates:
-- Total redesign (again)
-- Better profile page
-- Better reaction to screen sizes
-- More languages
-- Theme settings
-- Ruby.ai integration
-- EraCloud redesign
-- easter eggs 🎉
+- Theme color settings
+- Midia/Post section
+- Project-Only Page
+- More Chapters of the "Book Project"
+- More animations and small tweaks
 
 ...

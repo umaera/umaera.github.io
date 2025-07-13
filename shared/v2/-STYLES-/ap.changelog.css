@@ -20,6 +20,15 @@ body {
     position: relative;
 }
 
+a{
+    color: rgb(255, 133, 174);
+}
+
+a:hover{
+    color: rgb(255, 197, 216);
+    font-weight: 500;
+}
+
 /* ====== Effects + Animations ====== */
 .version-group {
     animation-delay: calc(var(--delay) * 0.2s);
@@ -253,12 +262,7 @@ body {
 .update-content {
     line-height: 1.6;
 }
-        
-.update-content ul {
-    list-style: none;
-    padding-left: 0;
-}
-        
+  
 .update-content li {
     position: relative;
     padding-left: 25px;
