@@ -12,45 +12,40 @@
         background: linear-gradient(135deg, #230f22 0%, #2e1a29 25%, #3e163b 50%, #600f56 100%);
         font-family: outfit;
         color: white; 
+        transition: 0.2s ease;
     }
 
+    header{
+        background-color: #30162f;
+        padding: 5px;
+        color: #96398e;
+    }
+
+    ::selection{
+        background-color: #96398e;
+        color: white;
+    }
+    /*---*/
     img{
         border-color: rgb(235, 98, 98);
-        width: auto;
+        width:auto;
         height: 100px;
         border-style: solid;
-        border-radius: 0px;
-        image-rendering:optimizeSpeed;
-        transition: 0.2s;
+        border-radius: 5px;
+        transition: 0.1s ease;
         user-select: none;
         -webkit-user-select: none;
         -webkit-user-drag: auto;
         border-width: 1px;
+        animation: init 1s ease-in-out;
     }
 
-    .newimg{
-        border-color: aqua;
-        border-width: 3px;
-        animation: glow 2s ease infinite;
-    }
-    .newimg:hover{
-        background-color: rgba(112, 210, 255, 0.246);
-    }
-    .deleted{
-        background-image: url('../shared/v2/-IMAGES-/staticNoise-wrd.gif');
-        background-repeat: repeat;
-        background-size: 50%;
-        border-color: transparent;
-    }
-    .deleted:hover{
-        transform: scale(1);
-        border-color: transparent;
-        background-color: rgb(0, 0, 0);
-        cursor:help;
+    img:nth-child{
+        animation: init 2s ease-in-out;
     }
 
     img:hover{
-        transition: 0.2s;
+        transition: 0.1s;
         transform: scale(1.2);
         border-radius: 5px;
         border-color: rgba(222, 137, 255, 0);
@@ -59,15 +54,51 @@
         backdrop-filter: blur(3px);
     }
 
+    /*---*/
+    .newimg{
+        border-color: aqua;
+        border-radius: 5px;
+        border-width: 1px;
+        animation: glow 2s ease infinite;
+        transition: 0.2s ease;
+    }
+
+    .newimg:hover{
+        background-color: rgba(112, 210, 255, 0.246);
+    }
+
     mark{
         background-color: aqua;
         color: rgb(10, 56, 65);
+        animation: init 2s ease-in-out;
+        transition: 0.2s ease;
     }
 
+    mark::selection{
+        background-color: yellow;
+        color: black;
+    }
+
+
+    /*---*/
+    .deleted{
+        background-image: url('../shared/v2/-IMAGES-/staticNoise-wrd.gif');
+        background-repeat: repeat;
+        background-size: 50%;
+        border-color: transparent;
+    }
+
+    .deleted:hover{
+        transform: scale(1);
+        border-color: transparent;
+        background-color: rgb(0, 0, 0);
+        cursor:help;
+    }
+
+    /*---*/
     @keyframes init {
         0%{
-            background-color: aqua;
-            border-radius: 100rem;
+           opacity: 0;
         }
 
     }
@@ -76,114 +107,151 @@
         50%{border-color: rgb(10, 56, 65) ;}
         100%{border-color: aqua;}
     }
+
 </style>
+<header>Asset Icon/Images - Hover or click to view details</header>
 
-<h2>- [ Project Icons ]</h2>
-<img src="../icons/app-icons/PrivateEye.png" onclick="alert('first icon ever')" title="first icon ever">
-<img src="../icons/app-icons/npb.ico" onclick="alert('test icon, but it still remains in the files')" title="test icon, but it still remains in the files">
-<img src="../icons/app-icons/JustEye.png" onclick="alert('another test icon')" title="another test icon">
-<img src="../icons/app-icons/eey.png"  onclick="alert('used since version 3.0')"title="used since version 3.0">
-<img src="../icons/app-icons/s2p.ico" onclick="alert('another test icon')"  title="another test icon">
-<img src="../icons/app-icons/7dred.ico" onclick="alert('i liked this, almost became the default app icon')" title="i liked this, almost became the default app icon">
-<img src="../icons/app-icons/s3p.ico" onclick="alert('this is old, i remember this apearing in 2.2')" title="this is old, i remember this apearing in 2.2">
-<img src="../icons/app-icons/GreenEye.ico" onclick="alert('almost became the 3.5 icon')" title="almost became the 3.5 icon">
-<img src="../icons/app-icons/PlantPNG.png" onclick="alert('modern plant, cool leaf, good times')" title="modern plant, cool leaf, good times">
-<img src="../icons/app-icons/Plant-Turbo.png" onclick="alert('used as a icon for turbo versions')" title="used as a icon for turbo versions">
-<img src="../icons/app-icons/scah.png" onclick="alert('the default app icon')" title="the default app icon">
-<img src="../icons/app-icons/simplyprivate37.png" onclick="alert('version 3.7 icon')" title="version 3.7 icon">
+<h2>@Global (All Projects) - <mark>2 Project Assets Added (UI v3.2.1)</mark></h2>
+<img src="../icons/@projects/@NoContext/atvoa.ico" onclick="alert('ATVOA - Default/placeholder Icon For all my project')" title="ATVOA - Default/placeholder Icon For all my project">
+<img src="../icons/@projects/@SimplyPrivate/scah.png" onclick="alert('SimplyPrivate • Web-Browser • 2023')" title="SimplyPrivate • Web-Browser • 2023">
+<img src="../icons/@projects/@NoContext/LMA.png" onclick="alert('Linguagem Modular Autonoma (LMA) • Ai/Tool app • 2024')" title="Linguagem Modular Autonoma (LMA) • Ai/Tool app • 2024">
+<img src="../icons/@projects/@NoContext/AST.jpg" onclick="alert('Astrodist • Mobile Game • 2023')" title="Astrodist • Mobile Game • 2023">
+<img src="../icons/@projects/@NoContext/aun2.jpg" onclick="alert('AUN2 • Ecosystem website enviroment • 2025')" title="AUN2 - connecting ecosystems into platforms">
+<img src="../icons/@projects/@NoContext/europia-gen3.jpg" onclick="alert('Europia G3 • Discord Mod/Tool/Ai Bot • 2023')" title="Europia G3 • Discord Mod/Tool/Ai Bot • 2023">
+<img src="../icons/lib-icons/ruby2.png" onclick="alert('Ruby.AI • internet-free Modular AI • 2023')" title="Ruby.AI • internet-free Modular AI • 2023">
+<img src="../icons/lib-icons/white.sphere.png" onclick="alert('SphereLib • Memory Manager Command Tool • 2025')" title="SphereLib • Memory Manager Command Tool • 2025">
+<img src="../icons/@projects/@umaera.github.io/website-icons/GemCloud.png" onclick="alert('GemCloud • AI & Asset Repository Website • 2025')" title="GemCloud • AI & Asset Repository Website • 2025">
+<img class="newimg" src="../icons/@projects/@PuplProject/PuplIcon-s1.png" onclick="alert('PuplBrowser • WebBrowser • Coming Soon (2026/2027)')" title="PuplBrowser • WebBrowser • Coming Soon (2026/2027)">
+<img class="newimg" src="../icons/@projects/@PuplProject/SilicaIcon-f0332-t.png" onclick="alert('Silica • Package Manager, APIs, Advanced app arquitecture - Nodejs package • 2025')" title="Silica • Package Manager, APIs, Advanced app arquitecture - Nodejs package • 2025">
+<img src="../icons/@projects/@umaera.github.io/website-icons/cloud-default.png" onclick="alert('EraCloud • Web/Shared server • 2024')" title="EraCloud • Web/Shared server • 2024">
+<img src="../icons/@projects/@PuplProject/Oriana.png" onclick="alert('Oriana Terminal • Ai Chat/Manager Desktop App • 2025')" title="Oriana Terminal • Ai Chat/Manager Desktop App • 2025">
+<img src="../icons/@projects/@CherryMonsters/Lnd.png" onclick="alert('CherryMonsters • Tower Defense Desktop Game • 2025')" title="CherryMonsters • Tower Defense Desktop Game • 2025">
+<img src="../icons/@projects/@NoContext/NeoChat.png" onclick="alert('NeoChat • Anonimous Chat Website • 2024')" title="NeoChat • Anonimous Chat Website • 2024">
+<img src="../icons/@projects/@NoContext/StreamifyIcon.png" onclick="alert('Streamify • Pirated Streaming Service • 2023')" title="Streamify • Pirated Streaming Service • 2023">
+<img src="../icons/@projects/@NoContext/Rius1.ico" onclick="alert('Rius • Web-Recorder Browser • 2023')" title="Rius • Web-Recorder Browser • 2023">
 
-<img src="../icons/lib-icons/Shaders.jpg" onclick="alert('hydrogen shader renderer icon')" title="hydrogen shader renderer icon">
-<img src="../icons/lib-icons/akttf-576yv-001.ico" onclick="alert('chartLib icon')" title="chartLib icon">
-<img src="../icons/lib-icons/BUGISSUE.jpg" onclick="alert('bug/issue report system')" title="bug/issue report system">
-<img src="../icons/lib-icons/LMA.png" onclick="alert('Linguagem Modular Autonoma (LMA) - icon')" title="Linguagem Modular Autonoma (LMA) - icon">
-<img src="../icons/lib-icons/Terminal.png" onclick="alert('Linguagem Modular Autonoma (LMA) - fileExplorer icon')" title="Linguagem Modular Autonoma (LMA) - fileExplorer icon">
-<img src="../icons/lib-icons/ruby2.png" onclick="alert('Ruby.Ai - internet-free, human-learned modular ai')" title="Ruby.Ai - internet-free, human-learned modular ai">
-<img src="../icons/lib-icons/white.sphere.png" onclick="alert('sphereLib - an complex library for optimization and memory management')" title="sphereLib - an complex library for optimization and memory management">
-<img src="../icons/lib-icons/Oriana.png" onclick="alert('Oriana.AI - get what you want right from the terminal.')" title="Oriana.AI - get what you want right from the terminal.">
-
-<h2>- [ Package Icons ]</h2>
-<img src="../icons/new-pack-icons/tile.carbon.png" onclick="alert('carbon: used everything, modular language for packages')" title="carbon: used everything, modular language for packages">
-<img src="../icons/new-pack-icons/tile.hydrogen.png" onclick="alert('hydrogen: used for visual elements, effects, shaders and rendering')" title="hydrogen: used for visual elements, effects, shaders and rendering">
-<img src="../icons/new-pack-icons/tile.iridium.png" onclick="alert('iridium: complex modular network manager')" title="iridium: complex modular network manager">
-<img src="../icons/new-pack-icons/tile.uranium.png" onclick="alert('Uranium: complex library to manage every render option in existence, also used to make spinning things!')" title="Uranium: complex library to manage every render option in existence, also used to make spinning things!">
-<img src="../icons/new-pack-icons/tile.justafrog.png" onclick="alert('JustAFrogScript: ultra modular powerful language with high flexibilty and advanced encription')" title="JustAFrogScript: ultra modular powerful language with high flexibilty and advanced encription">
-<img src="../icons/new-pack-icons/tile.file.png" onclick="alert('just a lil file :D')" title="just a lil file :D">
-<img src="../icons/new-pack-icons/tile.folder.png" onclick="alert('lil folder with thingy files inside ❤️')" title="lil folder with thingy files inside ❤️">
-<img src="../icons/new-pack-icons/tile.folder.settings.png" onclick="alert('ohhh thats a tough folder, beware')" title="ohhh thats a tough folder, bewaredefault plugin icon / also RainOs icon">
-<img src="../icons/new-pack-icons/tile.folder.dev.png" onclick="alert('sweaty nerd kinda folder')" title="sweaty nerd kinda folder">
-<img src="../icons/new-pack-icons/tile.folder.special.png" onclick="alert('party star 🌈🌈')" title="party star 🌈🌈">
-<img src="../icons/pack-icons/Utils.png" onclick="alert('default plugin icon / also RainOs icon')" title="default plugin icon / also RainOs icon">
-<img src="../icons/pack-icons/EffectsEngine.png" onclick="alert('EffectEngine - by Dhummy')" id="preview" title="EffectsEngine - by Dhummy">
-
-<h2>- [ Website Icons/Images ]- <mark>3 icons added (UI v3.2)</mark></h2>
-<img src="../icons//website-icons/2025.ico" onclick="alert('2025 - old icon')" alt="2025 - old icon">
-<img src="../icons/website-icons/icon25withFont.png" onclick="alert('2025 - new icon with font')" alt="2025 - new icon with font">
-<img src="../icons/website-icons/icon25withoutFont.png" onclick="alert('2025 - new icon without font')" alt="2025 - new icon without font">
-<img class="newimg" src="../icons//website-icons/26-CompleteFrame.jpg" onclick="alert('2026 - Unmasked Icon')" alt="2026 - Unmasked Icon">
-<img class="newimg" src="../icons//website-icons/26-Framed.png" onclick="alert('2026 - Masked Icon With Letters')" alt="2026 - Masked Icon With Letters">
-<img class="newimg" src="../icons//website-icons/26-FramedNoLetters.png" onclick="alert('2026 - Masked Icon No Letters')" alt="2026 - Masked Icon No Letters">
-<img src="../icons/website-icons/a2lk2-8tsw6-001.ico" onclick="alert('simplyprivate.github.io')" title="simplyprivate.github.io">
-<img src="../icons/website-icons/default.png" onclick="alert('umaera.github.io - old icon')" title="umaera.github.io - old icon">
-<img src="../icons/lib-icons/services2.png" onclick="alert('/services')" alt="/services">
-<img src="../icons/website-icons/wiki.jpg" onclick="alert('wiki - default icon')" alt="wiki - default icon">
-<img src="../icons/website-icons/wiki-transparent.png" onclick="alert('wiki - colored icon')" alt="wiki - colored icon">
-<img src="../icons/website-icons/SH-ICON-0.png" onclick="alert('StoryHome Project (Transparent Icon)')" alt="StoryHome Project (Transparent Icon)">
-<img src="../icons/website-icons/SH-ICON-SOLID.png" onclick="alert('StoryHome Project (Solid Icon)')" alt="StoryHome Project (Solid Icon)">
-<img src="../icons/website-icons/PUPL-BORDERED.png" onclick="alert('@PuplProject - Icon with border')" alt="@PuplProject - Icon with border">
-<img src="../icons/website-icons/PUPL-BORDERLESS.png" onclick="alert('@PuplProject - Icon without border')" alt="@PuplProject - Icon without border">
-<img src="../icons/website-icons/PUPL-WIREFRAMED.png" onclick="alert('@PuplProject - Icon with wireframe')" alt="@PuplProject - Icon with wireframe">
-<img src="../icons/website-icons/PUPL-COVER.jpg" onclick="alert('@PuplProject - Cover Icon')" alt="@PuplProject - Cover Icon">
-
-<h2>- [ GemCloud icons/images ]</h2>
-<img src="../icons/cloud-icons/GemCloud.png" onclick="alert('GemCloud Icon - Cute lil ruby')" title="GemCloud Icon - Cute lil ruby">
+<h2>- @umaera.github.io - <mark>26 icons added (UI v3.2.1)</mark></h2>
+<img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-v1.png" onclick="alert('MyLittleIcon - Default (version 3)')" title="MyLittleIcon - Default (version 3)">
+<img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-Resources-v1.png" onclick="alert('MyLittleIcon - Resources')" title="MyLittleIcon - Resources">
+<img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-Midia-v1.png" onclick="alert('MyLittleIcon - Midia')" title="MyLittleIcon - Midia">
+<img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-What-v1.png" onclick="alert('MyLittleIcon - What (no context)')" title="MyLittleIcon - What (no context)">
+<img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-Paint-v1.png" onclick="alert('MyLittleIcon - Paint/Edit')" title="MyLittleIcon - Paint/Edit">
+<img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-Connect-v1.png" onclick="alert('MyLittleIcon - Connect')" title="MyLittleIcon - Connect">
+<img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-Display.png" onclick="alert('MyLittleIcon - Display')" title="MyLittleIcon - Display">
+<img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-codeOrDev.png" onclick="alert('MyLittleIcon - Code or development')" title="MyLittleIcon - Code or development">
+<img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-Enviroment.png" onclick="alert('MyLittleIcon - Enviroment')" title="MyLittleIcon - Enviroment">
+<img src="../icons/@projects/@umaera.github.io/website-icons/default.png" onclick="alert('Main Website Icon - Version 1')" title="Main Website Icon - Version 1">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/pupur.png" onclick="alert('Main Website Icon - Version 2')" title="Main Website Icon - Version 2">
+<p></p>
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/cloud-default.png" onclick="alert('/cloud icon - Version 1 (EraCloud)')" title="/cloud icon - Version 1 (EraCloud)">
+<img src="../icons/@projects/@umaera.github.io/website-icons/GemCloud.png" onclick="alert('/cloud icon - Version 2 (GemCloud)')" title="/cloud icon - Version 2 (GemCloud)">
 <img src="../icons/@core/azayra/azy-icon.jpg" onclick="alert('TeamEra icon - designed by @dede07 & @squidoHere (isis)')" title="TeamEra icon - designed by @dede07 & @squidoHere (isis)">
 <img src="../icons/@core/azayra/azy-png.png" onclick="alert('TeamEra icon - designed by @dede07 & @squidoHere (isis)')" title="TeamEra icon - designed by @dede07 & @squidoHere (isis)">
-<img src="../icons/cloud-icons/cloud.png" onclick="alert('EraCloud - transparentIcon')" title="EraCloud - transparentIcon">
-<img src="../icons/cloud-icons/default.png" onclick="alert('EraCloud - /cloud')" id="special" title="EraCloud - /cloud">
-<img src="../icons/cloud-icons/eco.png" onclick="alert('unused - eco icon')"  title="unused - eco icon">
-<img src="../icons/cloud-icons/no.png" onclick="alert('my cloud went down!! 😨😱😰')" title="my cloud went down!! 😨😱😰">
-<img src="../icons/cloud-icons/erita.jpg" onclick="alert('lumiaProject')" title="lumiaProject">
-<img src="../icons/cloud-icons/cacti.jpg" onclick="alert('cactusProject')" title="cactusProject">
-<img src="../icons/cloud-icons/ic1-3.jpg" onclick="alert('eritaProject')" title="eritaProject">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/EritaTree.jpg" onclick="alert('EritaTree')" title="EritaTree">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/AzaTree.jpg" onclick="alert('AzaTree')" title="AzaTree">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/AzaCacti.jpg" onclick="alert('AzaCacti')" title="AzaCacti">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/Bulb.png" onclick="alert('/book - Book Project Icon (Version 1)')" title="/book - Book Project Icon (Version 1)">
+<img src="../icons/@projects/@umaera.github.io/website-icons/BookProject.png" onclick="alert('/book - Book Project Icon (Version 2)')" title="/book - Book Project Icon (Version 2)">
+<img src="../icons/@projects/@umaera.github.io/website-icons/2025.ico" onclick="alert('2025 count down (version 1)')" title="2025 count down (version 1)">
+<img src="../icons/@projects/@umaera.github.io/website-icons/icon25withFont.png" onclick="alert('2025 count down (version 2) - with font')" title="2025 count down (version 2) - with font">
+<img src="../icons/@projects/@umaera.github.io/website-icons/icon25withoutFont.png" onclick="alert('2025 count down (version 2) - without font')" title="2025 count down (version 2) - without font">
+<img src="../icons/@projects/@umaera.github.io/website-icons/26-CompleteFrame.jpg" onclick="alert('2026 count down - full frame')" title="2026 count down - full frame">
+<img src="../icons/@projects/@umaera.github.io/website-icons/26-Framed.png" onclick="alert('2026 count down - masked frame')" title="2026 count down - masked frame">
+<img src="../icons/@projects/@umaera.github.io/website-icons/26-FramedNoLetters.png" onclick="alert('2026 count down - masked frame & no font')" title="2026 count down - masked frame & no font">
+<p></p>
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/social/discord.png" onclick="alert('SocialMedia Icons - Discord')" title="SocialMedia Icons - Discord">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/social/twitch.png" onclick="alert('SocialMedia Icons - Twitch')" title="SocialMedia Icons - Twitch">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/social/twitter.png" onclick="alert('SocialMedia Icons - Twitter (X)')" title="SocialMedia Icons - Twitter (X)">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/social/youtube.png" onclick="alert('SocialMedia Icons - YouTube')" title="SocialMedia Icons - YouTube">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/social/e-mail.png" onclick="alert('SocialMedia Icons - Email')" title="SocialMedia Icons - Email">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/social/github.png" onclick="alert('SocialMedia Icons - GitHub')" title="SocialMedia Icons - GitHub">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/social/instagram.png" onclick="alert('SocialMedia Icons - Instagram')" title="SocialMedia Icons - Instagram">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/skshot-DepressedMYRA.webp" onclick="alert('SkShots - Depressed MYRA')" title="SkShots - Depressed MYRA">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/skshot-HappyMisk.webp" onclick="alert('SkShots - Happy Misk')" title="SkShots - Happy Misk">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/skshot-pan-drawpaper.webp" onclick="alert('SkShots - Panned drawing')" title="SkShots - Panned drawing">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/skshot-pan-inred.jpg" onclick="alert('SkShots - Panned InRed Figure')" title="SkShots - Panned InRed Figure">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/skshot-tintedWindow.webp" onclick="alert('SkShots - Tinted Window')" title="SkShots - Tinted Window">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/pan-drawlist.webp" onclick="alert('SkShots - List of sketches')" title="SkShots - List of sketches">
 
-<h2>- [ Miscellaneous ] - <mark>4 icons added (UI v3.2)</mark></h2>
-<img src="../icons/@core/MyLittleIcon-v1.png" onclick="alert('MyLittleIcon - Main Icon')" title="MyLittleIcon - Main Icon">
-<img src="../icons/@core/MyLittleIcon-Midia-v1.png" onclick="alert('MyLittleIcon - For midia')" title="MyLittleIcon - For midia">
-<img src="../icons/@core/MyLittleIcon-Paint-v1.png" onclick="alert('MyLittleIcon - Painting?')" title="MyLittleIcon - Painting?">
-<img src="../icons/@core/MyLittleIcon-Resources-v1.png" onclick="alert('MyLittleIcon - For Resources')" title="MyLittleIcon - For Resources">
-<img src="../icons/@core/MyLittleIcon-What-v1.png" onclick="alert('MyLittleIcon - What?')" title="MyLittleIcon - What?">
-<img src="../icons/@core/MyLittleIcon-Connect-v1.png" onclick="alert('MyLittleIcon - Connect')" title="MyLittleIcon - Connect">
-<img class="newimg" src="../icons/@core/MyLittleIcon-Display.png" onclick="alert('MyLittleIcon - Display')" title="MyLittleIcon - Display">
-<img class="newimg" src="../icons/@core/MyLittleIcon-Enviroment.png" onclick="alert('MyLittleIcon - Enviroment')" title="MyLittleIcon - Enviroment">
-<img class="newimg" src="../icons/@core/MyLittleIcon-codeOrDev.png" onclick="alert('MyLittleIcon - Code Or Development')" title="MyLittleIcon -  Code Or Development">
-<img src="../icons/@core/v3-favicon.png" onclick="alert('v3 default icon - glitchy moon')" title="v3 default icon - glitchy moon">
-<img class="newimg" src="../icons/@core/BookProject.png" onclick="alert('Book Project Icon')" title="Book Project Icon">
-<img src="../icons/m-icons/world2.jpg" onclick="alert('World2 App Icon')" title="World2 App Icon">
-<img src="../icons/lib-icons/atvoa.ico" onclick="alert('default icon for everything')" title="default icon for everything">
-<img src="../icons/m-icons/3leaf.ico" onclick="alert('another simplyprivate icon')" title="another simplyprivate icon">
-<img src="../icons/m-icons/missing-texture.png" onclick="alert(`missing texture - pops up when something doesn't load right`)" title="missing texture - pops up when something doesn't load right">
-<img src="../icons/m-icons/Tabs.png" onclick="alert('tabs - open tab screen icon')" title="tabs - open tab screen icon">
-<img src="../icons/m-icons/Static.gif" onclick="location.href = './RML/'" title="static - it's giving no signal">
-<img src="../icons/m-icons/AST.jpg" onclick="alert('Astrodist - asteroid game')" title="Astrodist - asteroid game">
-<img src="../icons/lib-icons/aun2.jpg" onclick="alert('AUN2 - connecting ecosystems into platforms')" title="AUN2 - connecting ecosystems into platforms">
-<img src="../icons/lib-icons/europia.webp" onclick="alert('Europia - Simplest Moderation bot')" title="Europia - Simplest Moderation bot">
-<img src="../icons/lib-icons/europia-gen3.jpg" onclick="alert('Europia G3 - Simplest Moderation bot')" title="Europia G3 - Simplest Moderation bot">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/Just404.png" onclick="alert('support images - 404 glitched woobly')" title="support images - 404 glitched woobly">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/fameTitle.png" onclick="alert('support images - umaera glitched woobly')" title="support images - umaera glitched woobly">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/folderCode.png" onclick="alert('support images - folder icon to /resources')" title="support images - folder icon to /resources">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/stat.png" onclick="alert('support images - stat icon (unused)')" title="support images - stat icon (unused)">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/user.png" onclick="alert('support images - user icon to /social')" title="support images - user icon to /social">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/staticNoise-alp.gif" onclick="alert('effect - Static Noise (Type: ALP)')" title="effect - Static Noise (Type: ALP)">
+<img class="newimg" src="../icons/@projects/@umaera.github.io/staticNoise-wrd.gif" onclick="alert('effect - Static Noise (Type: WRD)')" title="effect - Static Noise (Type: WRD)">
 
-<h2>- [ Themes Icon/Images ]</h2>
-<img src="../icons/themes/atmosphere.jpg" onclick="alert('atmosphere - better green theme')" title="atmosphere - better green theme">
-<img src="../icons/themes/cherry.jpg" onclick="alert('cherry - soft bread colors')" title="cherry - soft bread colors">
-<img src="../icons/themes/couple.jpg" onclick="alert('couple - soft purple colors, named by a friend')" title="couple - soft purple colors, named by a friend">
-<img src="../icons/themes/grass.jpg" onclick="alert('grass - atmosphere but more vivid')" title="grass - atmosphere but more vivid">
-<img src="../icons/themes/king.jpg" onclick="alert('king - weid choice of colors')" title="king - weid choice of colors">
-<img src="../icons/themes/redberry.jpg" onclick="alert('redberry - berry colors')" title="redberry - berry colors">
-<img src="../icons/themes/ones/quartz.jpg" onclick="alert('quartz (preview) - soft white colors')" alt="quartz - soft white colors">
-<img src="../icons/themes/ones/bia.jpg" onclick="alert('bia (preview) - average favorite color')" id="preview" alt="bia (preview) - average favorite color">
-<img src="../icons/themes/ones/cadet.jpg" onclick="alert('cadet (preview) - blue ones')" id="preview" alt="cadet (preview) - blue ones">
-<img src="../icons/themes/ones/carmine.jpg" onclick="alert('carmine (preview)  - red ones')" id="preview" alt="carmine (preview)  - red ones">
-<img src="../icons/themes/ones/cotton.jpg" onclick="alert('cotton (preview)  - pink ones')" id="preview" alt="cotton (preview)  - pink ones">
-<img src="../icons/themes/ones/mossy green.jpg" onclick="alert('mossy green (preview)  - green one')" id="preview" alt="mossy green (preview)  - green one">
-<img src="../icons/themes/ones/nightsnap.jpg" onclick="alert('nightsnap (preview) - night colors')" id="preview" alt="nightsnap (preview) - night colors">
+<h2>@PuplProject - <mark>New section! (UI v3.2.1)</mark></h2>
+<img class="newimg" src="../icons/@projects/@PuplProject/PUPL-COVER.jpg" onclick="alert('Official Icon of PuplProject')" title="Official Icon of PuplProject">
+<img class="newimg" src="../icons/@projects/@PuplProject/PUPL-BORDERLESS.png" onclick="alert('Official Icon of PuplProject - with effects')" title="Official Icon of PuplProject - with effects">
+<img class="newimg" src="../icons/@projects/@PuplProject/PUPL-WIREFRAMED.png" onclick="alert('Official Icon of PuplProject - wired & transparent')" title="Official Icon of PuplProject - wired & transparent">
+<img class="newimg" src="../icons/@projects/@PuplProject/PuplIcon-s1.png" onclick="alert('Beautified App Icon - Used for PuplBrowser')" title="Beautified App Icon - Used for PuplBrowser">
+<img class="newimg" src="../icons/@projects/@PuplProject/SilicaIcon-f0332.png" onclick="alert('Silica - Package Manager, APIs, Advanced app arquitecture (Colored & BlackBG)')" title="Silica - Package Manager, APIs, Advanced app arquitecture (Colored & BlackBG)">
+<img class="newimg" src="../icons/@projects/@PuplProject/SilicaIcon-f0332-blackver.png" onclick="alert('Silica - Package Manager, APIs, Advanced app arquitecture (Black and White & BlackBG)')" title="Silica - Package Manager, APIs, Advanced app arquitecture (Black and White & BlackBG)">
+<img class="newimg" src="../icons/@projects/@PuplProject/SilicaIcon-f0332-t.png" onclick="alert('Silica - Package Manager, APIs, Advanced app arquitecture (Colored & Transparent)')" title="Silica - Package Manager, APIs, Advanced app arquitecture (Colored & Transparent)">
+<img class="newimg" src="../icons/@projects/@PuplProject/SilicaIcon-f0332-t-blackver.png" onclick="alert('Silica - Package Manager, APIs, Advanced app arquitecture (Black and White & Transparent)')" title="Silica - Package Manager, APIs, Advanced app arquitecture (Black and White & Transparent)">
+<p></p>
+<img class="newimg" src="../icons/@projects/@PuplProject/Oriana.png" onclick="alert('Oriana Terminal (Or Oriana.Ai) - Official App Icon')" title="Oriana Terminal (Or Oriana.Ai) - Official App Icon">
+<img class="newimg" src="../icons/@projects/@PuplProject/Oriana.png" onclick="alert('Oriana - Coder/Developer agent')" title="Oriana - Coder/Developer agent">
+<img class="newimg" src="../icons/@projects/@PuplProject/Ivy (Designer).png" onclick="alert('Ivy - Designer agent')" title="Ivy - Designer agent">
+<img class="newimg" src="../icons/@projects/@PuplProject/Jessy (Idealist).png" onclick="alert('Jessy - Idealist/Concept manager agent')" title="Jessy - Idealist/Concept manager agent">
+<img class="newimg" src="../icons/@projects/@PuplProject/Zia (Animator).png" onclick="alert('Zia - Animator agent')" title="Zia - Animator agent">
+<img class="newimg" src="../icons/@projects/@PuplProject/User.png" onclick="alert('User Profile Picture - On Oriana Terminal App')" title="User Profile Picture - On Oriana Terminal App">
+<p></p>
+<img class="newimg" src="../icons/@projects/@PuplProject/Studio - tab.station (demo2).png" onclick="alert('Studio Screenshot')" title="Studio Screenshot">
+<img class="newimg" src="../icons/@projects/@PuplProject/Themes.png" onclick="alert('PuplBrowser - Default Themes (version 1)')" title="PuplBrowser - Default Themes (version 1)">
+<img class="newimg" src="../icons/@projects/@PuplProject/Interface Themes.png" onclick="alert('PuplBrowser - Interface Themes (version 1)')" title="PuplBrowser - Interface Themes (version 1)">
 
+<h2>@SimplyPrivate - <mark>10 icons added! (UI v3.2.1)</mark></h2>
+<img src="../icons/@projects/@SimplyPrivate/PrivateEye.png" onclick="alert('First Icon Ever (PrivateEye)')" title="First Icon Ever (PrivateEye)">
+<img src="../icons/@projects/@SimplyPrivate/npb.ico" onclick="alert('Test Icon (NPB) - Still remains in the files')" title="Test Icon - Still remains in the files">
+<img src="../icons/@projects/@SimplyPrivate/JustEye.png" onclick="alert('Test Icon (JustEye)')" title="Test Icon (JustEye)">
+<img src="../icons/@projects/@SimplyPrivate/eey.png"  onclick="alert('+3.0 Icon (EEY)')"title="+3.0 Icon (EEY)">
+<img src="../icons/@projects/@SimplyPrivate/s2p.ico" onclick="alert('Unused Icon (S2P)')"  title="Unused Icon (S2P)">
+<img src="../icons/@projects/@SimplyPrivate/7dred.ico" onclick="alert('Unused Icon (7DRED)')" title="Unused Icon (7DRED)">
+<img src="../icons/@projects/@SimplyPrivate/s3p.ico" onclick="alert('Unused Icon (S3P)')" title="Unused Icon (S3P)">
+<img src="../icons/@projects/@SimplyPrivate/GreenEye.ico" onclick="alert('Test Icon (GreenEye)')" title="Test Icon (GreenEye)">
+<img src="../icons/@projects/@SimplyPrivate/PlantPNG.png" onclick="alert('+3.4 & FallBack Icon (PlantPNG)')" title="+3.4 & FallBack Icon (PlantPNG)">
+<img src="../icons/@projects/@SimplyPrivate/Plant-Turbo.png" onclick="alert('+3.4 Icon for Turbo Versions  (PlantTurbo)')" title="+3.4 Icon for Turbo Versions  (PlantTurbo)">
+<img src="../icons/@projects/@SimplyPrivate/scah.png" onclick="alert('Latest Icon')" title="Latest Icon">
+<p></p>
+<img class="newimg" src="../icons/@projects/@SimplyPrivate/WhiteWall.png" onclick="alert('WhiteWall Security Extension')" title="WhiteWall Security Extension">
+<img class="newimg" src="../icons/@projects/@SimplyPrivate/BUGISSUE.jpg" onclick="alert('Bug Or Issue Report Icon')" title="Bug Or Issue Report Icon">
+<img class="newimg" src="../icons/@projects/@SimplyPrivate/akttf-576yv-001.ico" onclick="alert('Task/Resources/App Icon')" title="Task/Resources/App Icon">
+<img class="newimg" src="../icons/@projects/@SimplyPrivate/3leaf.ico" onclick="alert('Transparent & Rounded Icon')" title="Transparent & Rounded Icon">
+<img class="newimg" src="../icons/@projects/@SimplyPrivate/icon-pack/help.png" onclick="alert('Help - Mini')" title="Help - Mini">
+<p></p>
+<img src="../icons/@projects/@SimplyPrivate/icon-pack/tile.carbon.png" onclick="alert('carbon: log everything, modular language for packages')" title="carbon: log everything, modular language for packages">
+<img src="../icons/@projects/@SimplyPrivate/icon-pack/tile.hydrogen.png" onclick="alert('hydrogen: used for visual elements, effects, shaders and rendering')" title="hydrogen: used for visual elements, effects, shaders and rendering">
+<img src="../icons/@projects/@SimplyPrivate/icon-pack/tile.iridium.png" onclick="alert('iridium: complex modular network logic management')" title="iridium: complex modular network logic management">
+<img src="../icons/@projects/@SimplyPrivate/icon-pack/tile.uranium.png" onclick="alert('Uranium: complex library for logic/visual/reactive rendering.')" title="Uranium: complex library for logic/visual/reactive rendering.">
+<img src="../icons/@projects/@SimplyPrivate/icon-pack/tile.justafrog.png" onclick="alert('JustAFrogScript: Work with other programming languages in the same ambient, encrypt and build everything in the same workspace')" title="JustAFrogScript:  Work with other programming languages in the same ambient, encrypt and build everything in the same workspace">
+<img src="../icons/@projects/@SimplyPrivate/icon-pack/tile.file.png" onclick="alert('just a lil file :D')" title="just a lil file :D">
+<img src="../icons/@projects/@SimplyPrivate/icon-pack/tile.folder.png" onclick="alert('lil folder with thingy files inside ❤️')" title="lil folder with thingy files inside ❤️">
+<img src="../icons/@projects/@SimplyPrivate/icon-pack/tile.folder.settings.png" onclick="alert('ohhh thats a tough folder, beware')" title="ohhh thats a tough folder, bewaredefault plugin icon / also RainOs icon">
+<img src="../icons/@projects/@SimplyPrivate/icon-pack/tile.folder.dev.png" onclick="alert('sweaty nerd kinda folder')" title="sweaty nerd kinda folder">
+<img src="../icons/@projects/@SimplyPrivate/icon-pack/tile.folder.special.png" onclick="alert('party star 🌈🌈')" title="party star 🌈🌈">
+<img class="newimg" src="../icons/new-pack-icons/tile.folder.carbon.png" onclick="alert('Carbon Config Folder')" title="Carbon Config Folder">
+<img class="newimg" src="../icons/new-pack-icons/tile.folder.hydrogen.png" onclick="alert('Hydrogen Config Folder')" title="Hydrogen Config Folder">
+<img class="newimg" src="../icons/new-pack-icons/tile.folder.uranium.png" onclick="alert('Uranium Config Folder')" title="Uranium Config Folder">
+<img class="newimg" src="../icons/new-pack-icons/tile.folder.justafrog.png" onclick="alert('JAF Config Folder')" title="JAF Config Folder">
+<img class="newimg" src="../icons/lib-icons/Shaders.jpg" onclick="alert('hydrogen shader renderer icon')" title="hydrogen shader renderer icon">
+
+<h2>@NoContext - <mark>New section! (UI v3.2.1)</mark></h2>
+<img class="newimg" src="../icons/@projects/@CherryMonsters/Lnd.png" onclick="alert('CherryMonsters (Game)')" title="CherryMonsters (Game)">
+<img class="newimg" src="../icons/@projects/@CherryMonsters/Cursor.png" onclick="alert('CherryMonsters (Game) - Cursor')" title="CherryMonsters (Game) - Cursor">
+<img class="newimg" src="../icons/@projects/@CherryMonsters/Defense_Tower.png" onclick="alert('CherryMonsters (Game) - Defence Tower')" title="CherryMonsters (Game) - Defence Tower">
+<img class="newimg" src="../icons/@projects/@CherryMonsters/EnemyBasic.png" onclick="alert('CherryMonsters (Game) - Basic Enemy')" title="CherryMonsters (Game) - Basic Enemy">
+<img class="newimg" src="../icons/@projects/@CherryMonsters/Offense_Tower.png" onclick="alert('CherryMonsters (Game) - Offense Tower')" title="CherryMonsters (Game) - Offense Tower">
+<img class="newimg" src="../icons/@projects/@CherryMonsters/ui.health.png" onclick="alert('CherryMonsters (Game) - ui.health')" title="CherryMonsters (Game) - ui.health">
+<img class="newimg" src="../icons/@projects/@CherryMonsters/ui.money.png" onclick="alert('CherryMonsters (Game) - ui.money')" title="CherryMonsters (Game) - ui.money">
+<img class="newimg" src="../icons/@projects/@CherryMonsters/ui.settings.png" onclick="alert('CherryMonsters (Game) - ui.settings')" title="CherryMonsters (Game) - ui.settings">
+<img class="newimg" src="../icons/@projects/@CherryMonsters/ui.wave.png" onclick="alert('CherryMonsters (Game) - ui.wave')" title="CherryMonsters (Game) - ui.wave">
+<p></p>
+<img class="newimg" src="../icons/@projects/@NoContext/ColdAhh.png" onclick="alert('Reaction Pack - Cold Ahh')" title="Reaction Pack - Cold Ahh">
+<img class="newimg" src="../icons/@projects/@NoContext/CatLurk.png" onclick="alert('Reaction Pack - Cat Lurk')" title="Reaction Pack - Cat Lurk">
+<img class="newimg" src="../icons/@projects/@NoContext/BrotherOfCatLurkIsLurking.jpg" onclick="alert('Reaction Pack - Brother of cat lurk')" title="Reaction Pack - Brother of cat lurk">
+<img class="newimg" src="../icons/@projects/@NoContext/debugTHICKguy.webp" onclick="alert('Random Selection - Debug of THICCC guy')" title="Random Selection - Debug of THICCC guy">
 
 <h2>- [ Developers / Supporters Profile Picture ]</h2>
 <!--Profile Picture: UmaEra --><img src="../icons/pfp/umaera.png" onclick="alert('@umaera - antisocial optimist')" title="@umaera - antisocial optimist">

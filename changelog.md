@@ -239,6 +239,13 @@
 - Deleted "Dede07" From all Systems - He choosed to.
 - SimplyPrivate Reached the end of it's support - announced
 
+# UI_v3.2.1
+- Remade/Fixed and added new icons to /assets
+- Removed Temporary RML page.
+- Added /mybrowser to test purposes
+- New project media added to /assets
+- Fixed some "Open in new tab" links
+
 ### In the Next Updates:
 - Theme color settings
 - Midia/Post section

@@ -30,10 +30,12 @@
 }
 
 body {
-    background: #181818;
-    color: #e0e0e0;
-    font-family: 'Quicksand', Arial, sans-serif;
-    transition: background 0.3s, color 0.3s;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #2c3e50;
+    position: relative;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -179,8 +181,7 @@ body::before {
 }
 
 .episode-card {
-    background: #23232360 !important;
-    color: #e0e0e0 !important;
+    background: rgba(209, 255, 234, 0.7);
     border: 2px solid rgba(102, 126, 234, 0.1);
     border-radius: 15px;
     padding: 25px;
@@ -312,9 +313,6 @@ body::before {
     position: absolute;
     opacity: 0.1;
     animation: floatRandom 15s ease-in-out infinite;
-    background: rgba(40,40,40,0.7) !important;
-    color: #ffd700 !important;
-    border-radius: 50%;
 }
 
 .floating-element:nth-child(1) {
