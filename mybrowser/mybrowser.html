@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBrowser</title>
+    <meta name="robots" content="none">
+    <link rel="shortcut icon" href="../icons/@core/MyLittleIcon-codeOrDev.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 2em;
+            background: black;
+            color: #ffffff;
+        }
+        ::selection{
+           background-color: #ff00ff;
+           color: white;
+        }
+        h1 {
+            color: #b72ae2;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #b72ae2;
+            color: #fff;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background: #2b2b2b;
+        }
+        code {
+            background-color: #b72ae22c;
+            padding: 4px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Browser & WebView Information</h1>
+    <table id="browser-info">
+        <tbody></tbody>
+    </table>
+    <script>
+        function getBrowserInfo() {
+            return {
+                'User Agent': navigator.userAgent,
+                'Platform': navigator.platform,
+                'App Name': navigator.appName,
+                'App Version': navigator.appVersion,
+                'Language': navigator.language,
+                'Languages': navigator.languages ? navigator.languages.join(', ') : 'N/A',
+                'Cookies Enabled': navigator.cookieEnabled,
+                'Online': navigator.onLine,
+                'Java Enabled': navigator.javaEnabled ? navigator.javaEnabled() : 'N/A',
+                'Do Not Track': navigator.doNotTrack,
+                'Screen Size': `${screen.width} x ${screen.height}`,
+                'Color Depth': screen.colorDepth,
+                'Pixel Depth': screen.pixelDepth,
+                'Device Memory (GB)': navigator.deviceMemory || 'N/A',
+                'Hardware Concurrency (CPUs)': navigator.hardwareConcurrency || 'N/A',
+                'Touch Support': 'ontouchstart' in window,
+                'Timezone': Intl.DateTimeFormat().resolvedOptions().timeZone,
+                'Local Time': new Date().toString(),
+                'Referrer': document.referrer,
+                'Location': window.location.href,
+                'Cookies': document.cookie || 'None',
+            };
+        }
+
+        function getAdvancedBrowserInfo() {
+            return {
+                ...getBrowserInfo(),
+                'Window Size': `${window.innerWidth} x ${window.innerHeight}`,
+                'Screen Orientation': screen.orientation ? screen.orientation.type : 'N/A',
+            };
+        }
+
+        function getWebGLRenderer() {
+            try {
+                const canvas = document.createElement('canvas');
+                const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                if (gl) {
+                    const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                    return debugInfo ? gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) : 'Unknown';
+                }
+            } catch (e) {
+                return 'Unavailable';
+            }
+            return 'Unavailable';
+        }
+
+        function renderInfo() {
+            const info = getBrowserInfo();
+            const tbody = document.querySelector('#browser-info tbody');
+            tbody.innerHTML = '';
+            for (const key in info) {
+                const tr = document.createElement('tr');
+                const th = document.createElement('th');
+                th.textContent = key;
+                const td = document.createElement('td');
+                td.innerHTML = `<code>${info[key]}</code>`;
+                tr.appendChild(th);
+                tr.appendChild(td);
+                tbody.appendChild(tr);
+            }
+        }
+
+        function renderAdvancedInfo() {
+            const info = getAdvancedBrowserInfo();
+            const tbody = document.querySelector('#browser-info tbody');
+            tbody.innerHTML = '';
+            for (const key in info) {
+                const tr = document.createElement('tr');
+                const th = document.createElement('th');
+                th.textContent = key;
+                const td = document.createElement('td');
+                td.innerHTML = `<code>${info[key]}</code>`;
+                tr.appendChild(th);
+                tr.appendChild(td);
+                tbody.appendChild(tr);
+            }
+        }
+
+        renderAdvancedInfo();
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* ---⭐ General Effects ⭐--- */
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 4s infinite ease-in-out;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.particle.interactive {
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.2s ease;
+}
+
+.particle.interactive:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(1.5);
+}
+
+.particle.normal {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.particle:nth-child(odd) {
+    animation-direction: reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+    50% { transform: translateY(-30px) rotate(180deg); opacity: 0.8; }
+}
+
+/* ---⭐ Sparkles ⭐--- */
+.sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkle 0.8s ease-out forwards;
+}
+
+@keyframes sparkle {
+    0% { transform: scale(0) rotate(0deg); opacity: 1; }
+    100% { transform: scale(2) rotate(360deg); opacity: 0; }
+}
+
+/* ---⭐ Glitch ⭐--- */
+.glitch-particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #ff00ff;
+    animation: glitchMove 1.5s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes glitchMove {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    25% { transform: translate(10px, -5px) scale(1.5); opacity: 0.8; }
+    50% { transform: translate(-8px, 10px) scale(0.8); opacity: 0.6; }
+    75% { transform: translate(5px, -15px) scale(1.2); opacity: 0.4; }
+    100% { transform: translate(-12px, 20px) scale(0.5); opacity: 0; }
+}
+
+/* ---⭐ Rain ⭐---*/
+.digital-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.rain-drop {
+    position: absolute;
+    color: #00ff41;
+    font-family: monospace;
+    font-size: 14px;
+    opacity: 0.7;
+    animation: rainFall 3s linear infinite;
+}
+
+@keyframes rainFall {
+    0% { transform: translateY(-100px); opacity: 0; }
+    10% { opacity: 0.7; }
+    90% { opacity: 0.3; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}

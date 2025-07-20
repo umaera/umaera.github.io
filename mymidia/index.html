@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow, archive, snippet, translate">
+    <link rel="shortcut icon" href="../icons/@core/MyMidia.png" type="image/x-icon">
+    <title>MyMidia</title>
+    <meta name="description" content="What's happening to me? (maybe in an oversimplified way)">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/effects.css">
+    <link rel="stylesheet" href="./styles/resize.css">
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/effects.js"></script>
+</head>
+<body>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+    <div class="digital-rain" id="digitalRain"></div>
+    <div class="blur-overlay" id="blurOverlay"></div>
+
+    <div class="floating-element" style="top: 10%; left: 5%;">✨</div>
+    <div class="floating-element" style="top: 70%; left: 85%; animation-delay: -2s;">💫</div>
+    <div class="floating-element" style="top: 30%; left: 90%; animation-delay: -4s;">🌟</div>
+    <div class="floating-element" style="top: 80%; left: 10%; animation-delay: -6s;">⭐</div>
+    <div class="floating-element" style="top: 15%; left: 75%; animation-delay: -1s;">🔮</div>
+    <div class="floating-element" style="top: 85%; left: 60%; animation-delay: -3s;">💎</div>
+
+    <!-- Music Player -->
+    <div class="container music-player" data-z="100">
+        <div class="album-art">
+            <img src="./.midia/track-covers/albumcover.Panic.jpg" translate="no" alt="Album Cover - Panic (By: Caravan Palace)" onerror="this.style.display='none'">
+        </div>
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+            <div class="now-playing">
+                <div class="track-title" translate="no">Clash</div>
+                <div class="track-artist" translate="no">by Caravan Palace</div>
+            </div>
+            <div class="music-controls">
+                <button class="control-btn" id="prevBtn">⏮</button>
+                <button class="control-btn play-btn" id="playBtn">▶</button>
+                <button class="control-btn" id="nextBtn">⏭</button>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="time-display">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            <div class="volume-container" style="display: none;"">
+                <span style="font-size: 14px;">🔊</span>
+                <div class="volume-slider" id="volumeSlider">
+                    <div class="volume-bar" id="volumeBar" "></div>
+                </div>
+            </div>
+            <audio id="audioPlayer" preload="auto">
+                <source src="./.midia/tracks/Clash.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <div class="container music-player" data-z="99">
+        <div class="album-art">
+            <img src="./.midia/track-covers/albumcover.MakeRoom.jpg" translate="no" alt="Album Cover - Make Room (By: Destroy Boys)" onerror="this.style.display='none'">
+        </div>
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+            <div class="now-playing">
+                <div class="track-title" translate="no">Duck Eat Duck World</div>
+                <div class="track-artist" translate="no">by DestroyBoys</div>
+            </div>
+            <div class="music-controls">
+                <button class="control-btn">⏮</button>
+                <button class="control-btn play-btn">▶</button>
+                <button class="control-btn">⏭</button>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="time-display">
+                    <span>0:00</span>
+                    <span>0:00</span>
+                </div>
+            </div>
+            <div class="volume-container" style="display: none;">
+                <span style="font-size: 14px;">🔊</span>
+                <div class="volume-slider">
+                    <div class="volume-bar"></div>
+                </div>
+            </div>
+            <audio preload="auto">
+                <source src="./.midia/tracks/Duck Eat Duck World.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+        <div class="container music-player" data-z="99">
+        <div class="album-art">
+            <img src="./.midia/track-covers/albumcover.EvilFriends.jpg" translate="no" alt="Album Cover - Evil Friends (By: Portugal. The man)" onerror="this.style.display='none'">
+        </div>
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+            <div class="now-playing">
+                <div class="track-title" translate="no">Atomic Man</div>
+                <div class="track-artist" translate="no">by Portugal. The man</div>
+            </div>
+            <div class="music-controls">
+                <button class="control-btn">⏮</button>
+                <button class="control-btn play-btn">▶</button>
+                <button class="control-btn">⏭</button>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="time-display">
+                    <span>0:00</span>
+                    <span>0:00</span>
+                </div>
+            </div>
+            <div class="volume-container" style="display: none;">
+                <span style="font-size: 14px;">🔊</span>
+                <div class="volume-slider">
+                    <div class="volume-bar"></div>
+                </div>
+            </div>
+            <audio preload="auto">
+                <source src="./.midia/tracks/Atomic Man.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+
+        <div class="container music-player" data-z="99">
+        <div class="album-art">
+            <img src="./.midia/track-covers/albumcover.IGotHeaven.jpg" translate="no" alt="Album Cover - I Got Heaven (By: Mannequin Pussy)" onerror="this.style.display='none'">
+        </div>
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+            <div class="now-playing">
+                <div class="track-title" translate="no">Sometimes</div>
+                <div class="track-artist" translate="no">by Mannequin Pussy</div>
+            </div>
+            <div class="music-controls">
+                <button class="control-btn">⏮</button>
+                <button class="control-btn play-btn">▶</button>
+                <button class="control-btn">⏭</button>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="time-display">
+                    <span>0:00</span>
+                    <span>0:00</span>
+                </div>
+            </div>
+            <div class="volume-container" style="display: none;">
+                <span style="font-size: 14px;">🔊</span>
+                <div class="volume-slider">
+                    <div class="volume-bar"></div>
+                </div>
+            </div>
+            <audio preload="auto">
+                <source src="./.midia/tracks/Sometimes.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+        <div class="container music-player" data-z="99">
+        <div class="album-art">
+            <img src="./.midia/track-covers/albumcover.PartyFavors.jpg" translate="no" alt="Album Cover - Party Favors (By: Sir Chloe)" onerror="this.style.display='none'">
+        </div>
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+            <div class="now-playing">
+                <div class="track-title" translate="no">Easy On You</div>
+                <div class="track-artist" translate="no">by Sir Chloe</div>
+            </div>
+            <div class="music-controls">
+                <button class="control-btn">⏮</button>
+                <button class="control-btn play-btn">▶</button>
+                <button class="control-btn">⏭</button>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="time-display">
+                    <span>0:00</span>
+                    <span>0:00</span>
+                </div>
+            </div>
+            <div class="volume-container" style="display: none;">
+                <span style="font-size: 14px;">🔊</span>
+                <div class="volume-slider">
+                    <div class="volume-bar"></div>
+                </div>
+            </div>
+            <audio preload="auto">
+                <source src="./.midia/tracks/Sir Chloe - Easy On You.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <!-- Post Container
+    <div class="container post" data-z="99">
+        <h3>📸 midnight captures</h3>
+        <div class="post-image" style="background-image: url('./.midia/post-images/media-193476981211.png');"></div>
+        <div class="post-content">caught the city breathing at 3am again... neon reflections on wet asphalt tell stories that daylight erases</div>
+        <div class="post-meta">
+            <span class="post-tag">#nocturnal</span>
+            <span class="post-tag">#urban-decay</span>
+            <span class="post-tag">#liminal</span>
+        </div>
+    </div>
+-->
+    <!-- Activity Card
+    <div class="container activity-card" data-z="98">
+        <div class="activity-banner">🎮 HYPERFOCUS MODE</div>
+        <div style="font-size: 14px; margin-bottom: 8px;">Hollow Knight - Path of Pain</div>
+        <div class="small-text">entering the flow state, losing track of reality</div>
+        <div class="activity-stats">
+            <div class="stat-item">
+                <span class="stat-number">73h</span>
+                <span>deep dive</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">∞</span>
+                <span>attempts</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">94%</span>
+                <span>obsessed</span>
+            </div>
+        </div>
+    </div>
+-->
+
+    <!-- Todo List -->
+    <div class="container todo-list" data-z="97">
+        <h3>✓ TODO list</h3>
+        <div class="todo-item">
+            <input type="checkbox" class="todo-checkbox" readonly>
+            <span class="todo-text">Making a final version of SimplyPrivate</span>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" class="todo-checkbox" readonly>
+            <span class="todo-text">Organize my whole Development ambient</span>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" class="todo-checkbox" readonly>
+            <span class="todo-text">Document my development jorney in PuplProject</span>
+        </div>
+        <div class="todo-item completed">
+            <input type="checkbox" class="todo-checkbox" checked readonly>
+            <span class="todo-text">Draw</span>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" class="todo-checkbox" readonly>
+            <span class="todo-text">Explore new music</span>
+        </div>
+        <div class="todo-item completed">
+            <input type="checkbox" class="todo-checkbox" checked readonly>
+            <span class="todo-text">Sleep more than 8 hours</span>
+        </div>
+        <div class="todo-item completed">
+            <input type="checkbox" class="todo-checkbox" checked readonly>
+            <span class="todo-text">Study Freelancing</span>
+        </div>
+    </div>
+
+        <div class="container todo-list" data-z="97">
+        <h3>✓ TODO list</h3>
+    <div class="todo-item completed">
+            <input type="checkbox" class="todo-checkbox" checked readonly>
+            <span class="todo-text">Implementing Oriana in VS code</span>
+        </div>
+        <div class="todo-item completed">
+            <input type="checkbox" class="todo-checkbox" checked readonly>
+            <span class="todo-text">Be friends with 8 random people on the street.</span>
+        </div>
+        <div class="todo-item completed">
+            <input type="checkbox" class="todo-checkbox" checked readonly>
+            <span class="todo-text">Spend 20€ on friends (for fun)</span>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" class="todo-checkbox" readonly>
+            <span class="todo-text">Another cinematic/mood photo album</span>
+        </div>
+    </div>
+
+    <!-- Thoughts Container -->
+    <div class="container thoughts" data-z="96">
+        <h3>Self Relation</h3>
+        <div class="thought-text">
+            "Era só eu e a minha pessoa, eu era quem me conhecia, eu era quem me apoiava mais, eu era quem mais me amava e continuo a ser — sempre serei!"
+        </div>
+        <div class="thought-timestamp">4:17 AM • For a book</div>
+    </div>
+
+     <!-- Thoughts Container -->
+    <div class="container thoughts" data-z="96">
+        <h3>Shows i am currently watching (yes all of them)</h3>
+        <div class="thought-text">
+           <li translate="no">Atypical</li>
+           <li translate="no">Dr House</li>
+           <li translate="no">Hilda</li>
+           <li translate="no">Rick and Morty</li>
+           <li translate="no">Jentry Chau vs the underworld</li>
+           <li translate="no">The blacklist</li>
+        </div>
+        <div class="thought-timestamp">4:17 AM • For a book</div>
+    </div>
+
+    <!-- Mood Tracker -->
+    <div class="container mood-tracker" data-z="95">
+        <h3>current mood/state</h3>
+        <div class="mood-emoji">👧🏻🫶</div>
+        <div class="mood-description">Visiting my past - i changed too much</div>
+    </div>
+
+        <div class="container mood-tracker" data-z="95">
+        <h3>current mood/state</h3>
+        <div class="mood-emoji">😴</div>
+        <div class="mood-description">Power saving state, tired.</div>
+    </div>
+
+
+    <!-- Book Card
+    <div class="container book-rec" data-z="94">
+        <div class="book-cover">📚</div>
+        <h3>📖 mind expansion</h3>
+        <div style="font-size: 14px; margin-bottom: 5px;">Gödel, Escher, Bach</div>
+        <div class="small-text">Douglas Hofstadter</div>
+        <div class="reading-progress">
+            <div class="reading-bar"></div>
+        </div>
+        <div class="small-text" style="margin-top: 10px;">breaking my brain beautifully • 43% consumed</div>
+    </div>
+
+    <div class="container activity-card" data-z="93" style="background: rgba(255, 20, 147, 0.2); border-color: rgba(255, 20, 147, 0.3);">
+        <div class="activity-banner" style="background: linear-gradient(90deg, #ff1493, #ff69b4, #ff1493); background-size: 200% 100%;">📷 VISUAL HUNTING</div>
+        <div style="font-size: 14px; margin-bottom: 8px;">Liminal space documentation</div>
+        <div class="small-text">capturing the spaces between spaces</div>
+        <div class="activity-stats">
+            <div class="stat-item">
+                <span class="stat-number">28h</span>
+                <span>wandering</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">342</span>
+                <span>frames</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">12</span>
+                <span>gems</span>
+            </div>
+        </div>
+    </div>
+-->
+
+
+    <div class="interactive-hint">
+        hold + drag to move • This is most of my headspace • after 48h all the activity will be deleted and replaced • Last Update: July 20, 2025
+    </div>
+
+</body>
+</html>

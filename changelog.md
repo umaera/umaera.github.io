@@ -246,6 +246,15 @@
 - New project media added to /assets
 - Fixed some "Open in new tab" links
 
+# UI_v3.2.2
+- Completed the /mymedia page, check it out!
+- New images for mymedia and @puplproject added in /assets
+- 404 page modified to have more morph animations/shapes!
+- Included translation and context to some pages
+- Main page has a new image!
+- Mobile view fixed in some pages.
+- Accent color switched "red" to "yellow"!
+
 ### In the Next Updates:
 - Theme color settings
 - Midia/Post section

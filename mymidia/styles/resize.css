@@ -1,0 +1,8 @@
+@media (max-width: 350px) {
+    html{
+        background-color: rgb(244, 0, 0);
+    }
+    body{
+        display: none;
+    }
+}

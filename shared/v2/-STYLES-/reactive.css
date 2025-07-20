@@ -71,8 +71,9 @@
 
 @media (max-height: 450px) {
     /*-*/
-    body{ 
-        background-color: rgb(255, 0, 128);
+    body{
+        background-color: yellow;
+        color: black;
         padding: 0;
     }
     /*-*/
