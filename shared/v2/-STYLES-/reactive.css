@@ -49,7 +49,8 @@
 @media (max-width: 350px) {
     /*-*/
     body{ 
-        background-color: rgb(255, 0, 128);
+        background-color: yellow;
+        color: black;
         padding: 0;
     }
     /*-*/

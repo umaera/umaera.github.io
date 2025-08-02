@@ -255,6 +255,14 @@
 - Mobile view fixed in some pages.
 - Accent color switched "red" to "yellow"!
 
+# UI_v3.2.3
+- Added/polished Start animation on index page
+- /bookproject anounced in index page
+- MyMidia link in index replaced by BookProject
+- Redesigned Bookproject page & read page
+- New series at /bookproject! @FewThings (included with: Hotel & LiquidLove episodes)
+- Changed 404 page to have more feedback
+
 ### In the Next Updates:
 - Theme color settings
 - Midia/Post section

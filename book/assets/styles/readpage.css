@@ -1,3 +1,5 @@
+@import url('https://umaera.github.io/shared/v2/-FONTS-/fonts.css');
+
 ::selection{
     background-color: #000000;
     color: #ff0077;
@@ -6,12 +8,14 @@
 body {
     background: #181818;
     color: #e0e0e0;
-    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    font-family: Outfit, sans-serif;
     transition: background 0.3s, color 0.3s;
     overflow-x: hidden;
     overflow-y: auto;
     line-height: 1.6;
     padding: 2rem;
+    font-size: 0.6rem;
 }
 
 body::before {
@@ -71,6 +75,7 @@ section {
   background: #000000;
   padding: 10px;
   z-index: 1000;
+  font-size: 1rem;
 }
 
 p {
@@ -95,3 +100,4 @@ blockquote {
   border-left: 3px solid #ddd;
   color: #ffffff;
 }
+

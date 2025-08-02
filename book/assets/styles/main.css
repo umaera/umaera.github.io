@@ -1,9 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
-        
+
+html{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+:root{
+    --bg-primary: #0f1325;
+    --bg-primary-light: #717897;
+    --bg-secundary: #764ba2;
+    --bg-secundary-light: #bc8deb;
+    --text-dark: #2c3e50;
+    --text-light: #4c6885;
+
+    --part-color-blue: #5754ff4d;
+    --part-color-pink: #7c2e7833;
+    --part-color-altblue: #524fff33;
 }
 
 ::selection{
@@ -16,24 +34,24 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    background: var(--bg-secundary);
+    border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    border-radius: 10px;
+    background-color: var(--bg-secundary-light);
+    border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #5a6fd8, #6a4190);
+    background-color: var(--bg-primary-light);
 }
 
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secundary) 100%);
     min-height: 100vh;
-    font-family: 'Inter', sans-serif;
-    color: #2c3e50;
+    font-family: Poppins, sans-serif;
+    color: var(--text-light);
     position: relative;
     overflow-x: hidden;
 }
@@ -45,19 +63,32 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(87, 84, 255, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(124, 46, 120, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(82, 79, 255, 0.2) 0%, transparent 50%);
+    background:
+        radial-gradient(circle at 20% 80%, var(--part-color-blue) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, var(--part-color-pink) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, var(--part-color-altblue) 0%, transparent 50%);
     z-index: -1;
     animation: float 20s ease-in-out infinite;
 }
 
+.new{
+    text-align: center;
+    background-color: #00d5ff27;
+    color: #00d5ff;
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    overflow: hidden;
+    border-style: solid; border-color:  #00d5ff; border-width: 1px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
 /* // Actual Page Elements // */
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    margin: 0;
+    padding: 20% 10%;
     position: relative;
     z-index: 1;
 }
@@ -65,16 +96,14 @@ body::before {
 .header {
     text-align: center;
     margin-bottom: 50px;
-    background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(20px);
     border-radius: 25px;
-    padding: 40px 30px;
+    padding: 20px 30px;
     border: 1px solid rgba(255, 255, 255, 0);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0);
 }
 
 .header h1 {
-    font-family: 'Crimson Text', serif;
     font-size: 2.8rem;
     font-weight: 600;
     color: white;
@@ -83,7 +112,6 @@ body::before {
 }
 
 .header .subtitle {
-    font-family: 'Crimson Text', serif;
     font-style: italic;
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.9);
@@ -95,19 +123,20 @@ body::before {
     display: inline-flex;
     align-items: center;
     gap: 15px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 12px 25px;
-    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-style: solid; border-width: 1px; border-color:rgba(236, 92, 255, 0.375) ;
+    padding: 12px 15px;
+    border-radius: 15px;
     font-weight: 500;
     color: white;
     backdrop-filter: blur(10px);
 }
 
 .stats .number {
-    background: linear-gradient(45deg, #ff6b9d, #c471ed);
+    background-color: rgba(236, 92, 255, 0.375);
     color: white;
     padding: 5px 12px;
-    border-radius: 15px;
+    border-radius: 5px;
     font-weight: 600;
     text-shadow: none;
 }
@@ -129,8 +158,8 @@ body::before {
 
 .collection-item {
     margin-bottom: 50px;
-    border-bottom: 1px solid rgba(108, 117, 125, 0.2);
     padding-bottom: 40px;
+    width: 100%;
 }
 
 .collection-item:last-child {
@@ -144,27 +173,39 @@ body::before {
     align-items: center;
     gap: 15px;
     margin-bottom: 25px;
+    width: 100%;
 }
 
 .collection-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, var(--bg-primary), var(--bg-secundary));
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     color: white;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    border-color:#764ba2;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .collection-title {
-    font-family: 'Crimson Text', serif;
     font-size: 1.8rem;
     font-weight: 600;
     color: #cb8cff;
     margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 5%;
+    width: 100%;
+}
+
+.collection-title .new {
+    flex-direction: column;
 }
 
 .collection-description {
@@ -181,7 +222,7 @@ body::before {
 }
 
 .episode-card {
-    background: rgba(209, 255, 234, 0.7);
+    background:#0f1325c1;
     border: 2px solid rgba(102, 126, 234, 0.1);
     border-radius: 15px;
     padding: 25px;
@@ -200,7 +241,7 @@ body::before {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(17, 0, 255, 0.057), transparent);
     transition: left 0.5s ease;
 }
 
@@ -209,29 +250,32 @@ body::before {
 }
 
 .episode-card:hover {
-    border-color: rgba(102, 126, 234, 0.3);
-    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
-    background: rgba(209, 255, 234, 0.7);
+    border-color: var(--part-color-pink);
+    box-shadow: 0 15px 35px var(--part-color-pink);
+    background:#181e3a72;
 }
 
 .episode-number {
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    color: white;
+    background-color: #272e5127;
+    color: rgb(195, 173, 227);
     padding: 5px 12px;
-    border-radius: 20px;
+    border-radius: 5px;
     font-size: 0.8rem;
     font-weight: 600;
     display: inline-block;
     margin-bottom: 15px;
+    border-style: solid; border-color:  #576190; border-width: 1px;
 }
 
 .episode-title {
-    font-family: 'Crimson Text', serif;
     font-size: 1.3rem;
     font-weight: 600;
-    color: #ff11b0;
+    color: #afa8f2;
     margin-bottom: 12px;
     line-height: 1.4;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding: 1% 0px;
 }
 
 .episode-excerpt {
@@ -251,31 +295,33 @@ body::before {
 }
 
 .episode-language {
-    background: rgba(72, 10, 85, 0.603);
-    color: #ea66cd;
-    padding: 4px 10px;
-    border-radius: 10px;
-    font-weight: 500;
-    margin-bottom: 10px;
+    background-color: #272e5127;
+    color: rgb(195, 173, 227);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+    border-style: solid; border-color:  #576190; border-width: 1px;
 }
 
 .read-arrow {
     opacity:1;
     transform: translateX(-10px);
     transition: all 0.3s ease;
-    color: #ffc4f2;
-    font-weight: 600;
+    color: #d0eeff;
+    font-weight: 200;
     margin-bottom: 5px;
-    padding: 4px 10px;
+    padding: 0px 2%;
 }
 
 .read-arrow:hover {
     opacity:1;
     transform: translateX(-10px);
     transition: all 0.3s ease;
-    color: #ff00c8;
+    color: #ffffff;
     text-decoration: underline;
-    font-weight: 600;
 }
 
 .origin-note {
