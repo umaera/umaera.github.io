@@ -1,26 +1,58 @@
 @media (max-width: 768px) {
     .container {
-        padding: 20px 15px;
+        padding: 5% 2%;
     }
-            
+
+    header{
+        width: 100%;
+        padding: 0px 0px;
+    }
+
     .header h1 {
         font-size: 2.2rem;
     }
-            
-    .header .subtitle {
-        font-size: 1rem;
+
+    .stats{
+        font-size: 0.8rem;
+        padding: 10px 10px;
+        align-items: left;
+        text-align: left;
     }
-            
+
+    .header .subtitle {
+        font-size: 0.9rem;
+    }
+
     .book-collection {
         padding: 25px;
     }
-            
-    .collection-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
+
+    .collection-item {
+        margin-bottom: 50px;
+        padding-bottom: 40px;
+        width: 100%;
     }
-            
+
+    .collection-title {
+        font-size: 1.3rem;
+    }
+
+    .collection-description {
+        font-size: 0.8rem;
+    }
+
+    .new{
+        padding: 3px 8px;
+        border-style: none;
+    }
+
+    .episode-card {
+        background:#0f1325c1;
+        border: 2px solid rgba(102, 126, 234, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+    }
+
     .episode-meta {
         flex-direction: column;
         gap: 10px;

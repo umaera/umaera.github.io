@@ -48,8 +48,8 @@
 
 @media (max-width: 350px) {
     /*-*/
-    body{ 
-        background-color: yellow;
+    body{
+        background-color: rgb(128, 82, 244);
         color: black;
         padding: 0;
     }
@@ -73,7 +73,7 @@
 @media (max-height: 450px) {
     /*-*/
     body{
-        background-color: yellow;
+        background-color: rgb(128, 82, 244);
         color: black;
         padding: 0;
     }

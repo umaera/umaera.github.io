@@ -263,6 +263,13 @@
 - New series at /bookproject! @FewThings (included with: Hotel & LiquidLove episodes)
 - Changed 404 page to have more feedback
 
+# UI_v3.2.4
+- Fixed some issues in main page
+- New color change: "yellow" to "purple"
+- BookProject design polishing and new indexing system (all links changed)
+- Fixed some translations across the website
+- Changed images in the main page
+
 ### In the Next Updates:
 - Theme color settings
 - Midia/Post section

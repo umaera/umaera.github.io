@@ -1,13 +1,19 @@
 @import url('https://umaera.github.io/shared/v2/-FONTS-/fonts.css');
 
+:root{
+    --accent-text: #ff0077;
+    --text: #ffffff;
+    --background: #1a1a1a;
+}
+
 ::selection{
     background-color: #000000;
-    color: #ff0077;
+    color: var(--accent-text);
 }
 
 body {
-    background: #181818;
-    color: #e0e0e0;
+    background: var(--background);
+    color: var(--text);
     min-height: 100vh;
     font-family: Outfit, sans-serif;
     transition: background 0.3s, color 0.3s;
@@ -18,39 +24,38 @@ body {
     font-size: 0.6rem;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(87, 84, 255, 0.3) 0%, transparent 70%),
-        radial-gradient(circle at 80% 20%, rgba(124, 46, 120, 0.2) 0%, transparent 70%),
-        radial-gradient(circle at 40% 40%, rgba(82, 79, 255, 0.2) 0%, transparent 70%);
-    z-index: -1;
-    animation: float 20s ease-in-out infinite;
+h1 {
+    color:var(--accent-text);
+    font-size: 2.2rem;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+h4 {
+    text-align: left;
+    margin-top: 0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: white;
+    padding-bottom: 2%;
 }
 
 .reading-header {
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
-    color: #ffd700;
+    color: var(--accent-text);
 }
 
 .reading-content {
     text-align: center;
-    background: #2222222a;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.4);
 }
 
 .back-link {
     display: inline-block;
     margin-bottom: 2rem;
-    color: #ffd700;
+    color: var(--accent-text);
     text-decoration: none;
     font-size: 1rem;
 }
@@ -60,11 +65,10 @@ body::before {
 }
 
 section {
-    background: #0f0f0f7e;
+    background: var(--background);
     padding: 2rem;
     font-size: 1.2rem;
     border-radius: 2px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.4);
 }
 
 #pageNumElement {
@@ -97,7 +101,28 @@ blockquote {
   font-style: italic;
   margin: 1rem 0;
   padding-left: 1.5rem;
-  border-left: 3px solid #ddd;
-  color: #ffffff;
+  border-left: 3px solid var(--accent-text);
+  color: var(--text);
 }
 
+/* --- Responsive --- */
+@media (max-width: 700px) {
+    body {
+        padding:0.5rem ;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    section {
+        padding: 1rem;
+        font-size: 1.0rem;
+    }
+    .reading-header {
+        font-size: 1rem;
+    }
+    .reading-content {
+        text-align: center;
+        padding: 0.5rem;
+        border-radius: 12px;
+    }
+}

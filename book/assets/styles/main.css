@@ -4,6 +4,7 @@ html{
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
+    background-color: #000000;
 }
 
 * {
@@ -26,7 +27,11 @@ html{
 
 ::selection{
     background-color: white;
-    color:rgb(255, 0, 140)
+    color:rgb(255, 0, 140);
+}
+:focus{
+    background-color: white;
+    color:rgb(255, 0, 140);
 }
 
 ::-webkit-scrollbar {
@@ -80,7 +85,9 @@ body::before {
     font-size: 0.8rem;
     font-weight: 600;
     overflow: hidden;
-    border-style: solid; border-color:  #00d5ff; border-width: 1px;
+    border-style: solid;
+    border-color:  #00d5ff;
+    border-width: 1px;
     flex-shrink: 0;
     white-space: nowrap;
 }
@@ -88,7 +95,7 @@ body::before {
 /* // Actual Page Elements // */
 .container {
     margin: 0;
-    padding: 20% 10%;
+    padding: 5% 10%;
     position: relative;
     z-index: 1;
 }
@@ -124,7 +131,9 @@ body::before {
     align-items: center;
     gap: 15px;
     background-color: rgba(0, 0, 0, 0.2);
-    border-style: solid; border-width: 1px; border-color:rgba(236, 92, 255, 0.375) ;
+    border-style: solid;
+    border-width: 1px;
+    border-color:rgba(236, 92, 255, 0.375) ;
     padding: 12px 15px;
     border-radius: 15px;
     font-weight: 500;
@@ -143,7 +152,7 @@ body::before {
 
 .content-area {
     background: rgba(0, 0, 0, 0.26);
-    border-radius: 20px;
+    border-radius: 15px;
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 124, 237, 0.3);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -189,6 +198,9 @@ body::before {
     border-color:#764ba2;
     border-style: solid;
     border-width: 1px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
 }
 
 .collection-title {
@@ -202,6 +214,8 @@ body::before {
     justify-content: start;
     gap: 5%;
     width: 100%;
+    user-select: text;
+    -moz-user-select: text;
 }
 
 .collection-title .new {
@@ -213,6 +227,8 @@ body::before {
     color: #c2c2c2;
     margin-top: 5px;
     font-size: 0.95rem;
+    user-select: text;
+    -moz-user-select: text;
 }
 
 .episodes-grid {
@@ -276,6 +292,8 @@ body::before {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     padding: 1% 0px;
+    user-select: text;
+    -moz-user-select: text;
 }
 
 .episode-excerpt {
@@ -283,6 +301,8 @@ body::before {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 15px;
+    user-select: text;
+    -moz-user-select: text;
 }
 
 .episode-meta {

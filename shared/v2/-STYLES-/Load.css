@@ -21,14 +21,14 @@
 @keyframes width-anim {
   0% {
     width: 0;
-    background-color: yellow;
+    background-color: rgb(128, 82, 244);
   }
 }
 
 @keyframes height-anim {
   0% {
     height: 0;
-    background-color: yellow;
+    background-color: rgb(128, 82, 244);
   }
 }
 
