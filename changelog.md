@@ -270,6 +270,16 @@
 - Fixed some translations across the website
 - Changed images in the main page
 
+
+# UI_v3.2.5
+- "asp" page compleatly removed - it contained old credit display and useless assets. (It's still acessible on website's source code)
+- New access point link: "/sap".
+- Removed /mymidia.
+- Fixed and improved countdown to 2026.
+- Added SparkBunny to asset images
+- Changed images in the main page
+- EasterEgg videos on code. Check the on github: https://github.com/umaera/umaera.github.io
+
 ### In the Next Updates:
 - Theme color settings
 - Midia/Post section

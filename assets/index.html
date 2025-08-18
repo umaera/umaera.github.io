@@ -22,12 +22,17 @@
     }
 
     ::selection{
-        background-color: #96398e;
+        background-color: #651a5f;
+        color: white;
+    }
+
+    header::selection{
+        background-color: #651a5f;
         color: white;
     }
     /*---*/
     img{
-        border-color: rgb(235, 98, 98);
+        border-color: #eb6262;
         width:auto;
         height: 100px;
         border-style: solid;
@@ -36,12 +41,10 @@
         user-select: none;
         -webkit-user-select: none;
         -webkit-user-drag: auto;
+        opacity: 1;
         border-width: 1px;
-        animation: init 1s ease-in-out;
-    }
-
-    img:nth-child{
-        animation: init 2s ease-in-out;
+        animation: init 0.5s ease-in-out;
+        animation-delay: var(--delay, 0s);
     }
 
     img:hover{
@@ -98,7 +101,7 @@
     /*---*/
     @keyframes init {
         0%{
-           opacity: 0;
+            opacity: 0;
         }
 
     }
@@ -130,7 +133,7 @@
 <img src="../icons/@projects/@NoContext/StreamifyIcon.png" onclick="alert('Streamify • Pirated Streaming Service • 2023')" title="Streamify • Pirated Streaming Service • 2023">
 <img src="../icons/@projects/@NoContext/Rius1.ico" onclick="alert('Rius • Web-Recorder Browser • 2023')" title="Rius • Web-Recorder Browser • 2023">
 
-<h2>- @umaera.github.io - <mark>2 icons added (UI v3.2.2)</mark></h2>
+<h2>- @umaera.github.io</h2>
 <img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-v1.png" onclick="alert('MyLittleIcon - Default (version 3)')" title="MyLittleIcon - Default (version 3)">
 <img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-Resources-v1.png" onclick="alert('MyLittleIcon - Resources')" title="MyLittleIcon - Resources">
 <img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-Midia-v1.png" onclick="alert('MyLittleIcon - Midia')" title="MyLittleIcon - Midia">
@@ -140,7 +143,7 @@
 <img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-Display.png" onclick="alert('MyLittleIcon - Display')" title="MyLittleIcon - Display">
 <img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-codeOrDev.png" onclick="alert('MyLittleIcon - Code or development')" title="MyLittleIcon - Code or development">
 <img src="../icons/@projects/@umaera.github.io/website-icons/MyLittleIcon-Enviroment.png" onclick="alert('MyLittleIcon - Enviroment')" title="MyLittleIcon - Enviroment">
-<img class="newimg" src="../icons/@projects/@umaera.github.io/website-icons/MyMidia.png" onclick="alert('MyMidia')" title="MyMidia">
+<img src="../icons/@projects/@umaera.github.io/website-icons/MyMidia.png" onclick="alert('MyMidia')" title="MyMidia">
 <img src="../icons/@projects/@umaera.github.io/website-icons/default.png" onclick="alert('Main Website Icon - Version 1')" title="Main Website Icon - Version 1">
 <img src="../icons/@projects/@umaera.github.io/website-icons/pupur.png" onclick="alert('Main Website Icon - Version 2')" title="Main Website Icon - Version 2">
 <p></p>
@@ -183,7 +186,7 @@
 <img src="../icons/@projects/@umaera.github.io/staticNoise-wrd.gif" onclick="alert('effect - Static Noise (Type: WRD)')" title="effect - Static Noise (Type: WRD)">
 <img class="newimg" src="../icons/@projects/@umaera.github.io/Yes_This_is_rust_code_hahahah-edited.jpg" onclick="alert('Yes_This_is_rust_code_hahahah')" title="Yes_This_is_rust_code_hahahah">
 
-<h2>@PuplProject - <mark>1 icons added (UI v3.2.2)</mark></h2>
+<h2>@PuplProject</h2>
 <img src="../icons/@projects/@PuplProject/PUPL-COVER.jpg" onclick="alert('Official Icon of PuplProject')" title="Official Icon of PuplProject">
 <img src="../icons/@projects/@PuplProject/PUPL-BORDERLESS.png" onclick="alert('Official Icon of PuplProject - with effects')" title="Official Icon of PuplProject - with effects">
 <img src="../icons/@projects/@PuplProject/PUPL-WIREFRAMED.png" onclick="alert('Official Icon of PuplProject - wired & transparent')" title="Official Icon of PuplProject - wired & transparent">
@@ -203,7 +206,7 @@
 <img src="../icons/@projects/@PuplProject/Studio - tab.station (demo2).png" onclick="alert('Studio Screenshot')" title="Studio Screenshot">
 <img src="../icons/@projects/@PuplProject/Themes.png" onclick="alert('PuplBrowser - Default Themes (version 1)')" title="PuplBrowser - Default Themes (version 1)">
 <img src="../icons/@projects/@PuplProject/Interface Themes.png" onclick="alert('PuplBrowser - Interface Themes (version 1)')" title="PuplBrowser - Interface Themes (version 1)">
-<img class="newimg" src="../icons/@projects/@PuplProject/media-pupllanguages.webp" onclick="alert('Programming languages Github Repo Board')" title="Programming languages Github Repo Board">
+<img src="../icons/@projects/@PuplProject/media-pupllanguages.webp" onclick="alert('Programming languages Github Repo Board')" title="Programming languages Github Repo Board">
 
 <h2>@SimplyPrivate </h2>
 <img src="../icons/@projects/@SimplyPrivate/PrivateEye.png" onclick="alert('First Icon Ever (PrivateEye)')" title="First Icon Ever (PrivateEye)">
@@ -240,6 +243,27 @@
 <img src="../icons/new-pack-icons/tile.folder.justafrog.png" onclick="alert('JAF Config Folder')" title="JAF Config Folder">
 <img src="../icons/lib-icons/Shaders.jpg" onclick="alert('hydrogen shader renderer icon')" title="hydrogen shader renderer icon">
 
+<h2>@SparkBunny - <mark>New section (UI v3.2.5)</mark></h2>
+<img class="newimg" src="../icons/@projects/@SparkBunny/SparkBunny-NF.png" onclick="alert('SparkBunny Icon - No frame')" title="SparkBunny Icon - No frame">
+<img class="newimg" src="../icons/@projects/@SparkBunny/SparkBunny-RF.png" onclick="alert('SparkBunny Icon - Rounded Frame')" title="SparkBunny Icon - Rounded Frame">
+<img class="newimg" src="../icons/@projects/@SparkBunny/SparkBunny-T.png" onclick="alert('SparkBunny Icon - Transparent')" title="SparkBunny Icon - Transparent">
+<img class="newimg" src="../icons/@projects/@SparkBunny/Bunny.gif" onclick="alert('BunnyGif')" title="BunnyGif">
+<img class="newimg" src="../icons/@projects/@SparkBunny/CherryBomb.gif" onclick="alert('CherryBomb')" title="CherryBomb">
+<img class="newimg" src="../icons/@projects/@SparkBunny/Crystal.gif" onclick="alert('MorphCrystal')" title="MorphCrystal">
+<img class="newimg" src="../icons/@projects/@SparkBunny/MapBuild.gif" onclick="alert('MapBuild')" title="MapBuild">
+<img class="newimg" src="../icons/@projects/@SparkBunny/PathFinding.gif" onclick="alert('AI path finding / raycaster')" title="AI path finding / raycaster">
+<img class="newimg" src="../icons/@projects/@SparkBunny/slime_party.gif" onclick="alert('Slime Party')" title="Slime Party">
+<img class="newimg" src="../icons/@projects/@SparkBunny/SlimeDancin.gif" onclick="alert('Slime Dance')" title="Slime Dance">
+<img class="newimg" src="../icons/@projects/@SparkBunny/Smash.gif" onclick="alert('Smash / Boink')" title="Smash / Boink">
+<img class="newimg" src="../icons/@projects/@SparkBunny/slime_attack.gif" onclick="alert('Slime attack')" title="Slime attack">
+<img class="newimg" src="../icons/@projects/@SparkBunny/slime_alive.gif" onclick="alert('Slime idle')" title="Slime idle">
+<img class="newimg" src="../icons/@projects/@SparkBunny/screenshots/vLGbOyX.jpg" onclick="alert('1st screenshot of the game - testing core mechanics')" title="1st screenshot of the game - testing core mechanics">
+<img class="newimg" src="../icons/@projects/@SparkBunny/screenshots/mIatTl8.jpg" onclick="alert('2nd screenshot of the game - working on polishing everything')" title="2nd screenshot of the game - working on polishing everything">
+<img class="newimg" src="../icons/@projects/@SparkBunny/screenshots/sparkbunny_screenshot_1754330693257.png" onclick="alert('implementing shaders')" title="implementing shaders">
+<img class="newimg" src="../icons/@projects/@SparkBunny/screenshots/sparkbunny_screenshot_1754559454368.png" onclick="alert('implementing level design')" title="implementing level design">
+<img class="newimg" src="../icons/@projects/@SparkBunny/screenshots/sparkbunny_screenshot_1754559585033.png" onclick="alert('1st map ever')" title="1st map ever">
+
+
 <h2>@NoContext</h2>
 <img src="../icons/@projects/@CherryMonsters/Lnd.png" onclick="alert('CherryMonsters (Game)')" title="CherryMonsters (Game)">
 <img src="../icons/@projects/@CherryMonsters/Cursor.png" onclick="alert('CherryMonsters (Game) - Cursor')" title="CherryMonsters (Game) - Cursor">
@@ -271,3 +295,9 @@
 <!--Profile Picture: JJcia689 --><img src="../icons/pfp/jjcia689.png" onclick="alert('@jjscia689 - Gta fanatic')" title="@jjscia689 - Gta fanatic">
 <!--Profile Picture: nsei_03 --><img src="../icons/pfp/nsei03.png" onclick="alert('@nsei03')" title="@nsei03">
 <!--Profile Picture: nakuMihau --><img src="../icons/pfp/naku.png" onclick="alert('@NakuMihau - creative but childish')" title="@NakuMihau - creative but childish">
+
+<script>
+document.querySelectorAll('img').forEach((img, i) => {
+  img.style.setProperty('--delay', (i * 0.05) + 's');
+});
+</script>

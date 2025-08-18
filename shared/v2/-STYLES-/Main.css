@@ -215,12 +215,12 @@ body{
     inset: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../-IMAGES-/gemcloudconfigicon.PNG');
+    background-image: url('../-IMAGES-/CGCyKNM.webp');
     background-repeat: repeat;
     background-position: center;
     background-size: 100%;
     filter: blur(1px);
-    opacity: 0.8;
+    opacity: 0.4;
     z-index: -1;
     pointer-events: none;
 }

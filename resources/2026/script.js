@@ -1,6 +1,6 @@
    const targetDate = new Date("January 1, 2026 00:00:00").getTime();
     let previousSeconds = -1;
-    
+
     const interval = setInterval(() => {
         const currentDate = new Date().getTime();
         const difference = targetDate - currentDate;
@@ -34,14 +34,14 @@
             clearInterval(interval);
             document.getElementById("countdown").innerHTML = "00:00:00";
             document.body.classList.add('celebration');
-            
-            const userLang = navigator.language || navigator.userLanguage;
-            if (userLang.startsWith('pt') || userLang.startsWith('br')) {
-                document.getElementById('gma').innerHTML = 'Bem-vindo(a) a <span class="bracketed">2026</span>!✨';
-            } else {
-                document.getElementById('gma').innerHTML = 'Welcome to <span class="bracketed">2026</span>!✨';
-            }
-            
+
+            const userLang = navigator.language;
+                if (userLang.startsWith('pt')) {
+                    document.getElementById('gma').innerHTML = 'Bem-vindo(a) a <span class="bracketed">2026</span>!';
+                } else {
+                    document.getElementById('gma').innerHTML = 'Welcome to <span class="bracketed">2026</span>!';
+                }
+
             // Create celebration particles
             createCelebrationParticles();
         }
@@ -49,14 +49,12 @@
 
 
     window.onload = function() {
-        const userLang = navigator.language || navigator.userLanguage;
-
-        if (userLang.startsWith('pt') || userLang.startsWith('br')) {
-            document.getElementById('gma').innerHTML = 'Countdown to <span class="bracketed">2026</span>!';
-        } else {
-           document.getElementById('gma').innerHTML = 'Contagem para <span class="bracketed">2026</span>!';
-        }
-        
+        const userLang = navigator.language;
+            if (userLang.startsWith('pt')) {
+                document.getElementById('gma').innerHTML = 'Contagem para <span class="bracketed">2026</span>!';
+            } else {
+                document.getElementById('gma').innerHTML = 'Countdown to <span class="bracketed">2026</span>!';
+            }
         // Initialize particles
         createParticles();
     };
