@@ -1,0 +1,125 @@
+.SideNav{
+    animation: IN-SIDENAV ease-in 1s;
+}
+
+.painel1{
+    animation: IN-painel1 ease-in 1s;
+}
+
+.painel2{
+    animation: IN-painel2 ease-in 1s;
+}
+
+.painel2-title{
+    animation: IN-painel2title ease-in 2s;
+}
+
+.painel3{
+    animation: IN-painel3 ease-in 1s;
+}
+.painel3-title{
+    animation: IN-painel3title ease-in 2s;
+}
+@keyframes IN-SIDENAV {
+    0%{
+        margin-left: -1000;
+        transform: rotate(20deg);
+    }
+    80%{
+        margin-left: 60;
+        transform: rotate(0deg);
+    }
+    83%{
+        transform: rotate(-5deg);
+    }
+    95%{
+        margin-left: -10;
+    }
+
+    98%{
+        margin-left: 10;
+    }
+}
+
+@keyframes IN-painel1 {
+
+    0%{
+        margin-top: -1100;
+      
+    }
+    80%{
+        margin-top: 25;
+    }
+    85%{
+        margin-top: -10;
+    }
+    90%{
+        margin-top: 5;
+    }
+
+}
+
+@keyframes IN-painel2 {
+
+    0%{
+        height: 0;
+      
+    }
+    80%{
+       
+    }
+    85%{
+        height: 0;
+    }
+    90%{
+        
+    }
+
+}
+
+
+@keyframes IN-painel2title {
+
+    0%{
+        opacity: 0;
+    }
+    65%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 1;
+    }
+
+}
+
+@keyframes IN-painel3 {
+    0%{
+        width: 0;       
+    }
+    80%{
+        width: 0;  
+    }
+    98%{
+        
+    }
+}
+
+@keyframes IN-painel3title {
+
+    0%{
+        opacity: 0;
+    }
+    65%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 1;
+    }
+
+}
+
+@keyframes closepmedia {
+    0%{height: 0%;}
+    90%{height: 120%;}
+    100%{height: 120%;}
+}

@@ -2,6 +2,7 @@
 
 :root{
     --accent-text: #ff0077;
+    --sec-text: rgb(95, 208, 69);
     --text: #ffffff;
     --background: #1a1a1a;
 }
@@ -98,11 +99,18 @@ em {
 
 
 blockquote {
-  font-style: italic;
   margin: 1rem 0;
   padding-left: 1.5rem;
   border-left: 3px solid var(--accent-text);
   color: var(--text);
+}
+
+.green{
+    border-left: 3px solid rgb(63, 171, 63)
+}
+
+.blue{
+    border-left: 3px solid rgb(63, 171, 166)
 }
 
 /* --- Responsive --- */

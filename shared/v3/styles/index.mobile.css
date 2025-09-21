@@ -1,0 +1,79 @@
+.mobileView{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-slow);
+    display: none;
+    overflow-x:hidden;
+    overflow-y: auto;
+    margin-left: 5%;
+}
+
+.mobileView::before{
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    background-image: url('../images/bgs/moony.jpg');
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(10px);
+    opacity: 0.7;
+    transition: var(--transition-fast);
+}
+
+.headerMV{
+    margin-top: 5%;
+    padding-bottom: 2%;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    width: 90%;
+    transition: var(--transition-fast);
+}
+
+.MVtools{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    transition: var(--transition-fast);
+    padding-top: 0.3rem;
+    font-family: var(--font-def);
+    font-size: var(--font-size-normal);
+    color: var(--text-light-color);
+    margin-bottom: 5%;
+}
+
+.mvtool{
+    padding: 0.5rem;
+    width: fit-content;
+    background-color: var(--accent-color-dark);
+    border-radius: var(--round-feather);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.mvtool:hover{
+    padding: 0.5rem;
+    width: fit-content;
+    background-color: var(--accent-color-light);
+    border-radius: var(--round-feather);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.newsMV{
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.newsMV .newsItem{
+    width: 80%;
+}

@@ -1,0 +1,20 @@
+html{
+    background-color: #d0004c;
+}
+
+body {
+    color:white; font-family: QuickSand;
+    background-color: #d0004c;
+    margin: 20; overflow: hidden;
+    transition: opacity 1s ease-in-out;
+}
+
+a{
+    color: black;
+    border-style: dashed;
+    border-width: 1px; 
+    padding: 3;
+    transition: 0.1s;
+}
+
+

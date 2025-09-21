@@ -24,7 +24,7 @@ body {
 body:before{
     content: '';
     position: absolute;
-    background-image: url('../../shared/v2/-IMAGES-/pan-draw.webp');
+    background-image: url('../../shared/v3/images/bgs/room_vines.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

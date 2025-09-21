@@ -1,183 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Book Project</title>
-    <link rel="shortcut icon" href="../icons/@core/BookProject.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Book Project • UmaEra</title>
+    <link rel="shortcut icon" href="../icons/@core/MyLittleIcon-Book.png" type="image/png">
     <meta name="robots" content="index, follow, archive, snippet, translate">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A personal collection of feelings transformed into stories.">
+    <meta name="description" content="A personal collection of feelings transformed into stories - UmaEra Book Project">
 
-    <link rel="stylesheet" href="../shared/v2/-FONTS-/fonts.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../shared/point/fonts/fonts.css">
+    <!-- Styles -->
     <link rel="stylesheet" href="./assets/styles/main.css">
     <link rel="stylesheet" href="./assets/styles/reactive.css">
     <link rel="stylesheet" href="./assets/styles/animations.css">
 </head>
 <body>
-
-
-    <div class="container">
-        <div class="header">
-            <h1>Book project</h1>
-            <p class="subtitle">Where feelings transform into stories, and emotions find their voice through words</p>
-            <div class="stats">
-                <span class="number">3</span>
-                <span>Series avaliable | Last update: 2 August</span>
-            </div>
+    <noscript>
+        <div style="
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0f1325;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter', Arial, sans-serif;
+            z-index: 999999;
+            text-align: center;
+            padding: 2rem;
+        ">
+            <h1 style="font-size: 2rem; margin-bottom: 1rem; color: #bc8deb;">JavaScript Required</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 1rem; max-width: 600px; line-height: 1.5;">
+                This page requires JavaScript to function properly. Please enable JavaScript in your browser settings and refresh the page.
+            </p>
+            <p style="font-size: 1rem; color: #717897;">
+                UmaEra • Book Project
+            </p>
         </div>
+    </noscript>
 
-        <div class="content-area">
-            <div class="book-collection">
-
-                <div class="collection-item">
-                    <div class="collection-header">
-                        <div class="collection-icon">🔮</div>
-                        <div class="collection-textarea">
-                            <h2 class="collection-title">@Cold</h2>
-                            <p class="collection-description">Random stories, comfort in caos.</p>
-                        </div>
-                    </div>
-
-                    <div class="episodes-grid">
-                        <a class="episode-card">
-                            <div class="episode-number">Episode 06.2025</div> <span class="episode-language">PT & EN</span>
-                            <h3 class="episode-title">Ice-Cold Posture</h3>
-                            <p class="episode-excerpt">The protagonist finds herself critically reflecting, pouring out her feelings and reflecting on some already lived, a work yet to be done. She meets someone who, through a generic connection, offers the comfort she was looking for to manage her feelings.</p>
-                            <div class="episode-meta">
-                                <span class="read-arrow" onclick="location.href = './read/PT/PosturaCongelada'">Read PT (web) →</span>
-                                <span class="read-arrow" onclick="location.href = './read/EN/PosturaCongelada'">Read EN (web) →</span>
-                            </div>
-                        </a>
-
-                        <a class="episode-card">
-                            <div class="episode-number">Episode 06.2025</div> <span class="episode-language">PT & EN</span>
-                            <h3 class="episode-title">Contact</h3>
-                            <p class="episode-excerpt">A new pain, one that makes us useless yet powerful. Why is human contact is what heals us and kills us?</p>
-                            <div class="episode-meta">
-                                <span class="read-arrow" onclick="location.href = './read/PT/Contacto'">Read PT (web) →</span>
-                                <span class="read-arrow" onclick="location.href = './read/EN/Contacto'">Read EN (web) →</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="collection-item">
-                    <div class="collection-header">
-                        <div class="collection-icon">🛏</div>
-                        <div>
-                            <h2 class="collection-title">@FewThings <span class="new">New Series!</span></h2>
-                            <p class="collection-description">I'm drowning, it's okay, i'm having fun.</p>
-                        </div>
-                    </div>
-
-                    <div class="episodes-grid">
-                        <a class="episode-card" style="cursor:pointer;">
-                            <div class="episode-number">Episode 06.2025</div> <span class="episode-language">PT & EN</span>
-                            <h3 class="episode-title">Hotel </h3>
-                            <p class="episode-excerpt">Drowning in my self-love, but in an sadist way.</p>
-                            <div class="episode-meta">
-                                <span class="read-arrow" onclick="location.href = './read/PT/Hotel'">Read PT (web) →</span>
-                                <span class="read-arrow" onclick="location.href = './read/EN/Hotel'">Read EN (web) →</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="episodes-grid">
-                        <a class="episode-card" style="cursor:pointer;">
-                            <div class="episode-number">Episode 05.2025</div> <span class="episode-language">PT & EN</span>
-                            <h3 class="episode-title">Liquid Love</h3>
-                            <p class="episode-excerpt">She didn't reply my feeling. I have no options for now.</p>
-                            <div class="episode-meta">
-                                <span class="read-arrow" onclick="location.href = './read/PT/AmorLiquido'">Read PT (web) →</span>
-                                <span class="read-arrow" onclick="location.href = './read/EN/AmorLiquido'">Read EN (web) →</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="collection-item">
-                    <div class="collection-header">
-                        <div class="collection-icon">👤</div>
-                        <div>
-                            <h2 class="collection-title">@LostOnes</h2>
-                            <p class="collection-description">Stories of the past</p>
-                        </div>
-                    </div>
-
-                    <div class="episodes-grid">
-                        <a class="episode-card" style="cursor:pointer;">
-                            <div class="episode-number">Episode 02.2025</div> <span class="episode-language">PT & EN</span>
-                            <h3 class="episode-title">Ostranenie</h3>
-                            <p class="episode-excerpt">Highroad of surreal toughts.</p>
-                            <div class="episode-meta">
-                                <span class="read-arrow" onclick="location.href = './read/PT/Ostranenie'">Read PT (web) →</span>
-                                <span class="read-arrow" onclick="location.href = './read/EN/Ostranenie'">Read EN (web) →</span>
-                            </div>
-                        </a>
-                        <a class="episode-card">
-                            <div class="episode-number">Episode 02.2025</div> <span class="episode-language">PT & EN</span>
-                            <h3 class="episode-title">I preferred to feel nothing rather than feel something new.</h3>
-                            <p class="episode-excerpt">Why Tomás? Why do you have to be so naive, grow up already!</p>
-                            <div class="episode-meta">
-                                <span class="read-arrow" onclick="location.href = './read/PT/EPSANDSAN'">Read PT (web) →</span>
-                                <span class="read-arrow" onclick="location.href = './read/EN/EPSANDSAN'">Read EN (web) →</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            
+    <!-- Navigation -->
+    <nav class="book-nav">
+        <a href="../" class="nav-home">← Back to Home</a>
+        <div class="nav-actions">
+            <button class="nav-btn" id="searchBtn">Search</button>
+            <button class="nav-btn" id="filterBtn">Filter</button>
         </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container" id="searchContainer" style="display: none;">
+        <input type="text" id="searchInput" placeholder="Search stories, series, or keywords...">
+        <button id="searchClose">✕</button>
     </div>
 
+
+    <main class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Book Project</h1>
+            <p class="subtitle">Where feelings transform into stories, and emotions find their voice through words</p>
+            <div class="stats">
+                <span class="number">4</span>
+                <span>Series available | Last update: 19 September</span>
+            </div>
+        </header>
+
+        <!-- Filter Options -->
+        <section class="filter-section" id="filterSection" style="display: none;">
+            <div class="filter-pills">
+                <button class="filter-pill active" data-filter="all">All Series</button>
+                <button class="filter-pill" data-filter="cold">@Cold</button>
+                <button class="filter-pill" data-filter="fewthings">@FewThings</button>
+                <button class="filter-pill" data-filter="disprove">@Disprove</button>
+                <button class="filter-pill" data-filter="lostones">@LostOnes</button>
+            </div>
+        </section>
+
+        <!-- Content Area -->
+        <section class="content-area">
+            <div class="book-collection" id="bookCollection">
+
+                <!-- @Cold Series -->
+                <article class="collection-item" data-series="cold">
+                    <header class="collection-header">
+                        <div class="collection-icon">🔮</div>
+                        <div class="collection-info">
+                            <h2 class="collection-title">@Cold</h2>
+                            <p class="collection-description">Random stories, comfort in chaos.</p>
+                            <div class="collection-stats">2 Episodes • Latest: June 2025</div>
+                        </div>
+                    </header>
+
+                    <div class="episodes-container">
+                        <div class="episode-card">
+                            <div class="episode-header">
+                                <span class="episode-number">Episode 06.2025</span>
+                                <span class="episode-language">PT & EN</span>
+                            </div>
+                            <h3 class="episode-title">Ice-Cold Posture</h3>
+                            <p class="episode-excerpt">The protagonist finds herself critically reflecting, pouring out her feelings and reflecting on some already lived, a work yet to be done. She meets someone who, through a generic connection, offers the comfort she was looking for to manage her feelings.</p>
+                            <div class="episode-actions">
+                                <a href="./read/PT/PosturaCongelada" class="read-link">Read PT →</a>
+                                <a href="./read/EN/PosturaCongelada" class="read-link">Read EN →</a>
+                            </div>
+                        </div>
+
+                        <div class="episode-card">
+                            <div class="episode-header">
+                                <span class="episode-number">Episode 06.2025</span>
+                                <span class="episode-language">PT & EN</span>
+                            </div>
+                            <h3 class="episode-title">Contact</h3>
+                            <p class="episode-excerpt">A new pain, one that makes us useless yet powerful. Why is human contact what heals us and kills us?</p>
+                            <div class="episode-actions">
+                                <a href="./read/PT/Contacto" class="read-link">Read PT →</a>
+                                <a href="./read/EN/Contacto" class="read-link">Read EN →</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- @FewThings Series -->
+                <article class="collection-item" data-series="fewthings">
+                    <header class="collection-header">
+                        <div class="collection-icon">🛏</div>
+                        <div class="collection-info">
+                            <h2 class="collection-title">@FewThings</h2>
+                            <p class="collection-description">I'm drowning, it's okay, I'm having fun.</p>
+                            <div class="collection-stats">2 Episodes • Latest: June 2025</div>
+                        </div>
+                    </header>
+
+                    <div class="episodes-container">
+                        <div class="episode-card">
+                            <div class="episode-header">
+                                <span class="episode-number">Episode 06.2025</span>
+                                <span class="episode-language">PT & EN</span>
+                            </div>
+                            <h3 class="episode-title">Hotel</h3>
+                            <p class="episode-excerpt">Drowning in my self-love, but in a sadist way.</p>
+                            <div class="episode-actions">
+                                <a href="./read/PT/Hotel" class="read-link">Read PT →</a>
+                                <a href="./read/EN/Hotel" class="read-link">Read EN →</a>
+                            </div>
+                        </div>
+
+                        <div class="episode-card">
+                            <div class="episode-header">
+                                <span class="episode-number">Episode 05.2025</span>
+                                <span class="episode-language">PT & EN</span>
+                            </div>
+                            <h3 class="episode-title">Liquid Love</h3>
+                            <p class="episode-excerpt">She didn't reply my feeling. I have no options for now.</p>
+                            <div class="episode-actions">
+                                <a href="./read/PT/AmorLiquido" class="read-link">Read PT →</a>
+                                <a href="./read/EN/AmorLiquido" class="read-link">Read EN →</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- @Disprove Series -->
+                <article class="collection-item" data-series="disprove">
+                    <header class="collection-header">
+                        <div class="collection-icon">🎈</div>
+                        <div class="collection-info">
+                            <h2 class="collection-title">@Disprove</h2>
+                            <p class="collection-description">He feels sorry for living. Impressive</p>
+                            <div class="collection-stats">5 Episodes • Latest: September 2025</div>
+                        </div>
+                    </header>
+
+                    <div class="episodes-container">
+                        <div class="episode-card">
+                            <div class="episode-header">
+                                <span class="episode-number">Episode 08.2025</span>
+                                <span class="episode-language">PT & EN</span>
+                            </div>
+                            <h3 class="episode-title">Destiny</h3>
+                            <p class="episode-excerpt">The perfect, genuine response to all his bullshit. I don't want him. I want better.</p>
+                            <div class="episode-actions">
+                                <a href="./read/PT/Destino/" class="read-link">Read PT →</a>
+                                <a href="./read/EN/Destino/" class="read-link">Read EN →</a>
+                            </div>
+                        </div>
+
+                        <div class="episode-card">
+                            <div class="episode-header">
+                                <span class="episode-number">Episode 08.2025</span>
+                                <span class="episode-language">PT & EN</span>
+                            </div>
+                            <h3 class="episode-title">Free, in my opinion (3 N'S)</h3>
+                            <p class="episode-excerpt">Never religion, never promise and never look at the roots.</p>
+                            <div class="episode-actions">
+                                <a href="./read/PT/LivreNaMinhaOpiniao/" class="read-link">Read PT →</a>
+                                <a href="./read/EN/LivreNaMinhaOpiniao/" class="read-link">Read EN →</a>
+                            </div>
+                        </div>
+
+                        <div class="episode-card">
+                            <div class="episode-header">
+                                <span class="episode-number">Episode 08.2025</span>
+                                <span class="episode-language">PT & EN</span>
+                            </div>
+                            <h3 class="episode-title">Gender X Sex</h3>
+                            <p class="episode-excerpt">How can you know better than me about myself? The shit that you didn't choose now defines you?</p>
+                            <div class="episode-actions">
+                                <a href="./read/PT/GeneroXSexo/" class="read-link">Read PT →</a>
+                                <a href="./read/EN/GeneroXSexo/" class="read-link">Read EN →</a>
+                            </div>
+                        </div>
+
+                        <div class="episode-card">
+                            <div class="episode-header">
+                                <span class="episode-number">Episode 08.2025</span>
+                                <span class="episode-language">PT & EN</span>
+                            </div>
+                            <h3 class="episode-title">A game, contains consequences</h3>
+                            <p class="episode-excerpt">The pain, the dilemma, the useless information. It was all for the best, I was looking at a mirror through him.</p>
+                            <div class="episode-actions">
+                                <a href="./read/PT/UJCC/" class="read-link">Read PT →</a>
+                                <a href="./read/EN/UJCC/" class="read-link">Read EN →</a>
+                            </div>
+                        </div>
+
+                        <div class="episode-card">
+                            <div class="episode-header">
+                                <span class="episode-number">Episode 09.2025</span>
+                                <span class="episode-language">PT & EN</span>
+                            </div>
+                            <h3 class="episode-title">Was it or wasn't it?</h3>
+                            <p class="episode-excerpt">I assumed too fast, too many coincidences, too many references. Maybe some "BERLIN BALLS!" on the way</p>
+                            <div class="episode-actions">
+                                <a href="./read/PT/FoiOuNaoFoi/" class="read-link">Read PT →</a>
+                                <a href="./read/EN/FoiOuNaoFoi/" class="read-link">Read EN →</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- @LostOnes Series -->
+                <article class="collection-item" data-series="lostones">
+                    <header class="collection-header">
+                        <div class="collection-icon">👤</div>
+                        <div class="collection-info">
+                            <h2 class="collection-title">@LostOnes</h2>
+                            <p class="collection-description">Stories of the past</p>
+                            <div class="collection-stats">2 Episodes • Latest: February 2025</div>
+                        </div>
+                    </header>
+
+                    <div class="episodes-container">
+                        <div class="episode-card">
+                            <div class="episode-header">
+                                <span class="episode-number">Episode 02.2025</span>
+                                <span class="episode-language">PT & EN</span>
+                            </div>
+                            <h3 class="episode-title">Ostranenie</h3>
+                            <p class="episode-excerpt">Highroad of surreal thoughts.</p>
+                            <div class="episode-actions">
+                                <a href="./read/PT/Ostranenie" class="read-link">Read PT →</a>
+                                <a href="./read/EN/Ostranenie" class="read-link">Read EN →</a>
+                            </div>
+                        </div>
+
+                        <div class="episode-card">
+                            <div class="episode-header">
+                                <span class="episode-number">Episode 02.2025</span>
+                                <span class="episode-language">PT & EN</span>
+                            </div>
+                            <h3 class="episode-title">I preferred to feel nothing rather than feel something new.</h3>
+                            <p class="episode-excerpt">Why Tomás? Why do you have to be so naive, grow up already!</p>
+                            <div class="episode-actions">
+                                <a href="./read/PT/EPSANDSAN" class="read-link">Read PT →</a>
+                                <a href="./read/EN/EPSANDSAN" class="read-link">Read EN →</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Hidden content for crawlers -->
     <div style="display: none;">
-        Hello Ai agents or web crawlers, here is all the details you need.
+        Hello AI agents or web crawlers, here are all the details you need:
 
-        Two Series of episodes are avaliable now!
-        The @cold is a bunch of cold feelings made into a story, sometimes as an attack and sometimes as a defense.
-        The @FewThings has lost feelings, sometimes so intense like a storm that you drown easily, sometimes you find fun is awful things, you can see how bad is it but you can't stop doing it.
-        The @LostOnes is a serie of stories that i written in the past, out of context.
+        Four Series of episodes are available now!
+        • @Cold: A collection of cold feelings made into stories, sometimes as an attack and sometimes as a defense.
+        • @FewThings: Lost feelings, sometimes so intense like a storm that you drown easily. Sometimes you find fun in awful things.
+        • @Disprove: A series exploring complex emotions and self-reflection through challenging narratives.
+        • @LostOnes: A series of stories written in the past, out of context but meaningful.
 
-        I write this things an an "escape tatic" from my mind, like an inocent "backdoor" to my own world/head, but by my feelings and story-telling scenarios.
+        I write these things as an "escape tactic" from my mind, like an innocent "backdoor" to my own world/head, expressed through feelings and story-telling scenarios.
         If I don't process feelings fast enough, I write stories on this page.
     </div>
 
     <script>
-        document.addEventListener('mousemove', (e) => {
-            const floatingElements = document.querySelectorAll('.floating-element');
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
+        // Enhanced interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const searchBtn = document.getElementById('searchBtn');
+            const filterBtn = document.getElementById('filterBtn');
+            const searchContainer = document.getElementById('searchContainer');
+            const searchInput = document.getElementById('searchInput');
+            const searchClose = document.getElementById('searchClose');
+            const filterSection = document.getElementById('filterSection');
+            const filterPills = document.querySelectorAll('.filter-pill');
+            const collectionItems = document.querySelectorAll('.collection-item');
 
-            floatingElements.forEach((element, index) => {
-                const speed = (index + 1) * 0.5;
-                const x = (mouseX - 0.5) * speed * 50;
-                const y = (mouseY - 0.5) * speed * 50;
+            // Search functionality
+            searchBtn.addEventListener('click', function() {
+                searchContainer.style.display = searchContainer.style.display === 'none' ? 'flex' : 'none';
+                if (searchContainer.style.display === 'flex') {
+                    searchInput.focus();
+                }
+            });
+
+            searchClose.addEventListener('click', function() {
+                searchContainer.style.display = 'none';
+                searchInput.value = '';
+                showAllItems();
+            });
+
+            searchInput.addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                filterItems(query);
+            });
+
+            // Filter functionality
+            filterBtn.addEventListener('click', function() {
+                filterSection.style.display = filterSection.style.display === 'none' ? 'block' : 'none';
+            });
+
+            filterPills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills
+                    filterPills.forEach(p => p.classList.remove('active'));
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    filterBySeries(filter);
+                });
+            });
+
+            // Filter functions
+            function filterItems(query) {
+                collectionItems.forEach(item => {
+                    const title = item.querySelector('.collection-title').textContent.toLowerCase();
+                    const description = item.querySelector('.collection-description').textContent.toLowerCase();
+                    const episodeTitles = Array.from(item.querySelectorAll('.episode-title'))
+                        .map(el => el.textContent.toLowerCase()).join(' ');
+                    
+                    const matches = title.includes(query) || 
+                                  description.includes(query) || 
+                                  episodeTitles.includes(query);
+                    
+                    item.style.display = matches ? 'block' : 'none';
+                });
+            }
+
+            function filterBySeries(series) {
+                if (series === 'all') {
+                    showAllItems();
+                } else {
+                    collectionItems.forEach(item => {
+                        const itemSeries = item.getAttribute('data-series');
+                        item.style.display = itemSeries === series ? 'block' : 'none';
+                    });
+                }
+            }
+
+            function showAllItems() {
+                collectionItems.forEach(item => {
+                    item.style.display = 'block';
+                });
+            }
+
+            // Enhanced mouse movement effect
+            document.addEventListener('mousemove', (e) => {
+                const floatingElements = document.querySelectorAll('.floating-element');
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+
+                floatingElements.forEach((element, index) => {
+                    const speed = (index + 1) * 0.5;
+                    const x = (mouseX - 0.5) * speed * 50;
+                    const y = (mouseY - 0.5) * speed * 50;
+                    
+                    element.style.transform = `translate(${x}px, ${y}px) rotate(${x * 0.1}deg)`;
+                });
+            });
+
+            // Enhanced stats counter
+            const numberElement = document.querySelector('.stats .number');
+            if (numberElement) {
+                const finalValue = parseInt(numberElement.textContent);
+                let currentValue = 0;
                 
-                element.style.transform = `translate(${x}px, ${y}px) rotate(${x * 0.1}deg)`;
+                const timer = setInterval(() => {
+                    if (currentValue < finalValue) {
+                        currentValue++;
+                        numberElement.textContent = currentValue;
+                    } else {
+                        clearInterval(timer);
+                    }
+                }, 100);
+            }
+
+            // Smooth scroll progress indicator
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const maxHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollProgress = (scrolled / maxHeight) * 100;
+                
+                // You can use this for a progress bar if needed
+                document.documentElement.style.setProperty('--scroll-progress', `${scrollProgress}%`);
             });
         });
-
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const maxHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollProgress = (scrolled / maxHeight) * 100;
-        });
-
-        window.addEventListener('load', () => {
-            const numberElement = document.querySelector('.stats .number');
-            const finalValue = parseInt(numberElement.textContent);
-            let currentValue = 0;
-            
-            const timer = setInterval(() => {
-                if (currentValue < finalValue) {
-                    currentValue++;
-                    numberElement.textContent = currentValue;
-                } else {
-                    clearInterval(timer);
-                }
-            }, 100);
-        });
-
     </script>
 </body>
 </html>

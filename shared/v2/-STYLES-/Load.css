@@ -21,14 +21,14 @@
 @keyframes width-anim {
   0% {
     width: 0;
-    background-color: rgb(128, 82, 244);
+    background-color: var(--accent-color-light);
   }
 }
 
 @keyframes height-anim {
   0% {
     height: 0;
-    background-color: rgb(128, 82, 244);
+    background-color: var(--accent-color-light);
   }
 }
 
@@ -37,4 +37,13 @@
     opacity: 0;
     height: 0;
   }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px var(--accent-color-dark);
+    }
+    to {
+        text-shadow: 0 0 10px var(--accent-color-dark);
+    }
 }

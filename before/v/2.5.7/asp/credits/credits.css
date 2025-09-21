@@ -1,0 +1,109 @@
+@font-face {
+    font-family: QuickSand;
+    src: url(../fonts/font-quicksand.ttf);
+  }
+
+  @font-face {
+    font-family: Jersey;
+    src: url(../fonts/Jersey15-Regular.ttf);
+  }
+
+body{
+  overflow: hidden;
+  zoom: 50%;
+  background-color: #00000000;
+}
+  .class{
+    font-family: Jersey;
+    position: absolute;
+    font-size:5rem;
+    width: 99%;
+    text-align: center;
+    margin-top: 50px;
+    color: #c0c0c0e6;
+  }
+  
+.pfp{
+    border-style: none;
+    border-radius:2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 250px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1px;
+    box-shadow: 0 0 10px #ff6f00;
+    width: 250; height: 250;
+    margin-top: 150px;
+    transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor:grab;
+}
+
+.left-arrow{
+  background-image: url(./other/left-arrow-blue.png);
+  background-position: center;
+  background-size: 100px;
+  background-color: rgba(255, 0, 0, 0);
+  width: 100;
+  height: 100;
+  position: absolute;
+  margin-top: 70;
+  margin-left: -150;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: scale(1.2);
+}
+
+.left-arrow:hover{
+  transform: scale(1.1);
+  filter: brightness(1.5);
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.left-arrow:active{
+  filter:brightness(10);
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.right-arrow{
+  background-image: url(./other/right-arrow-blue.png);
+  background-position: center;
+  background-size: 100px;
+  background-color: rgba(255, 0, 0, 0);
+  width: 100;
+  height: 100;
+  position: absolute;
+  margin-top: 70;
+  margin-left: 300;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: scale(1.2);
+}
+
+.right-arrow:hover{
+  transform: scale(1.1);
+  filter: brightness(1.5);
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.right-arrow:active{
+  filter:brightness(10);
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.name{
+  font-family: QuickSand;
+  margin-top: 20px;
+  font-size:2.2rem;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-weight: bold;
+}
+
+.profile{
+  font-family: QuickSand;
+  color: #000000;
+  font-size:1.7rem;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-weight: bold;
+}

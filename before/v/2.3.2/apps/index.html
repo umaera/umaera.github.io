@@ -1,0 +1,136 @@
+<head>
+    <title>Resources</title>
+    <link rel="shortcut icon" href="../icons/lib-icons/services.png" type="image/x-icon">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Resources | a repo to all of our projets, assets and code!">
+    <link rel="stylesheet" href="../css/fonts/fonts.css">
+</head>
+<body>
+    <style>
+        body{
+            overflow: hidden;
+            background: linear-gradient(45deg, #ff00ff, #00ffff), no-repeat;
+            color: white;
+            font-family: QuickSand;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            animation: backgroundShift 10s alternate infinite;
+        }
+
+        @keyframes backgroundShift {
+            0% { background: linear-gradient(45deg, #ff00ff, #00ffff), no-repeat; }
+            50% { background: linear-gradient(45deg, #ff9900, #ff00ff), no-repeat; }
+            100% { background: linear-gradient(45deg, #00ffff, #ff9900), no-repeat; }
+        }
+
+        .bigone{
+            font-family: Jersey;
+            font-size: 150px;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) skew(-10deg, -5deg);
+            text-align: center;
+            text-shadow: 3px 3px 0 #ff00ff, -3px -3px 0 #00ffff;
+            animation: pulse 2s infinite alternate, glow 3s infinite alternate;
+        }
+
+        div:hover{
+            border-style: solid;
+            border-color:#ff00ff;
+            border-spacing: 3rem;
+            text-align: center;
+        }
+
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) skew(-10deg, -5deg) scale(1); }
+            100% { transform: translate(-50%, -50%) skew(-10deg, -5deg) scale(1.1); }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+            100% { text-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff, 0 0 35px #00ffff; }
+        }
+
+        .description{
+            font-family: QuickSand;
+            font-size: 1.3rem;
+            position: absolute;
+            top: 85%; left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            animation: flicker 2s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .classic{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+        }
+
+        .shapes{
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid white;
+            animation: rotateShape 6s infinite linear;
+        }
+
+        @keyframes rotateShape {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .shape1 { top: 10%; left: 10%; width: 200px; height: 200px; }
+        .shape2 { top: 70%; left: 70%; width: 200px; height: 200px; }
+        .shape3 { top: 40%; left: 80%; width: 150px; height: 150px; }
+
+        .moving-shape{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #ff00ff;
+            background: rgba(255, 255, 255, 0.2);
+            animation: moveAround 20s infinite linear, bounce 3s infinite ease-in-out;
+            z-index: -1;
+        }
+
+        @keyframes moveAround {
+            0% { top: 0%; left: 0%; }
+            25% { top: 50%; left: 80%; }
+            50% { top: 80%; left: 80%; }
+            75% { top: 80%; left: 10%; }
+            100% { top: 0%; left: 0%; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+
+    <div class="bigone"><b>404</b></div>
+    <div class="description" id="title">
+        can't find the resources page
+        <div class="classic">(〜￣▽￣)〜</div>
+    </div>
+
+    <!-- Geometric Shapes -->
+    <div class="shapes shape1"></div>
+    <div class="shapes shape2"></div>
+    <div class="shapes shape3"></div>
+
+
+    <script>
+        console.log("-- { resources not found } --")
+        console.log("--       { 404 }        --")
+        console.warn("[EN] something went wrong while trying to access a especific page, maybe the page was removed")
+        console.warn("[PT] alguma coisa deu errado enquanto tentavas aceder a uma página específica, talvez a página foi removida")
+    </script>
+</body>

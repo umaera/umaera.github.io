@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection{
+    background-color: #f65c5c;
+    color: white;
+}
+
+body {
+    font-family:  Outfit ,'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    position: relative;
+}
+
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    background: linear-gradient(45deg, #f16363, #f65c85, #d406a4);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ====== Header ====== */
+header {
+    padding: 2rem 4rem;
+    position: relative;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff3838;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 5%;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    width: 100%; height: 100%;
+    background-image: url('../../icons/cloud-icons/GemCloud.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 1.8rem;
+    margin-left: -70%;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #aaa1a1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #f16363;
+}
+
+/*====== Hero Section ====== */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: white;
+    animation: slideUp 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #a1a1aa;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    animation: slideUp 1s ease-out 0.2s both;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ====== Service Grid ====== */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(241, 99, 99, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 1s ease-out 0.4s both;
+}
+
+.service-card:nth-child(2) { animation-delay: 0.6s; }
+.service-card:nth-child(3) { animation-delay: 0.8s; }
+.service-card:nth-child(4) { animation-delay: 1s; }
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #f16363, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #f16363;
+    box-shadow: 0 20px 40px rgba(241, 99, 99, 0.1);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #a1a1aa;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.service-features li {
+    color: #aaa1a1;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.service-features li::before {
+    content: "✓";
+    color: #f16363;
+    font-weight: bold;
+}
+
+/* ====== Status Badge ======*/
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(241, 99, 99, 0.1);
+    border: 1px solid rgba(241, 99, 99, 0.3);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: #f16363;
+    margin-top: 2rem;
+    animation: pulse 2s infinite;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #f16363;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* ====== CTA Section ====== */
+.cta {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #f16363, #f65c9a);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    animation: slideUp 1s ease-out 1.2s both;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(241, 99, 99, 0.3);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}

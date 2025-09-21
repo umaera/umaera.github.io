@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <title>404</title>
-    <link rel="shortcut icon" href="./icons/@core/MyLittleIcon-v1.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./icons/@core/MyLittleIcon-What.png" type="image/png">
     <meta name="robots" content="none, translate">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="OOPS, something went wrong">
-    <link rel="stylesheet" href="https://umaera.github.io/shared/v2/-FONTS-/fonts.css">
-    <link rel="stylesheet" href="shared/v2/-FONTS-/fonts.css">
+    <link rel="stylesheet" href="./shared/v3/styles/root.css">
     <style>
         body {
             margin: 0;
@@ -40,334 +39,46 @@
     </style>
 </head>
 <body>
-    <h1 translate="yes">This is an <mark>error 404</mark> page.</h1>
+    <img src="./shared/v3/images/Just404.svg" style="width: 40%;" class="imgBlock">
     <h2 translate="yes">Page unavaliable or deleted</h2>
-    <canvas id="canvas" width="600" height="600"></canvas>
 
-    <script>
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-        
-        const centerX = canvas.width / 2;
-        const centerY = canvas.height / 2;
-        const size = 80;
-        
-        let animationTime = 0;
-        const morphDuration = 2000; // 2 seconds per morph
-        const totalDuration = morphDuration * 8; // 8 shapes total
-        
-        let currentColor = getRandomColor();
-        let nextColor = getRandomColor();
-        
-        function getRandomColor() {
-            const colors = [
-                '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
-                '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
-                '#F8C471', '#82E0AA', '#F1948A', '#85C1E9', '#D2B4DE'
-            ];
-            return colors[Math.floor(Math.random() * colors.length)];
-        }
-        
-        function lerp(start, end, t) {
-            return start + (end - start) * t;
-        }
-        
-        function easeInOutCubic(t) {
-            return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-        }
-        
-        function getCirclePoints(numPoints = 60) {
-            const points = [];
-            for (let i = 0; i < numPoints; i++) {
-                const angle = (i / numPoints) * Math.PI * 2;
-                points.push({
-                    x: centerX + Math.cos(angle) * size,
-                    y: centerY + Math.sin(angle) * size
-                });
-            }
-            return points;
-        }
-        
-        function getSquarePoints(numPoints = 60) {
-            const points = [];
-            const perimeter = 4 * size * 2;
-            const sideLength = size * 2;
-            
-            for (let i = 0; i < numPoints; i++) {
-                const t = (i / numPoints) * perimeter;
-                let x, y;
-                
-                if (t < sideLength) {
-                    // Top side
-                    x = centerX - size + (t / sideLength) * sideLength;
-                    y = centerY - size;
-                } else if (t < sideLength * 2) {
-                    // Right side
-                    x = centerX + size;
-                    y = centerY - size + ((t - sideLength) / sideLength) * sideLength;
-                } else if (t < sideLength * 3) {
-                    // Bottom side
-                    x = centerX + size - ((t - sideLength * 2) / sideLength) * sideLength;
-                    y = centerY + size;
-                } else {
-                    // Left side
-                    x = centerX - size;
-                    y = centerY + size - ((t - sideLength * 3) / sideLength) * sideLength;
-                }
-                
-                points.push({ x, y });
-            }
-            return points;
-        }
-        
-        function getPentagonPoints(numPoints = 60) {
-            const points = [];
-            for (let i = 0; i < numPoints; i++) {
-                const angle = (i / numPoints) * Math.PI * 2 - Math.PI / 2;
-                const radius = size * 1.2;
-                points.push({
-                    x: centerX + Math.cos(angle * 2/5) * radius,
-                    y: centerY + Math.sin(angle * 2/5) * radius
-                });
-            }
-            return points;
-        }
+<script src="./shared/v3/libs/gsap-min.js"></script>
+<script>
+const img = document.querySelector('.imgBlock');
 
-        function getHexagonPoints(numPoints = 60) {
-            const points = [];
-            for (let i = 0; i < numPoints; i++) {
-                const angle = (i / numPoints) * Math.PI * 2;
-                const radius = size * 1.1;
-                points.push({
-                    x: centerX + Math.cos(angle) * radius,
-                    y: centerY + Math.sin(angle) * radius
-                });
-            }
-            return points;
-        }
+const svgFilter = `
+<svg style="position: absolute; width: 0; height: 0;">
+  <defs>
+    <filter id="wave-distortion">
+      <feTurbulence
+        id="turbulence" 
+        type="fractalNoise" 
+        baseFrequency="0.02 0.06"
+        numOctaves="8"
+        result="noise"
+      />
+      <feDisplacementMap 
+        in="SourceGraphic" 
+        in2="noise"
+        scale="10"
+      />
+    </filter>
+  </defs>
+</svg>
+`;
 
-        function getOctagonPoints(numPoints = 60) {
-            const points = [];
-            const radius = size * 1.2;
-            const angleStep = (Math.PI * 2) / 8;  // 8 sides for octagon
-            
-            for (let i = 0; i < numPoints; i++) {
-                const t = (i / numPoints) * 8;  // 8 segments
-                const segment = Math.floor(t);
-                const segmentT = t - segment;
-                
-                const angle1 = segment * angleStep;
-                const angle2 = ((segment + 1) % 8) * angleStep;
-                
-                const x1 = Math.cos(angle1) * radius;
-                const y1 = Math.sin(angle1) * radius;
-                const x2 = Math.cos(angle2) * radius;
-                const y2 = Math.sin(angle2) * radius;
-                
-                points.push({
-                    x: centerX + lerp(x1, x2, segmentT),
-                    y: centerY + lerp(y1, y2, segmentT)
-                });
-            }
-            return points;
-        }
-
-        function getStarPoints(numPoints = 60) {
-            const points = [];
-            for (let i = 0; i < numPoints; i++) {
-                const angle = (i / numPoints) * Math.PI * 2;
-                const radius = size * (1 + Math.sin(angle * 5) * 0.5);
-                points.push({
-                    x: centerX + Math.cos(angle) * radius,
-                    y: centerY + Math.sin(angle) * radius
-                });
-            }
-            return points;
-        }
-
-        function getHeartPoints(numPoints = 60) {
-            const points = [];
-            for (let i = 0; i < numPoints; i++) {
-                const t = (i / numPoints) * Math.PI * 2;
-                const scale = 1.2;
-                const x = scale * size * 16 * Math.pow(Math.sin(t), 3);
-                const y = scale * size * -(13 * Math.cos(t) - 5 * Math.cos(2*t) - 2 * Math.cos(3*t) - Math.cos(4*t));
-                points.push({
-                    x: centerX + x/16,
-                    y: centerY + y/16
-                });
-            }
-            return points;
-        }
-
-        function getTrianglePoints(numPoints = 60) {
-            const points = [];
-            const height = size * Math.sqrt(3);
-            const vertices = [
-                { x: centerX, y: centerY - height * 0.6 },
-                { x: centerX + size, y: centerY + height * 0.4 },
-                { x: centerX - size, y: centerY + height * 0.4 }
-            ];
-            
-            const perimeter = 3 * size * 2;
-            
-            for (let i = 0; i < numPoints; i++) {
-                const t = (i / numPoints) * perimeter;
-                let x, y;
-                
-                if (t < size * 2) {
-                    // First side
-                    const ratio = t / (size * 2);
-                    x = lerp(vertices[0].x, vertices[1].x, ratio);
-                    y = lerp(vertices[0].y, vertices[1].y, ratio);
-                } else if (t < size * 4) {
-                    // Second side
-                    const ratio = (t - size * 2) / (size * 2);
-                    x = lerp(vertices[1].x, vertices[2].x, ratio);
-                    y = lerp(vertices[1].y, vertices[2].y, ratio);
-                } else {
-                    // Third side
-                    const ratio = (t - size * 4) / (size * 2);
-                    x = lerp(vertices[2].x, vertices[0].x, ratio);
-                    y = lerp(vertices[2].y, vertices[0].y, ratio);
-                }
-                
-                points.push({ x, y });
-            }
-            return points;
-        }
-        
-        function morphPoints(points1, points2, t) {
-            const morphed = [];
-            for (let i = 0; i < points1.length; i++) {
-                morphed.push({
-                    x: lerp(points1[i].x, points2[i].x, t),
-                    y: lerp(points1[i].y, points2[i].y, t)
-                });
-            }
-            return morphed;
-        }
-        
-        function drawShape(points, color) {
-            ctx.fillStyle = color;
-            ctx.strokeStyle = color;
-            ctx.lineWidth = 3;
-            
-            ctx.beginPath();
-            ctx.moveTo(points[0].x, points[0].y);
-            
-            for (let i = 1; i < points.length; i++) {
-                ctx.lineTo(points[i].x, points[i].y);
-            }
-            
-            ctx.closePath();
-            ctx.fill();
-            ctx.stroke();
-        }
-        
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            const cycle = animationTime % totalDuration;
-            const phase = Math.floor(cycle / morphDuration);
-            const t = easeInOutCubic((cycle % morphDuration) / morphDuration);
-            
-            let fromPoints, toPoints;
-            
-            // Change color at the start of each morph
-            if (Math.floor(animationTime / morphDuration) !== Math.floor((animationTime - 16) / morphDuration)) {
-                currentColor = nextColor;
-                nextColor = getRandomColor();
-            }
-            
-            switch (phase) {
-                case 0: // Circle to Square
-                    fromPoints = getCirclePoints();
-                    toPoints = getSquarePoints();
-                    break;
-                case 1: // Square to Pentagon
-                    fromPoints = getSquarePoints();
-                    toPoints = getPentagonPoints();
-                    break;
-                case 2: // Pentagon to Hexagon
-                    fromPoints = getPentagonPoints();
-                    toPoints = getHexagonPoints();
-                    break;
-                case 3: // Hexagon to Octagon
-                    fromPoints = getHexagonPoints();
-                    toPoints = getOctagonPoints();
-                    break;
-                case 4: // Octagon to Star
-                    fromPoints = getOctagonPoints();
-                    toPoints = getStarPoints();
-                    break;
-                case 5: // Star to Heart
-                    fromPoints = getStarPoints();
-                    toPoints = getHeartPoints();
-                    break;
-                case 6: // Heart to Triangle
-                    fromPoints = getHeartPoints();
-                    toPoints = getTrianglePoints();
-                    break;
-                case 7: // Triangle to Circle
-                    fromPoints = getTrianglePoints();
-                    toPoints = getCirclePoints();
-                    break;
-            }
-            
-            const morphedPoints = morphPoints(fromPoints, toPoints, t);
-            drawShape(morphedPoints, currentColor);
-            
-            animationTime += 16;
-            requestAnimationFrame(animate);
-        }
-        
-        // Start animation
-        animate();
-
-// ------ Random Favicon System ------ //
-const favicons = [
-    '../icons/shapes/RedCircle.png',
-    '../icons/shapes/OrangeCircle.png',
-    '../icons/shapes/YellowCircle.png',
-    '../icons/shapes/GreenCircle.png',
-    '../icons/shapes/CyanCircle.png',
-    '../icons/shapes/BlueCircle.png',
-    '../icons/shapes/PurpleCircle.png',
-    '../icons/shapes/VioletCircle.png',
-    '../icons/shapes/FollyCircle.png',
-
-    '../icons/shapes/RedSquare.png',
-    '../icons/shapes/OrangeSquare.png',
-    '../icons/shapes/YellowSquare.png',
-    '../icons/shapes/GreenSquare.png',
-    '../icons/shapes/CyanSquare.png',
-    '../icons/shapes/BlueSquare.png',
-    '../icons/shapes/PurpleSquare.png',
-    '../icons/shapes/VioletSquare.png',
-    '../icons/shapes/FollySquare.png',
-
-    '../icons/shapes/RedTriangle.png',
-    '../icons/shapes/OrangeTriangle.png',
-    '../icons/shapes/YellowTriangle.png',
-    '../icons/shapes/GreenTriangle.png',
-    '../icons/shapes/CyanTriangle.png',
-    '../icons/shapes/BlueTriangle.png',
-    '../icons/shapes/PurpleTriangle.png',
-    '../icons/shapes/VioletTriangle.png',
-    '../icons/shapes/FollyTriangle.png',
-];
-
-const randomIcon = favicons[Math.floor(Math.random() * favicons.length)];
-const newFavicon = document.createElement('link');
-newFavicon.rel = 'icon';
-newFavicon.type = 'image/png';
-newFavicon.href = randomIcon;
-
-const oldIcons = document.querySelectorAll('link[rel="icon"], link[rel="shortcut icon"]');
-oldIcons.forEach(icon => icon.remove());
-
-document.head.appendChild(newFavicon);
+document.body.insertAdjacentHTML('beforeend', svgFilter);
+img.style.filter = 'url(#wave-distortion)';
+gsap.to('#turbulence', {
+  attr: {
+    baseFrequency: '1.80 1.60'
+  },
+  duration: 800,
+  yoyo: true,
+  repeat: -1,
+  ease: "sine"
+});
     </script>
+
 </body>
 </html>

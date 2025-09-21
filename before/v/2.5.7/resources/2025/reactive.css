@@ -1,0 +1,58 @@
+@media (max-width: 596px) {
+  #countdown{
+    border-radius: 0.5rem;
+    background-color: #00000000;
+    width: 13rem;
+    font-weight: 550;
+    border-bottom-style: solid;
+    border-bottom-width: 0.1rem;
+    font-size: 2.2rem;
+    transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  #gma{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #countdown{
+    border-radius: 0.5rem;
+    background-color: #30303048;
+    width: 11rem;
+    font-weight: 550;
+    border-bottom-style: solid;
+    border-bottom-width: 0.1rem;
+    font-size: 2rem;
+    transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  #gma{
+    font-size: 1rem;
+  }
+
+  .circle1 {
+    width: 50vw;
+    height: 50vw;
+    background: linear-gradient(45deg, #ff007f, #ff00ff);
+    bottom: -10vw; 
+    left: -25vw; 
+  }
+  
+  .circle2 {
+    width: 50vw;
+    height: 50vw;
+    background: linear-gradient(45deg, #ff007f, #ff00ff);
+    top: -25vw; 
+    right: -25vw; 
+  }
+  
+}
+
+#warning{
+  animation: warning 2s infinite;
+}
+@keyframes warning {
+  0%{ color: yellow; font-weight: 500; font-size: 1.1rem;}
+  50%{color: white; font-weight: normal;}
+}

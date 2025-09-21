@@ -1,0 +1,167 @@
+html{
+    background-color: #d0004c00;
+}
+
+body {
+    background-color: #2F0B17;
+    opacity: 0; margin: 0; overflow: hidden;
+    transition: opacity 1s ease-in-out;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+header{
+    width:100%;
+    height: 5rem;
+    padding: 20px;
+    animation: header 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+canvas {
+    display: block;
+}
+
+.bubble{
+    width: 30rem; height: 30rem;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 105%; left: 5%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+}
+
+.frame{
+    padding: 25px;
+    width: 95%; height: 95%;
+    overflow: hidden; position: absolute;
+    backdrop-filter: blur(0px);
+    background-color: #00000086;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+
+.title{
+    font-size: 5rem; color: white;
+    font-family: RubikIso;
+    /*overflow: hidden; position: absolute;
+    top: 12%; left: 50%;
+    transform: translate(-50%, -50%);
+    */
+}
+
+.description{
+    font-size: 1rem; color: white;
+    font-family: QuickSand;
+   /* overflow: hidden; position: absolute;
+    top: 22%; left: 50%;
+    transform: translate(-50%, -50%);
+    */
+}
+
+.toolbar{
+    width: 80%; height: 10%;
+    overflow: hidden; position: absolute;
+    top: 90%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: toolbar 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.button {
+    background-color: #000000;
+    border-radius: 5px; width: 4vw; height: 4vw;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none; cursor: pointer;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.74);
+    margin-left: 10; margin-right: 10;
+    filter: invert();
+}
+
+.button:hover {
+    background-color: #00d0b4;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.74);
+}
+
+.button:active {
+    background-color: #d00080;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0);
+}
+
+.ex-projects {
+    background-color: #FF0046;
+    width: 4vw; height: 4vw;
+    overflow: hidden; border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: solid; cursor: pointer;
+    border-color: #FF0046; border-width: 2px;
+    margin-left: 20; margin-right: 20;
+}
+
+.ex-projects:hover {
+    background-color: #b80131;
+}
+
+.ex-projects:active {
+    background-color: #7f0022;
+}
+
+/* -- Screens -- */
+@media (max-width: 800px) {
+    .button {
+        width: 7vw; height: 7vw;
+        margin-left: 10; margin-right:10;
+    }
+    .ex-projects {
+        width: 7vw; height: 7vw;
+        margin-left: 10; margin-right: 10;
+    }
+}
+
+@media (max-width: 500px) {
+    .title{
+        text-align: center;
+        font-size: 5rem; 
+        top: 12%;
+    }
+    
+    .description{
+        text-align: center;
+        font-size: 1.3rem; 
+        top: 20%; 
+        width: 100%;
+    }
+    
+    .button {
+        width: 13vw; height: 13vw;
+        margin-left: 2; margin-right: 2;
+    }
+    .ex-projects {
+        width: 13vw; height: 13vw;
+        margin-left: 2; margin-right: 2;
+    }
+}
+
+@keyframes header {
+    0%{
+        margin-top: -500;
+    }
+}
+
+@keyframes toolbar {
+    0%{
+        margin-top: 500;
+    }
+}

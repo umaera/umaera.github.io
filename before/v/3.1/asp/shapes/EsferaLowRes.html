@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>LowPolySphere</title>
+  <link rel="shortcut icon" href="http://umaera.github.io/icons/lib-icons/services2.png" type="image/x-icon">
+  <style>
+    body { margin: 0; background: #111; overflow: hidden; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <button onclick="setSphereResolution(1, 1);">2 Sides</button> 
+  <button onclick="setSphereResolution(4, 4);">4 Sides</button> 
+  <button onclick="setSphereResolution(8, 8);">8 Sides</button>
+  <button onclick="setSphereResolution(16, 32);">16 Sides</button>
+  <button onclick="setSphereResolution(32, 64);" >32 Sides</button>
+  <button onclick="setSphereResolution(64, 128);" >64 Sides</button>
+  <button onclick="setSphereResolution(128, 256);">128 Sides</button>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script>
+
+  function setSphereResolution(wSeg, hSeg) {
+    const newGeometry = new THREE.SphereGeometry(radius, wSeg, hSeg);
+    sphere.geometry.dispose();
+    sphere.geometry = newGeometry;
+  }
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(70, window.innerWidth/window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // 🎲 Esfera com baixa resolução (poucos segmentos)
+    const radius = 3;
+    let widthSegments = 16;
+    let heightSegments = 16;  // resolução vertical (latitude)
+
+    const geometry = new THREE.SphereGeometry(radius, widthSegments, heightSegments);
+    const material = new THREE.MeshNormalMaterial({ flatShading: true });
+    const sphere = new THREE.Mesh(geometry, material);
+
+    scene.add(sphere);
+    camera.position.z = 10;
+
+    // Luz ambiente opcional
+    const light = new THREE.AmbientLight(0xffffff, 0.7);
+    scene.add(light);
+
+    // Animação
+    function animate() {
+      requestAnimationFrame(animate);
+      sphere.rotation.y += 0.01;
+      sphere.rotation.x += 0.005;
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    // Responsivo
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>
+

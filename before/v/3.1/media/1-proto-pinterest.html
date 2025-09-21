@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e60023;
+            text-decoration: none;
+        }
+
+        .nav-button {
+            padding: 12px 16px;
+            border-radius: 24px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .nav-button.active {
+            background-color: #111;
+            color: white;
+        }
+
+        .nav-button:hover {
+            background-color: #e1e1e1;
+        }
+
+        .nav-button.active:hover {
+            background-color: #333;
+        }
+
+        .search-container {
+            flex: 1;
+            position: relative;
+            max-width: 600px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 16px 48px 16px 16px;
+            border: none;
+            border-radius: 24px;
+            background-color: #efefef;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .search-box:focus {
+            background-color: #fff;
+            box-shadow: 0 0 0 4px rgba(230, 0, 35, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #767676;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .icon-button {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #767676;
+        }
+
+        .icon-button:hover {
+            background-color: #e1e1e1;
+        }
+
+        .profile-pic {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        .pins-container {
+            columns: 5;
+            column-gap: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1200px) {
+            .pins-container { columns: 4; }
+        }
+
+        @media (max-width: 900px) {
+            .pins-container { columns: 3; }
+        }
+
+        @media (max-width: 600px) {
+            .pins-container { columns: 2; }
+        }
+
+        .pin {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 16px;
+            break-inside: avoid;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pin:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .pin-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .pin:hover .pin-image {
+            filter: brightness(0.8);
+        }
+
+        .pin-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.8) 100%);
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 16px;
+        }
+
+        .pin:hover .pin-overlay {
+            opacity: 1;
+        }
+
+        .pin-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .save-button {
+            background-color: #e60023;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+
+        .save-button:hover {
+            background-color: #d50c22;
+        }
+
+        .pin-menu {
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .pin-menu:hover {
+            background: white;
+        }
+
+        .pin-info {
+            color: white;
+        }
+
+        .pin-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .pin-author {
+            font-size: 14px;
+            opacity: 0.9;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .pin-bottom-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .pin-icon-button {
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #333;
+        }
+
+        .pin-icon-button:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .pin-icon-button.liked {
+            background: #e60023;
+            color: white;
+        }
+
+        /* Loading animation */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #e60023;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 56px;
+            height: 56px;
+            background: #e60023;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(230, 0, 35, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(230, 0, 35, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">Pinterest</a>
+        <a href="#" class="nav-button active">Home</a>
+        <a href="#" class="nav-button">Today</a>
+        <a href="#" class="nav-button">Create</a>
+        
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search for ideas" id="searchInput">
+            <div class="search-icon">🔍</div>
+        </div>
+        
+        <div class="header-icons">
+            <button class="icon-button">🔔</button>
+            <button class="icon-button">💬</button>
+            <div class="profile-pic">U</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="pins-container" id="pinsContainer">
+            <!-- Pins will be dynamically loaded here -->
+        </div>
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+    </main>
+
+    <!-- Floating Action Button -->
+    <button class="fab">+</button>
+
+    <script>
+        // Sample data for pins
+        const samplePins = [
+            {
+                id: 1,
+                image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=400&h=600&fit=crop',
+                title: 'Delicious Breakfast Bowl',
+                author: 'Food & Co'
+            },
+            {
+                id: 2,
+                image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=500&fit=crop',
+                title: 'Modern Interior Design',
+                author: 'Design Studio'
+            },
+            {
+                id: 3,
+                image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=700&fit=crop',
+                title: 'Urban Street Style',
+                author: 'Fashion Weekly'
+            },
+            {
+                id: 4,
+                image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=550&fit=crop',
+                title: 'Mountain Adventure',
+                author: 'Nature Explorer'
+            },
+            {
+                id: 5,
+                image: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=400&h=650&fit=crop',
+                title: 'Cute Cat Portrait',
+                author: 'Pet Lovers'
+            },
+            {
+                id: 6,
+                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=500&fit=crop',
+                title: 'Business Analytics',
+                author: 'Data Viz'
+            },
+            {
+                id: 7,
+                image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=600&fit=crop',
+                title: 'Mountain Landscape',
+                author: 'Scenic Views'
+            },
+            {
+                id: 8,
+                image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=550&fit=crop',
+                title: 'Pizza Perfection',
+                author: 'Foodie Blog'
+            },
+            {
+                id: 9,
+                image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=700&fit=crop',
+                title: 'Cozy Living Room',
+                author: 'Home Decor'
+            },
+            {
+                id: 10,
+                image: 'https://images.unsplash.com/photo-1434394354979-a235cd36269d?w=400&h=500&fit=crop',
+                title: 'Vintage Camera',
+                author: 'Photography'
+            },
+            {
+                id: 11,
+                image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&h=650&fit=crop',
+                title: 'Tropical Paradise',
+                author: 'Travel Guide'
+            },
+            {
+                id: 12,
+                image: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=400&h=550&fit=crop',
+                title: 'Healthy Breakfast',
+                author: 'Nutrition Tips'
+            },
+            {
+                id: 13,
+                image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=600&fit=crop',
+                title: 'Modern Workspace',
+                author: 'Office Design'
+            },
+            {
+                id: 14,
+                image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=700&fit=crop',
+                title: 'Running Shoes',
+                author: 'Fitness Gear'
+            },
+            {
+                id: 15,
+                image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=400&h=500&fit=crop',
+                title: 'Concert Vibes',
+                author: 'Music Life'
+            }
+        ];
+
+        let likedPins = new Set();
+        let allPins = [...samplePins];
+        let displayedPins = [];
+
+        // Create pin HTML
+        function createPinHTML(pin) {
+            return `
+                <div class="pin" data-id="${pin.id}">
+                    <img src="${pin.image}" alt="${pin.title}" class="pin-image" loading="lazy">
+                    <div class="pin-overlay">
+                        <div class="pin-actions">
+                            <button class="save-button" onclick="savePin(${pin.id})">Save</button>
+                            <button class="pin-menu">⋯</button>
+                        </div>
+                        <div class="pin-info">
+                            <div class="pin-title">${pin.title}</div>
+                            <div class="pin-author">${pin.author}</div>
+                            <div class="pin-bottom-actions">
+                                <button class="pin-icon-button ${likedPins.has(pin.id) ? 'liked' : ''}" 
+                                        onclick="toggleLike(${pin.id})" title="Like">❤️</button>
+                                <button class="pin-icon-button" onclick="sharePin(${pin.id})" title="Share">📤</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Load pins into the container
+        function loadPins(pins) {
+            const container = document.getElementById('pinsContainer');
+            pins.forEach(pin => {
+                if (!displayedPins.includes(pin.id)) {
+                    container.innerHTML += createPinHTML(pin);
+                    displayedPins.push(pin.id);
+                }
+            });
+        }
+
+        // Save pin function
+        function savePin(id) {
+            const pin = allPins.find(p => p.id === id);
+            if (pin) {
+                alert(`Saved: ${pin.title}`);
+                // Add save animation
+                const pinElement = document.querySelector(`[data-id="${id}"] .save-button`);
+                pinElement.style.background = '#28a745';
+                pinElement.textContent = 'Saved!';
+                setTimeout(() => {
+                    pinElement.style.background = '#e60023';
+                    pinElement.textContent = 'Save';
+                }, 2000);
+            }
+        }
+
+        // Toggle like function
+        function toggleLike(id) {
+            const button = document.querySelector(`[data-id="${id}"] .pin-icon-button`);
+            if (likedPins.has(id)) {
+                likedPins.delete(id);
+                button.classList.remove('liked');
+            } else {
+                likedPins.add(id);
+                button.classList.add('liked');
+                // Add like animation
+                button.style.transform = 'scale(1.3)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1)';
+                }, 200);
+            }
+        }
+
+        // Share pin function
+        function sharePin(id) {
+            const pin = allPins.find(p => p.id === id);
+            if (pin && navigator.share) {
+                navigator.share({
+                    title: pin.title,
+                    text: `Check out this pin: ${pin.title}`,
+                    url: window.location.href
+                });
+            } else {
+                alert(`Share: ${pin.title}`);
+            }
+        }
+
+        // Search functionality
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            let searchTimeout;
+
+            searchInput.addEventListener('input', (e) => {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    const query = e.target.value.toLowerCase();
+                    const container = document.getElementById('pinsContainer');
+                    
+                    if (query === '') {
+                        // Show all pins
+                        container.innerHTML = '';
+                        displayedPins = [];
+                        loadPins(allPins);
+                    } else {
+                        // Filter pins
+                        const filteredPins = allPins.filter(pin => 
+                            pin.title.toLowerCase().includes(query) || 
+                            pin.author.toLowerCase().includes(query)
+                        );
+                        container.innerHTML = '';
+                        displayedPins = [];
+                        loadPins(filteredPins);
+                    }
+                }, 300);
+            });
+        }
+
+        // Infinite scroll
+        function setupInfiniteScroll() {
+            window.addEventListener('scroll', () => {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000) {
+                    loadMorePins();
+                }
+            });
+        }
+
+        // Load more pins (simulated)
+        function loadMorePins() {
+            const loading = document.getElementById('loading');
+            loading.style.display = 'flex';
+            
+            setTimeout(() => {
+                // Generate additional pins (simulated)
+                const morePins = samplePins.map((pin, index) => ({
+                    ...pin,
+                    id: pin.id + allPins.length,
+                    title: pin.title + ' (More)',
+                }));
+                
+                allPins.push(...morePins);
+                loadPins(morePins);
+                loading.style.display = 'none';
+            }, 1000);
+        }
+
+        // Initialize the app
+        function init() {
+            loadPins(allPins);
+            setupSearch();
+            setupInfiniteScroll();
+            
+            // Add some hover effects and animations
+            document.addEventListener('mouseover', (e) => {
+                if (e.target.classList.contains('pin-image')) {
+                    e.target.style.transform = 'scale(1.05)';
+                }
+            });
+            
+            document.addEventListener('mouseout', (e) => {
+                if (e.target.classList.contains('pin-image')) {
+                    e.target.style.transform = 'scale(1)';
+                }
+            });
+        }
+
+        // Start the app when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

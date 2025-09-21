@@ -1,0 +1,32 @@
+<head>
+    <title>UmaEra</title>
+    <link rel="shortcut icon" href="./icons/@core/pupur.png" type="image/x-icon">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="UmaEra | Official website of UmaEra!, explore and try out projects!">
+
+    <link rel="stylesheet" href="./shared/v1/fonts/fonts.css">
+    <link rel="stylesheet" href="./shared/v1/styles/index.css">
+</head>
+<body style="background-color: black;"></body>
+<script>
+const userLang = navigator.language || navigator.userLanguage;
+
+function after() {
+    if (userLang.startsWith('pt') || userLang.startsWith('br')) {
+        goPT();
+    } else {
+        goEN();
+    }
+}
+
+setTimeout(after, 1)
+
+function goPT() {
+    window.location.href = 'pt/'; 
+}
+
+function goEN() {
+    window.location.href = 'en/'; 
+}
+</script>

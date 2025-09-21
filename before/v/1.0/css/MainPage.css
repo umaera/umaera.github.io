@@ -1,0 +1,79 @@
+.painel1{
+    width: 350;
+    height: 250;
+    background-color: rgba(124, 62, 76, 0.2);
+    position:absolute;
+    margin-left: 300;
+    border-radius:25px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    
+}
+
+.painel1-Title{
+    width: 150;
+    height:150;
+    position:absolute;
+    margin-left: 100;
+    margin-top: 105;
+    border-radius:25px;
+    text-align: center;
+    font-size:28px;
+    font-family: QuickSand;
+    color:  rgb(255, 255, 255);
+}
+
+.painel2{
+    width: 410;
+    height: 320;
+    background-color: rgba(124, 62, 76, 0.2);
+    position:absolute;
+    margin-left: 300;
+    margin-top: 280;
+    border-radius:25px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    
+}
+
+.painel2-Title{
+    width: 150;
+    height:150;
+    position:absolute;
+    margin-left: 130;
+    margin-top: 140;
+    border-radius:25px;
+    text-align: center;
+    font-size:28px;
+    font-family: QuickSand;
+    color:  rgb(255, 255, 255);
+}
+
+.painel3{
+    width: 550;
+    height: 420;
+    background-color: rgba(124, 62, 76, 0.2);
+    position:absolute;
+    margin-left: 750;
+    margin-top: 185;
+    border-radius:25px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    
+}
+
+.painel3-Title{
+    width: 150;
+    height:150;
+    position:absolute;
+    margin-left: 190;
+    margin-top: 190;
+    border-radius:25px;
+    text-align: center;
+    font-size:28px;
+    font-family: QuickSand;
+    color:  rgb(255, 255, 255);
+}

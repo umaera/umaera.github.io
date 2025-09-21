@@ -1,0 +1,76 @@
+body{
+    overflow:hidden;
+    font-family: Inter;
+    font-weight:lighter;
+    font-size: 1rem;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    padding: 25px;
+    background-color: rgb(41, 0, 24);
+    color: white;
+}
+
+.results{
+    width: 99%; height: 90%;
+    border-style:solid;
+    border-width: 1px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1%;
+}
+
+.results::scroll-marker-group{
+    scroll-behavior:smooth;
+}
+
+.results::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Scrollbar Thumb */
+.results::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+/* Scrollbar Track Background */
+.results::-webkit-scrollbar-track {
+  background: rgba(240, 240, 240, 0.092);
+  border-radius: 6px;
+}
+
+
+blockquote{
+    margin-top: -15;
+    margin-left: 10;
+    padding: 1px;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+blockquote:hover{
+    background-color: rgba(255, 0, 153, 0.174);
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+        
+blockquote::before {
+    content: "- ";
+}
+
+h4{
+    font-size:1rem;
+}
+
+a{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+a:visited{
+    color: rgb(255, 245, 153)
+}
+
+.project::before {
+    content: "> ";
+}

@@ -1,558 +1,349 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>umaera.github.io - Changelog</title>
-    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-    <link rel="shortcut icon" href="./icons/@core/MyLittleIcon-v1.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <title>Changelog</title>
 
-    <link rel="stylesheet" href="./shared/v2/-STYLES-/ap.changelog.css">
-    <link rel="stylesheet" href="./shared/v2/-FONTS-/fonts.css">
+  <link rel="shortcut icon" href="./icons/@core/MyLittleIcon-codeOrDev.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    @import url('./shared/point/fonts/fonts.css');
+
+    body {
+      font-family: Outfit, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: #310615;
+      color: #ffe1ec;
+      font-size: 1rem;
+    }
+    ::selection{
+      background-color: yellow;
+      color: #000000;
+    }
+
+    #md {
+      width: 90%;
+      max-width: 800px;
+      padding: 20px;
+      background: #85123a;
+      overflow-y: auto;
+    }
+    pre, code {
+      background-color: #000000;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    a{color: yellow;}
+  </style>
 </head>
 <body>
-    <div class="particles"></div>
-    
-    <header class="header">
-        <h1>umaera.github.io</h1>
-        <p>Complete changelog • Development Journey</p>
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number">30+</div>
-                <div class="stat-label">Total Versions </div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">690+</div>
-                <div class="stat-label">Changes</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">3</div>
-                <div class="stat-label">Major Redesigns</div>
-            </div>
-        </div>
-    </header>
+  <div id="md"></div>
 
-    <div class="timeline">
-        <div class="version-group" style="--delay: 1">
-            <div class="version-header">
-                <div class="version-badge">UI v1.0 - v1.9</div>
-                <div class="version-line"></div>
-            </div>
-            <div class="updates-grid">
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        UI v1.0 - Foundation
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Added base website structure</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Initial Release</span>
-                        </div>
-                    </div>
-                </div>
+  <script>
+    const markdownText = `
+# Changelog: \`umaera.github.io\`
+## UI_v1.0
+- **Added** base webite
 
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        UI v1.1 - Animations
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Added intro animations</li>
-                            <li>Added button animations</li>
-                            <li>Added SimplyPrivate page and access button</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Animations</span>
-                            <span class="tag">New Page</span>
-                        </div>
-                    </div>
-                </div>
+## UI_v1.1
+- **Added** intro animations
+- **Added** button animations
+- **Added** SimplyPrivate page and access button
 
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        UI v1.2-1.6 - Polish
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Added alerts to project buttons</li>
-                            <li>Changed pop-up text <span class="code">"soon"</span> to <span class="code">"Not Ready"</span></li>
-                            <li>Removed text selection</li>
-                            <li>Slower main page animations</li>
-                            <li>Better transition animations</li>
-                            <li>Version config added</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">UX Improvements</span>
-                            <span class="tag">Bug Fixes</span>
-                        </div>
-                    </div>
-                </div>
+## UI_v1.2
+- **Added** alerts to the project buttons
+- **Changed** pop-up text "soon" to "Not Ready"
+- **Removed** text selection
 
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        UI v1.7-1.9 - Content
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Welcome message with secret links</li>
-                            <li>Added lots of images on assets.html</li>
-                            <li>Remade the c3.6.0 screens</li>
-                            <li>Shortcuts for every page</li>
-                            <li>Access to RainOS granted</li>
-                            <li>Created "astrodist" page</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Content</span>
-                            <span class="tag">Navigation</span>
-                            <span class="tag">Easter Eggs</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+## UI_v1.3
+- **Improved** index page speed by deleting unused elements
+- **Improved** alerts to project buttons
+- **Changed** pop-up 1 text "Not Ready" to "Preparing..."
+- **Added** transition animation
+- **Changed** text font on SimplyPrivate page
+- **Changed** changed background color on SimplyPrivate page
+- **Added** bubble effect on SimplyPrivate page
+- **General BugFix**
 
-        <div class="version-group major-update" style="--delay: 2">
-            <div class="version-header">
-                <div class="version-badge">UI v2.0 - TOTAL REDESIGN</div>
-                <div class="version-line"></div>
-            </div>
-            <div class="updates-grid">
-                <div class="update-card major-update">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        Complete Visual Overhaul
-                    </h3>
-                    <div class="update-content">
-                        <p>A complete redesign from the ground up, introducing a new visual language and improved user experience across all pages.</p>
-                        <div class="feature-tags">
-                            <span class="tag">Major Update</span>
-                            <span class="tag">Redesign</span>
-                            <span class="tag">Architecture</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+## UI_v1.4
+- **Changed** Pop-up 1 was transformed into a Simplyprivate version info popup about version 3.6
+- **Changed** Popup 2 text was changed "Not Ready" to "Soon"
+- **General BugFix**
+- **Improved** Animation Smoothness
+- **Fixed** transition between pages
 
-        <div class="version-group" style="--delay: 3">
-            <div class="version-header">
-                <div class="version-badge">UI v2.1 - v2.3</div>
-                <div class="version-line"></div>
-            </div>
-            <div class="updates-grid">
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        UI v2.1 - Architecture
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Removed old pages</li>
-                            <li>Shared CSS and JS files</li>
-                            <li>New translations in credits page</li>
-                            <li>New hidden project "astrodist"</li>
-                            <li>All buttons open in new tabs</li>
-                            <li>Added 404 error page</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Code Quality</span>
-                            <span class="tag">Navigation</span>
-                        </div>
-                    </div>
-                </div>
+## UI_v1.5
+- **Added** version config
+- **Changed** Version board: Version 3.6 is 90% Complete
 
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        UI v2.2-2.3 - Security & Features
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Added WhiteWall Security Modules</li>
-                            <li>Added ECSE Security Modules</li>
-                            <li>EraCloud modified to public versions</li>
-                            <li>Added 2025 countdown page</li>
-                            <li>Responsive design improvements</li>
-                            <li>New random messages in intro</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Security</span>
-                            <span class="tag">Responsive</span>
-                            <span class="tag">Interactive</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+## UI_v1.6
+- **Minor fixes**
 
-        <div class="version-group" style="--delay: 4">
-            <div class="version-header">
-                <div class="version-badge">UI v2.4 - v2.5</div>
-                <div class="version-line"></div>
-            </div>
-            <div class="updates-grid">
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        UI v2.4 - Resources
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Made Resources page with current apps</li>
-                            <li>New categorized images at /assets</li>
-                            <li>Removed heavy animations</li>
-                            <li>New main screen aesthetic</li>
-                            <li>Overall polishing</li>
-                            <li>/RainOs updated</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Resources</span>
-                            <span class="tag">Performance</span>
-                            <span class="tag">Visual</span>
-                        </div>
-                    </div>
-                </div>
+## UI_v1.7 - major update
+- **Changed** the popup2 into an welcome menssage and added secret links to it
+- **Added** a lot of images on assets.html
+- **Redesigned** the c3.6.0 screens
 
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        UI v2.5 - Organization
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Renamed "services" to "resources"</li>
-                            <li>Moved RainOs and astrodist to Resources</li>
-                            <li>Server-side improvements</li>
-                            <li>Added wiki-icons to /assets</li>
-                            <li>Updated SimplyPrivate screens</li>
-                            <li>Added new resources: EffectsEngine & PuplProject</li>
-                            <li>LowResSphere shape in ASP menu</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Organization</span>
-                            <span class="tag">Backend</span>
-                            <span class="tag">Content</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+## UI_v1.8
+- **Changed** shortcuts for every page like "assets/" goes to "assets.html"
+- **Redesigned** design of the assets page
+- **Removed** news page from asp
+- **Added** access to RainOS (i made a web version to work), access on /RainOs
+- **Fixed** some page descriptions and icons
+
+## UI_v1.9
+- **Added** extra paths to simplyprivate pages
+- **Changed** all website icons
+- **Added** "astrodist" project page
+
+## UI_v2.0 - TOTAL REDESIGN
+## UI_v2.1
+- **Removed** some old pages
+- **Added** a shared folder with all css and js files to all pages
+- **Added** translations happen in the credits page as long with new images
+- **Changed** objects and formats in /asp as long with new design
+- **Added** hidden project "astrodist" is now accessible in projects menu
+- **Removed** all "open in new tab" links
+- **Added** a 404 error page
+
+## UI_v2.2
+- **Added** WhiteWall Security Modules
+- **Added** ECSE Security Modules
+- **General Bug Fix**
+- **Changed** EraCloud addapted to public versions, insert token to access to projects and resources
+- **Added** Random Icons
+
+## UI_v2.3
+- **Fixed** EraCloud design
+- **Added** 2025 countdown page
+- **General Bug fix**
+- **Added** icons added to asset page
+
+## UI_v2.3.1
+- **General bug fix**
+- **Added** random quotes in intro page
+- **Added** intro page design
+- **Fixed** general redirects
+- **Added** Screen size reactions to 2025 countdown page
+- **Added** Screen size reactions to index (main) page
+- **Added** redirect access button to changelog in the loading/intro page
+
+## UI_v2.3.2
+- **General bug fix**
+- **Added** resources page
+- **Added** New helper to the credits board: soupreto123 - Cloud services developer
+- **Added** images at /assets
+- **Added** animations at credits page
+- **Added** new quotes in the page intro
+- **Warning**: 2025 page will deleted soon
+
+# UI_v2.5.3
+- big big big update coming
+- **Removed** unused icons
+- **Changed** resources - styles
+- **Changed** resources - added "@EffectsEngine" & "@PuplProject"
+- **Added** icons for the new resources on resources page
+- **General bug fix**
+- **Added** randoms animations
+- **Added** a new shape in "asp" menu, "LowResSphere" - a low resolution sphere that you can choose the number of sides.
 
 
-        <div class="version-group" style="--delay: 5">
-            <div class="version-header">
-                <div class="version-badge">UI v2.5.4 - v2.5.7</div>
-                <div class="version-line"></div>
-            </div>
-            <div class="updates-grid">
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        Optimization Era
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li><strong>OVER 300 CHANGES!</strong></li>
-                            <li>Minimalistic design improvements</li>
-                            <li>Better folder organization</li>
-                            <li>Enhanced profile sliding in credits</li>
-                            <li>Overall optimization</li>
-                            <li>Added StorageTest folder</li>
-                            <li>@Old-Websites resource added</li>
-                            <li>SimplyPrivate Changelog masterpiece added</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Optimization</span>
-                            <span class="tag">Masterpiece</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+## UI_v2.4
+- **General bug fix**
+- **Added** New resources: @2025, @simplyprivate (previews), @world2
+- **Added** images at /assets and added highlights: image (blue), preview (yellow), special (purple)
+- **Removed** and added click functions to /assets
+- **Removed** heavy animations
+- **Removed** 2025 page
+- **Removed** quotes in the main screen
+- **Overall polishing**
 
-        <div class="version-group major-update" style="--delay: 2">
-            <div class="version-header">
-                <div class="version-badge">UI v3.0 - TOTAL REDESIGN</div>
-                <div class="version-line"></div>
-            </div>
-            <div class="updates-grid">
-                <div class="update-card major-update">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        Complete Visual Overhaul
-                    </h3>
-                    <div class="update-content">
-                        <p>A complete redesign from the ground up, including old to new pages. All that to give a new artistic look for my drastic personality change.</p>
-                        
-                        <div class="update-content">
-                        <ul>
-                            <p>-</p>
-                            <li>New design, new layout, new animations, new everything.</li>
-                            <li>Main Screen - cinematic and useful</li>
-                            <li>Resources - now on dark mode, categorized and color coded.</li>
-                            <li>Changelog page - a new space.</li>
-                            <li>/Cloud is back - new service "GemCloud" coming soon.</li>
-                            <li>Ruby.ai access website was redesigned (now shows when the server is closed.).</li>
-                            <li>/assets is much more more visually organized.</li>
-                            <li>New info section in /resources with information about old projects.</li>
-                            <li>The "Book project" (at /book) was redesigned.</li>
-                            <li>404 page is also cinematicly fresh.</li>
-                            <li>europia is here! with a new agent/g3.</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Optimization</span>
-                            <span class="tag">Masterpiece</span>
-                        </div>
-                    </div>
-                        <div class="feature-tags">
-                            <span class="tag">Major Update</span>
-                            <span class="tag">Redesign</span>
-                            <span class="tag">Architecture</span>
-                            <span class="tag">Optimization</span>
-                            <span class="tag">Masterpiece</span>
-                        </div>
-                    </div>
-                </div>
-            </div><section id="latest"></section>
-        </div>
+## UI_v2.4.1
+- **General bug fix**
+- **Added** images at "./asp/credits.html", changed visuals, description, translations and more
+- **Added** random images in /assets and removed a few ones
+- **Added** better visuals and resources at "./apps"
 
-        <div class="version-group" style="--delay: 5">
-            <div class="version-header"> <div class="version-badge">UI v3.1 - v3.2</div>
-                <div class="version-line"></div>
-            </div>
-            <div class="updates-grid">
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        Reactive and Shiny 
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Loading animations added to every page of the website.</li>
-                            <li>Small visual tweaks to button elements.</li>
-                            <li>Buttons on Mobile-View now have text!</li>
-                            <li>Optimized 404 page.</li>
-                            <li>Mobile Social Media page fixed & new design like desktop page!</li>
-                            <li>Visual tweaks to Social Media pages</li>
-                            <li>Visual Tweaks and font changes in changelog page.</li>
-                            <li>Added a LOT of new fonts</li>
-                            <li>Polished info pages, resources marker/project count & style</li>
-                            <li>Astrodist page now has an favicon (wow, compleatly relevant)</li>
-                            <li>Made website icon variations.</li>
-                            <li>Changed some features in Cloud & Ruby pages.</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Optimization</span>
-                            <span class="tag">Screen variations</span>
-                            <span class="tag">Visual Tweaks</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        More Stories to tell and secrets to keep
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>MyMedia page pinned at the "Website Pages" top marker in <a href="./resources/" target="_blank">/Resources</a>.</li>
-                            <li>Book Project pinned at the "Website Pages" top marker in <a href="./resources/" target="_blank">/Resources</a>.</li>
-                            <li>New design for the "<a href="./book/" target="_blank">Book Project</a>" page.</li>
-                            <li>New Series in Book Project: <ul>@LostOnes</ul></li>
-                            <li>New books out! "Ostranenie" & "I preferred to feel nothing rather than feel something new" (at <a href="./book/" target="_blank">/book</a>).</li>
-                            <li>New Translations & read pages for all book in <a href="./book/" target="_blank">Book Project</a>.</li>
-                            <li>Visual Tweaks and font changes in changelog page.</li>
-                            <li>Added a new <a href="/resources/2026/" target="_blank">Countdown page - 2026</a>!! (new logo/design/animations).</li>
-                            <li>Optimized image loading on <a href="/assets/" target="_blank">/Assets</a>.</li>
-                            <li>Added a little secret, click on a <i>very RANDOM tile image</i> in <a href="/assets/" target="_blank">/Assets</a>.</li>
-                            <li>Added morph loading animations to unfinished pages.</li>
-                            <li>Added random favicon shape icon generator to random pages.</li>
-                            <li>Changelog Page now suports <ul>Markdown & Links</ul></li>
-                            <li>Updated <a href="./resources/rubyAi/" target="_blank">Ruby.ai</a> design and added an automatic check for the server.</li>
-                            <li>Made "added items" animations & indicators at <a href="./assets" target="_blank">/assets</a>.</li>
-                            <li>Deleted "Dede07" From all Systems - He choosed to.</li>
-                            <li>SimplyPrivate Reached the end of it's support - announced</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">BIG UPDATE!!!</span>
-                            <span class="tag">Optimization</span>
-                            <span class="tag">EasterEgg Implementation</span>
-                            <span class="tag">Small Tweaks</span>
-                            <span class="tag">Redesign - new styles</span>
-                            <span class="tag">Utility/Function Implementation</span>
-                            <span class="tag">Visual Polishing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+# UI_v2.4.2
+- **General bug fix**
+- **Added** random images at "./assets"
 
-        <div class="version-group" style="--delay: 5">
-            <div class="version-header">
-                <div class="version-badge">UI v3.2.1 - 3.2.2 (latest)</div>
-                <div class="version-line"></div>
-            </div>
-            <div class="updates-grid">
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        3.2.1 - Fixes and design
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Remade/Fixed and added new icons to <a href="./assets/" target="_blank">/assets</a>.</li>
-                            <li>Removed temporary RML page</li>
-                            <li>Added <a href="/mybrowser/" target="_blank">/mybrowser</a> to test purposes.</li>
-                            <li>New project midia added to <a href="./assets/" target="_blank">/assets</a>.</li>
-                            <li>fixed some "Open in new tab" links</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Small update</span>
-                            <span class="tag">Small tweaks</span>
-                            <span class="tag">Page Redesign</span>
-                        </div>
-                    </div>
-                </div>
+# UI_v2.4.3
+- **General bug fix**
+- **Removed** /cloud for security reasons
+- did some shady server-side stuff
+- **Added** images in "./assets"
+- plotting something
 
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        3.2.2 - MyMedia and general improvements
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Completed the /mymedia page.</li>
-                            <li>New images for mymedia and @puplproject added in <a href="./assets/" target="_blank">/assets</a>.</li>
-                            <li>404 page modified to have more morph animations/shapes! </li>
-                            <li>Included translation and context to some pages</li>
-                            <li>Main page has a new image!</li>
-                            <li>Mobile view fixed in some pages.</li>
-                            <li>Accent color switched <div style="display: inline-block; color: rgb(248, 56, 104); font-weight: 800;">"red"</div> to <div style="display: inline-block;font-weight: 800; color: yellow">"yellow"</div>!</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Small update</span>
-                            <span class="tag">General Improvements</span>
-                            <span class="tag">New page!</span>
-                            <span class="tag">Color Change</span>
-                        </div>
-                    </div>
-        </div>
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        3.2.3 - BookProject update and animations
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Added/polished Start animation on index page.</li>
-                            <li><a href="book/" target="_blank">Book Project</a> anounced in index page.</li>
-                            <li>MyMidia link in index replaced by BookProject.</li>
-                            <li>Redesigned Bookproject page & read page.</li>
-                            <li>New series at Book Project! @FewThings (included with: Hotel & LiquidLove episodes).</li>
-                            <li>Mobile view fixed in some pages.</li>
-                            <li>Changed 404 page to have more feedback</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Small update</span>
-                            <span class="tag">BookProject</span>
-                            <span class="tag">Animations</span>
-                        </div>
-                    </div>
+# UI_v2.5
+- **General bug fix**
+- **General polishing**
+- **Renamed** "services" to "resources"
+- **Moved** "RainOs" to Resources
+- **Moved** "astrodist" to Resources
+- did some shady server-side stuff
+- **Removed**, **Updated** and **Added** new icons at "/assets"
+- still plotting something
 
-        </div></div>
+# UI_v2.5.1
+- yes, i'm still plotting something
+- **Added** wiki-icons to "/assets"
 
-        <div class="version-group" style="--delay: 5">
-            <div class="version-header">
-                <div class="version-badge">UI v3.2.4</div>
-                <div class="version-line"></div>
-            </div>
-            <div class="updates-grid">
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        Overall polishing
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Fixed some issues in main page</li>
-                            <li>New color change: "yellow" to "purple"</li>
-                            <li>BookProject design polishing and new indexing system (all links changed)</li>
-                            <li>Fixed some translations across the website</li>
-                            <li>Changed images in the main page</li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Color Change</span>
-                            <span class="tag">Small Update</span>
-                            <span class="tag">Small Tweaks</span>
-                            <span class="tag">Translation</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+# UI_v2.5.2
+- yes! i'm still plotting
+- **Updated** SimplyPrivate Screens
+- **Updated** resources - @azayra & @simplyprivate
+- **General bug fix**
 
-        <div class="version-group" style="--delay: 5">
-            <div class="version-header">
-                <div class="version-badge">UI v3.2.5</div>
-                <div class="version-line"></div>
-            </div>
-            <div class="updates-grid">
-                <div class="update-card">
-                    <h3 class="update-title">
-                        <div class="update-icon"></div>
-                        Overall polishing
-                    </h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>"asp" page compleatly removed - it contained old credit display and useless assets. (It's still acessible on website's source code)</li>
-                            <li>New useful implementation: "/sap".</li>
-                            <li>Removed /mymidia.</li>
-                            <li>Fixed and improved countdown to 2026.</li>
-                            <li>Added SparkBunny to asset images.</li>
-                            <li>Changed images in the main page.</li>
-                            <li>EasterEgg videos on the code. Check them out: <a href="https://github.com/umaera/umaera.github.io" target="_blank">on GitHub</a></li>
-                        </ul>
-                        <div class="feature-tags">
-                            <span class="tag">Improvments</span>
-                            <span class="tag">Small Update</span>
-                            <span class="tag">Optimizing</span>
-                            <span class="tag">EasterEggs!</span>
-                            <span class="tag">More content and techy stuff</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+# UI_v2.5.3
+- big big big update coming
+- **Removed** useless icons
+- **Updated** resources - styles
+- **Updated** resources - added "@EffectsEngine" & "@PuplProject"
+- **Added** icons for the new resources
+- **General bug fix & polishing**
+- **Added** a new shape in "asp" page, "LowResSphere" - a low resolution sphere that you can choose the number of sides.
 
-        <div class="version-group coming-soon" style="--delay: 6">
-            <div class="version-header">
-                <div class="version-badge">Coming Soon</div>
-                <div class="version-line"></div>
-            </div>
-            <div class="updates-grid">
-                <div class="update-card coming-soon">
-                    <h3>Next Updates</h3>
-                    <div class="update-content">
-                        <ul>
-                            <li>Theme color settings</li>
-                            <li>Midia/Post section</li>
-                            <li>Each Project - One page</li>
-                            <li>GemCloud Activation</li>
-                            <li>Web Apps/Games</li>
-                            <li>More Episodes in the <a href="/book/" target="_blank">"Book Project"</a> </li>
-                            <li>More animations and small tweaks</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<script src="./shared/v2/-SCRIPTS-/ap.changelog.js"></script>
+
+# UI_v2.5.4
+- new design coming soon.
+- **Updated** some resources
+- **Removed** unused pages and assets
+- **Changed** folder organization
+- **General bug fixed & polishing**
+- OVER 300 CHANGES?!
+
+# UI_v2.5.5
+- new design coming soon.
+- **Updated** resources page with new "StorageTest" Folder, a dedicated storage to test rendering and other logic.
+
+# UI_v2.5.6
+- new design coming soon.
+- **Added** "@Old-Websites" to "Resources", it displays (not all)the public websites that i created. They all are abandoned, so don't put any info or send any form.
+
+# UI_v2.5.7
+- Still cooking something
+- **Removed** some resources from /resources and /assets.
+- **Cooked** a masterpiece: The SimplyPrivate Changelog page.
+- **Ajusted** image and animation structure from /assets.
+- **Updated** the Developers/Supporters profile picture.
+- Some bipolar translations are going on, i'm working in a creative solution.
+
+# UI_v3.0
+- TOTAL REDESING IS HERE!!!!!
+- **Updated** design, new layout, new animations, new everything.
+- Introducing Main Screen - cinematic and useful
+- Resources page is now on dark mode, and color coded.
+- Changelog page - a new space.
+- /Cloud is back - new service "GemCloud" coming soon.
+- Ruby.ai access website was redesigned.
+- New info section for informing about old projects.
+- /assets is much more more visually organized
+- The "book project" (at /book) is redesigned.
+- 404 is also cinematicly fresh.
+- europia is here! with a new agent/g3.
+
+# UI_v3.1
+- Loading animations **Added** to every page of the website.
+- **Made** visual tweaks to button elements.
+- Buttons on Mobile-View now have text!
+- **Optimized** 404 page.
+- Mobile Social Media page fixed & new design like desktop page!
+- Visual tweaks to Social Media pages.
+- Visual Tweaks and font changes in changelog page.
+- **Added** a LOT of new fonts
+- **Polished** info pages, resources marker/project count & style
+- Astrodist page now has an favicon (wow, compleatly relevant)
+- **Made** new website icon variations.
+- **Changed** some features in Cloud & Ruby pages.
+
+# UI_v3.2
+- MyMedia page pinned at the "Website Pages" top marker in /Resources.
+- Book Project pinned at the "Website Pages" top marker in /Resources.
+- New design for the "Book Project" page.
+- New Series in Book Project: @LostOnes.
+- New books out! "Ostranenie" & "I preferred to feel nothing rather than feel something new." (at /book).
+- New Translations & read pages for all book in Book Project.
+- Added a new Countdown page - 2026!! (new logo/design/animations)
+- Optimized image loading on /Assets
+- Added a little secret, click on a very RANDOM tile image in /assets.
+- Added morph loading animations to unfinished pages.
+- Added random favicon shape icon generator to random pages.
+- Changelog Page now suports Markdown & links
+- Updated Ruby.ai design and added an automatic check for the server.
+- Made "added items" animations & indicators at /assets
+- Deleted "Dede07" From all Systems - He choosed to.
+- SimplyPrivate Reached the end of it's support - announced
+
+# UI_v3.2.1
+- Remade/Fixed and added new icons to /assets
+- Removed Temporary RML page.
+- Added /mybrowser to test purposes
+- New project media added to /assets
+- Fixed some "Open in new tab" links
+
+# UI_v3.2.2
+- Completed the /mymedia page, check it out!
+- New images for mymedia and @puplproject added in /assets
+- 404 page modified to have more morph animations/shapes!
+- Included translation and context to some pages
+- Main page has a new image!
+- Mobile view fixed in some pages.
+- Accent color switched "red" to "yellow"!
+
+# UI_v3.2.3
+- Added/polished Start animation on index page
+- /bookproject anounced in index page
+- MyMidia link in index replaced by BookProject
+- Redesigned Bookproject page & read page
+- New series at /bookproject! @FewThings (included with: Hotel & LiquidLove episodes)
+- Changed 404 page to have more feedback
+
+# UI_v3.2.4
+- Fixed some issues in main page
+- New color change: "yellow" to "purple"
+- BookProject design polishing and new indexing system (all links changed)
+- Fixed some translations across the website
+- Changed images in the main page
+
+
+# UI_v3.2.5
+- "asp" page compleatly removed - it contained old credit display and useless assets. (It's still acessible on website's source code)
+- New access point link: "/sap".
+- Removed /mymidia.
+- Fixed and improved countdown to 2026.
+- Added SparkBunny to asset images
+- Changed images in the main page
+- EasterEgg videos on code. Check the on github: https://github.com/umaera/umaera.github.io
+
+# UI_v3.8
+- Skipped a few versions (others will not count).
+- Redesign to the main page. That includes:
+-- Background system, name shaders, new animations, new button styles & news board.
+- Added "/before" for viewing old pages, it's still a work in progress.
+- New icons and screenshots for @umaera.github.io and @Bubble.
+- Fixed all icon and robot atributions to @BookProject.
+- Optimized some pages.
+- Gave a new background to social media page.
+- Redesigned the 404.html page.
+- deleted gemcloud (no use).
+- Redesigned the @BookProject page!
+- Redesigned mybrowser.html page.
+- Redesigned changelog - it didn't fit the website's style.
+- New link on /resources: BubblePlay Website (not complete)
+
+### In the Next Updates:
+- Theme color settings
+- Project-Only Page
+- More Chapters of the "Book Project"
+- More animations and small tweaks
+
+...
+`;
+
+    document.getElementById('md').innerHTML = marked.parse(markdownText);
+  </script>
 </body>
-</html>

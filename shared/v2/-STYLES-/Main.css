@@ -1,9 +1,14 @@
+@import url('../../point/fonts/fonts.css');
+
 :root {
     --default-text-font: Outfit;
     --default-text-color: #ffffff;
+    --default-text-color-select: #cccccc;
     --default-text-size: 1rem;
     --default-bg-color: #000000;
-    --accent-color: rgb(128, 82, 244);
+    --accent-color-light: #c1004d;
+    --accent-color-dark: #3a0017;
+    --accent-color: #8f003a;
     --accent-text: rgb(255, 255, 255);
 }
 
@@ -24,7 +29,7 @@
 
 body{
     font-family: Outfit, 'Arial', sans-serif;
-    background: #000;
+    background: var(--default-bg-color);
     min-width: 300px;
     min-height: 100vh;
     padding: 4%;
@@ -32,6 +37,17 @@ body{
 }
 
 /* ====== DESKTOP VIEW ELEMENTS ====== */
+
+.bubble{
+    position: absolute;
+    width: 80%; height: 60%;
+    background-color: var(--accent-color-light);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    top: 120%; left: 50%;
+    filter: blur(30px);
+    z-index: -111;
+}
 
 .fylc {
     display: flex;
@@ -68,7 +84,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: var(--accent);
+    background-color: var(--accent-color-light);
     background-image: url('../-IMAGES-/pandrasid.webp');
     background-repeat: no-repeat;
     background-position: center;
@@ -81,7 +97,7 @@ body{
 .box1 h1 {
     font-size: 6rem;
     font-weight: bold;
-    color: white;
+    color: var(--default-text-color);
     margin-bottom: 10px;
     letter-spacing: 2px;
     opacity: 1;
@@ -98,10 +114,10 @@ body{
 }
 
 .box1 h1::selection {
-    background-color: var(--accent);
-    color: #ffffff;
+    background-color: var(--accent-color-light);
+    color: var(--default-text-color);
     -webkit-background-clip:unset;
-    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-fill-color: var(--default-text-color);
     background-clip: unset;
     transition: 0.2s ease;
     user-select: text;
@@ -111,7 +127,7 @@ body{
 
 
 .box1 p {
-    color: #ffffff;
+    color: var(--default-text-color);
     font-size: 1.2rem;
     font-weight: 300;
 }
@@ -125,7 +141,7 @@ body{
     margin-left: 7%;
     overflow: hidden;
     cursor:unset;
-    color: white;
+    color: var(--default-text-color);
     font-family: Quicksand;
 }
 
@@ -258,33 +274,32 @@ body{
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
+    list-style-type: none;
 }
 
+
 .nav-menu a {
-    color: #c1c1c1;
+    color: var(--default-text-color-select);
     text-decoration: none;
     font-size: 2rem;
     transition: 0.2s ease;
     position: relative;
-    border-bottom-style: solid;
-    border-bottom-color: black;
-    border-bottom-width: 1px;
 }
 
 .nav-menu a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color-light);
     transition: 0.2s ease;
 }
 
 .nav-menu a::before {
     content: '• ';
-    color: var(--accent-color);
+    color: var(--accent-color-light);
     margin-right: 5px;
 }
 
 .box2:hover ~ .box4 .nav-menu a[href="./book/"] {
-    color:  var(--accent-text) !important;
-    text-shadow: 0 0 10px var(--accent-text);
+    color:  var(--accent-color-light) !important;
+    text-shadow: 0 0 10px var(--accent-color-light);
     transition: all 0.3s ease;
 }
 
@@ -293,14 +308,6 @@ body{
     animation: glow 1.5s ease-in-out infinite alternate;
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0 0 5px var(--accent-color);
-    }
-    to {
-        text-shadow: 0 0 10px var(--accent-color);
-    }
-}
 
 /* ====== PHONE VIEW ELEMENTS ====== */
 .phoneView {
@@ -308,7 +315,7 @@ body{
     position: absolute;
     width: 100vw;
     height: 100vh;
-    color: white;
+    color: var(--default-text-color);
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -352,7 +359,7 @@ body{
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    color: white;
+    color: var(--default-text-color);
     z-index: -1; 
     font-size: 5rem;
     font-family: outfit;

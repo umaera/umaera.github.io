@@ -1,0 +1,40 @@
+.box1 {
+  animation: height-anim 0.5s ease;
+}
+
+.box2 {
+  animation: width-anim 0.5s ease;
+}
+
+.box3 {
+  animation: height-anim 0.5s ease;
+}
+
+.box4 {
+  animation: fade-anim 1s ease;
+}
+
+.PhoneViewContent {
+  animation: height-anim 1s ease;
+}
+
+@keyframes width-anim {
+  0% {
+    width: 0;
+    background-color: rgb(128, 82, 244);
+  }
+}
+
+@keyframes height-anim {
+  0% {
+    height: 0;
+    background-color: rgb(128, 82, 244);
+  }
+}
+
+@keyframes fade-anim {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+}

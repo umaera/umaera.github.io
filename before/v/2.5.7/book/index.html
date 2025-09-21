@@ -1,0 +1,76 @@
+<head>
+ <title>Book Project</title>
+ <link rel="shortcut icon" href="../icons/@core/Bulb.png" type="image/x-icon">
+ <meta name="robots" content="index, follow">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="Book project.">
+ <link rel="stylesheet" href="../shared/v1/fonts/fonts.css">
+
+  <style>
+        body{
+            background-color: pur;
+            overflow:hidden;
+            font-family: QuickSand;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            padding: 25px;
+        }
+
+        .results{
+            width: 99%; height: 90%;
+            border-style:inset;
+            border-width: 3px;
+            overflow-y: auto;
+            background-color: rgba(192, 192, 192, 0.623);
+        }
+
+        .results::scroll-marker-group{
+            scroll-behavior:smooth;
+        }
+
+        blockquote{
+            margin-top: -15;
+            margin-left: 10;
+            padding: 1px;
+            transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        blockquote:hover{
+            background-color: rgba(255, 255, 255, 0.452);
+            transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        
+        blockquote::before {
+            content: "- ";
+        }
+
+        h4{
+            font-size:1rem;
+        }
+
+        a{
+            color: rgb(255, 0, 255);
+            font-weight: 500;
+        }
+
+        a:visited{
+            color: rgb(255, 80, 197)
+        }
+
+        .project::before {
+            content: "> ";
+        }
+
+    </style>
+</head>
+<h3>Book Project | <mark>1</mark> book found!</h3>
+<div>
+  
+ <h4>@Origin</h4>
+ <blockquote>- no source --</blockquote>
+ <h4>@unamed</h4>
+ <blockquote><a href="./unnamed/EP1-PosturaCongelada.pdf" target="_blank">↳ [PT] Episode 1 - Postura-congelada</a></blockquote>
+ <blockquote><a href="./unnamed/EP2 - Contacto.pdf" target="_blank">↳ [PT] Episode 2 - Contacto</a></blockquote>
+</div>
