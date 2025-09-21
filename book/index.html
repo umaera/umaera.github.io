@@ -48,8 +48,15 @@
     <nav class="book-nav">
         <a href="../" class="nav-home">← Back to Home</a>
         <div class="nav-actions">
-            <button class="nav-btn" id="searchBtn">Search</button>
-            <button class="nav-btn" id="filterBtn">Filter</button>
+            <button class="nav-btn mobile-menu-toggle" id="mobileMenuToggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="nav-buttons" id="navButtons">
+                <button class="nav-btn" id="searchBtn">Search</button>
+                <button class="nav-btn" id="filterBtn">Filter</button>
+            </div>
         </div>
     </nav>
 
@@ -315,12 +322,51 @@
             const filterSection = document.getElementById('filterSection');
             const filterPills = document.querySelectorAll('.filter-pill');
             const collectionItems = document.querySelectorAll('.collection-item');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navButtons = document.getElementById('navButtons');
+
+            // Mobile menu functionality
+            mobileMenuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navButtons.classList.toggle('active');
+                
+                // Close search and filter when menu is toggled
+                if (searchContainer.style.display === 'flex') {
+                    searchContainer.style.display = 'none';
+                    searchInput.value = '';
+                    showAllItems();
+                }
+                if (filterSection.style.display === 'block') {
+                    filterSection.style.display = 'none';
+                }
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!mobileMenuToggle.contains(e.target) && !navButtons.contains(e.target)) {
+                    mobileMenuToggle.classList.remove('active');
+                    navButtons.classList.remove('active');
+                }
+            });
+
+            // Close mobile menu when window is resized to desktop
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    mobileMenuToggle.classList.remove('active');
+                    navButtons.classList.remove('active');
+                }
+            });
 
             // Search functionality
             searchBtn.addEventListener('click', function() {
-                searchContainer.style.display = searchContainer.style.display === 'none' ? 'flex' : 'none';
-                if (searchContainer.style.display === 'flex') {
+                const isVisible = searchContainer.style.display === 'flex';
+                searchContainer.style.display = isVisible ? 'none' : 'flex';
+                
+                if (!isVisible) {
                     searchInput.focus();
+                    // Close mobile menu if open
+                    mobileMenuToggle.classList.remove('active');
+                    navButtons.classList.remove('active');
                 }
             });
 
@@ -337,7 +383,14 @@
 
             // Filter functionality
             filterBtn.addEventListener('click', function() {
-                filterSection.style.display = filterSection.style.display === 'none' ? 'block' : 'none';
+                const isVisible = filterSection.style.display === 'block';
+                filterSection.style.display = isVisible ? 'none' : 'block';
+                
+                if (!isVisible) {
+                    // Close mobile menu if open
+                    mobileMenuToggle.classList.remove('active');
+                    navButtons.classList.remove('active');
+                }
             });
 
             filterPills.forEach(pill => {
@@ -349,6 +402,18 @@
                     
                     const filter = this.getAttribute('data-filter');
                     filterBySeries(filter);
+                });
+            });
+
+            // Enhanced touch support for episode cards
+            const episodeCards = document.querySelectorAll('.episode-card');
+            episodeCards.forEach(card => {
+                card.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.98)';
+                });
+                
+                card.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
                 });
             });
 
@@ -385,20 +450,22 @@
                 });
             }
 
-            // Enhanced mouse movement effect
-            document.addEventListener('mousemove', (e) => {
-                const floatingElements = document.querySelectorAll('.floating-element');
-                const mouseX = e.clientX / window.innerWidth;
-                const mouseY = e.clientY / window.innerHeight;
+            // Enhanced mouse movement effect (disabled on mobile for performance)
+            if (window.innerWidth > 768) {
+                document.addEventListener('mousemove', (e) => {
+                    const floatingElements = document.querySelectorAll('.floating-element');
+                    const mouseX = e.clientX / window.innerWidth;
+                    const mouseY = e.clientY / window.innerHeight;
 
-                floatingElements.forEach((element, index) => {
-                    const speed = (index + 1) * 0.5;
-                    const x = (mouseX - 0.5) * speed * 50;
-                    const y = (mouseY - 0.5) * speed * 50;
-                    
-                    element.style.transform = `translate(${x}px, ${y}px) rotate(${x * 0.1}deg)`;
+                    floatingElements.forEach((element, index) => {
+                        const speed = (index + 1) * 0.5;
+                        const x = (mouseX - 0.5) * speed * 50;
+                        const y = (mouseY - 0.5) * speed * 50;
+                        
+                        element.style.transform = `translate(${x}px, ${y}px) rotate(${x * 0.1}deg)`;
+                    });
                 });
-            });
+            }
 
             // Enhanced stats counter
             const numberElement = document.querySelector('.stats .number');

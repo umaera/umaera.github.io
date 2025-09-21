@@ -4,7 +4,6 @@ const right = document.querySelectorAll('.right');
 const left = document.querySelectorAll('.left');
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Initialize sidepanel
     if (!localStorage.getItem(sidepanel)) {
         localStorage.setItem(sidepanel, "true");
         showpanel();
@@ -46,3 +45,36 @@ function hidepanel() {
     });
     tools.textContent = 'show panel';
 }
+
+// === For mobile - dropdown === //
+function setDropdownState(isOpen) {
+    const dropdown = document.querySelector('.newsDropdown');
+    const content = document.getElementById('newsDropdownContent');
+    const arrow = document.querySelector('.dropdownArrow');
+
+    if (isOpen) {
+        content.classList.add('open');
+        dropdown.classList.add('open');
+        arrow.textContent = '▴';
+    } else {
+        content.classList.remove('open');
+        dropdown.classList.remove('open');
+        arrow.textContent = '▾';
+    }
+}
+
+function toggleNewsDropdown() {
+    const content = document.getElementById('newsDropdownContent');
+    const isCurrentlyOpen = content.classList.contains('open');
+    const newState = !isCurrentlyOpen;
+
+    setDropdownState(newState);
+    localStorage.setItem('sidepanel', newState.toString());
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const savedState = localStorage.getItem('sidepanel');
+    const isOpen = savedState === 'true';
+    setDropdownState(isOpen);
+});

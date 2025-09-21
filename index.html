@@ -56,23 +56,23 @@
         </div>
         <div class="right">
             <div class="plateContainer">
-                <div class="plate p-resources" onclick="window.open('./resources')">
+                <div class="plate p-resources" onclick="location.href = './resources'">
                     <div class="platetext">Resources</div>
                     <div class="plateshadow"></div>
                 </div>
-                <div class="plate p-socials" onclick="window.open('./social')">
+                <div class="plate p-socials" onclick="location.href = './social'">
                     <div class="platetext">Social Midia</div>
                     <div class="plateshadow"></div>
                 </div>
-                <div class="plate p-book" onclick="window.open('./book')">
+                <div class="plate p-book" onclick="location.href = './book'">
                     <div class="platetext">BookProject</div>
                     <div class="plateshadow"></div>
                 </div>
-                <div class="plate p-changelog" onclick="window.open('./changelog.html')">
+                <div class="plate p-changelog" onclick="location.href = './changelog.html'">
                     <div class="platetext">Changelog</div>
                     <div class="plateshadow"></div>
                 </div>
-                <div class="plate p-year" onclick="window.open('./resources/2026')">
+                <div class="plate p-year" onclick="location.href = './resources/2026'">
                     <div class="platetext">Countdown</div>
                     <div class="plateshadow"></div>
                 </div>
@@ -107,7 +107,7 @@
     <!-- Mobile View -->
     <div class="mobileView">
         <div class="headerMV">
-            <div class="iconflower"></div>
+            <div class="iconflower" onclick="cycleBgNum(); updateBackground()"></div>
             <div class="titleBlock"></div>
             <div class="descriptionBlock">Software developer • digital artist/designer • video editor & animator</div>
         </div>
@@ -115,28 +115,35 @@
             <div class="mvtool" onclick="location.href = './resources'">Resources</div>
             <div class="mvtool" onclick="location.href = './social'">Social Media</div>
             <div class="mvtool" onclick="location.href = './book'">BookProject</div>
-            <div class="mvtool" onclick="location.href = './changelog.html'">Changelog</div>
         </div>
 
         <div class="newsMV">
-                <div class="newsItem news-featured" onclick="window.open('./before/v/3.2.5')">
-                    <div class="newsDate">2025-09-21</div>
-                    <div class="newsTitle">Welcome to the new design!</div>
-                    <div class="newsPreview">This is awesome, right? <p></p> In case you want to see what the old version looked like, just click here. Probably new stuff will be displayed here.</div>
-                    <div class="newsShadow"></div>
+            <div class="newsDropdown">
+                <div class="newsDropdownHeader" onclick="toggleNewsDropdown()">
+                    <span>News & Updates</span>
+                    <span class="dropdownArrow">▴</span>
                 </div>
-                <div class="newsItem news-bookproject" onclick="window.open('./book')">
-                    <div class="newsDate">2025-09-21</div>
-                    <div class="newsTitle">Check out <b>@Disprove</b> Series on BookProject!</div>
-                    <div class="newsPreview"><blockquote>"He feels sorry for living. Impressive"</blockquote></div>
-                    <div class="newsShadow"></div>
+                <div class="newsDropdownContent" id="newsDropdownContent">
+                    <div class="newsItem news-featured" onclick="window.open('./before/v/3.2.5')">
+                        <div class="newsDate">2025-09-21</div>
+                        <div class="newsTitle">Welcome to the new design!</div>
+                        <div class="newsPreview">This is awesome, right? <p></p> In case you want to see what the old version looked like, just click here. Probably new stuff will be displayed here.</div>
+                        <div class="newsShadow"></div>
+                    </div>
+                    <div class="newsItem news-bookproject" onclick="window.open('./book')">
+                        <div class="newsDate">2025-09-21</div>
+                        <div class="newsTitle">Check out <b>@Disprove</b> Series on BookProject!</div>
+                        <div class="newsPreview"><blockquote>"He feels sorry for living. Impressive"</blockquote></div>
+                        <div class="newsShadow"></div>
+                    </div>
+                    <div class="newsItem news-before" onclick="window.open('./before')">
+                        <div class="newsDate">2025-09-21</div>
+                        <div class="newsTitle">Explore different versions of the website!</div>
+                        <div class="newsPreview">Click here, i will take you right into the versions hub.</div>
+                        <div class="newsShadow"></div>
+                    </div>
                 </div>
-                <div class="newsItem news-before" onclick="window.open('./before')">
-                    <div class="newsDate">2025-09-21</div>
-                    <div class="newsTitle">Explore different versions of the website!</div>
-                    <div class="newsPreview">Click here, i will take you right into the versions hub.</div>
-                    <div class="newsShadow"></div>
-                </div>
+            </div>
         </div>
     </div>
 </body>

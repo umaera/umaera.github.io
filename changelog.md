@@ -289,6 +289,12 @@
 - Redesigned changelog - it didn't fit the website's style.
 - New link on /resources: BubblePlay Website (not complete)
 
+# UI_v3.8.1
+- Removed a lot of "open in new tab" links
+- Added background-themes and a dropdown (for news & updates) for index on mobile interface.
+- Fixed design issues in /book (book project).
+- General Bug Fix & polishing
+
 ### In the Next Updates:
 - Theme color settings
 - Project-Only Page
