@@ -1,0 +1,21 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-light-color);
+    font-family: var(--font-def);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: var(--transition-fast);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.invalid{
+    display: none;
+}

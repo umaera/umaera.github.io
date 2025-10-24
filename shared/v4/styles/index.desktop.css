@@ -1,0 +1,142 @@
+/* == DesktopView == */
+.desktopView{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-slow);
+    background-image: url('../images/bgs.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* == Bottom == */
+.bottom{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 8%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    transition: var(--transition-slow);
+    overflow: hidden;
+    margin-top:-10
+}
+
+.navbar{
+    background-color: #90003A;
+    width: 20rem;
+    height: 90%;
+    border-radius: var(--round-normal);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+    overflow: hidden;
+}
+
+.navelement{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.navicon{
+    background-color: #90003A;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+.navicon:hover{
+    transform: scale(1.4);
+    transition: var(--transition-fast);
+    filter: brightness(1.4)
+}
+
+/* == Notification Badge == */
+.notification-badge{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 12px;
+    height: 12px;
+    background-color: #ff3366;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 8px rgba(255, 51, 102, 0.8);
+    animation: shake 5s infinite;
+    z-index: 10;
+}
+
+@keyframes shake {
+    0%, 98%, 100% {
+        transform: translate(0, 0);
+    }
+    98.5% {
+        transform: translate(-2px, 0);
+    }
+    99% {
+        transform: translate(2px, 0);
+    }
+    99.5% {
+        transform: translate(-2px, 0);
+    }
+}
+
+.navelement{
+    position: relative;
+}
+
+/* == Top Side == */
+.top{
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-slow);
+    z-index: 0;
+}
+
+.iconflower{
+    background-image: url('../../../icons/@core/Flower.png');
+    width: 100%;
+    height: 4rem;
+    background-position:center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: var(--transition-fast);
+}
+
+.titleBlock{
+    background-image: url('../images/Title.block.svg');
+    width: 100%;
+    height: 7rem;
+    background-position:center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: var(--transition-fast);
+}
+
+.descriptionBlock{
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-def);
+    color: var(--text-light-color);
+    font-size: var(--font-size-normal);
+    transition: var(--transition-fast);
+}

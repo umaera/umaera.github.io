@@ -9,11 +9,11 @@
     <meta name="description" content="I'm too wild to put a description on my own website. 🤘😭">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./shared/v3/styles/root.css">
-    <link rel="stylesheet" href="./shared/v3/styles/index.main.css">
-    <link rel="stylesheet" href="./shared/v3/styles/index.desktop.css">
-    <link rel="stylesheet" href="./shared/v3/styles/index.mobile.css">
-    <link rel="stylesheet" href="./shared/v3/styles/index.resp.css">
+    <link rel="stylesheet" href="./shared/v4/styles/root.css">
+    <link rel="stylesheet" href="./shared/v4/styles/index.main.css">
+    <link rel="stylesheet" href="./shared/v4/styles/index.desktop.css">
+    <link rel="stylesheet" href="./shared/v4/styles/index.mobile.css">
+    <link rel="stylesheet" href="./shared/v4/styles/index.resp.css">
 </head>
 <body>
     <div class="invalid">invalid page size</div>
@@ -47,67 +47,35 @@
     <div id="load"></div>
     <!-- Desktop View -->
     <div class="desktopView">
-        <div class="overlay"></div>
-        <div class="afterlay"></div>
-        <div class="left">
+        <div class="top">
             <div class="iconflower"></div>
             <div class="titleBlock"></div>
             <div class="descriptionBlock">Software developer • digital artist/designer • video editor & animator</div>
         </div>
-        <div class="right">
-            <div class="plateContainer">
-                <div class="plate p-resources" onclick="location.href = './resources'">
-                    <div class="platetext">Resources</div>
-                    <div class="plateshadow"></div>
+        <div class="bottom">
+            <div class="navbar">
+                <div class="navelement" title="Resources" onclick="location.href = './resources'">
+                    <div class="navicon" style="background-image: url('./icons/@core/MyLittleIcon-Resources.png');"></div>
                 </div>
-                <div class="plate p-socials" onclick="location.href = './social'">
-                    <div class="platetext">Social Midia</div>
-                    <div class="plateshadow"></div>
+                <div class="navelement" title="Social" onclick="location.href = './social/'">
+                    <div class="navicon" style="background-image: url('./icons/@core/MyLittleIcon-Creator.png');"></div>
                 </div>
-                <div class="plate p-book" onclick="location.href = './book'">
-                    <div class="platetext">BookProject</div>
-                    <div class="plateshadow"></div>
+                <div class="navelement" title="Assets" onclick="location.href = './assets/'">
+                    <div class="navicon" style="background-image: url('./icons/@core/MyLittleIcon-Midia.png');"></div>
                 </div>
-                <div class="plate p-changelog" onclick="location.href = './changelog.html'">
-                    <div class="platetext">Changelog</div>
-                    <div class="plateshadow"></div>
+                <div class="navelement" title="Changelog" onclick="location.href = './changelog.html'">
+                    <div class="navicon" style="background-image: url('./icons/@core/MyLittleIcon-History.png');"></div>
                 </div>
-                <div class="plate p-year" onclick="location.href = './resources/2026'">
-                    <div class="platetext">Countdown</div>
-                    <div class="plateshadow"></div>
+                <div class="navelement" title="News" onclick="location.href = './n/'">
+                    <div class="navicon" style="background-image: url('./icons/@core/MyLittleIcon-Pings.png');"></div>
                 </div>
             </div>
-
-            <div class="newsBoard">
-                <div class="newsItem news-featured" onclick="window.open('./before/v/3.2.5')">
-                    <div class="newsDate">2025-09-21</div>
-                    <div class="newsTitle">Welcome to the new design!</div>
-                    <div class="newsPreview">This is awesome, right? <p></p> In case you want to see what the old version looked like, just click here. Probably new stuff will be displayed here.</div>
-                    <div class="newsShadow"></div>
-                </div>
-                <div class="newsItem news-bookproject" onclick="window.open('./book')">
-                    <div class="newsDate">2025-09-21</div>
-                    <div class="newsTitle">Check out <b>@Disprove</b> Series on BookProject!</div>
-                    <div class="newsPreview"><blockquote>"He feels sorry for living. Impressive"</blockquote></div>
-                    <div class="newsShadow"></div>
-                </div>
-                <div class="newsItem news-before" onclick="window.open('./before')">
-                    <div class="newsDate">2025-09-21</div>
-                    <div class="newsTitle">Explore different versions of the website!</div>
-                    <div class="newsPreview">Click here, i will take you right into the versions hub.</div>
-                    <div class="newsShadow"></div>
-                </div>
-            </div>
-            
-            <div class="bgSwitcher" id="bgSwitcher">-</div>
-            <div class="tools" id="tools">hide panel</div>
         </div>
-    </div>
-
+</div>
     <!-- Mobile View -->
     <div class="mobileView">
         <div class="headerMV">
-            <div class="iconflower" onclick="cycleBgNum(); updateBackground()"></div>
+            <div class="iconflower"></div>
             <div class="titleBlock"></div>
             <div class="descriptionBlock">Software developer • digital artist/designer • video editor & animator</div>
         </div>
@@ -115,35 +83,7 @@
             <div class="mvtool" onclick="location.href = './resources'">Resources</div>
             <div class="mvtool" onclick="location.href = './social'">Social Media</div>
             <div class="mvtool" onclick="location.href = './book'">BookProject</div>
-        </div>
-
-        <div class="newsMV">
-            <div class="newsDropdown">
-                <div class="newsDropdownHeader" onclick="toggleNewsDropdown()">
-                    <span>News & Updates</span>
-                    <span class="dropdownArrow">▴</span>
-                </div>
-                <div class="newsDropdownContent" id="newsDropdownContent">
-                    <div class="newsItem news-featured" onclick="window.open('./before/v/3.2.5')">
-                        <div class="newsDate">2025-09-21</div>
-                        <div class="newsTitle">Welcome to the new design!</div>
-                        <div class="newsPreview">This is awesome, right? <p></p> In case you want to see what the old version looked like, just click here. Probably new stuff will be displayed here.</div>
-                        <div class="newsShadow"></div>
-                    </div>
-                    <div class="newsItem news-bookproject" onclick="window.open('./book')">
-                        <div class="newsDate">2025-09-21</div>
-                        <div class="newsTitle">Check out <b>@Disprove</b> Series on BookProject!</div>
-                        <div class="newsPreview"><blockquote>"He feels sorry for living. Impressive"</blockquote></div>
-                        <div class="newsShadow"></div>
-                    </div>
-                    <div class="newsItem news-before" onclick="window.open('./before')">
-                        <div class="newsDate">2025-09-21</div>
-                        <div class="newsTitle">Explore different versions of the website!</div>
-                        <div class="newsPreview">Click here, i will take you right into the versions hub.</div>
-                        <div class="newsShadow"></div>
-                    </div>
-                </div>
-            </div>
+            <div class="mvtool" onclick="location.href = './n'">News & Updates</div>
         </div>
     </div>
 </body>
@@ -151,7 +91,8 @@
         <script src="./shared/v3/scripts/load.js"></script>
         <script src="./shared/v3/libs/gsap-min.js"></script>
         <script src="./shared/v3/scripts/wave.js"></script>
-        <script src="./shared/v3/scripts/panel.js"></script>
-        <script src="./shared/v3/scripts/bg-switcher.js"></script>
+        <script src="./shared/v3/scripts/notification.js"></script>
+        <!-- <script src="./shared/v3/scripts/panel.js"></script> -->
+        <!-- <script src="./shared/v3/scripts/bg-switcher.js"></script> -->
 </body>
 </html>

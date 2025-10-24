@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Eras</title>
+  <link rel="shortcut icon" href="../icons/@core/MyLittleIcon-Connect-v1.png" type="image/x-icon">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="No description 😜 - i'm too wild for that">
+
+  <link rel="stylesheet" href="../shared/v2/-FONTS-/fonts.css">
+  <link rel="stylesheet" href="./styles/index.main.css">
+  <link rel="stylesheet" href="./styles/index.animations.css">
+  <link rel="stylesheet" href="./styles/index.reactive.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="floating-element">✨</div>
+        <div class="floating-element">🌟</div>
+        <div class="floating-element">💫</div>
+        <div class="floating-element">⭐</div>
+        
+
+  <div class="title">
+    <h1>My Eras</h1>
+    <p>Select a year to explore random memories</p>
+  </div>
+
+  <div class="year-grid">
+    <div class="year-card-glitched" data-year="2020">
+      <div class="year-number">2020</div>
+    </div>
+    <div class="year-card-glitched" data-year="2021">
+      <div class="year-number">2021</div>
+    </div>
+    <div class="year-card" data-year="2022">
+      <div class="year-number">2022</div>
+    </div>
+    <div class="year-card-glitched" data-year="2023">
+      <div class="year-number">2023</div>
+    </div>
+    <div class="year-card-glitched" data-year="2024">
+      <div class="year-number">2024</div>
+    </div>
+  </div>
+
+    </div>
+
+  <script>
+    document.querySelectorAll('.year-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const year = card.dataset.year;
+        alert(`Selected year: ${year}`);
+      });
+    });
+
+        // Create particles
+        function createParticles() {
+            const particlesContainer = document.querySelector('.particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
+            }
+        }
+
+        // Year card interactions
+        const yearCards = document.querySelectorAll('.year-card');
+        yearCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const year = card.dataset.year;
+                
+                // Add selection effect
+                card.style.transform = 'scale(0.95)';
+                card.style.filter = 'brightness(1.5)';
+                
+                setTimeout(() => {
+                    // Create explosion effect
+                    createExplosion(card);
+                    
+                    if (year === '2022') {
+                        alert('Navigating to 2022');
+                        window.location.href = '../year/2022/';
+                    } else {
+                        alert(`Selected year: ${year}`);
+                    }
+                }, 200);
+            });
+            
+            // Hover effects
+            card.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(2)';
+                cursor.style.background = 'radial-gradient(circle, #8b5cf6, #ffd700)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.background = 'radial-gradient(circle, #ffd700, #ff6b6b)';
+            });
+        });
+
+        // Create explosion effect
+        function createExplosion(element) {
+            const rect = element.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'fixed';
+                particle.style.left = centerX + 'px';
+                particle.style.top = centerY + 'px';
+                particle.style.width = '6px';
+                particle.style.height = '6px';
+                particle.style.borderRadius = '50%';
+                particle.style.background = ['#ffd700', '#ff6b6b', '#8b5cf6'][Math.floor(Math.random() * 3)];
+                particle.style.pointerEvents = 'none';
+                particle.style.zIndex = '9999';
+                
+                document.body.appendChild(particle);
+                
+                const angle = (Math.PI * 2 * i) / 20;
+                const velocity = 100 + Math.random() * 100;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity;
+                
+                particle.animate([
+                    { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+                    { transform: `translate(${vx}px, ${vy}px) scale(0)`, opacity: 0 }
+                ], {
+                    duration: 800,
+                    easing: 'ease-out'
+                }).onfinish = () => {
+                    particle.remove();
+                };
+            }
+        }
+
+        // Initialize everything
+        window.addEventListener('load', () => {
+            createParticles();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key >= '1' && e.key <= '5') {
+                const index = parseInt(e.key) - 1;
+                if (yearCards[index]) {
+                    yearCards[index].click();
+                }
+            }
+        });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Updates - UmaEra</title>
+    <meta name="robots" content="index, follow, archive, snippet, translate">
+    <meta name="description" content="Latest news, projects, videos and updates from UmaEra">
+    <link rel="shortcut icon" href="../icons/@core/MyLittleIcon-Pings.png" type="image/png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../shared/v4/styles/root.css">
+    <link rel="stylesheet" href="./news.css">
+</head>
+<body>
+    <div id="load"></div>
+    
+    <!-- Top Island (appears on scroll) -->
+    <div class="top-island" id="topIsland">
+        <div class="island-back" onclick="window.location.href='../'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span>Back</span>
+        </div>
+        <div class="island-title">News</div>
+        <div class="island-filters">
+            <button class="island-filter active" data-filter="all">All</button>
+            <button class="island-filter" data-filter="videos">Videos</button>
+            <button class="island-filter" data-filter="projects">Projects</button>
+            <button class="island-filter" data-filter="personal">Personal</button>
+            <button class="island-filter" data-filter="development">Dev</button>
+            <button class="island-filter" data-filter="BookProject">Book</button>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="news-header" id="newsHeader">
+        <div class="back-button" onclick="window.location.href='../'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span>Back</span>
+        </div>
+        <div class="header-content">
+            <div class="iconflower"></div>
+            <h1 class="page-title">News & Updates</h1>
+            <p class="page-subtitle">Latest projects, videos, and development updates</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="news-container">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="videos">Videos</button>
+            <button class="filter-tab" data-filter="projects">Projects</button>
+            <button class="filter-tab" data-filter="personal">Personal</button>
+            <button class="filter-tab" data-filter="development">Development</button>
+            <button class="filter-tab" data-filter="BookProject">BookProject</button>
+        </div>
+
+        <!-- News Grid -->
+        <div class="news-grid">
+            <!-- Featured News Item -->
+            <article class="news-item compact featured" data-category="personal">
+                <div class="news-badge">Featured</div>
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-date">October 24, 2025</span>
+                        <span class="news-category">Personal</span>
+                    </div>
+                    <h2 class="news-title">Welcome to the New News Hub! 🎉</h2>
+                    <p class="news-excerpt">
+                        I've redesigned the notifications system! Now you can stay up to date with all my latest videos,
+                        projects, personal updates, and development progress all in one beautiful place.
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">Website Update</span>
+                        <span class="tag">New Feature</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-item big featured" data-category="development projects">
+                <div class="news-image" style="background: url('./covers/bubble2.png') center/cover no-repeat;"></div>
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-date">October 24, 2025</span>
+                        <span class="news-category">Development</span>
+                    </div>
+                    <h2 class="news-title">BubblePlay Open Beta SOON!</h2>
+                    <p class="news-excerpt">The platform's code will be published to github. Free to download and modify, under the "WTFPL – Do What the Fuck You Want to" Public License.</p>
+                    <div class="news-tags">
+                        <span class="tag">Web & App</span>
+                        <span class="tag">Design</span>
+                        <span class="tag">Music</span>
+                        <span class="tag">Projects</span>
+                    </div>
+                    <!-- <a href="https://github.com/umaera" target="_blank" class="news-open-btn">
+                        <span>Open</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                        </svg>
+                    </a> -->
+                </div>
+            </article>
+
+            <article class="news-item big featured" data-category="development projects">
+                <div class="news-image" style="background: url('./covers/Ocean1.png') center/cover no-repeat;"></div>
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-date">October 20, 2025</span>
+                        <span class="news-category">Development</span>
+                    </div>
+                    <h2 class="news-title">New Project: OceanBoard</h2>
+                    <p class="news-excerpt">Picture your ideas/stories and advanced concepts in a simple website workspace. Avaliable soon on this website!</p>
+                    <div class="news-tags">
+                        <span class="tag">Website</span>
+                        <span class="tag">Design</span>
+                        <span class="tag">Projects</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-item compact featured" data-category="development projects">
+                <div class="news-image" style="background: url('./covers/bubble1.png') center/cover no-repeat;"></div>
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-date">August 08, 2025</span>
+                        <span class="news-category">Development</span>
+                    </div>
+                    <h2 class="news-title">New Project: BubblePlay</h2>
+                    <p class="news-excerpt">A user-focused music platform with audio & video from youtube - without vibe breakers.</p>
+                    <div class="news-tags">
+                        <span class="tag">Web & App</span>
+                        <span class="tag">Design</span>
+                        <span class="tag">Music</span>
+                        <span class="tag">Projects</span>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- News Items -->
+            <article class="news-item compact" data-category="videos">
+                <div class="news-image" style="background: url('./covers/flowerThing.webp') center/cover no-repeat;"></div>
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-date">October 05, 2025</span>
+                        <span class="news-category">Videos</span>
+                    </div>
+                    <h2 class="news-title">New Video: Flower Thing</h2>
+                    <p class="news-excerpt">the flower has a bad day.</p>
+                    <div class="news-tags">
+                        <span class="tag">YouTube</span>
+                        <span class="tag">Video</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=w1tNsOqZo4Y" target="_blank" class="news-open-btn">
+                        <span>Watch</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            <article class="news-item big featured" data-category="development projects">
+                <div class="news-image" style="background: url('./covers/SimplyPrivate1.jpg') center/cover no-repeat;"></div>
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-date">October 12, 2025</span>
+                        <span class="news-category">Development</span>
+                    </div>
+                    <h2 class="news-title">SimplyPrivate IS BACK!</h2>
+                    <p class="news-excerpt">
+                        Now under the "Froggies" Team (umaera, dhummy & zeva - original team) we are going to bring SimplyPrivate Back and better than ever, with things that no other version had. Stick around
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">SimplyPrivate</span>
+                        <span class="tag">Browser</span>
+                        <span class="tag">Freedom</span>
+                        <span class="tag">Privacy</span>
+                        <span class="tag">Simple</span>
+                    </div>
+                </div>
+            </article>
+            <article class="news-item" data-category="BookProject book">
+                <div class="news-image" style="background: url('./covers/disproveSeries.jpg') center/cover no-repeat;"></div>
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-date">September 21, 2025</span>
+                        <span class="news-category">Book</span>
+                    </div>
+                    <h2 class="news-title"><b>@Disprove</b> Series avaliable!</h2>
+                    <p class="news-excerpt">
+                        New chapters added to the BookProject. "He feels sorry for living. Impressive"
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">BookProject</span>
+                        <span class="tag">Writing</span>
+                    </div>
+                    <a href="../book" target="_blank" class="news-open-btn">
+                        <span>Read</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../shared/v3/scripts/load.js"></script>
+    <script src="../shared/v3/libs/gsap-min.js"></script>
+    <script src="../shared/v3/scripts/notification.js"></script>
+</body>
+</html>

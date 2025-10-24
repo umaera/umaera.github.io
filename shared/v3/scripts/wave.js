@@ -27,7 +27,7 @@ gsap.to('#turbulence', {
   attr: {
     baseFrequency: '1.80 1.60'
   },
-  duration: 300,
+  duration: 30,
   yoyo: true,
   repeat: -1,
   ease: "sine"
