@@ -23,18 +23,23 @@
 /* === Responsive === */
 @media (max-width: 768px) {
 	.ob-hero-title {
-		font-size: 48px;
+		font-size: 3rem !important;
 	}
 
 	.ob-hero-subtitle {
-		font-size: 16px;
+		font-size: 2rem;
 	}
 	
 	.ob-hero-buttons {
 		flex-direction: column;
 		align-items: center;
 	}
-	
+	.ob-nav-logo-img{
+		display: none;
+	}
+	.ob-nav-btn{
+		display: none;
+	}
 	.ob-nav-links {
 		gap: 16px;
 	}
@@ -49,6 +54,9 @@
 	}
 
 	.ob-section-title {
-		font-size: 36px;
+		font-size: 2rem !important;
+	}
+	.ob-cta-title{
+		font-size: 2rem !important;
 	}
 }

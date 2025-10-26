@@ -1,3 +1,4 @@
+@import url('./docs.responsive.css');
 /* === OceanBoard Documentation Styles === */
 
 :root {
@@ -28,6 +29,12 @@ body {
 ::selection{
 	background-color: pink;
 	color: blueviolet;
+}
+
+.no-select{
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
 }
 
 /* === Navigation === */

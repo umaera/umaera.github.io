@@ -1,5 +1,10 @@
 # Changelog: `umaera.github.io`
 
+## UI_v3.9.2
+- Some mobile polishes
+- new minimal icons for OceanBoard
+
+
 ## UI_v3.9.1
 - Added OceanBoard!!
 - Added relative paths to 404 page

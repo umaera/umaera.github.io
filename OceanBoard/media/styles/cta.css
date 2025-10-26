@@ -1,6 +1,6 @@
 /* === CTA Section === */
 .ob-cta {
-	padding: 120px 0;
+	padding: 2rem 0;
 	background-color: var(--ob-bg-secondary);
 	text-align: center;
 }
@@ -13,7 +13,7 @@
 
 .ob-cta-title {
 	font-family: 'Dosis', sans-serif;
-	font-size: 48px;
+	font-size: 3rem;
 	font-weight: 700;
 	color: var(--ob-accent);
 	margin-bottom: 16px;

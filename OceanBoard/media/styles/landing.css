@@ -16,6 +16,12 @@
 	--ob-border: rgba(255, 255, 255, 0.1);
 }
 
+.no-select{
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+}
+
 * {
 	margin: 0;
 	padding: 0;
