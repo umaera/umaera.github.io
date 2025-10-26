@@ -13,28 +13,19 @@ Welcome to my personal website - a creative digital space showcasing my work as 
 - **`/shared/`** - Shared CSS, JavaScript, and font resources across versions
 - **`/before/`** - Archive of previous website versions
 - **`/assets/`** - Image gallery and media storage
+- **`/social/` or `/socials/` ** - Social Media board.
 - **`/sap/`** - Service Access Point for utilities
+- **`/book/`** - Book Project - i post random story shit.. i like writting and not making sense
+- **`/n/`** - News & Updates
+- **`/OceanBoard/`** - A creative tool for writters, developers & creative minds.
 
 ## Site Navigation
-
-### Main Navigation
-- **Home** (`/`) - Landing page
-- **Resources** (`/resources/`) - Project hub and tools
-- **Social Media** (`/social/`) - Social platform links
-- **Book Project** (`/book/`) - Book collection
-- **Changelog** (`/changelog.html`) - Version history
-
-### Quick Access
-- **SAP** (`/sap/`) - Service utilities
-- **Assets** (`/assets/`) - Media gallery
-- **2026 Countdown** (`/resources/2026/`) - New Year countdown
-- **Version Archive** (`/before/`) - Historical website versions
 
 ## Contact & Connect
 
 - **Email**: [umaera.dev@gmail.com](mailto:umaera.dev@gmail.com)
-- **Website**: [umaera.github.io](https://umaera.github.io)
-- **Quote**: *"Blinded by curiosity"*
+- **Website**: This.
+- **Quote**: *"Going ~~crazy~~ Radical"*
 
 ## License
 

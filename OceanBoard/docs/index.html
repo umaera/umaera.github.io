@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OceanBoard - Documentation</title>
+	<meta name="robots" content="index, follow, archive, snippet, translate">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dosis:wght@400;700&family=Outfit:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+	<!-- Material Icons -->
+	<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+	<link rel="stylesheet" href="./styles/docs.css">
+    <link rel="shortcut icon" href="../media/icons/Icon-B&W.png" type="image/png">
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="ob-docs-nav">
+		<a href="../" class="ob-docs-back">
+			<span class="material-icons-round">arrow_back</span>
+			Back to Home
+		</a>
+		<div class="ob-docs-logo">
+			<img src="../media/icons/Icon-Pink.svg" alt="OceanBoard">
+			<span>OceanBoard Docs</span>
+		</div>
+		<a href="../editor/" class="ob-docs-launch">
+			Launch Editor
+			<span class="material-icons-round">open_in_new</span>
+		</a>
+	</nav>
+
+	<div class="ob-docs-container">
+		<!-- Sidebar -->
+		<aside class="ob-docs-sidebar">
+			<div class="ob-docs-sidebar-section">
+				<h3 class="ob-docs-sidebar-title">Getting Started</h3>
+				<a href="#introduction" class="ob-docs-sidebar-link active">Introduction</a>
+				<a href="#quick-start" class="ob-docs-sidebar-link">Quick Start</a>
+				<a href="#interface" class="ob-docs-sidebar-link">Interface Overview</a>
+			</div>
+
+			<div class="ob-docs-sidebar-section">
+				<h3 class="ob-docs-sidebar-title">Core Concepts</h3>
+				<a href="#series" class="ob-docs-sidebar-link">Series & Seasons</a>
+				<a href="#files" class="ob-docs-sidebar-link">File Types</a>
+				<a href="#special-files" class="ob-docs-sidebar-link">Special Files</a>
+				<a href="#attributes" class="ob-docs-sidebar-link">Attributes & Mentions</a>
+			</div>
+
+			<div class="ob-docs-sidebar-section">
+				<h3 class="ob-docs-sidebar-title">Features</h3>
+				<a href="#markdown" class="ob-docs-sidebar-link">Markdown Editor</a>
+				<a href="#import-export" class="ob-docs-sidebar-link">Import & Export</a>
+				<a href="#settings" class="ob-docs-sidebar-link">Settings</a>
+			</div>
+
+			<div class="ob-docs-sidebar-section">
+				<h3 class="ob-docs-sidebar-title">Advanced</h3>
+				<a href="#file-linking" class="ob-docs-sidebar-link">File Linking</a>
+				<a href="#workflows" class="ob-docs-sidebar-link">Workflows</a>
+			</div>
+		</aside>
+
+		<!-- Content -->
+		<main class="ob-docs-content">
+			<!-- Introduction -->
+			<section id="introduction" class="ob-docs-section">
+				<h1 class="ob-docs-heading">Welcome to OceanBoard</h1>
+				<p class="ob-docs-text">
+					OceanBoard is a beautiful, powerful creative writing tool designed for authors, 
+					worldbuilders, and storytellers. It helps you organize your characters, locations, 
+					episodes, and creative content with an intuitive markdown editor and smart file management.
+				</p>
+				
+				<div class="ob-docs-highlight">
+					<div class="ob-docs-highlight-icon">
+						<span class="material-icons-round">info</span>
+					</div>
+					<div>
+						<strong>Local-First</strong>
+						<p>Everything is stored locally in your browser. No accounts, no cloud, no tracking.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Quick Start -->
+			<section id="quick-start" class="ob-docs-section">
+				<h2 class="ob-docs-heading">Quick Start</h2>
+				<p class="ob-docs-text">Get started with OceanBoard in just a few steps:</p>
+
+				<div class="ob-docs-steps">
+					<div class="ob-docs-step">
+						<div class="ob-docs-step-number">1</div>
+						<div class="ob-docs-step-content">
+							<h3>Create a Series</h3>
+							<p>Click the <strong>+</strong> button in the sidebar to create your first series. 
+							Think of series as your main projects or story collections.</p>
+						</div>
+					</div>
+
+					<div class="ob-docs-step">
+						<div class="ob-docs-step-number">2</div>
+						<div class="ob-docs-step-content">
+							<h3>Add Seasons</h3>
+							<p>Right-click your series and select <strong>Add Season</strong>. 
+							Seasons help organize different parts of your story or project phases.</p>
+						</div>
+					</div>
+
+					<div class="ob-docs-step">
+						<div class="ob-docs-step-number">3</div>
+						<div class="ob-docs-step-content">
+							<h3>Create Files</h3>
+							<p>Right-click a season and add episodes or special files. 
+							Start writing in the beautiful markdown editor!</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Interface Overview -->
+			<section id="interface" class="ob-docs-section">
+				<h2 class="ob-docs-heading">Interface Overview</h2>
+				<p class="ob-docs-text">OceanBoard's interface is designed to be intuitive and distraction-free:</p>
+				
+				<div class="ob-docs-interface-grid">
+					<div class="ob-docs-interface-item">
+						<div class="ob-docs-interface-icon">
+							<span class="material-icons-round">menu_open</span>
+						</div>
+						<h4>Sidebar</h4>
+						<p>Navigate between series, seasons, and files. Drag to reorder, right-click for options.</p>
+					</div>
+
+					<div class="ob-docs-interface-item">
+						<div class="ob-docs-interface-icon">
+							<span class="material-icons-round">tab</span>
+						</div>
+						<h4>Tab Bar</h4>
+						<p>Keep multiple files open. Click tabs to switch, close button to dismiss.</p>
+					</div>
+
+					<div class="ob-docs-interface-item">
+						<div class="ob-docs-interface-icon">
+							<span class="material-icons-round">edit_note</span>
+						</div>
+						<h4>Editor</h4>
+						<p>Split-view markdown editor. Write on the left, see formatted preview on the right.</p>
+					</div>
+
+					<div class="ob-docs-interface-item">
+						<div class="ob-docs-interface-icon">
+							<span class="material-icons-round">settings</span>
+						</div>
+						<h4>Settings</h4>
+						<p>Customize font size, line height, word wrap, and more. Access via settings icon.</p>
+					</div>
+				</div>
+
+				<!-- IMAGE PLACEHOLDER -->
+				<div class="ob-docs-image-placeholder">
+					<img src="../media/images/fullscreenshot.png" alt="Interface Overview">
+					<p class="ob-docs-image-caption">The OceanBoard interface layout</p>
+				</div>
+			</section>
+
+			<!-- Series & Seasons -->
+			<section id="series" class="ob-docs-section">
+				<h2 class="ob-docs-heading">Series & Seasons</h2>
+				<p class="ob-docs-text">
+					OceanBoard uses a hierarchical structure to organize your creative work:
+				</p>
+
+				<div class="ob-docs-hierarchy">
+					<div class="ob-docs-hierarchy-level">
+						<strong>Series</strong> - Your main project or story collection
+					</div>
+					<div class="ob-docs-hierarchy-arrow">
+						<span class="material-icons-round">arrow_downward</span>
+					</div>
+					<div class="ob-docs-hierarchy-level">
+						<strong>Seasons</strong> - Chapters, volumes, or story arcs
+					</div>
+					<div class="ob-docs-hierarchy-arrow">
+						<span class="material-icons-round">arrow_downward</span>
+					</div>
+					<div class="ob-docs-hierarchy-level">
+						<strong>Files</strong> - Episodes, characters, locations, etc.
+					</div>
+				</div>
+
+				<div class="ob-docs-tip">
+					<span class="material-icons-round">lightbulb</span>
+					<p><strong>Tip:</strong> You can export entire seasons or individual files to share or backup your work.</p>
+				</div>
+			</section>
+
+			<!-- File Types -->
+			<section id="files" class="ob-docs-section">
+				<h2 class="ob-docs-heading">File Types</h2>
+				<p class="ob-docs-text">OceanBoard supports regular episodes and special file types:</p>
+
+				<div class="ob-docs-file-types">
+					<div class="ob-docs-file-type">
+						<div class="ob-docs-file-type-badge episode">EP</div>
+						<div>
+							<h4>Episode</h4>
+							<p>Regular story files, chapters, or writing entries</p>
+						</div>
+					</div>
+
+					<div class="ob-docs-file-type">
+						<div class="ob-docs-file-type-badge character">C</div>
+						<div>
+							<h4>Character</h4>
+							<p>Character profiles, descriptions, and development notes</p>
+						</div>
+					</div>
+
+					<div class="ob-docs-file-type">
+						<div class="ob-docs-file-type-badge object">O</div>
+						<div>
+							<h4>Object</h4>
+							<p>Important items, artifacts, or props in your story</p>
+						</div>
+					</div>
+
+					<div class="ob-docs-file-type">
+						<div class="ob-docs-file-type-badge scene">SC</div>
+						<div>
+							<h4>Scene</h4>
+							<p>Locations, settings, or environment descriptions</p>
+						</div>
+					</div>
+
+					<div class="ob-docs-file-type">
+						<div class="ob-docs-file-type-badge abstract">A</div>
+						<div>
+							<h4>Abstract</h4>
+							<p>Concepts, themes, or abstract ideas</p>
+						</div>
+					</div>
+
+					<div class="ob-docs-file-type">
+						<div class="ob-docs-file-type-badge attribute">AT</div>
+						<div>
+							<h4>Attribute</h4>
+							<p>Dictionary files for linking mentions across files</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Special Files -->
+			<section id="special-files" class="ob-docs-section">
+				<h2 class="ob-docs-heading">Special Files</h2>
+				<p class="ob-docs-text">
+					Special files (Characters, Objects, Scenes, etc.) automatically get a file-id template 
+					on creation. This ID allows you to reference them from other files.
+				</p>
+
+				<div class="ob-docs-code">
+					<pre><code>$ file-id = "protagonist1"
+
+# Character Name
+Description of your character...</code></pre>
+				</div>
+
+				<p class="ob-docs-text">
+					The first line contains the file-id (hidden in preview). You can customize or remove it.
+				</p>
+
+				<div class="ob-docs-rules">
+					<h4>File-ID Rules:</h4>
+					<ul>
+						<li>Maximum 24 characters</li>
+						<li>Alphanumeric only (letters and numbers)</li>
+						<li>Must be unique across all files</li>
+						<li>Used for mentions and linking</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Attributes & Mentions -->
+			<section id="attributes" class="ob-docs-section">
+				<h2 class="ob-docs-heading">Attributes & Mentions</h2>
+				<p class="ob-docs-text">
+					Link files together using mentions. There are two ways to create mentions:
+				</p>
+
+				<div class="ob-docs-mention-types">
+					<div class="ob-docs-mention-type">
+						<h4>Natural Mention</h4>
+						<div class="ob-docs-code">
+							<pre><code>The character.protagonist1 entered the room.</code></pre>
+						</div>
+						<p>Shows a confirmation bubble: "Link to character.protagonist1?"</p>
+					</div>
+
+					<div class="ob-docs-mention-type">
+						<h4>Direct Mention</h4>
+						<div class="ob-docs-code">
+							<pre><code>The @character.protagonist1 entered the room.</code></pre>
+						</div>
+						<p>Instant link, no confirmation. Preview shows only "protagonist1"</p>
+					</div>
+				</div>
+
+				<div class="ob-docs-tip">
+					<span class="material-icons-round">link</span>
+					<p><strong>Click mentions</strong> to navigate directly to the referenced file and line!</p>
+				</div>
+			</section>
+
+			<!-- Markdown Editor -->
+			<section id="markdown" class="ob-docs-section">
+				<h2 class="ob-docs-heading">Markdown Editor</h2>
+				<p class="ob-docs-text">
+					OceanBoard uses markdown for formatting. Here are the basics:
+				</p>
+
+				<div class="ob-docs-markdown-guide">
+					<div class="ob-docs-markdown-item">
+						<code># Heading 1</code>
+						<span class="ob-docs-markdown-arrow">→</span>
+						<h1 style="margin: 0; font-size: 24px;">Heading 1</h1>
+					</div>
+
+					<div class="ob-docs-markdown-item">
+						<code>**bold text**</code>
+						<span class="ob-docs-markdown-arrow">→</span>
+						<strong>bold text</strong>
+					</div>
+
+					<div class="ob-docs-markdown-item">
+						<code>*italic text*</code>
+						<span class="ob-docs-markdown-arrow">→</span>
+						<em>italic text</em>
+					</div>
+
+					<div class="ob-docs-markdown-item">
+						<code>[link](url)</code>
+						<span class="ob-docs-markdown-arrow">→</span>
+						<a href="#" style="color: var(--ob-accent);">link</a>
+					</div>
+
+					<div class="ob-docs-markdown-item">
+						<code>- list item</code>
+						<span class="ob-docs-markdown-arrow">→</span>
+						<span>• list item</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Import & Export -->
+			<section id="import-export" class="ob-docs-section">
+				<h2 class="ob-docs-heading">Import & Export</h2>
+				<p class="ob-docs-text">
+					OceanBoard offers flexible import and export options:
+				</p>
+
+				<div class="ob-docs-export-options">
+					<div class="ob-docs-export-card">
+						<span class="material-icons-round">folder</span>
+						<h4>Full Workspace</h4>
+						<p>Export all series, seasons, files, and settings as one ZIP file</p>
+					</div>
+
+					<div class="ob-docs-export-card">
+						<span class="material-icons-round">library_books</span>
+						<h4>Season</h4>
+						<p>Export all files from a single season (right-click season)</p>
+					</div>
+
+					<div class="ob-docs-export-card">
+						<span class="material-icons-round">description</span>
+						<h4>Single File</h4>
+						<p>Export individual files with metadata (right-click file)</p>
+					</div>
+				</div>
+
+				<div class="ob-docs-warning">
+					<span class="material-icons-round">backup</span>
+					<p><strong>Backup Regularly:</strong> Export your workspace periodically to keep your work safe!</p>
+				</div>
+			</section>
+
+			<!-- Settings -->
+			<section id="settings" class="ob-docs-section">
+				<h2 class="ob-docs-heading">Settings</h2>
+				<p class="ob-docs-text">
+					Customize your writing experience in the settings panel:
+				</p>
+
+				<div class="ob-docs-settings-list">
+					<div class="ob-docs-setting">
+						<span class="material-icons-round">format_size</span>
+						<div>
+							<strong>Font Size</strong>
+							<p>Adjust editor and preview text size (12-24px)</p>
+						</div>
+					</div>
+
+					<div class="ob-docs-setting">
+						<span class="material-icons-round">height</span>
+						<div>
+							<strong>Line Height</strong>
+							<p>Control spacing between lines (1.2-2.0)</p>
+						</div>
+					</div>
+
+					<div class="ob-docs-setting">
+						<span class="material-icons-round">wrap_text</span>
+						<div>
+							<strong>Word Wrap</strong>
+							<p>Toggle automatic line wrapping in editor</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- File Linking -->
+			<section id="file-linking" class="ob-docs-section">
+				<h2 class="ob-docs-heading">File Linking</h2>
+				<p class="ob-docs-text">
+					Create connections between files using the attribute system:
+				</p>
+
+				<ol class="ob-docs-ordered-list">
+					<li>Create an Attribute file to act as your dictionary</li>
+					<li>Define keys that map to file-ids and line numbers</li>
+					<li>Reference these keys from any file using mentions</li>
+					<li>Click mentions to navigate instantly to the target location</li>
+				</ol>
+
+				<!-- IMAGE PLACEHOLDER -->
+				<div class="ob-docs-image-placeholder">
+					<img src="../media/images/attributes.PNG" alt="File Linking Workflow">
+					<p class="ob-docs-image-caption">How file linking works in OceanBoard</p>
+				</div>
+			</section>
+
+			<!-- Workflows -->
+			<section id="workflows" class="ob-docs-section">
+				<h2 class="ob-docs-heading">Workflows</h2>
+				<p class="ob-docs-text">
+					Here are some recommended workflows for different use cases:
+				</p>
+
+				<div class="ob-docs-workflow">
+					<h4>Novel Writing</h4>
+					<p>Create a series for your novel, seasons for parts/acts, episodes for chapters. 
+					Use character and scene files for reference.</p>
+				</div>
+
+				<div class="ob-docs-workflow">
+					<h4>Worldbuilding</h4>
+					<p>Organize by theme (Geography, History, Culture). Use attribute files to link 
+					related concepts across your world.</p>
+				</div>
+
+				<div class="ob-docs-workflow">
+					<h4>Screenplay</h4>
+					<p>Series for the project, seasons for acts, episodes for scenes. 
+					Character files for cast, object files for props.</p>
+				</div>
+			</section>
+
+
+			<!-- Footer -->
+			<div class="ob-docs-footer">
+				<p>Need more help? The interface is intuitive - just explore and create!</p>
+				<a href="../editor" class="ob-docs-footer-btn">
+					<span class="material-icons-round">rocket_launch</span>
+					Start Creating
+				</a>
+			</div>
+		</main>
+	</div>
+
+	<script src="./scripts/docs.js"></script>
+</body>
+</html>

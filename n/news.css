@@ -317,7 +317,11 @@ body {
 .news-item.compact .news-image {
     height: 150px;
 }
-
+.news-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
 .news-badge {
     position: absolute;
     top: 1rem;

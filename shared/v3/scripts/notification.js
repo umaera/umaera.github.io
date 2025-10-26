@@ -1,4 +1,4 @@
-const CURRENT_NOTIFICATION_DATE = '2025-10-24';
+const CURRENT_NOTIFICATION_DATE = '2025-10-26';
 
 function checkNotifications() {
     const lastNotificationDate = localStorage.getItem('lastNotificationDate');
