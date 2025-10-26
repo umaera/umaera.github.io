@@ -58,15 +58,15 @@ sections.forEach(section => {
 document.querySelectorAll('.ob-docs-code pre').forEach(pre => {
 	const copyBtn = document.createElement('button');
 	copyBtn.className = 'ob-docs-copy-btn';
-	copyBtn.innerHTML = '<span class="material-icons-round">content_copy</span>';
+	copyBtn.innerHTML = '<span class="material-icons-round" translate="no">content_copy</span>';
 	copyBtn.title = 'Copy code';
 	
 	copyBtn.addEventListener('click', () => {
 		const code = pre.querySelector('code').textContent;
 		navigator.clipboard.writeText(code).then(() => {
-			copyBtn.innerHTML = '<span class="material-icons-round">check</span>';
+			copyBtn.innerHTML = '<span class="material-icons-round" translate="no">check</span>';
 			setTimeout(() => {
-				copyBtn.innerHTML = '<span class="material-icons-round">content_copy</span>';
+				copyBtn.innerHTML = '<span class="material-icons-round" translate="no">content_copy</span>';
 			}, 2000);
 		});
 	});
