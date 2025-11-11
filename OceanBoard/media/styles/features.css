@@ -37,14 +37,14 @@
 	border: 1px solid var(--ob-border);
 	border-radius: 16px;
 	padding: 32px;
-	transition: all 0.3s;
+	transition: all 0.1s;
 }
 
 .ob-feature-card:hover {
 	transform: translateY(-8px);
 	border-color: var(--ob-accent);
 	box-shadow: 0 12px 30px rgba(255, 128, 170, 0.2);
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 
 .ob-feature-icon {

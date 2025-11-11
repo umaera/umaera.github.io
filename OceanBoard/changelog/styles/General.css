@@ -14,12 +14,13 @@
     --added: #bdff80;
     --improved: #ffef76;
     --redesigned: #ff9b73;
+    --changed: #d3adff;
     --deleted: #fd5050;
 }
 
-::selection {
-    background: black;
-    color: #ffb7b7;
+::selection{
+    background: var(--primary);
+    color: black;
 }
 
 html{
@@ -75,8 +76,13 @@ section {
 }
 
 section h1{
-    font-size: 1.8em;
+    font-size: 3em;
     margin: 0;
+}
+
+blockquote{
+	margin: 0;
+	padding: 0;
 }
 
 .content {

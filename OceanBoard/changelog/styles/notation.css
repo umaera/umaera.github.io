@@ -22,6 +22,12 @@
     font-weight: 800;
 }
 
+.changed{
+    display: inline-block;
+    color: var(--changed);
+    font-weight: 800;
+}
+
 .improved{
     display: inline-block;
     color: var(--improved);
@@ -80,7 +86,7 @@ ul li{
     border-left-color: var(--ul-text);
     margin: 10px;
     border-width: 1px;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #a4a4a4;
 }
