@@ -43,7 +43,7 @@ function executeAction(value) {
             document.getElementById('class').style.color = '#ff004c';
             setProfileImage('../icons/pfp/umaera.png');
             document.getElementById('pfp').style.boxShadow = '0 0 10px #ff004c';
-            document.getElementById('name').textContent = 'UmaEra';
+            document.getElementById('name').textContent = 'stoaticc (umaera)';
             document.getElementById('name').style.color = '#ff004c';
             document.getElementById('profile').textContent = 'Creator & developer';
             document.getElementById('profile').style.color = '#ff6090';

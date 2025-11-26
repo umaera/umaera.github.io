@@ -1,0 +1,37 @@
+{
+	"name": "UmaEra",
+	"short_name": "UmaEra",
+	"description": "Basicly a repo for all my projects, icons, assets and more.",
+	"start_url": "./index.html",
+	"display": "standalone",
+	"background_color": "#8f003a",
+	"theme_color": "#8f003a",
+	"orientation": "any",
+	"scope": "./",
+	"lang": "en",
+	"categories": ["productivity", "utilities", "writing", "games", "education", "code", "tools"],
+	"icons": [
+		{
+			"src": "./icons/@core/MyLittleIcon.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "./icons/@core/MyLittleIcon.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	],
+	"shortcuts": [{}],
+	"related_applications": [],
+	"prefer_related_applications": false,
+	"protocol_handlers": [
+		{
+			"protocol": "web+umaera",
+			"url": "./index.html?file=%s"
+		}
+	],
+	"file_handlers": []
+}

@@ -1,5 +1,21 @@
 # Changelog: `umaera.github.io`
 
+## UI_v3.9.4
+- Mobile index page fixed
+- NEW Social/display name! "umaera" -> "stoaticc"; but the official name will always be "umaera".
+- Updated some social media links.
+- Closed BubblePlay Server.
+- Updated Social/Display name all over the website.
+- NEWS: name change.
+- Added new lib point: `/shared/libs`
+- Added three.js
+- Created Project page `/p`, includes a list of all projects.
+- Hosted website of `SparkBunny`, `BubblePlay` & `OceanBoard` on Projects
+- Added more info about more projects.
+- Added new icons for BubblePlay
+- Added manifest
+
+
 ## UI_v3.9.3
 - Some mobile polishes
 - new update for OceanBoard

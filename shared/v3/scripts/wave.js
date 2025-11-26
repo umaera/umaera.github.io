@@ -1,18 +1,18 @@
-const titleBlock = document.querySelector('.titleBlock');
+const titleBlock = document.querySelectorAll('.titleBlock')[0];
 
 const svgFilter = `
 <svg style="position: absolute; width: 0; height: 0;">
   <defs>
     <filter id="wave-distortion">
       <feTurbulence
-        id="turbulence" 
-        type="fractalNoise" 
+        id="turbulence"
+        type="fractalNoise"
         baseFrequency="0.02 0.06"
         numOctaves="3"
         result="noise"
       />
-      <feDisplacementMap 
-        in="SourceGraphic" 
+      <feDisplacementMap
+        in="SourceGraphic"
         in2="noise"
         scale="8"
       />
