@@ -125,6 +125,39 @@ export default class Game {
 
   init() {
     this.player = new Player(this.width / 2, this.height / 2);
+
+    // Zoom limits (prevent browser zoom from exceeding 130% or going below 60%)
+    const MIN_ALLOWED = 0.6; // 60%
+    const MAX_ALLOWED = 1.3; // 130%
+    const wrapper = document.querySelector(".game-wrapper");
+    if (wrapper) {
+      wrapper.style.transformOrigin = "0 0";
+      const zoomWarning = document.getElementById("zoomWarning");
+
+      const enforceZoom = () => {
+        const actual = window.devicePixelRatio || 1;
+        const clamped = Math.min(MAX_ALLOWED, Math.max(MIN_ALLOWED, actual));
+        const scale = clamped / actual;
+        wrapper.style.transform = `scale(${scale})`;
+
+        if (zoomWarning) {
+          zoomWarning.style.display = clamped !== actual ? "flex" : "none";
+        }
+      };
+      enforceZoom();
+      window.addEventListener("resize", enforceZoom);
+      try {
+        const mq = window.matchMedia(
+          `(resolution: ${window.devicePixelRatio}dppx)`
+        );
+        if (mq && "addEventListener" in mq) {
+          mq.addEventListener("change", enforceZoom);
+        }
+      } catch (e) {
+        // ignore
+      }
+    }
+
     this.enemies = [];
     this.projectiles = [];
     this.enemyProjectiles = [];
@@ -151,6 +184,7 @@ export default class Game {
     this.novaActive = false;
     this.novaReappearLevel = null;
     this.novaDefeatedOnce = false; // Track if Nova was ever killed (for respawn logic)
+    this.mageDefeatedOnce = false; // Track if Mage was ever killed (for respawn logic)
     this.novaLasers = [];
     this.walls = [];
     this.screenShake = new ScreenShake();

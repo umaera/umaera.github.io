@@ -1,4 +1,4 @@
-// BotPlay.js - AI player system for automated gameplay
+// BotPlay.js - AI player system
 
 export default class BotPlay {
   constructor(game) {
@@ -37,7 +37,6 @@ export default class BotPlay {
     const boss = this.game.nova || this.game.mage;
     this.inBossFight = boss && boss.health > 0;
 
-    // Dodge incoming projectiles before anything else
     if (this.dodgeCooldown <= 0) {
       if (this.dodgeProjectiles()) {
         this.dodgeCooldown = 80; // Small cooldown after dodging

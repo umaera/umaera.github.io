@@ -391,6 +391,7 @@ export default class CombatSystem {
           game.mage = null;
           game.walls = []; // Remove all walls
           game.bossDefeatedThisSession = true; // Enable time warp spawns
+          game.mageDefeatedOnce = true; // Mark Mage defeated for respawn logic
 
           // Level up
           game.level++;

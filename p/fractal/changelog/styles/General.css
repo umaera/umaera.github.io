@@ -37,9 +37,25 @@ html{
     scroll-behavior: smooth;
 }
 
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../media/img/defaultbg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 2;
+    filter: blur(200px);
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
 body{
     display: flex;
-    background-color: var(--background);
+    background-color: transparent;
     color: var(--text);
     font-family: 'Outfit', sans-serif;
     margin: 0;
