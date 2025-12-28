@@ -1,5 +1,13 @@
 # Changelog: `umaera.github.io`
 
+## UI_v3.9.5
+- Added SubEraWeb - project info
+- Added Icons/Event icons for FRACTAL
+- Added FRACTAL game project.
+- Changed favicon for project page
+- Added FRACTAL project - website & game.
+- Quick fix to socials page resize system.
+
 ## UI_v3.9.4
 - Mobile index page fixed
 - NEW Social/display name! "umaera" -> "stoaticc"; but the official name will always be "umaera".

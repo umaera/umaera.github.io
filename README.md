@@ -17,7 +17,7 @@ Welcome to my personal website - a creative digital space showcasing my work as 
 - **`/sap/`** - Service Access Point for utilities
 - **`/book/`** - Book Project - i post random story shit.. i like writting and not making sense
 - **`/n/`** - News & Updates
-- **`/OceanBoard/`** - A creative tool for writters, developers & creative minds.
+- **`/p/`** - All projects!
 
 ## Site Navigation
 
@@ -28,5 +28,4 @@ Welcome to my personal website - a creative digital space showcasing my work as 
 - **Quote**: *"Going ~~crazy~~ Radical"*
 
 ## License
-
-This project represents personal creative work. Please reach out for any usage inquiries.
+This project represents personal creative work. Contact-me for use.
