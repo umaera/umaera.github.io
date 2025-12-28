@@ -24,6 +24,13 @@
   margin-bottom: 10px;
 }
 
+/* Section containers for mobile layout */
+.header-section,
+.media-section,
+.buttons-section {
+  width: 100%;
+}
+
 /* Left side - Buttons */
 .buttons {
   width: 100%;
@@ -42,9 +49,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   background-color: var(--purple-color);
   color: black;
   border: none;
@@ -120,4 +127,99 @@
   height: 100%;
   object-fit: cover;
   border: #4714ff 2px solid;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+/* ===== TABLET DESIGN (768px - 1024px) ===== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .header-icon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .line {
+    width: 50%;
+  }
+
+  .links {
+    font-size: 1rem;
+  }
+}
+
+/* ===== MOBILE DESIGN (Below 768px) ===== */
+@media (max-width: 768px) {
+  .header-icon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .line {
+    width: 60%;
+  }
+
+  .links {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== SMALL MOBILE (Below 480px) ===== */
+@media (max-width: 480px) {
+  .header-prese {
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .header-icon {
+    height: 32px;
+    width: 32px;
+  }
+
+  .line {
+    width: 75%;
+    height: 1.5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 3%;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+    border-width: 2px;
+  }
+
+  .button a {
+    font-size: 0.95rem;
+  }
+
+  .media-container {
+    padding: 1.5%;
+  }
+
+  .media-container video {
+    border-width: 1px;
+  }
+
+  .links {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-top: 2%;
+  }
 }

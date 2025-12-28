@@ -218,3 +218,106 @@
   background-color: var(--purple-color);
   border-color: var(--selection-color);
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .download-popup {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .popup-header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .popup-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .option-card {
+    min-width: 100px;
+    padding: 1rem;
+  }
+
+  .option-icon {
+    font-size: 1.75rem;
+  }
+
+  .option-card p {
+    font-size: 0.85rem;
+  }
+
+  .btn-download,
+  .btn-cancel {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-popup {
+    width: 95%;
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .popup-header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .popup-header h2 {
+    font-size: 1.15rem;
+  }
+
+  .close-btn {
+    font-size: 1.75rem;
+    width: 35px;
+    height: 35px;
+  }
+
+  .selection-group label {
+    font-size: 0.9rem;
+  }
+
+  .options-row {
+    gap: 0.75rem;
+  }
+
+  .option-card {
+    min-width: 85px;
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+
+  .option-icon {
+    font-size: 1.5rem;
+  }
+
+  .windows,
+  .macos,
+  .linux,
+  .exe,
+  .foldercode {
+    width: 35px;
+    height: 35px;
+  }
+
+  .option-card p {
+    font-size: 0.8rem;
+  }
+
+  .download-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .btn-download,
+  .btn-cancel {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
