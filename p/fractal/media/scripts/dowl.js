@@ -12,6 +12,9 @@ downloadBtn.addEventListener("click", function (e) {
 });
 
 function openDownloadPopup() {
+  // Hide portable option by default until Windows is selected
+  const portableCard = document.querySelector(".portable-option");
+  if (portableCard) portableCard.style.display = "none";
   downloadPopup.classList.add("active");
 }
 
@@ -26,11 +29,27 @@ function resetSelection() {
   document.querySelectorAll(".option-card").forEach((card) => {
     card.classList.remove("selected");
   });
+  // Hide portable option when resetting
+  const portableCard = document.querySelector(".portable-option");
+  if (portableCard) portableCard.style.display = "none";
   downloadActionBtn.disabled = true;
 }
 
 function selectOS(os) {
   selectedOS = os;
+  // Show/hide portable option depending on OS
+  const portableCard = document.querySelector(".portable-option");
+  if (portableCard) {
+    if (selectedOS === "windows") {
+      portableCard.style.display = "";
+    } else {
+      portableCard.style.display = "none";
+      // if portable was selected, reset selectedFormat
+      if (selectedFormat === "portable") {
+        selectedFormat = null;
+      }
+    }
+  }
   updateSelection();
 }
 
@@ -55,9 +74,9 @@ function updateSelection() {
   document
     .querySelectorAll(".options-row")[1]
     .querySelectorAll(".option-card")
-    .forEach((card, index) => {
-      const formatValues = ["executable", "code"];
-      if (formatValues[index] === selectedFormat) {
+    .forEach((card) => {
+      const format = card.getAttribute("data-format");
+      if (format === selectedFormat) {
         card.classList.add("selected");
       } else {
         card.classList.remove("selected");
@@ -85,16 +104,17 @@ downloadActionBtn.addEventListener("click", function () {
 
 function constructDownloadURL(os, format) {
   const baseURL =
-    "https://github.com/NotYarazi/fractal/releases/download/0.8.0";
+    "https://github.com/NotYarazi/fractal/releases/download/0.8.1";
 
   // Map selections to file names or URLs
   const fileMap = {
-    "windows-executable": `${baseURL}/FRACTAL-0.8.0-Setup.exe`,
-    "windows-code": `https://github.com/NotYarazi/fractal/archive/refs/tags/0.8.0.zip`,
-    "mac-executable": `${baseURL}/FRACTAL-0.8.0-arm64.dmg`,
-    "mac-code": `https://github.com/NotYarazi/fractal/archive/refs/tags/0.8.0.zip`,
-    "linux-executable": `${baseURL}/FRACTAL-0.8.0.AppImage`,
-    "linux-code": `https://github.com/NotYarazi/fractal/archive/refs/tags/0.8.0.zip`,
+    "windows-executable": `${baseURL}/FRACTAL-0.8.1-Setup.exe`,
+    "windows-portable": `${baseURL}/FRACTAL-0.8.1-Portable.exe`,
+    "windows-code": `https://github.com/NotYarazi/fractal/archive/refs/tags/0.8.1.zip`,
+    "mac-executable": `${baseURL}/FRACTAL-0.8.1-arm64.dmg`,
+    "mac-code": `https://github.com/NotYarazi/fractal/archive/refs/tags/0.8.1.zip`,
+    "linux-executable": `${baseURL}/FRACTAL-0.8.1.AppImage`,
+    "linux-code": `https://github.com/NotYarazi/fractal/archive/refs/tags/0.8.1.zip`,
   };
 
   return fileMap[`${os}-${format}`] || null;

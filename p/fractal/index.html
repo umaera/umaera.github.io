@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="./media/img/fractal.png" type="image/png" />
   <link
     rel="shortcut icon"
-    href="./media/img/fractal.png"
+    href="./media/img/4pti9-hlk56-001.ico"
     type="image/x-icon"
   />
 </head>
@@ -126,11 +126,28 @@
         <div class="selection-group">
           <label>Choose Format</label>
           <div class="options-row">
-            <div class="option-card" onclick="selectFormat('executable')">
+            <div
+              class="option-card"
+              data-format="executable"
+              onclick="selectFormat('executable')"
+            >
               <div class="option-icon exe"></div>
-              <p>Executable</p>
+              <p>Setup (Installer)</p>
             </div>
-            <div class="option-card" onclick="selectFormat('code')">
+            <div
+              class="option-card portable-option"
+              data-format="portable"
+              onclick="selectFormat('portable')"
+              style="display: none"
+            >
+              <div class="option-icon portable"></div>
+              <p>Portable Executable</p>
+            </div>
+            <div
+              class="option-card"
+              data-format="code"
+              onclick="selectFormat('code')"
+            >
               <div class="option-icon foldercode"></div>
               <p>Source Code</p>
             </div>
