@@ -139,6 +139,26 @@ h3 {
   .links {
     font-size: 1rem;
   }
+
+  /* Disable Try and Download buttons on tablet */
+  .button.try,
+  .button.download {
+    background-color: #555555;
+    color: #888888;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  .button.try a,
+  .button.download a {
+    color: #888888;
+  }
+
+  .button.try:hover,
+  .button.download:hover {
+    background-color: #555555;
+    border-color: transparent;
+  }
 }
 
 /* ===== MOBILE DESIGN (Below 768px) ===== */
@@ -239,6 +259,26 @@ h3 {
     width: 12rem;
     height: 12rem;
   }
+
+  /* Disable Try and Download buttons on mobile */
+  .button.try,
+  .button.download {
+    background-color: #555555;
+    color: #888888;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  .button.try a,
+  .button.download a {
+    color: #888888;
+  }
+
+  .button.try:hover,
+  .button.download:hover {
+    background-color: #555555;
+    border-color: transparent;
+  }
 }
 
 /* ===== SMALL MOBILE (Below 480px) ===== */
@@ -315,5 +355,25 @@ h3 {
     width: 10rem;
     height: 10rem;
     top: 200%;
+  }
+
+  /* Disable Try and Download buttons on small mobile */
+  .button.try,
+  .button.download {
+    background-color: #555555;
+    color: #888888;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  .button.try a,
+  .button.download a {
+    color: #888888;
+  }
+
+  .button.try:hover,
+  .button.download:hover {
+    background-color: #555555;
+    border-color: transparent;
   }
 }

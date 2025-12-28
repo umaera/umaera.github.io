@@ -144,20 +144,20 @@
   filter: invert(1);
 }
 
-.exe{
-    width: 40px;
-    height: 40px;
-    background-image: url("../img/desktop-install.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+.exe {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/desktop-install.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.foldercode{
-    width: 40px;
-    height: 40px;
-    background-image: url("../img/folder-code.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+.foldercode {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/folder-code.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .option-card p {
@@ -168,7 +168,7 @@
 }
 
 .option-card.selected p {
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
 .download-actions {
