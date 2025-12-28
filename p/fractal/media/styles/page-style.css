@@ -140,7 +140,6 @@ h3 {
     font-size: 1rem;
   }
 
-  /* Disable Try and Download buttons on tablet */
   .button.try,
   .button.download {
     background-color: #555555;
