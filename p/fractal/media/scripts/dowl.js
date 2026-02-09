@@ -104,17 +104,17 @@ downloadActionBtn.addEventListener("click", function () {
 
 function constructDownloadURL(os, format) {
   const baseURL =
-    "https://github.com/NotYarazi/fractal/releases/download/0.8.1";
+    "https://github.com/everm4iva/fractal/releases/download/0.8.1";
 
   // Map selections to file names or URLs
   const fileMap = {
     "windows-executable": `${baseURL}/FRACTAL-0.8.1-Setup.exe`,
     "windows-portable": `${baseURL}/FRACTAL-0.8.1-Portable.exe`,
-    "windows-code": `https://github.com/NotYarazi/fractal/archive/refs/tags/0.8.1.zip`,
+    "windows-code": `https://github.com/everm4iva/fractal/archive/refs/tags/0.8.1.zip`,
     "mac-executable": `${baseURL}/FRACTAL-0.8.1-arm64.dmg`,
-    "mac-code": `https://github.com/NotYarazi/fractal/archive/refs/tags/0.8.1.zip`,
+    "mac-code": `https://github.com/everm4iva/fractal/archive/refs/tags/0.8.1.zip`,
     "linux-executable": `${baseURL}/FRACTAL-0.8.1.AppImage`,
-    "linux-code": `https://github.com/NotYarazi/fractal/archive/refs/tags/0.8.1.zip`,
+    "linux-code": `https://github.com/everm4iva/fractal/archive/refs/tags/0.8.1.zip`,
   };
 
   return fileMap[`${os}-${format}`] || null;
