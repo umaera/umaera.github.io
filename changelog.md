@@ -1,5 +1,10 @@
 # Changelog: `umaera.github.io`
 
+## UI_v3.9.6
+- I changed my website domain, now im doing what microsoft does and heavily migrate everything
+- I plan into making this website compleatly obsolete in a space of a few months (less than 6 months)
+- Here is my new thingy: https://everm4iva.github.io - or just open any page of this website lol
+
 ## UI_v3.9.5
 - Added SubEraWeb - project info
 - Added Icons/Event icons for FRACTAL
